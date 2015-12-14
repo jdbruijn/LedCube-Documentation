@@ -1,0 +1,106 @@
+\hypertarget{_i_o_ports_8h}{}\section{source/\+Library\+Files/\+I\+O\+Ports.h File Reference}
+\label{_i_o_ports_8h}\index{source/\+Library\+Files/\+I\+O\+Ports.\+h@{source/\+Library\+Files/\+I\+O\+Ports.\+h}}
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Peripheral\+Pin\+Select.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ports.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_i_o_ports_8h_aa77cb09989b5c805a7344022ae64fb4c}{}\#define {\bfseries S\+P\+I1\+\_\+\+S\+D\+O}~P\+O\+R\+T\+\_\+\+R\+P19      /$\ast$ Serial Data Out to Led\+Driver $\ast$/\label{_i_o_ports_8h_aa77cb09989b5c805a7344022ae64fb4c}
+
+\item 
+\hypertarget{_i_o_ports_8h_a241b59557c3e3c91418162ed4d682aaa}{}\#define {\bfseries S\+P\+I1\+\_\+\+S\+C\+K}~P\+O\+R\+T\+\_\+\+R\+P21      /$\ast$ Serial Clock to Led\+Driver $\ast$/\label{_i_o_ports_8h_a241b59557c3e3c91418162ed4d682aaa}
+
+\item 
+\hypertarget{_i_o_ports_8h_afc08e0c3645b78b3f90c30556f760cbf}{}\#define {\bfseries L\+D\+\_\+\+L\+E}~P\+O\+R\+T\+\_\+\+R\+P20      /$\ast$ L\+E to Led\+Driver $\ast$/\label{_i_o_ports_8h_afc08e0c3645b78b3f90c30556f760cbf}
+
+\item 
+\hypertarget{_i_o_ports_8h_a7c7193eadd3932cba9dc8ed7f87dc38f}{}\#define {\bfseries S\+P\+I2\+\_\+\+S\+D\+O}~P\+O\+R\+T\+\_\+\+R\+P3       /$\ast$ Serial Data Out to Anode Control $\ast$/\label{_i_o_ports_8h_a7c7193eadd3932cba9dc8ed7f87dc38f}
+
+\item 
+\hypertarget{_i_o_ports_8h_a63873141764c733446b85913b9eecab0}{}\#define {\bfseries S\+P\+I2\+\_\+\+S\+C\+K}~P\+O\+R\+T\+\_\+\+R\+P18      /$\ast$ Serial Clock to Anode Control $\ast$/\label{_i_o_ports_8h_a63873141764c733446b85913b9eecab0}
+
+\item 
+\hypertarget{_i_o_ports_8h_aa44e2c1f94e2b449d84d92f3492972ad}{}\#define {\bfseries A\+N\+O\+D\+E\+\_\+\+L\+A\+T\+C\+H}~P\+O\+R\+T\+\_\+\+R\+P17\label{_i_o_ports_8h_aa44e2c1f94e2b449d84d92f3492972ad}
+
+\item 
+\hypertarget{_i_o_ports_8h_a7122a6e5d75b5f8b7f00c7130df40407}{}\#define {\bfseries O\+E}~P\+O\+R\+T\+\_\+\+R\+P16      /$\ast$ For both the Led\+Driver and Anode Control $\ast$/\label{_i_o_ports_8h_a7122a6e5d75b5f8b7f00c7130df40407}
+
+\item 
+\hypertarget{_i_o_ports_8h_a5bf3f091a6c7fc0468eb55302a88111b}{}\#define {\bfseries U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}~P\+O\+R\+T\+\_\+\+R\+P14      /$\ast$ U\+S\+B to U\+A\+R\+T Tx $\ast$/\label{_i_o_ports_8h_a5bf3f091a6c7fc0468eb55302a88111b}
+
+\item 
+\hypertarget{_i_o_ports_8h_a749c2832c30db741b409369a3f96ab1b}{}\#define {\bfseries U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}~P\+O\+R\+T\+\_\+\+R\+P12      /$\ast$ U\+S\+B to U\+A\+R\+T Rx $\ast$/\label{_i_o_ports_8h_a749c2832c30db741b409369a3f96ab1b}
+
+\item 
+\hypertarget{_i_o_ports_8h_a70fecc971886964f3ef112e49eccb9f8}{}\#define {\bfseries U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}~P\+O\+R\+T\+\_\+\+R\+P13      /$\ast$ U\+S\+B to U\+A\+R\+T Clear To Send $\ast$/\label{_i_o_ports_8h_a70fecc971886964f3ef112e49eccb9f8}
+
+\item 
+\hypertarget{_i_o_ports_8h_a25963cd05918ed960fbff9dfbdfdcefd}{}\#define {\bfseries U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}~P\+O\+R\+T\+\_\+\+R\+P15      /$\ast$ U\+S\+B to U\+A\+R\+T Ready To Send $\ast$/\label{_i_o_ports_8h_a25963cd05918ed960fbff9dfbdfdcefd}
+
+\item 
+\hypertarget{_i_o_ports_8h_a0420f7c5cadb2f351c574f9fc8f8148d}{}\#define {\bfseries B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}~P\+O\+R\+T\+\_\+\+R\+P10      /$\ast$ Bluetooth U\+A\+R\+T Tx $\ast$/\label{_i_o_ports_8h_a0420f7c5cadb2f351c574f9fc8f8148d}
+
+\item 
+\hypertarget{_i_o_ports_8h_a8e5b7c0a39cc269da3c337912608d002}{}\#define {\bfseries B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}~P\+O\+R\+T\+\_\+\+R\+P11      /$\ast$ Bluetooth U\+A\+R\+T Rx $\ast$/\label{_i_o_ports_8h_a8e5b7c0a39cc269da3c337912608d002}
+
+\item 
+\hypertarget{_i_o_ports_8h_aac29686a7a20a266c34fd1d0fbe7a4bc}{}\#define {\bfseries B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}~P\+O\+R\+T\+\_\+\+R\+P6       /$\ast$ Bluetooth U\+A\+R\+T Clear To Send $\ast$/\label{_i_o_ports_8h_aac29686a7a20a266c34fd1d0fbe7a4bc}
+
+\item 
+\hypertarget{_i_o_ports_8h_ad70340c11a3fc5377b61289e920f65ef}{}\#define {\bfseries B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}~P\+O\+R\+T\+\_\+\+R\+P22      /$\ast$ Bluetooth U\+A\+R\+T Ready To Send $\ast$/\label{_i_o_ports_8h_ad70340c11a3fc5377b61289e920f65ef}
+
+\item 
+\hypertarget{_i_o_ports_8h_a2429598577785b17d1e1098fd846a26a}{}\#define {\bfseries B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P}~P\+O\+R\+T\+\_\+\+R\+P24      /$\ast$ Bluetooth Command or M\+L\+D\+P mode $\ast$/\label{_i_o_ports_8h_a2429598577785b17d1e1098fd846a26a}
+
+\item 
+\hypertarget{_i_o_ports_8h_a9d914e6bac9f4c1b1b04042a614d14eb}{}\#define {\bfseries B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W}~P\+O\+R\+T\+\_\+\+R\+P9       /$\ast$ Bluetooth Hardware Wake $\ast$/\label{_i_o_ports_8h_a9d914e6bac9f4c1b1b04042a614d14eb}
+
+\item 
+\hypertarget{_i_o_ports_8h_a06ab137eab09cead1e4d3ab044b81ba3}{}\#define {\bfseries B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W}~P\+O\+R\+T\+\_\+\+R\+P25      /$\ast$ Bluetooth Deep Sleep Wake $\ast$/\label{_i_o_ports_8h_a06ab137eab09cead1e4d3ab044b81ba3}
+
+\item 
+\hypertarget{_i_o_ports_8h_a1b079ac95c4f2e1ab333434e07eb0955}{}\#define {\bfseries B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S}~P\+O\+R\+T\+\_\+\+R\+P8       /$\ast$ Bluetooth Connected Status $\ast$/\label{_i_o_ports_8h_a1b079ac95c4f2e1ab333434e07eb0955}
+
+\item 
+\hypertarget{_i_o_ports_8h_aa6d965d9a428a747f4982fcada1df564}{}\#define {\bfseries B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V}~P\+O\+R\+T\+\_\+\+R\+P7       /$\ast$ Bluetooth M\+L\+D\+P Data Event $\ast$/\label{_i_o_ports_8h_aa6d965d9a428a747f4982fcada1df564}
+
+\item 
+\hypertarget{_i_o_ports_8h_a33c3e3ecbf6aed12bb34e02d5e073167}{}\#define {\bfseries B\+T\+\_\+\+W\+S}~P\+O\+R\+T\+\_\+\+R\+P23      /$\ast$ Bluetooth Activity indicator $\ast$/\label{_i_o_ports_8h_a33c3e3ecbf6aed12bb34e02d5e073167}
+
+\item 
+\hypertarget{_i_o_ports_8h_a8312d218f200ac51487f9860d6fc5e8e}{}\#define {\bfseries B\+T\+\_\+\+P\+I\+O7}~P\+O\+R\+T\+\_\+\+R\+P5       /$\ast$ Bluetooth P\+I\+O7 $\ast$/\label{_i_o_ports_8h_a8312d218f200ac51487f9860d6fc5e8e}
+
+\item 
+\hypertarget{_i_o_ports_8h_a145103118f6d9d1129aa4509cf214a13}{}\#define {\bfseries B\+U\+Z\+Z\+E\+R}~P\+O\+R\+T\+\_\+\+R\+P2       /$\ast$ On-\/board buzzer $\ast$/\label{_i_o_ports_8h_a145103118f6d9d1129aa4509cf214a13}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_i_o_ports_8h_a8f5ec0d1281e1e90818c1f027002185a}{I\+O\+Ports\+\_\+init} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+test description 
+
+\subsection{Function Documentation}
+\hypertarget{_i_o_ports_8h_a8f5ec0d1281e1e90818c1f027002185a}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!I\+O\+Ports\+\_\+init@{I\+O\+Ports\+\_\+init}}
+\index{I\+O\+Ports\+\_\+init@{I\+O\+Ports\+\_\+init}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{I\+O\+Ports\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+Ports\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_i_o_ports_8h_a8f5ec0d1281e1e90818c1f027002185a}
+Initialize all used I/\+Os.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void  {\ttfamily \hyperlink{_i_o_ports_8h_a8f5ec0d1281e1e90818c1f027002185a}{I\+O\+Ports\+\_\+init()};}
+\end{DoxyReturn}
+Configure the used I/\+O ports using the P\+P\+S library. 

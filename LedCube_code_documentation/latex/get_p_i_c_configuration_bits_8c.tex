@@ -1,0 +1,161 @@
+\hypertarget{get_p_i_c_configuration_bits_8c}{}\section{source/\+Library\+Files/src/get\+P\+I\+C\+Configuration\+Bits.c File Reference}
+\label{get_p_i_c_configuration_bits_8c}\index{source/\+Library\+Files/src/get\+P\+I\+C\+Configuration\+Bits.\+c@{source/\+Library\+Files/src/get\+P\+I\+C\+Configuration\+Bits.\+c}}
+
+
+Gets the configuration bits that are set in the microcontroller.  
+
+
+{\ttfamily \#include \char`\"{}get\+P\+I\+C\+Configuration\+Bits.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned short \hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}
+\item 
+typedef unsigned long \hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \hyperlink{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch} (\hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16} addrhi, \hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16} addrlo)
+\item 
+bool \hyperlink{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte} (\hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \+\_\+\+C\+W)
+\item 
+void \hyperlink{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}{get\+P\+I\+C\+Config\+Bits} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gets the configuration bits that are set in the microcontroller. 
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}
+\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}\label{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}
+Internal typedef for a 16-\/bit unsigned word. 
+
+Definition at line 28 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+
+\hypertarget{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}
+\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}\label{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}
+Internal typedef for a 32-\/bit unsigned word. 
+
+Definition at line 30 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch}}
+\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch(\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16 addrhi, \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16 addrlo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}]{addrhi, }
+\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}]{addrlo}
+\end{DoxyParamCaption}
+)}\label{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}
+ignore Internal function to read a 32-\/bit value from an address.
+
+\begin{DoxyNote}{Note}
+This gives a compiler warning because a value is not explicitly returned from the function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em addrhi} & High word of the address to read from. \\
+\hline
+{\em addrlo} & Low word of the address to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\+Word32 32-\/bit value that was at the address of addrhi and addrlo. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+
+\hypertarget{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte}}
+\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte(\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32 \+\_\+\+C\+W)}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}]{\+\_\+\+C\+W}
+\end{DoxyParamCaption}
+)}\label{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}
+Internal function to verify that the upper byte of a Flash Configuration Word is \textquotesingle{}1111 1111\textquotesingle{} as it should be according to the P\+I\+C24\+F\+J64\+G\+A004 Family Data Sheet.\+pdf (page 209).
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+C\+W} & 32-\/bit Configuration Word to verify the upper byte from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the upper byte is successfully verified, false else. 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+
+\hypertarget{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}}
+\index{get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{get\+P\+I\+C\+Config\+Bits(void)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+P\+I\+C\+Config\+Bits (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}
+Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \begin{DoxyNote}{Note}
+The print of the read data is done using the \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F} wrapper.
+\end{DoxyNote}
+\subparagraph*{Example output (without the asterisks)\+:}
+
+\begin{DoxyVerb}* Reading Flash Configuration Word 1...
+* Binary read value:
+* 111111110011111101111111
+* Successfully verified the Flash Configuration Word 1 with address 0x00ABFE
+*  JTAGEN: JTAG Port Enable bit
+*   [JTAGEN_OFF] JTAG port is disabled
+*  GCP: General Segment Program Memory Code Protection bit
+*   [GCP_OFF] Code protection is disabled
+*  GWRP: General Segment Code Flash Write Protection bit
+*   [GWRP_OFF] Writes to program memory are allowed
+*  !DEBUG: Background Debugger Enable bit
+*   [BKBUG_OFF] Device resets into Operational mode
+*  ICS<1:0>: Emulator Pin Placement Select bits
+*   [ICS_PGx1] Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1
+*  FWDTEN: Watchdog Timer Enable bit
+*   [FWDTEN_OFF] Watchdog Timer is disabled
+*  WINDIS: Windowed Watchdog Timer Disable bit
+*   [WINDIS_ON] Standard Watchdog Timer is enabled
+*  FWPSA: WDT Prescaler Ratio Select bit
+*   [FWPSA_PR128] Prescaler ratio of 1:128
+*  WDTPS<3:0>: Watchdog Timer Postscaler Select bits
+*   [WDTPS_PS32768] 1:32768
+* Done Reading Flash Configuration Word 1.
+* 
+* Reading Flash Configuration Word 2...
+* Binary read value:
+* 111111111111100101101101
+* Successfully verified the Flash Configuration Word 2 with address 0x00ABFC
+*  IESO: Internal External Switchover bit
+*   [IESO_ON] IESO mode (Two-Speed Start-up) is enabled
+*  WUTSEL<1:0>: Voltage Regulator Standby Mode Wake-up Time Select bits
+*   [WUTSEL_LEG] Default regulator start-up time is used
+*  SOSCSEL<1:0>: Secondary Oscillator Power Mode Select bits
+*   [SOSCSEL_SOSC] Default (High Drive Strength) mode
+*  FNOSC<2:0>: Initial Oscillator Select bits
+*   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
+*  FCKSM<1:0>: Clock Switching and Fail-Safe Clock Monitor Configuration bits
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+*  OSCIOFCN: OSCO Pin Configuration bit:
+*   OSCIOFCN has no effect on OSCO/CLKO/RA3
+*  IOL1WAY: IOLOCK One-Way Set Enable bit
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed, provided the unlock sequence has been completed
+*  I2C1SEL: I2C1 Pin Select bit
+*   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
+*  POSCMD<1:0:> Primary Oscillator Configuration bits
+*   [POSCMOD_XT] XT Oscillator mode is selected
+* Done Reading Flash Configuration Word 2.
+* \end{DoxyVerb}
+ 
+
+Definition at line 179 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+

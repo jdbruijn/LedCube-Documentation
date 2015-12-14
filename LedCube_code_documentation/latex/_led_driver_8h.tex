@@ -1,0 +1,150 @@
+\hypertarget{_led_driver_8h}{}\section{source/\+Cube\+Control/\+Led\+Driver.h File Reference}
+\label{_led_driver_8h}\index{source/\+Cube\+Control/\+Led\+Driver.\+h@{source/\+Cube\+Control/\+Led\+Driver.\+h}}
+
+
+Controls a single L\+E\+D Sink Driver.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ports.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+O\+Ports.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_led_driver_8h_a97476fd466a0045342316c7a2a0c6ccb}{S\+P\+I1\+\_\+\+P\+P\+R\+E}~1           /$\ast$ S\+P\+I1 Primary Prescale bits $\ast$/
+\item 
+\#define \hyperlink{_led_driver_8h_a3ed82ed3cce7de15bc8e7675c776e1d9}{\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data}(led\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_led_driver_8h_ab6acead9b284609b765eeeffd49ef71c}{Led\+Driver\+\_\+init} (void)
+\item 
+void \hyperlink{_led_driver_8h_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update} (const uint16\+\_\+t \+\_\+led\+Data)
+\item 
+void \hyperlink{_led_driver_8h_a770bac51c657f55727e019d0a32cfa3f}{Led\+Driver\+\_\+all\+Off} (void)
+\item 
+void \hyperlink{_led_driver_8h_a229365e5de1b33af936f9d1511748f78}{Led\+Driver\+\_\+all\+On} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls a single L\+E\+D Sink Driver. 
+
+A L\+E\+D Sink Driver has 16 outputs and sinks sixteen pillars (two rows) of one colour in the L\+E\+D cube. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_led_driver_8h_a97476fd466a0045342316c7a2a0c6ccb}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!S\+P\+I1\+\_\+\+P\+P\+R\+E@{S\+P\+I1\+\_\+\+P\+P\+R\+E}}
+\index{S\+P\+I1\+\_\+\+P\+P\+R\+E@{S\+P\+I1\+\_\+\+P\+P\+R\+E}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{S\+P\+I1\+\_\+\+P\+P\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I1\+\_\+\+P\+P\+R\+E~1           /$\ast$ S\+P\+I1 Primary Prescale bits $\ast$/}\label{_led_driver_8h_a97476fd466a0045342316c7a2a0c6ccb}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]document defines and macros \end{DoxyRefDesc}
+
+
+Definition at line 49 of file Led\+Driver.\+h.
+
+\hypertarget{_led_driver_8h_a3ed82ed3cce7de15bc8e7675c776e1d9}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data@{\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data}}
+\index{\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data@{\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{\+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+L\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Reorder\+Led\+Data(
+\begin{DoxyParamCaption}
+\item[{}]{led\+Data}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8h_a3ed82ed3cce7de15bc8e7675c776e1d9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( ((ledData) & 0x0303) << 3 | \(\backslash\)
+                ((ledData) & 0x0404)      | ((ledData) & 0x0808) << 2 | \(\backslash\)
+                ((ledData) & 0x1010) >> 3 | ((ledData) & 0x2020) << 1 | \(\backslash\)
+                ((ledData) & 0x4040) >> 6 | ((ledData) & 0x8080) )
+\end{DoxyCode}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]Change bitorder in the tables below so 0 is the L\+S\+B and 15 the M\+S\+B. \end{DoxyRefDesc}
+Reorder the bits to be in correct order, where 0 is the rightmost (L\+S\+B) bit and 15 is the leftmost (M\+S\+B) bit. This is needed for \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update}, which needs to reorder the L\+E\+D data befor sending it to the L\+E\+D Sink Driver.
+
+\begin{TabularC}{17}
+\hline
+\rowcolor{lightgray}{\bf Bit number }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }\\\cline{1-17}
+{\bfseries Old var} &\PBS\centering 3 &\PBS\centering 4 &\PBS\centering 2 &\PBS\centering 5 &\PBS\centering 1 &\PBS\centering 6 &\PBS\centering 0 &\PBS\centering 7 &\PBS\centering 11 &\PBS\centering 12 &\PBS\centering 10 &\PBS\centering 13 &\PBS\centering 9 &\PBS\centering 14 &\PBS\centering 8 &\PBS\centering 15 \\\cline{1-17}
+{\bfseries New var} &\PBS\centering 0 &\PBS\centering 1 &\PBS\centering 2 &\PBS\centering 3 &\PBS\centering 4 &\PBS\centering 5 &\PBS\centering 6 &\PBS\centering 7 &\PBS\centering 8 &\PBS\centering 9 &\PBS\centering 10 &\PBS\centering 11 &\PBS\centering 12 &\PBS\centering 13 &\PBS\centering 14 &\PBS\centering 15 \\\cline{1-17}
+\end{TabularC}
+The following table shows the shift operations needed for specific bits.
+
+\begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Old bit numbers }&{\bf new bit numbers }&\PBS\centering {\bf shift action  }\\\cline{1-3}
+0, 2, 8, 9 &3, 4, 11, 12 &\PBS\centering $<$$<$ 3 \\\cline{1-3}
+2, 10 &2, 10 &\PBS\centering \\\cline{1-3}
+3, 11 &5, 13 &\PBS\centering $<$$<$ 2 \\\cline{1-3}
+4, 12 &1, 9 &\PBS\centering $>$$>$ 3 \\\cline{1-3}
+5, 13 &6, 14 &\PBS\centering $>$$>$ 1 \\\cline{1-3}
+6, 14 &0, 8 &\PBS\centering $>$$>$ 6 \\\cline{1-3}
+7, 15 &7, 15 &\PBS\centering \\\cline{1-3}
+\end{TabularC}
+\subparagraph*{Operations\+:}
+
+7 {\ttfamily A\+N\+D}, 6 {\ttfamily O\+R}, 5 {\ttfamily S\+H\+I\+F\+T} 
+
+Definition at line 87 of file Led\+Driver.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_led_driver_8h_ab6acead9b284609b765eeeffd49ef71c}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!Led\+Driver\+\_\+init@{Led\+Driver\+\_\+init}}
+\index{Led\+Driver\+\_\+init@{Led\+Driver\+\_\+init}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{Led\+Driver\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8h_ab6acead9b284609b765eeeffd49ef71c}
+Initialize a L\+E\+D Sink Driver by configuring the S\+P\+Ix peripheral.
+
+\begin{DoxyNote}{Note}
+This function should be called only once because it sets the S\+P\+Ix peripheral for all the L\+E\+D Sink Drivers since they are in a bus. 
+\end{DoxyNote}
+
+
+Definition at line 29 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8h_a5e8f1b876929be89fbd493f4df041895}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!Led\+Driver\+\_\+update@{Led\+Driver\+\_\+update}}
+\index{Led\+Driver\+\_\+update@{Led\+Driver\+\_\+update}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{Led\+Driver\+\_\+update(const uint16\+\_\+t \+\_\+led\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const uint16\+\_\+t}]{\+\_\+led\+Data}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8h_a5e8f1b876929be89fbd493f4df041895}
+Update the output of a L\+E\+D Sink Driver using the S\+P\+Ix peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+led\+Data} & 16-\/bit variable to send to a L\+E\+D Sink Driver. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8h_a770bac51c657f55727e019d0a32cfa3f}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!Led\+Driver\+\_\+all\+Off@{Led\+Driver\+\_\+all\+Off}}
+\index{Led\+Driver\+\_\+all\+Off@{Led\+Driver\+\_\+all\+Off}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{Led\+Driver\+\_\+all\+Off(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+all\+Off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8h_a770bac51c657f55727e019d0a32cfa3f}
+Turn all the L\+E\+Ds of a L\+E\+D Sink Driver off using \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update}. 
+
+Definition at line 102 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8h_a229365e5de1b33af936f9d1511748f78}{}\index{Led\+Driver.\+h@{Led\+Driver.\+h}!Led\+Driver\+\_\+all\+On@{Led\+Driver\+\_\+all\+On}}
+\index{Led\+Driver\+\_\+all\+On@{Led\+Driver\+\_\+all\+On}!Led\+Driver.\+h@{Led\+Driver.\+h}}
+\subsubsection[{Led\+Driver\+\_\+all\+On(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+all\+On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8h_a229365e5de1b33af936f9d1511748f78}
+Turn all the L\+E\+Ds of a L\+E\+D Sink Driver off using \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update}. 
+
+Definition at line 111 of file Led\+Driver.\+c.
+

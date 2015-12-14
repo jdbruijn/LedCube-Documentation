@@ -1,0 +1,95 @@
+\hypertarget{_panel_control_8c}{}\section{source/\+Cube\+Control/src/\+Panel\+Control.c File Reference}
+\label{_panel_control_8c}\index{source/\+Cube\+Control/src/\+Panel\+Control.\+c@{source/\+Cube\+Control/src/\+Panel\+Control.\+c}}
+
+
+Controls a single Panel\+Control P\+C\+B.  
+
+
+{\ttfamily \#include \char`\"{}Panel\+Control.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_panel_control_8c_aef253c0667beeb546a7eff1cf564e3a5}{Panel\+Control\+\_\+init} (void)
+\item 
+void \hyperlink{_panel_control_8c_a9cca035778989fdd5e4651c52a813c8b}{Panel\+Control\+\_\+update} (const \hyperlink{struct_cube_control_data__t}{p\+Cube\+Control\+Data\+\_\+t} \+\_\+p\+Cube\+Control\+Data, const \hyperlink{struct_row_data__t}{p\+Cube\+Data\+\_\+t} \+\_\+p\+Cube\+Data, const uint8\+\_\+t \+\_\+layer, const \hyperlink{_cube_control_data_8h_a7c161caaf8c4faf47d07899aeb79d25d}{Panels\+\_\+t} \+\_\+panel, const uint8\+\_\+t \+\_\+bam\+Round)
+\item 
+void \hyperlink{_panel_control_8c_a7b7be44baa16fe021aa42b1eba9406aa}{Panel\+Control\+\_\+all\+Off} (void)
+\item 
+void \hyperlink{_panel_control_8c_a2a56611f2abac08f8558ddeb1b19cad8}{Panel\+Control\+\_\+all\+On} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls a single Panel\+Control P\+C\+B. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_panel_control_8c_aef253c0667beeb546a7eff1cf564e3a5}{}\index{Panel\+Control.\+c@{Panel\+Control.\+c}!Panel\+Control\+\_\+init@{Panel\+Control\+\_\+init}}
+\index{Panel\+Control\+\_\+init@{Panel\+Control\+\_\+init}!Panel\+Control.\+c@{Panel\+Control.\+c}}
+\subsubsection[{Panel\+Control\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Panel\+Control\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_panel_control_8c_aef253c0667beeb546a7eff1cf564e3a5}
+Initialize everything needed for a Panel\+Control P\+C\+B.
+
+\begin{DoxyNote}{Note}
+This initializes a L\+E\+D Sink Driver using \hyperlink{_led_driver_8c_ab6acead9b284609b765eeeffd49ef71c}{Led\+Driver\+\_\+init}. 
+\end{DoxyNote}
+
+
+Definition at line 29 of file Panel\+Control.\+c.
+
+\hypertarget{_panel_control_8c_a9cca035778989fdd5e4651c52a813c8b}{}\index{Panel\+Control.\+c@{Panel\+Control.\+c}!Panel\+Control\+\_\+update@{Panel\+Control\+\_\+update}}
+\index{Panel\+Control\+\_\+update@{Panel\+Control\+\_\+update}!Panel\+Control.\+c@{Panel\+Control.\+c}}
+\subsubsection[{Panel\+Control\+\_\+update(const p\+Cube\+Control\+Data\+\_\+t \+\_\+p\+Cube\+Control\+Data, const p\+Cube\+Data\+\_\+t \+\_\+p\+Cube\+Data, const uint8\+\_\+t \+\_\+layer, const Panels\+\_\+t \+\_\+panel, const uint8\+\_\+t \+\_\+bam\+Round)}]{\setlength{\rightskip}{0pt plus 5cm}void Panel\+Control\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const {\bf p\+Cube\+Control\+Data\+\_\+t}}]{\+\_\+p\+Cube\+Control\+Data, }
+\item[{const {\bf p\+Cube\+Data\+\_\+t}}]{\+\_\+p\+Cube\+Data, }
+\item[{const uint8\+\_\+t}]{\+\_\+layer, }
+\item[{const {\bf Panels\+\_\+t}}]{\+\_\+panel, }
+\item[{const uint8\+\_\+t}]{\+\_\+bam\+Round}
+\end{DoxyParamCaption}
+)}\label{_panel_control_8c_a9cca035778989fdd5e4651c52a813c8b}
+Update the outputs of a Panel\+Control P\+C\+B by calling \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update} three times.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+p\+Cube\+Control\+Data} & Pointer to \hyperlink{_cube_control_data_8c_ab0f2a4842fb487bd7dee12e22b81b5b3}{Cube\+Control\+Data} structure. \\
+\hline
+{\em \+\_\+p\+Cube\+Data\mbox{[}$\,$\mbox{]}} & Pointer to the first element of a Cube\+Data structure array. \\
+\hline
+{\em \+\_\+layer} & The layer to update. \\
+\hline
+{\em \+\_\+panel} & The panel to update. \\
+\hline
+{\em \+\_\+bam\+Round} & The B\+A\+M-\/round to update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Panel\+Control.\+c.
+
+\hypertarget{_panel_control_8c_a7b7be44baa16fe021aa42b1eba9406aa}{}\index{Panel\+Control.\+c@{Panel\+Control.\+c}!Panel\+Control\+\_\+all\+Off@{Panel\+Control\+\_\+all\+Off}}
+\index{Panel\+Control\+\_\+all\+Off@{Panel\+Control\+\_\+all\+Off}!Panel\+Control.\+c@{Panel\+Control.\+c}}
+\subsubsection[{Panel\+Control\+\_\+all\+Off(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Panel\+Control\+\_\+all\+Off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_panel_control_8c_a7b7be44baa16fe021aa42b1eba9406aa}
+Turn all the L\+E\+Ds of a Panel\+Control P\+C\+B off using \hyperlink{_led_driver_8c_a770bac51c657f55727e019d0a32cfa3f}{Led\+Driver\+\_\+all\+Off}. 
+
+Definition at line 75 of file Panel\+Control.\+c.
+
+\hypertarget{_panel_control_8c_a2a56611f2abac08f8558ddeb1b19cad8}{}\index{Panel\+Control.\+c@{Panel\+Control.\+c}!Panel\+Control\+\_\+all\+On@{Panel\+Control\+\_\+all\+On}}
+\index{Panel\+Control\+\_\+all\+On@{Panel\+Control\+\_\+all\+On}!Panel\+Control.\+c@{Panel\+Control.\+c}}
+\subsubsection[{Panel\+Control\+\_\+all\+On(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Panel\+Control\+\_\+all\+On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_panel_control_8c_a2a56611f2abac08f8558ddeb1b19cad8}
+Turn all the L\+E\+Ds of a Panel\+Control P\+C\+B on using \hyperlink{_led_driver_8c_a229365e5de1b33af936f9d1511748f78}{Led\+Driver\+\_\+all\+On}. 
+
+Definition at line 87 of file Panel\+Control.\+c.
+

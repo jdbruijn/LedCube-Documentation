@@ -1,0 +1,83 @@
+\hypertarget{_led_driver_8c}{}\section{source/\+Cube\+Control/src/\+Led\+Driver.c File Reference}
+\label{_led_driver_8c}\index{source/\+Cube\+Control/src/\+Led\+Driver.\+c@{source/\+Cube\+Control/src/\+Led\+Driver.\+c}}
+
+
+Controls a single L\+E\+D Sink Driver.  
+
+
+{\ttfamily \#include \char`\"{}Led\+Driver.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_led_driver_8c_ab6acead9b284609b765eeeffd49ef71c}{Led\+Driver\+\_\+init} (void)
+\item 
+void \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update} (const uint16\+\_\+t \+\_\+led\+Data)
+\item 
+void \hyperlink{_led_driver_8c_a770bac51c657f55727e019d0a32cfa3f}{Led\+Driver\+\_\+all\+Off} (void)
+\item 
+void \hyperlink{_led_driver_8c_a229365e5de1b33af936f9d1511748f78}{Led\+Driver\+\_\+all\+On} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls a single L\+E\+D Sink Driver. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_led_driver_8c_ab6acead9b284609b765eeeffd49ef71c}{}\index{Led\+Driver.\+c@{Led\+Driver.\+c}!Led\+Driver\+\_\+init@{Led\+Driver\+\_\+init}}
+\index{Led\+Driver\+\_\+init@{Led\+Driver\+\_\+init}!Led\+Driver.\+c@{Led\+Driver.\+c}}
+\subsubsection[{Led\+Driver\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8c_ab6acead9b284609b765eeeffd49ef71c}
+Initialize a L\+E\+D Sink Driver by configuring the S\+P\+Ix peripheral.
+
+\begin{DoxyNote}{Note}
+This function should be called only once because it sets the S\+P\+Ix peripheral for all the L\+E\+D Sink Drivers since they are in a bus. 
+\end{DoxyNote}
+
+
+Definition at line 29 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{}\index{Led\+Driver.\+c@{Led\+Driver.\+c}!Led\+Driver\+\_\+update@{Led\+Driver\+\_\+update}}
+\index{Led\+Driver\+\_\+update@{Led\+Driver\+\_\+update}!Led\+Driver.\+c@{Led\+Driver.\+c}}
+\subsubsection[{Led\+Driver\+\_\+update(const uint16\+\_\+t \+\_\+led\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const uint16\+\_\+t}]{\+\_\+led\+Data}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}
+Update the output of a L\+E\+D Sink Driver using the S\+P\+Ix peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+led\+Data} & 16-\/bit variable to send to a L\+E\+D Sink Driver. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8c_a770bac51c657f55727e019d0a32cfa3f}{}\index{Led\+Driver.\+c@{Led\+Driver.\+c}!Led\+Driver\+\_\+all\+Off@{Led\+Driver\+\_\+all\+Off}}
+\index{Led\+Driver\+\_\+all\+Off@{Led\+Driver\+\_\+all\+Off}!Led\+Driver.\+c@{Led\+Driver.\+c}}
+\subsubsection[{Led\+Driver\+\_\+all\+Off(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+all\+Off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8c_a770bac51c657f55727e019d0a32cfa3f}
+Turn all the L\+E\+Ds of a L\+E\+D Sink Driver off using \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update}. 
+
+Definition at line 102 of file Led\+Driver.\+c.
+
+\hypertarget{_led_driver_8c_a229365e5de1b33af936f9d1511748f78}{}\index{Led\+Driver.\+c@{Led\+Driver.\+c}!Led\+Driver\+\_\+all\+On@{Led\+Driver\+\_\+all\+On}}
+\index{Led\+Driver\+\_\+all\+On@{Led\+Driver\+\_\+all\+On}!Led\+Driver.\+c@{Led\+Driver.\+c}}
+\subsubsection[{Led\+Driver\+\_\+all\+On(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Driver\+\_\+all\+On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_led_driver_8c_a229365e5de1b33af936f9d1511748f78}
+Turn all the L\+E\+Ds of a L\+E\+D Sink Driver off using \hyperlink{_led_driver_8c_a5e8f1b876929be89fbd493f4df041895}{Led\+Driver\+\_\+update}. 
+
+Definition at line 111 of file Led\+Driver.\+c.
+
