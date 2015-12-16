@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['print_5fdesc',['PRINT_DESC',['../get_p_i_c_configuration_bits_8h.html#a522aa29295ebb2aa65ea06b325947f26',1,'getPICConfigurationBits.h']]],
-  ['print_5fresult',['PRINT_RESULT',['../get_p_i_c_configuration_bits_8h.html#a2237654922519f9d189b65b6ccad362e',1,'getPICConfigurationBits.h']]],
-  ['printf',['PRINTF',['../get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a',1,'getPICConfigurationBits.h']]]
+  ['n_5fleddrivers',['N_LEDDRIVERS',['../_panel_control_8h.html#a899966c4db3e79ca2068b92118f78c03',1,'PanelControl.h']]],
+  ['n_5fpanelcontrols',['N_PANELCONTROLS',['../_layer_control_8h.html#a06153a40508dfb2456f40e344e145c08',1,'LayerControl.h']]]
 ];

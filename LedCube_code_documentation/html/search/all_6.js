@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['n_5fleddrivers',['N_LEDDRIVERS',['../_panel_control_8h.html#a899966c4db3e79ca2068b92118f78c03',1,'PanelControl.h']]],
-  ['n_5fpanelcontrols',['N_PANELCONTROLS',['../_layer_control_8h.html#a06153a40508dfb2456f40e344e145c08',1,'LayerControl.h']]]
+  ['haveoppositesigns',['haveOppositeSigns',['../_bit_operations_8h.html#a5a16a55c4150b94d46a15bb4bdb16ab8',1,'haveOppositeSigns(int32_t const _x, int32_t const _y):&#160;BitOperations.c'],['../_bit_operations_8c.html#a5a16a55c4150b94d46a15bb4bdb16ab8',1,'haveOppositeSigns(int32_t const _x, int32_t const _y):&#160;BitOperations.c']]]
 ];

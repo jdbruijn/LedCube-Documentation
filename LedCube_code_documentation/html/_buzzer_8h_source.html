@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Buzzer.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<a href="_buzzer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Begin of file Buzzer.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Author: jdebruijn</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Created on July 26, 2015, 2:54 PM</span></div>
@@ -109,77 +109,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Copyright (c) 2015 Jeroen de Bruijn &lt;vidavidorra@gmail.com&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * </span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This file is part of LedCube which is released under The MIT License (MIT).</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE.md&quot; or go to</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE&quot; or go to</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * https://opensource.org/licenses/MIT</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Description:</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  Controls a buzzer using the Output Compare peripheral.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef BUZZER_H</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define BUZZER_H</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * Switches</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define BUZZER_ENABLE_SELF_TEST_NO</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Includes</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;xc.h&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;Debug.h&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;Delay.h&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;MyAssert.h&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * Defines</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define T2_TCKPS                8</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define BUZZER_MIN_FREQUENCY    40      // Hz</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define BUZZER_MAX_FREQUENCY    16000   // Hz</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define BUZZER_MIN_TIME         10      // ms</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define BUZZER_MAX_TIME         DELAY_MAX_MS</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef BUZZER_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define BUZZER_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * Switches</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define BUZZER_ENABLE_SELF_TEST_NO</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * Includes</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;xc.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_debug_8h.html">Debug.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_delay_8h.html">Delay.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_my_assert_8h.html">MyAssert.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * Defines</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="_buzzer_8h.html#a83a0b28f5714c9323dbb9c5db44c1820">   44</a></span>&#160;<span class="preprocessor">#define T2_TCKPS                8       </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_buzzer_8h.html#afdb978502460ffda1bda4f9a0d9db24e">   45</a></span>&#160;<span class="preprocessor">#define BUZZER_MIN_FREQUENCY    40      </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_buzzer_8h.html#a6009a054be83037a32067d8024113483">   46</a></span>&#160;<span class="preprocessor">#define BUZZER_MAX_FREQUENCY    16000   </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_buzzer_8h.html#ab6579044a020992e3434c6cedb70197f">   47</a></span>&#160;<span class="preprocessor">#define BUZZER_MIN_TIME         10      </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_buzzer_8h.html#a08068b81ca2f024ea304a38f72bf2bef">   49</a></span>&#160;<span class="preprocessor">#define BUZZER_MAX_TIME         DELAY_MAX_MS</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> * Function prototypes</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;Buzzer_init( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;Buzzer_beep( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;Buzzer_shortBeep( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;Buzzer_set( uint16_t _frequency, uint32_t _time );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifdef BUZZER_ENABLE_SELF_TEST_YES</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;Buzzer_selfTest( <span class="keywordtype">void</span> ); </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BUZZER_ENABLE_SELF_TEST_YES */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* BUZZER_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">/* End of file Buzzer.h */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="_buzzer_8h.html#a63b14dc978d082a9bf2f230083c94e0c">Buzzer_init</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="_buzzer_8h.html#a218af7115d48a5574f7463671ee2d947">Buzzer_beep</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="_buzzer_8h.html#a62f895374e11d0f54dbecb4df0d1a2a9">Buzzer_shortBeep</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="_buzzer_8h.html#a537dbbd99d6dc1681c7c781b8717cd3c">Buzzer_set</a>( uint16_t _frequency, uint32_t _time );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#ifdef BUZZER_ENABLE_SELF_TEST_YES</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;Buzzer_selfTest( <span class="keywordtype">void</span> ); </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BUZZER_ENABLE_SELF_TEST_YES */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* BUZZER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/* End of file Buzzer.h */</span></div>
+<div class="ttc" id="_buzzer_8h_html_a218af7115d48a5574f7463671ee2d947"><div class="ttname"><a href="_buzzer_8h.html#a218af7115d48a5574f7463671ee2d947">Buzzer_beep</a></div><div class="ttdeci">void Buzzer_beep(void)</div><div class="ttdoc">Create a short (250 ms) beep with a frequency of 4 kHz. </div><div class="ttdef"><b>Definition:</b> <a href="_buzzer_8c_source.html#l00058">Buzzer.c:58</a></div></div>
+<div class="ttc" id="_my_assert_8h_html"><div class="ttname"><a href="_my_assert_8h.html">MyAssert.h</a></div><div class="ttdoc">Macros to evaluate an assertion and wrapper to print the output to the standard device. </div></div>
+<div class="ttc" id="_buzzer_8h_html_a63b14dc978d082a9bf2f230083c94e0c"><div class="ttname"><a href="_buzzer_8h.html#a63b14dc978d082a9bf2f230083c94e0c">Buzzer_init</a></div><div class="ttdeci">void Buzzer_init(void)</div><div class="ttdoc">Initialize the on-board buzzer. </div><div class="ttdef"><b>Definition:</b> <a href="_buzzer_8c_source.html#l00029">Buzzer.c:29</a></div></div>
+<div class="ttc" id="_buzzer_8h_html_a537dbbd99d6dc1681c7c781b8717cd3c"><div class="ttname"><a href="_buzzer_8h.html#a537dbbd99d6dc1681c7c781b8717cd3c">Buzzer_set</a></div><div class="ttdeci">void Buzzer_set(uint16_t _frequency, uint32_t _time)</div><div class="ttdoc">Make a sound with adjustable frequency and duration time. </div><div class="ttdef"><b>Definition:</b> <a href="_buzzer_8c_source.html#l00082">Buzzer.c:82</a></div></div>
+<div class="ttc" id="_delay_8h_html"><div class="ttname"><a href="_delay_8h.html">Delay.h</a></div><div class="ttdoc">Delay macros and wrappers to the delay macros in libpic32.h. </div></div>
+<div class="ttc" id="_buzzer_8h_html_a62f895374e11d0f54dbecb4df0d1a2a9"><div class="ttname"><a href="_buzzer_8h.html#a62f895374e11d0f54dbecb4df0d1a2a9">Buzzer_shortBeep</a></div><div class="ttdeci">void Buzzer_shortBeep(void)</div><div class="ttdoc">Create a very short (50 ms) beep with a frequency of 4 kHz. </div><div class="ttdef"><b>Definition:</b> <a href="_buzzer_8c_source.html#l00070">Buzzer.c:70</a></div></div>
+<div class="ttc" id="_debug_8h_html"><div class="ttname"><a href="_debug_8h.html">Debug.h</a></div><div class="ttdoc">Macros for printing debugging messages. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

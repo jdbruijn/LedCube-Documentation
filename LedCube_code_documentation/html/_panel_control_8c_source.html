@@ -214,9 +214,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        </div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="_panel_control_8c.html#a9cca035778989fdd5e4651c52a813c8b">PanelControl_update</a>(pPanelData);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        Delay_ms(1000);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a>(1000);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span>( 0 == (led +1) % 8 ) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            Delay_ms(2000);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <a class="code" href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a>(2000);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        panelData &lt;&lt;= 1;    <span class="comment">// Prepare the panelData for the next iteration.</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
@@ -233,6 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="struct_row_data__t_html"><div class="ttname"><a href="struct_row_data__t.html">RowData_t</a></div><div class="ttdoc">Structure of the RGB values of a single row of LEDs. </div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00094">CubeControlData.h:94</a></div></div>
 <div class="ttc" id="_led_driver_8h_html_a770bac51c657f55727e019d0a32cfa3f"><div class="ttname"><a href="_led_driver_8h.html#a770bac51c657f55727e019d0a32cfa3f">LedDriver_allOff</a></div><div class="ttdeci">void LedDriver_allOff(void)</div><div class="ttdef"><b>Definition:</b> <a href="_led_driver_8c_source.html#l00102">LedDriver.c:102</a></div></div>
 <div class="ttc" id="_led_driver_8h_html_a5e8f1b876929be89fbd493f4df041895"><div class="ttname"><a href="_led_driver_8h.html#a5e8f1b876929be89fbd493f4df041895">LedDriver_update</a></div><div class="ttdeci">void LedDriver_update(const uint16_t _ledData)</div><div class="ttdef"><b>Definition:</b> <a href="_led_driver_8c_source.html#l00089">LedDriver.c:89</a></div></div>
+<div class="ttc" id="_delay_8h_html_a36292b8e8931575a52f4184b89fd1018"><div class="ttname"><a href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a></div><div class="ttdeci">#define Delay_ms(t)</div><div class="ttdoc">Delay a certain number of milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="_delay_8h_source.html#l00071">Delay.h:71</a></div></div>
 <div class="ttc" id="_panel_control_8h_html_a899966c4db3e79ca2068b92118f78c03"><div class="ttname"><a href="_panel_control_8h.html#a899966c4db3e79ca2068b92118f78c03">N_LEDDRIVERS</a></div><div class="ttdeci">#define N_LEDDRIVERS</div><div class="ttdef"><b>Definition:</b> <a href="_panel_control_8h_source.html#l00049">PanelControl.h:49</a></div></div>
 <div class="ttc" id="_led_driver_8h_html_a229365e5de1b33af936f9d1511748f78"><div class="ttname"><a href="_led_driver_8h.html#a229365e5de1b33af936f9d1511748f78">LedDriver_allOn</a></div><div class="ttdeci">void LedDriver_allOn(void)</div><div class="ttdef"><b>Definition:</b> <a href="_led_driver_8c_source.html#l00111">LedDriver.c:111</a></div></div>
 <div class="ttc" id="struct_cube_control_data__t_html_a945206c33a16ec4249c30e2b698dccff"><div class="ttname"><a href="struct_cube_control_data__t.html#a945206c33a16ec4249c30e2b698dccff">CubeControlData_t::BamRoundShift</a></div><div class="ttdeci">uint8_t BamRoundShift[CUBEDATA_N_BAM_BITS]</div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00134">CubeControlData.h:134</a></div></div>
@@ -247,7 +248,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

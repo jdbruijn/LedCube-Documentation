@@ -135,21 +135,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;xc.h&gt;</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;Uart.h&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_uart_8h.html">Uart.h</a>&quot;</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * Defines</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifndef PRINTF</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">   61</a></span>&#160;<span class="preprocessor"># define PRINTF Uart1_printf</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#ifdef __CONFIG1_BASE</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"># define _CONFIG1_BASE_ADDRESS __CONFIG1_BASE</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"># define _CONFIG1_BASE_ADDRESS 0x000000 </span><span class="comment">/* Dummy base address */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">   62</a></span>&#160;<span class="preprocessor"># define PRINTF Uart1_printf</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __CONFIG1_BASE</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"># define _CONFIG1_BASE_ADDRESS __CONFIG1_BASE</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"># error &quot;__CONFIG1_BASE is not defined. Enter the base address of Flash Configuration Word 1 manually.&quot;</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"># error &quot;For the Configuration Word Addresses @see PIC24FJ64GA004 Family Data Sheet.pdf TABLE 24-1.&quot;</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -158,127 +157,126 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"># define _CONFIG2_BASE_ADDRESS __CONFIG2_BASE</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"># define _CONFIG2_BASE_ADDRESS 0x000000 </span><span class="comment">/* Dummy base address */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"># error &quot;__CONFIG2_BASE is not defined. Enter the base address of Flash Configuration Word 2 manually.&quot;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"># error &quot;For the Configuration Word Addresses @see PIC24FJ64GA004 Family Data Sheet.pdf TABLE 24-1.&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define _CONFIG2_BASE_ADDRESS __CONFIG2_BASE</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/********** Result descriptions for Flash Configuration Word 1 ************/</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define JTAGEN_DESC &quot;JTAGEN: JTAG Port Enable bit&quot;</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define JTAGEN_1 &quot;[JTAGEN_ON] JTAG port is enabled&quot;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define JTAGEN_0 &quot;[JTAGEN_OFF] JTAG port is disabled&quot;</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define GCP_DESC &quot;GCP: General Segment Program Memory Code Protection bit&quot;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define GCP_1 &quot;[GCP_OFF] Code protection is disabled&quot;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define GCP_0 &quot;[GCP_ON] Code protection is enabled for the entire program memory space&quot;</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define GWRP_DESC &quot;GWRP: General Segment Code Flash Write Protection bit&quot;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define GWRP_1 &quot;[GWRP_OFF] Writes to program memory are allowed&quot;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define GWRP_0 &quot;[GWRP_ON] Writes to program memory are disabled&quot;</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define BKBUG_DESC &quot;!DEBUG: Background Debugger Enable bit&quot;</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define BKBUG_1 &quot;[BKBUG_OFF] Device resets into Operational mode&quot;</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define BKBUG_0 &quot;[BKBUG_ON] Device resets into Debug mode&quot;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define ICS_DESC &quot;ICS&lt;1:0&gt;: Emulator Pin Placement Select bits&quot;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define ICS_11 &quot;[ICS_PGx1] Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1&quot;</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define ICS_10 &quot;[ICS_PGx2] Emulator EMUC2/EMUD2 pins are shared with PGC2/PGD2&quot;</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define ICS_01 &quot;[ICS_PGx3] Emulator EMUC3/EMUD3 pins are shared with PGC3/PGD3&quot;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define ICS_00 &quot;Reserved; do not use&quot;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define FWDTEN_DESC &quot;FWDTEN: Watchdog Timer Enable bit&quot;</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define FWDTEN_1 &quot;[FWDTEN_ON] Watchdog Timer is enabled&quot;</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define FWDTEN_0 &quot;[FWDTEN_OFF] Watchdog Timer is disabled&quot;</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define WINDIS_DESC &quot;WINDIS: Windowed Watchdog Timer Disable bit&quot;</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define WINDIS_1 &quot;[WINDIS_ON] Standard Watchdog Timer is enabled&quot;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define WINDIS_0 &quot;[WINDIS_OFF] Windowed Watchdog Timer is enabled; FWDTEN must be &#39;1&#39;&quot;</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define FWPSA_DESC &quot;FWPSA: WDT Prescaler Ratio Select bit&quot;</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define FWPSA_1 &quot;[FWPSA_PR128] Prescaler ratio of 1:128&quot;</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define FWPSA_0 &quot;[FWPSA_PR32] Prescaler ratio of 1:32&quot;</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define WDTPS_DESC &quot;WDTPS&lt;3:0&gt;: Watchdog Timer Postscaler Select bits&quot;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#define WDTPS_1111 &quot;[WDTPS_PS32768] 1:32768&quot;</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define WDTPS_1110 &quot;[WDTPS_16384] 1:16384&quot;</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define WDTPS_1101 &quot;[WDTPS_8192] 1:8192&quot;</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define WDTPS_1100 &quot;[WDTPS_4096] 1:4096&quot;</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define WDTPS_1011 &quot;[WDTPS_2048] 1:2048&quot;</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#define WDTPS_1010 &quot;[WDTPS_1024] 1:1024&quot;</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#define WDTPS_1001 &quot;[WDTPS_512] 1:512&quot;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define WDTPS_1000 &quot;[WDTPS_256] 1:256&quot;</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#define WDTPS_0111 &quot;[WDTPS_128] 1:128&quot;</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define WDTPS_0110 &quot;[WDTPS_64] 1:64&quot;</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define WDTPS_0101 &quot;[WDTPS_32] 1:32&quot;</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#define WDTPS_0100 &quot;[WDTPS_16] 1:16&quot;</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#define WDTPS_0011 &quot;[WDTPS_8] 1:8&quot;</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define WDTPS_0010 &quot;[WDTPS_4] 1:4&quot;</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#define WDTPS_0001 &quot;[WDTPS_2] 1:2&quot;</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#define WDTPS_0000 &quot;[WDTPS_1] 1:1&quot;</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">/********** Result descriptions for Flash Configuration Word 2 ************/</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#define IESO_DESC &quot;IESO: Internal External Switchover bit&quot;</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#define IESO_1 &quot;[IESO_ON] IESO mode (Two-Speed Start-up) is enabled&quot;</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#define IESO_0 &quot;[IESO_OFF] IESO mode (Two-Speed Start-up) is disabled&quot;</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#define WUTSEL_DESC &quot;WUTSEL&lt;1:0&gt;: Voltage Regulator Standby Mode Wake-up Time Select bits&quot;</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#define WUTSEL_11 &quot;[WUTSEL_LEG] Default regulator start-up time is used&quot;</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#define WUTSEL_01 &quot;[WUTSEL_FST] Fast regulator start-up time is used&quot;</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#define WUTSEL_x0 &quot;Reserved; do not use&quot;</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#define SOSCSEL_DESC &quot;SOSCSEL&lt;1:0&gt;: Secondary Oscillator Power Mode Select bits&quot;</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#define SOSCSEL_11 &quot;[SOSCSEL_SOSC] Default (High Drive Strength) mode&quot;</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#define SOSCSEL_01 &quot;[SOSCSEL_LPSOSC] Low-Power (Low Drive Strength) mode&quot;</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#define SOSCSEL_x0 &quot;Reserved; do not use&quot;</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#define FNOSC_DESC &quot;FNOSC&lt;2:0&gt;: Initial Oscillator Select bits&quot;</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#define FNOSC_111 &quot;[FNOSC_FRCDIV] Fast RC Oscillator with Postscaler (FRCDIV)&quot;</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#define FNOSC_110 &quot;Reserved&quot;</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#define FNOSC_101 &quot;[FNOSC_LPRC] Low-Power RC Oscillator (LPRC)&quot;</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#define FNOSC_100 &quot;[FNOSC_SOSC] Secondary Oscillator (SOSC)&quot;</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#define FNOSC_011 &quot;[FNOSC_PRIPLL] Primary Oscillator with PLL module (XTPLL, HSPLL, ECPLL)&quot;</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#define FNOSC_010 &quot;[FNOSC_PRI] Primary Oscillator (XT, HS, EC)&quot;</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#define FNOSC_001 &quot;[FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)&quot;</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define FNOSC_000 &quot;[FNOSC_FRC] Fast RC Oscillator (FRC)&quot;</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#define FCKSM_DESC &quot;FCKSM&lt;1:0&gt;: Clock Switching and Fail-Safe Clock Monitor Configuration bits&quot;</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#define FCKSM_1x &quot;[FCKSM_CSDCMD] Clock switching and Fail-Safe Clock Monitor are disabled&quot;</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#define FCKSM_01 &quot;[FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled&quot;</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#define FCKSM_00 &quot;[FCKSM_CSECME] Clock switching is enabled, Fail-Safe Clock Monitor is enabled&quot;</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#define OSCIOFCN_DESC &quot;OSCIOFCN: OSCO Pin Configuration bit:&quot;</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#define OSCIOFCN_1 &quot;[OSCIOFNC_OFF] OSCO/CLKO/RA3 functions as CLKO (FOSC/2)&quot;    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 11 or 00: */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#define OSCIOFCN_0 &quot;[OSCIOFNC_ON] OSCO/CLKO/RA3 functions as port I/O (RA3)&quot;    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 11 or 00: */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#define OSCIOFCN_x &quot;OSCIOFCN has no effect on OSCO/CLKO/RA3&quot;                    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 10 or 01: */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#define IOL1WAY_DESC &quot;IOL1WAY: IOLOCK One-Way Set Enable bit&quot;</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#define IOL1WAY_1 &quot;[IOL1WAY_ON] The IOLOCK (OSCCON&lt;6&gt;) bit can be set once, provided the unlock sequence has been completed. Once set, the Peripheral Pin Select registers cannot be written to a second time.&quot;</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#define IOL1WAY_0 &quot;[IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed, provided the unlock sequence has been completed&quot;</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#define I2C1SEL_DESC &quot;I2C1SEL: I2C1 Pin Select bit&quot;</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#define I2C1SEL_1 &quot;[I2C1SEL_PRI] Use default SCL1/SDA1 pins&quot;</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#define I2C1SEL_0 &quot;[I2C1SEL_SEC] Use alternate SCL1/SDA1 pins&quot;</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define POSCMD_DESC &quot;POSCMD&lt;1:0:&gt; Primary Oscillator Configuration bits&quot;</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#define POSCMD_11 &quot;[POSCMOD_NONE] Primary oscillator is disabled&quot;</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#define POSCMD_10 &quot;[POSCMOD_HS] HS Oscillator mode is selected&quot;</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#define POSCMD_01 &quot;[POSCMOD_XT] XT Oscillator mode is selected&quot;</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#define POSCMD_00 &quot;[POSCMOD_EC] EC Oscillator mode is selected&quot;</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"> * Macros</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#ifndef UNUSED</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a86d500a34c624c2cae56bc25a31b12f3">  174</a></span>&#160;<span class="preprocessor"># define UNUSED(x) (void)(x)</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"># error &quot;__CONFIG2_BASE is not defined. Enter the base address of Flash Configuration Word 2 manually.&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"># error &quot;For the Configuration Word Addresses @see PIC24FJ64GA004 Family Data Sheet.pdf TABLE 24-1.&quot;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/********** Result descriptions for Flash Configuration Word 1 ************/</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define JTAGEN_DESC &quot;JTAGEN: JTAG Port Enable bit&quot;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#define JTAGEN_1 &quot;[JTAGEN_ON] JTAG port is enabled&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define JTAGEN_0 &quot;[JTAGEN_OFF] JTAG port is disabled&quot;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define GCP_DESC &quot;GCP: General Segment Program Memory Code Protection bit&quot;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define GCP_1 &quot;[GCP_OFF] Code protection is disabled&quot;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define GCP_0 &quot;[GCP_ON] Code protection is enabled for the entire program memory space&quot;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define GWRP_DESC &quot;GWRP: General Segment Code Flash Write Protection bit&quot;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define GWRP_1 &quot;[GWRP_OFF] Writes to program memory are allowed&quot;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define GWRP_0 &quot;[GWRP_ON] Writes to program memory are disabled&quot;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define BKBUG_DESC &quot;!DEBUG: Background Debugger Enable bit&quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define BKBUG_1 &quot;[BKBUG_OFF] Device resets into Operational mode&quot;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define BKBUG_0 &quot;[BKBUG_ON] Device resets into Debug mode&quot;</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define ICS_DESC &quot;ICS&lt;1:0&gt;: Emulator Pin Placement Select bits&quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define ICS_11 &quot;[ICS_PGx1] Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define ICS_10 &quot;[ICS_PGx2] Emulator EMUC2/EMUD2 pins are shared with PGC2/PGD2&quot;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define ICS_01 &quot;[ICS_PGx3] Emulator EMUC3/EMUD3 pins are shared with PGC3/PGD3&quot;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define ICS_00 &quot;Reserved; do not use&quot;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define FWDTEN_DESC &quot;FWDTEN: Watchdog Timer Enable bit&quot;</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define FWDTEN_1 &quot;[FWDTEN_ON] Watchdog Timer is enabled&quot;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define FWDTEN_0 &quot;[FWDTEN_OFF] Watchdog Timer is disabled&quot;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define WINDIS_DESC &quot;WINDIS: Windowed Watchdog Timer Disable bit&quot;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define WINDIS_1 &quot;[WINDIS_ON] Standard Watchdog Timer is enabled&quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define WINDIS_0 &quot;[WINDIS_OFF] Windowed Watchdog Timer is enabled; FWDTEN must be &#39;1&#39;&quot;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define FWPSA_DESC &quot;FWPSA: WDT Prescaler Ratio Select bit&quot;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define FWPSA_1 &quot;[FWPSA_PR128] Prescaler ratio of 1:128&quot;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define FWPSA_0 &quot;[FWPSA_PR32] Prescaler ratio of 1:32&quot;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#define WDTPS_DESC &quot;WDTPS&lt;3:0&gt;: Watchdog Timer Postscaler Select bits&quot;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define WDTPS_1111 &quot;[WDTPS_PS32768] 1:32768&quot;</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#define WDTPS_1110 &quot;[WDTPS_16384] 1:16384&quot;</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#define WDTPS_1101 &quot;[WDTPS_8192] 1:8192&quot;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define WDTPS_1100 &quot;[WDTPS_4096] 1:4096&quot;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define WDTPS_1011 &quot;[WDTPS_2048] 1:2048&quot;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define WDTPS_1010 &quot;[WDTPS_1024] 1:1024&quot;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define WDTPS_1001 &quot;[WDTPS_512] 1:512&quot;</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#define WDTPS_1000 &quot;[WDTPS_256] 1:256&quot;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#define WDTPS_0111 &quot;[WDTPS_128] 1:128&quot;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define WDTPS_0110 &quot;[WDTPS_64] 1:64&quot;</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#define WDTPS_0101 &quot;[WDTPS_32] 1:32&quot;</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#define WDTPS_0100 &quot;[WDTPS_16] 1:16&quot;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define WDTPS_0011 &quot;[WDTPS_8] 1:8&quot;</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#define WDTPS_0010 &quot;[WDTPS_4] 1:4&quot;</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#define WDTPS_0001 &quot;[WDTPS_2] 1:2&quot;</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define WDTPS_0000 &quot;[WDTPS_1] 1:1&quot;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/********** Result descriptions for Flash Configuration Word 2 ************/</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define IESO_DESC &quot;IESO: Internal External Switchover bit&quot;</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define IESO_1 &quot;[IESO_ON] IESO mode (Two-Speed Start-up) is enabled&quot;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#define IESO_0 &quot;[IESO_OFF] IESO mode (Two-Speed Start-up) is disabled&quot;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#define WUTSEL_DESC &quot;WUTSEL&lt;1:0&gt;: Voltage Regulator Standby Mode Wake-up Time Select bits&quot;</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#define WUTSEL_11 &quot;[WUTSEL_LEG] Default regulator start-up time is used&quot;</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#define WUTSEL_01 &quot;[WUTSEL_FST] Fast regulator start-up time is used&quot;</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#define WUTSEL_x0 &quot;Reserved; do not use&quot;</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#define SOSCSEL_DESC &quot;SOSCSEL&lt;1:0&gt;: Secondary Oscillator Power Mode Select bits&quot;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#define SOSCSEL_11 &quot;[SOSCSEL_SOSC] Default (High Drive Strength) mode&quot;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#define SOSCSEL_01 &quot;[SOSCSEL_LPSOSC] Low-Power (Low Drive Strength) mode&quot;</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#define SOSCSEL_x0 &quot;Reserved; do not use&quot;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#define FNOSC_DESC &quot;FNOSC&lt;2:0&gt;: Initial Oscillator Select bits&quot;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#define FNOSC_111 &quot;[FNOSC_FRCDIV] Fast RC Oscillator with Postscaler (FRCDIV)&quot;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#define FNOSC_110 &quot;Reserved&quot;</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#define FNOSC_101 &quot;[FNOSC_LPRC] Low-Power RC Oscillator (LPRC)&quot;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#define FNOSC_100 &quot;[FNOSC_SOSC] Secondary Oscillator (SOSC)&quot;</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#define FNOSC_011 &quot;[FNOSC_PRIPLL] Primary Oscillator with PLL module (XTPLL, HSPLL, ECPLL)&quot;</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#define FNOSC_010 &quot;[FNOSC_PRI] Primary Oscillator (XT, HS, EC)&quot;</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#define FNOSC_001 &quot;[FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)&quot;</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#define FNOSC_000 &quot;[FNOSC_FRC] Fast RC Oscillator (FRC)&quot;</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#define FCKSM_DESC &quot;FCKSM&lt;1:0&gt;: Clock Switching and Fail-Safe Clock Monitor Configuration bits&quot;</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define FCKSM_1x &quot;[FCKSM_CSDCMD] Clock switching and Fail-Safe Clock Monitor are disabled&quot;</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#define FCKSM_01 &quot;[FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled&quot;</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#define FCKSM_00 &quot;[FCKSM_CSECME] Clock switching is enabled, Fail-Safe Clock Monitor is enabled&quot;</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#define OSCIOFCN_DESC &quot;OSCIOFCN: OSCO Pin Configuration bit:&quot;</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#define OSCIOFCN_1 &quot;[OSCIOFNC_OFF] OSCO/CLKO/RA3 functions as CLKO (FOSC/2)&quot;    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 11 or 00: */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#define OSCIOFCN_0 &quot;[OSCIOFNC_ON] OSCO/CLKO/RA3 functions as port I/O (RA3)&quot;    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 11 or 00: */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#define OSCIOFCN_x &quot;OSCIOFCN has no effect on OSCO/CLKO/RA3&quot;                    </span><span class="comment">/* If POSCMD&lt;1:0&gt; = 10 or 01: */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#define IOL1WAY_DESC &quot;IOL1WAY: IOLOCK One-Way Set Enable bit&quot;</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#define IOL1WAY_1 &quot;[IOL1WAY_ON] The IOLOCK (OSCCON&lt;6&gt;) bit can be set once, provided the unlock sequence has been completed. Once set, the Peripheral Pin Select registers cannot be written to a second time.&quot;</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#define IOL1WAY_0 &quot;[IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed, provided the unlock sequence has been completed&quot;</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#define I2C1SEL_DESC &quot;I2C1SEL: I2C1 Pin Select bit&quot;</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#define I2C1SEL_1 &quot;[I2C1SEL_PRI] Use default SCL1/SDA1 pins&quot;</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#define I2C1SEL_0 &quot;[I2C1SEL_SEC] Use alternate SCL1/SDA1 pins&quot;</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#define POSCMD_DESC &quot;POSCMD&lt;1:0:&gt; Primary Oscillator Configuration bits&quot;</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#define POSCMD_11 &quot;[POSCMOD_NONE] Primary oscillator is disabled&quot;</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define POSCMD_10 &quot;[POSCMOD_HS] HS Oscillator mode is selected&quot;</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#define POSCMD_01 &quot;[POSCMOD_XT] XT Oscillator mode is selected&quot;</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#define POSCMD_00 &quot;[POSCMOD_EC] EC Oscillator mode is selected&quot;</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"> * Function macros</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#ifndef UNUSED</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a86d500a34c624c2cae56bc25a31b12f3">  172</a></span>&#160;<span class="preprocessor"># define UNUSED(x) (void)(x)</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a522aa29295ebb2aa65ea06b325947f26">  175</a></span>&#160;<span class="preprocessor">#define PRINT_DESC(fmt, args...) PRINTF(&quot; &quot; fmt &quot;\n&quot;, ##args)</span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a522aa29295ebb2aa65ea06b325947f26">  177</a></span>&#160;<span class="preprocessor">#define PRINT_DESC(fmt, args...) PRINTF(&quot; &quot; fmt &quot;\n&quot;, ##args)</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a2237654922519f9d189b65b6ccad362e">  177</a></span>&#160;<span class="preprocessor">#define PRINT_RESULT(fmt, args...) PRINTF(&quot;  &quot; fmt &quot;\n&quot;, ##args)</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="get_p_i_c_configuration_bits_8h.html#a2237654922519f9d189b65b6ccad362e">  179</a></span>&#160;<span class="preprocessor">#define PRINT_RESULT(fmt, args...) PRINTF(&quot;  &quot; fmt &quot;\n&quot;, ##args)</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment"> * Function prototypes</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<a class="code" href="get_p_i_c_configuration_bits_8h.html#a6cb24dac747d04d782a4810170da12d8">getPICConfigBits</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GETPICCONFIGURATIONBITS_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">/* End of file getPICConfigurationBits.h */</span></div>
-<div class="ttc" id="get_p_i_c_configuration_bits_8h_html_a6cb24dac747d04d782a4810170da12d8"><div class="ttname"><a href="get_p_i_c_configuration_bits_8h.html#a6cb24dac747d04d782a4810170da12d8">getPICConfigBits</a></div><div class="ttdeci">void getPICConfigBits(void)</div><div class="ttdef"><b>Definition:</b> <a href="get_p_i_c_configuration_bits_8c_source.html#l00179">getPICConfigurationBits.c:179</a></div></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"> * Function prototypes</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<a class="code" href="get_p_i_c_configuration_bits_8h.html#a6cb24dac747d04d782a4810170da12d8">getPICConfigBits</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GETPICCONFIGURATIONBITS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">/* End of file getPICConfigurationBits.h */</span></div>
+<div class="ttc" id="get_p_i_c_configuration_bits_8h_html_a6cb24dac747d04d782a4810170da12d8"><div class="ttname"><a href="get_p_i_c_configuration_bits_8h.html#a6cb24dac747d04d782a4810170da12d8">getPICConfigBits</a></div><div class="ttdeci">void getPICConfigBits(void)</div><div class="ttdoc">Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user...</div><div class="ttdef"><b>Definition:</b> <a href="get_p_i_c_configuration_bits_8c_source.html#l00180">getPICConfigurationBits.c:180</a></div></div>
+<div class="ttc" id="_uart_8h_html"><div class="ttname"><a href="_uart_8h.html">Uart.h</a></div><div class="ttdoc">Controls the UART functionality of the device to send and receive data. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

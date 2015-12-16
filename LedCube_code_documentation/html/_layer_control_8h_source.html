@@ -133,10 +133,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;xc.h&gt;</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;System.h&quot;</span>             <span class="comment">// For calculating the SPI Clock (FCY)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;Debug.h&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_system_8h.html">System.h</a>&quot;</span>             <span class="comment">// For calculating the SPI Clock (FCY)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_debug_8h.html">Debug.h</a>&quot;</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_panel_control_8h.html">PanelControl.h</a>&quot;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;Interrupts.h&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_interrupts_8h.html">Interrupts.h</a>&quot;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cube_control_data_8h.html">CubeControlData.h</a>&quot;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/*******************************************************************************</span></div>
@@ -152,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * Macros</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define LayerControl_pulseLatch() Port_PulsePin(ANODE_LATCH)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define LayerControl_pulseLatch() PORT_PULSE_PIN(ANODE_LATCH)</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define SPI2_WaitTillTxBufferEmpty() while( SPI2STATbits.SPITBF == 1 )</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/*******************************************************************************</span></div>
@@ -179,18 +179,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* LAYERCONTROL_H */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/* End of file LayerControl.h */</span></div>
+<div class="ttc" id="_system_8h_html"><div class="ttname"><a href="_system_8h.html">System.h</a></div><div class="ttdoc">Sets the system settings. </div></div>
 <div class="ttc" id="struct_cube_control_data__t_html"><div class="ttname"><a href="struct_cube_control_data__t.html">CubeControlData_t</a></div><div class="ttdoc">Structure with Cube- and CubeControl data. </div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00109">CubeControlData.h:109</a></div></div>
 <div class="ttc" id="_layer_control_8h_html_a39e071a2e648a1a3623645f5ae2d5fb7"><div class="ttname"><a href="_layer_control_8h.html#a39e071a2e648a1a3623645f5ae2d5fb7">LayerControl_allOff</a></div><div class="ttdeci">void LayerControl_allOff(void)</div><div class="ttdef"><b>Definition:</b> <a href="_layer_control_8c_source.html#l00199">LayerControl.c:199</a></div></div>
 <div class="ttc" id="_cube_control_data_8h_html"><div class="ttname"><a href="_cube_control_data_8h.html">CubeControlData.h</a></div><div class="ttdoc">Provides Cube- and CubeControl data structures and functions. </div></div>
+<div class="ttc" id="_interrupts_8h_html"><div class="ttname"><a href="_interrupts_8h.html">Interrupts.h</a></div><div class="ttdoc">Definitions for the interrupt priority. </div></div>
 <div class="ttc" id="struct_row_data__t_html"><div class="ttname"><a href="struct_row_data__t.html">RowData_t</a></div><div class="ttdoc">Structure of the RGB values of a single row of LEDs. </div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00094">CubeControlData.h:94</a></div></div>
 <div class="ttc" id="_layer_control_8h_html_a7e2027e2584c2ecb5f5f232215f88a94"><div class="ttname"><a href="_layer_control_8h.html#a7e2027e2584c2ecb5f5f232215f88a94">LayerControl_init</a></div><div class="ttdeci">void LayerControl_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="_layer_control_8c_source.html#l00047">LayerControl.c:47</a></div></div>
 <div class="ttc" id="_panel_control_8h_html"><div class="ttname"><a href="_panel_control_8h.html">PanelControl.h</a></div><div class="ttdoc">Controls a single PanelControl PCB. </div></div>
 <div class="ttc" id="_layer_control_8h_html_a9229038b5c14777110aec37681baf904"><div class="ttname"><a href="_layer_control_8h.html#a9229038b5c14777110aec37681baf904">LayerControl_allOn</a></div><div class="ttdeci">void LayerControl_allOn(void)</div><div class="ttdef"><b>Definition:</b> <a href="_layer_control_8c_source.html#l00211">LayerControl.c:211</a></div></div>
 <div class="ttc" id="_layer_control_8h_html_a91da6a5e378f6eb44818fd12c4ef383f"><div class="ttname"><a href="_layer_control_8h.html#a91da6a5e378f6eb44818fd12c4ef383f">LayerControl_update</a></div><div class="ttdeci">void LayerControl_update(const pCubeControlData_t _pCubeControlData, const pCubeData_t _pCubeData, const uint8_t _layer, const uint8_t _bamRound)</div><div class="ttdef"><b>Definition:</b> <a href="_layer_control_8c_source.html#l00175">LayerControl.c:175</a></div></div>
+<div class="ttc" id="_debug_8h_html"><div class="ttname"><a href="_debug_8h.html">Debug.h</a></div><div class="ttdoc">Macros for printing debugging messages. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

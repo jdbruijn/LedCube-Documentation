@@ -1,0 +1,172 @@
+\hypertarget{_uart_8c}{}\section{source/\+Library\+Files/src/\+Uart.c File Reference}
+\label{_uart_8c}\index{source/\+Library\+Files/src/\+Uart.\+c@{source/\+Library\+Files/src/\+Uart.\+c}}
+
+
+Controls the U\+A\+R\+T functionality of the device to send and receive data.  
+
+
+{\ttfamily \#include \char`\"{}Uart.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_uart_8c_a11aa72726c0f75c360d4fc847a97ea4b}{Uart1\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the U\+A\+R\+Tx module with the given baud rate. \end{DoxyCompactList}\item 
+void \hyperlink{_uart_8c_a6572d5a9aefd29ac8be4b7190c35d93f}{Uart1\+\_\+putc} (const char \+\_\+c)
+\begin{DoxyCompactList}\small\item\em Send a single character (byte) using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
+void \hyperlink{_uart_8c_abf908913993328fbf02cfb6cc47bec0d}{Uart1\+\_\+puts} (const char $\ast$\+\_\+s)
+\begin{DoxyCompactList}\small\item\em Send a string using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
+void \hyperlink{_uart_8c_a505ab248378a9dd26d0860bde9fff28f}{Uart1\+\_\+put\+Num} (int32\+\_\+t \+\_\+num, uint8\+\_\+t \+\_\+base, bool \+\_\+print\+Base)
+\begin{DoxyCompactList}\small\item\em Send an integer number using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
+void \hyperlink{_uart_8c_a5f9da20b7570f093e17cc0997dc37ca6}{Uart1\+\_\+put\+Bits} (const uint64\+\_\+t \+\_\+v, uint8\+\_\+t \+\_\+n\+Bits)
+\begin{DoxyCompactList}\small\item\em Send a byte in binary form (with zero padding) using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
+\hypertarget{_uart_8c_a348b663f86a656f5ea991d496ff9b896}{}void \hyperlink{_uart_8c_a348b663f86a656f5ea991d496ff9b896}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((interrupt, auto\+\_\+psv))\label{_uart_8c_a348b663f86a656f5ea991d496ff9b896}
+
+\begin{DoxyCompactList}\small\item\em Interrupt for received U\+A\+R\+Tx data. Puts the data in a software F\+I\+F\+O buffer (\hyperlink{_uart_8c_a4ad2edb55b2802d02a508eb857448daf}{p\+Rx\+Buffer}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structsw_fifo_buffer__t}{sw\+Fifo\+Buffer\+\_\+t} \hyperlink{_uart_8c_a9536199d47c0dfeb8104921c41af9a35}{rx\+Buffer} = \{ 0,0,0, \{0\}, 0,0,0 \}
+\item 
+\hyperlink{structsw_fifo_buffer__t}{p\+Sw\+Fifo\+Buffer\+\_\+t} const \hyperlink{_uart_8c_a4ad2edb55b2802d02a508eb857448daf}{p\+Rx\+Buffer} = \&\hyperlink{_uart_8c_a9536199d47c0dfeb8104921c41af9a35}{rx\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls the U\+A\+R\+T functionality of the device to send and receive data. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_uart_8c_a11aa72726c0f75c360d4fc847a97ea4b}{}\index{Uart.\+c@{Uart.\+c}!Uart1\+\_\+init@{Uart1\+\_\+init}}
+\index{Uart1\+\_\+init@{Uart1\+\_\+init}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{Uart1\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_uart_8c_a11aa72726c0f75c360d4fc847a97ea4b}
+
+
+Initialize the U\+A\+R\+Tx module with the given baud rate. 
+
+\begin{DoxyNote}{Note}
+If debug is enabled this function should be called before initializing all other initialize functions. But obviously I/\+O ports should be configured fist. 
+
+Make sure the analog functionality of the R\+X pin, if it has an analog functionality, is disabled. 
+\end{DoxyNote}
+
+
+Definition at line 38 of file Uart.\+c.
+
+\hypertarget{_uart_8c_a6572d5a9aefd29ac8be4b7190c35d93f}{}\index{Uart.\+c@{Uart.\+c}!Uart1\+\_\+putc@{Uart1\+\_\+putc}}
+\index{Uart1\+\_\+putc@{Uart1\+\_\+putc}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{Uart1\+\_\+putc(const char \+\_\+c)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+putc (
+\begin{DoxyParamCaption}
+\item[{const char}]{\+\_\+c}
+\end{DoxyParamCaption}
+)}\label{_uart_8c_a6572d5a9aefd29ac8be4b7190c35d93f}
+
+
+Send a single character (byte) using the U\+A\+R\+Tx module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+c} & Character to send using U\+A\+R\+Tx. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 102 of file Uart.\+c.
+
+\hypertarget{_uart_8c_abf908913993328fbf02cfb6cc47bec0d}{}\index{Uart.\+c@{Uart.\+c}!Uart1\+\_\+puts@{Uart1\+\_\+puts}}
+\index{Uart1\+\_\+puts@{Uart1\+\_\+puts}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{Uart1\+\_\+puts(const char $\ast$\+\_\+s)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+puts (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{\+\_\+s}
+\end{DoxyParamCaption}
+)}\label{_uart_8c_abf908913993328fbf02cfb6cc47bec0d}
+
+
+Send a string using the U\+A\+R\+Tx module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+s} & String to send using U\+A\+R\+Tx. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file Uart.\+c.
+
+\hypertarget{_uart_8c_a505ab248378a9dd26d0860bde9fff28f}{}\index{Uart.\+c@{Uart.\+c}!Uart1\+\_\+put\+Num@{Uart1\+\_\+put\+Num}}
+\index{Uart1\+\_\+put\+Num@{Uart1\+\_\+put\+Num}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{Uart1\+\_\+put\+Num(int32\+\_\+t \+\_\+num, uint8\+\_\+t \+\_\+base, bool \+\_\+print\+Base)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+put\+Num (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{\+\_\+num, }
+\item[{uint8\+\_\+t}]{\+\_\+base, }
+\item[{bool}]{\+\_\+print\+Base}
+\end{DoxyParamCaption}
+)}\label{_uart_8c_a505ab248378a9dd26d0860bde9fff28f}
+
+
+Send an integer number using the U\+A\+R\+Tx module. 
+
+\begin{DoxyNote}{Note}
+The number must be within range of a 32-\/bit integer. Thus the lowest number is -\/2147483647 and the highest number is 2147483647. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num} & Number to send using U\+A\+R\+Tx. \\
+\hline
+{\em \+\_\+base} & The numeral system to use.~\newline
+\+\_\+base \&\#09 Description~\newline
+2 \&\#09 Binary (adds suffix \textquotesingle{}b\textquotesingle{} to the output)~\newline
+10 \&\#09 Decimal~\newline
+16 \&\#09 Hexadecimal (adds suffix \textquotesingle{}h\textquotesingle{} to the output) \\
+\hline
+{\em \+\_\+pritn\+Base} & Boolean value whether the base (\textquotesingle{}b\textquotesingle{} or \textquotesingle{}h\textquotesingle{} suffix) needs to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file Uart.\+c.
+
+\hypertarget{_uart_8c_a5f9da20b7570f093e17cc0997dc37ca6}{}\index{Uart.\+c@{Uart.\+c}!Uart1\+\_\+put\+Bits@{Uart1\+\_\+put\+Bits}}
+\index{Uart1\+\_\+put\+Bits@{Uart1\+\_\+put\+Bits}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{Uart1\+\_\+put\+Bits(const uint64\+\_\+t \+\_\+v, uint8\+\_\+t \+\_\+n\+Bits)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+put\+Bits (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t}]{\+\_\+v, }
+\item[{uint8\+\_\+t}]{\+\_\+n\+Bits}
+\end{DoxyParamCaption}
+)}\label{_uart_8c_a5f9da20b7570f093e17cc0997dc37ca6}
+
+
+Send a byte in binary form (with zero padding) using the U\+A\+R\+Tx module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+v} & Variable to send using U\+A\+R\+Tx \\
+\hline
+{\em \+\_\+n\+Bits} & Number of bits to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 171 of file Uart.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_uart_8c_a9536199d47c0dfeb8104921c41af9a35}{}\index{Uart.\+c@{Uart.\+c}!rx\+Buffer@{rx\+Buffer}}
+\index{rx\+Buffer@{rx\+Buffer}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sw\+Fifo\+Buffer\+\_\+t} rx\+Buffer = \{ 0,0,0, \{0\}, 0,0,0 \}}\label{_uart_8c_a9536199d47c0dfeb8104921c41af9a35}
+Global U\+A\+R\+Tx receive software F\+I\+F\+O buffer. 
+
+Definition at line 30 of file Uart.\+c.
+
+\hypertarget{_uart_8c_a4ad2edb55b2802d02a508eb857448daf}{}\index{Uart.\+c@{Uart.\+c}!p\+Rx\+Buffer@{p\+Rx\+Buffer}}
+\index{p\+Rx\+Buffer@{p\+Rx\+Buffer}!Uart.\+c@{Uart.\+c}}
+\subsubsection[{p\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Sw\+Fifo\+Buffer\+\_\+t} const p\+Rx\+Buffer = \&{\bf rx\+Buffer}}\label{_uart_8c_a4ad2edb55b2802d02a508eb857448daf}
+Global pointer to the U\+A\+R\+Tx receive software F\+I\+F\+O buffer. 
+
+Definition at line 32 of file Uart.\+c.
+

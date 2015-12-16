@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SwFifoBuffer.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<a href="_sw_fifo_buffer_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Begin of file SwFifoBuffer.c</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Author: jdebruijn</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Created on September 12, 2015, 10:06 AM</span></div>
@@ -109,91 +109,102 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Copyright (c) 2015 Jeroen de Bruijn &lt;vidavidorra@gmail.com&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * </span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This file is part of LedCube which is released under The MIT License (MIT).</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE.md&quot; or go to</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE&quot; or go to</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * https://opensource.org/licenses/MIT</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Includes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;SwFifoBuffer.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Functions</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;swFifoBufferPut( <a class="code" href="structsw_fifo_buffer__t.html">pSwFifoBuffer_t</a> _pBuffer, <span class="keyword">const</span> <span class="keywordtype">char</span> _inData ) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Check if there is room in the buffer</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;numBytes == FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        _pBuffer-&gt;bufferOverflowFlag = 1;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( _pBuffer-&gt;numBytes &lt; FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        _pBuffer-&gt;data[_pBuffer-&gt;iLast] = _inData;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        _pBuffer-&gt;iLast++;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        _pBuffer-&gt;numBytes++;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * Includes</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sw_fifo_buffer_8h.html">SwFifoBuffer.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * Functions</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="_sw_fifo_buffer_8h.html#a2108bd9102fc9c33bae0f40bb11b9afd">   40</a></span>&#160;<a class="code" href="_sw_fifo_buffer_8c.html#a2108bd9102fc9c33bae0f40bb11b9afd">swFifoBufferPut</a>( <a class="code" href="structsw_fifo_buffer__t.html">pSwFifoBuffer_t</a> _pBuffer, <span class="keyword">const</span> <span class="keywordtype">char</span> _inData ) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="_interrupts_8h.html#a8ec23fc7d5e824e324f6240318e1657d">INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Check if there is room in the buffer</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a> == <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a9bbab1b668fb5a7f96f07478634a50f6">bufferOverflowFlag</a> = 1;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Check if the buffer has just been filled up</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;numBytes == FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        _pBuffer-&gt;bufferFullFlag = 1;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Check if the index needs to be rolled over</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;iLast == FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        _pBuffer-&gt;iLast = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Just put data in the buffer, so the buffer is not empty</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    _pBuffer-&gt;bufferNotEmptyFlag = 1;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    INTERRUPTS_RESTORE_CPU_IPL();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">char</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;swFifoBufferGet( <a class="code" href="structsw_fifo_buffer__t.html">pSwFifoBuffer_t</a> _pBuffer ) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">char</span> outData = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// Check if the buffer is full and handle the bufferFullFlag</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;numBytes == FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        _pBuffer-&gt;bufferFullFlag = 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// Check if there is data in the software FIFO buffer</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;numBytes &gt; 0 ) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// Get the oldest element in the software FIFO buffer</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        outData = _pBuffer-&gt;data[_pBuffer-&gt;iFirst];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        _pBuffer-&gt;iFirst++;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        _pBuffer-&gt;numBytes--;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// Handle bufferNotEmptyFlag</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        _pBuffer-&gt;bufferNotEmptyFlag = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Check if the index needs to be rolled over</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;iFirst == FIFO_BUFFER_SIZE ) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        _pBuffer-&gt;iFirst = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    INTERRUPTS_RESTORE_CPU_IPL();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> outData;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">/* End of file SwFifoBuffer.c */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a> &lt; <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a0b595a1d13af47083fedafee8e29e26e">data</a>[_pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a37b7c86bf28a0d6c402cd80d41a7abd1">iLast</a>] = _inData;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a37b7c86bf28a0d6c402cd80d41a7abd1">iLast</a>++;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a>++;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Check if the buffer has just been filled up</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a> == <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a8c291f4e2fda846402115081e5a750e7">bufferFullFlag</a> = 1;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Check if the index needs to be rolled over</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a37b7c86bf28a0d6c402cd80d41a7abd1">iLast</a> == <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a37b7c86bf28a0d6c402cd80d41a7abd1">iLast</a> = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Just put data in the buffer, so the buffer is not empty</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a5c7c40846fb9a0ce25dba8e99824ad8a">bufferNotEmptyFlag</a> = 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="_interrupts_8h.html#ac27b8fcb90a7780c507092e4e74e31ef">INTERRUPTS_RESTORE_CPU_IPL</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">char</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_sw_fifo_buffer_8h.html#aa06c19d936d3e10c01c3f1afbd66187b">   79</a></span>&#160;<a class="code" href="_sw_fifo_buffer_8c.html#aa06c19d936d3e10c01c3f1afbd66187b">swFifoBufferGet</a>( <a class="code" href="structsw_fifo_buffer__t.html">pSwFifoBuffer_t</a> _pBuffer ) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="_interrupts_8h.html#a8ec23fc7d5e824e324f6240318e1657d">INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">char</span> outData = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// Check if the buffer is full and handle the bufferFullFlag</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a> == <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a8c291f4e2fda846402115081e5a750e7">bufferFullFlag</a> = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Check if there is data in the software FIFO buffer</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a> &gt; 0 ) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// Get the oldest element in the software FIFO buffer</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        outData = _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a0b595a1d13af47083fedafee8e29e26e">data</a>[_pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a407513a78db2ae65a38a95646668164e">iFirst</a>];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a407513a78db2ae65a38a95646668164e">iFirst</a>++;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">numBytes</a>--;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">// Handle bufferNotEmptyFlag</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a5c7c40846fb9a0ce25dba8e99824ad8a">bufferNotEmptyFlag</a> = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// Check if the index needs to be rolled over</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>( _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a407513a78db2ae65a38a95646668164e">iFirst</a> == <a class="code" href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a> ) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        _pBuffer-&gt;<a class="code" href="structsw_fifo_buffer__t.html#a407513a78db2ae65a38a95646668164e">iFirst</a> = 0;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="_interrupts_8h.html#ac27b8fcb90a7780c507092e4e74e31ef">INTERRUPTS_RESTORE_CPU_IPL</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> outData;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/* End of file SwFifoBuffer.c */</span></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a05db6308e5fee7d2591c4bc4e21505da"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a05db6308e5fee7d2591c4bc4e21505da">swFifoBuffer_t::numBytes</a></div><div class="ttdeci">uint16_t numBytes</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00069">SwFifoBuffer.h:69</a></div></div>
+<div class="ttc" id="_sw_fifo_buffer_8h_html_ad73fd7fab7940b2765b6a7054fc591dd"><div class="ttname"><a href="_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd">FIFO_BUFFER_SIZE</a></div><div class="ttdeci">#define FIFO_BUFFER_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00039">SwFifoBuffer.h:39</a></div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a37b7c86bf28a0d6c402cd80d41a7abd1"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a37b7c86bf28a0d6c402cd80d41a7abd1">swFifoBuffer_t::iLast</a></div><div class="ttdeci">uint16_t iLast</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00067">SwFifoBuffer.h:67</a></div></div>
 <div class="ttc" id="structsw_fifo_buffer__t_html"><div class="ttname"><a href="structsw_fifo_buffer__t.html">swFifoBuffer_t</a></div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00052">SwFifoBuffer.h:52</a></div></div>
+<div class="ttc" id="_sw_fifo_buffer_8c_html_a2108bd9102fc9c33bae0f40bb11b9afd"><div class="ttname"><a href="_sw_fifo_buffer_8c.html#a2108bd9102fc9c33bae0f40bb11b9afd">swFifoBufferPut</a></div><div class="ttdeci">void swFifoBufferPut(pSwFifoBuffer_t _pBuffer, const char _inData)</div><div class="ttdoc">Put a single character in the FIFO buffer. </div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8c_source.html#l00040">SwFifoBuffer.c:40</a></div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a5c7c40846fb9a0ce25dba8e99824ad8a"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a5c7c40846fb9a0ce25dba8e99824ad8a">swFifoBuffer_t::bufferNotEmptyFlag</a></div><div class="ttdeci">uint8_t bufferNotEmptyFlag</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00055">SwFifoBuffer.h:55</a></div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a0b595a1d13af47083fedafee8e29e26e"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a0b595a1d13af47083fedafee8e29e26e">swFifoBuffer_t::data</a></div><div class="ttdeci">char data[FIFO_BUFFER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00063">SwFifoBuffer.h:63</a></div></div>
+<div class="ttc" id="_sw_fifo_buffer_8c_html_aa06c19d936d3e10c01c3f1afbd66187b"><div class="ttname"><a href="_sw_fifo_buffer_8c.html#aa06c19d936d3e10c01c3f1afbd66187b">swFifoBufferGet</a></div><div class="ttdeci">char swFifoBufferGet(pSwFifoBuffer_t _pBuffer)</div><div class="ttdoc">Get a single character in the FIFO buffer. </div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8c_source.html#l00079">SwFifoBuffer.c:79</a></div></div>
+<div class="ttc" id="_interrupts_8h_html_a8ec23fc7d5e824e324f6240318e1657d"><div class="ttname"><a href="_interrupts_8h.html#a8ec23fc7d5e824e324f6240318e1657d">INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL</a></div><div class="ttdeci">#define INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL()</div><div class="ttdoc">Disable interrupts. </div><div class="ttdef"><b>Definition:</b> <a href="_interrupts_8h_source.html#l00061">Interrupts.h:61</a></div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a407513a78db2ae65a38a95646668164e"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a407513a78db2ae65a38a95646668164e">swFifoBuffer_t::iFirst</a></div><div class="ttdeci">uint16_t iFirst</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00065">SwFifoBuffer.h:65</a></div></div>
+<div class="ttc" id="_sw_fifo_buffer_8h_html"><div class="ttname"><a href="_sw_fifo_buffer_8h.html">SwFifoBuffer.h</a></div><div class="ttdoc">Software FIFO buffer which can be used as storage for peripherals. </div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a9bbab1b668fb5a7f96f07478634a50f6"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a9bbab1b668fb5a7f96f07478634a50f6">swFifoBuffer_t::bufferOverflowFlag</a></div><div class="ttdeci">uint8_t bufferOverflowFlag</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00059">SwFifoBuffer.h:59</a></div></div>
+<div class="ttc" id="structsw_fifo_buffer__t_html_a8c291f4e2fda846402115081e5a750e7"><div class="ttname"><a href="structsw_fifo_buffer__t.html#a8c291f4e2fda846402115081e5a750e7">swFifoBuffer_t::bufferFullFlag</a></div><div class="ttdeci">uint8_t bufferFullFlag</div><div class="ttdef"><b>Definition:</b> <a href="_sw_fifo_buffer_8h_source.html#l00057">SwFifoBuffer.h:57</a></div></div>
+<div class="ttc" id="_interrupts_8h_html_ac27b8fcb90a7780c507092e4e74e31ef"><div class="ttname"><a href="_interrupts_8h.html#ac27b8fcb90a7780c507092e4e74e31ef">INTERRUPTS_RESTORE_CPU_IPL</a></div><div class="ttdeci">#define INTERRUPTS_RESTORE_CPU_IPL()</div><div class="ttdoc">Restore the previous CPU interrupt priority level from the saved variable. </div><div class="ttdef"><b>Definition:</b> <a href="_interrupts_8h_source.html#l00076">Interrupts.h:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -1,0 +1,91 @@
+\hypertarget{_sw_fifo_buffer_8h}{}\section{source/\+Library\+Files/\+Sw\+Fifo\+Buffer.h File Reference}
+\label{_sw_fifo_buffer_8h}\index{source/\+Library\+Files/\+Sw\+Fifo\+Buffer.\+h@{source/\+Library\+Files/\+Sw\+Fifo\+Buffer.\+h}}
+
+
+Software F\+I\+F\+O buffer which can be used as storage for peripherals.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Interrupts.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsw_fifo_buffer__t}{sw\+Fifo\+Buffer\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_sw_fifo_buffer_8h_ad73fd7fab7940b2765b6a7054fc591dd}{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}~255
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_sw_fifo_buffer_8h_a2108bd9102fc9c33bae0f40bb11b9afd}{sw\+Fifo\+Buffer\+Put} (\hyperlink{structsw_fifo_buffer__t}{p\+Sw\+Fifo\+Buffer\+\_\+t} \+\_\+p\+Buffer, const char \+\_\+in\+Data)
+\begin{DoxyCompactList}\small\item\em Put a single character in the F\+I\+F\+O buffer. \end{DoxyCompactList}\item 
+char \hyperlink{_sw_fifo_buffer_8h_aa06c19d936d3e10c01c3f1afbd66187b}{sw\+Fifo\+Buffer\+Get} (\hyperlink{structsw_fifo_buffer__t}{p\+Sw\+Fifo\+Buffer\+\_\+t} \+\_\+p\+Buffer)
+\begin{DoxyCompactList}\small\item\em Get a single character in the F\+I\+F\+O buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Software F\+I\+F\+O buffer which can be used as storage for peripherals. 
+
+For example U\+A\+R\+T Tx and Rx data. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_sw_fifo_buffer_8h_ad73fd7fab7940b2765b6a7054fc591dd}{}\index{Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}!F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E@{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}}
+\index{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E@{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}!Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}}
+\subsubsection[{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E~255}\label{_sw_fifo_buffer_8h_ad73fd7fab7940b2765b6a7054fc591dd}
+Maximum characters in the buffer. 
+
+Definition at line 39 of file Sw\+Fifo\+Buffer.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_sw_fifo_buffer_8h_a2108bd9102fc9c33bae0f40bb11b9afd}{}\index{Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}!sw\+Fifo\+Buffer\+Put@{sw\+Fifo\+Buffer\+Put}}
+\index{sw\+Fifo\+Buffer\+Put@{sw\+Fifo\+Buffer\+Put}!Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}}
+\subsubsection[{sw\+Fifo\+Buffer\+Put(p\+Sw\+Fifo\+Buffer\+\_\+t \+\_\+p\+Buffer, const char \+\_\+in\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void sw\+Fifo\+Buffer\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf p\+Sw\+Fifo\+Buffer\+\_\+t}}]{\+\_\+p\+Buffer, }
+\item[{const char}]{\+\_\+in\+Data}
+\end{DoxyParamCaption}
+)}\label{_sw_fifo_buffer_8h_a2108bd9102fc9c33bae0f40bb11b9afd}
+
+
+Put a single character in the F\+I\+F\+O buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+p\+Buffer} & Pointer to the buffer where the data is stored in. \\
+\hline
+{\em \+\_\+in\+Data} & Character to put in the buffer.\\
+\hline
+\end{DoxyParams}
+0. Checks if there is room in the software F\+I\+F\+O buffer; 0. Automatically sets buffer\+Overflow\+Flag; 0. Automatically handles buffer\+Full\+Flag; 0. Automatically handles buffer\+Not\+Empty\+Flag; 0. Sets buffer\+Overflow\+Flag upon software F\+I\+F\+O buffer overflow (doesn\textquotesingle{}t overwrite existing data). 
+
+Definition at line 40 of file Sw\+Fifo\+Buffer.\+c.
+
+\hypertarget{_sw_fifo_buffer_8h_aa06c19d936d3e10c01c3f1afbd66187b}{}\index{Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}!sw\+Fifo\+Buffer\+Get@{sw\+Fifo\+Buffer\+Get}}
+\index{sw\+Fifo\+Buffer\+Get@{sw\+Fifo\+Buffer\+Get}!Sw\+Fifo\+Buffer.\+h@{Sw\+Fifo\+Buffer.\+h}}
+\subsubsection[{sw\+Fifo\+Buffer\+Get(p\+Sw\+Fifo\+Buffer\+\_\+t \+\_\+p\+Buffer)}]{\setlength{\rightskip}{0pt plus 5cm}char sw\+Fifo\+Buffer\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf p\+Sw\+Fifo\+Buffer\+\_\+t}}]{\+\_\+p\+Buffer}
+\end{DoxyParamCaption}
+)}\label{_sw_fifo_buffer_8h_aa06c19d936d3e10c01c3f1afbd66187b}
+
+
+Get a single character in the F\+I\+F\+O buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+p\+Buffer} & Pointer to the buffer where the data is stored in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char The character gotten from the buffer.
+\end{DoxyReturn}
+0. Checks if data exists in the software F\+I\+F\+O buffer; 0. Automatically handles buffer\+Full\+Flag; 0. Automatically handles buffer\+Not\+Empty\+Flag. 
+
+Definition at line 79 of file Sw\+Fifo\+Buffer.\+c.
+

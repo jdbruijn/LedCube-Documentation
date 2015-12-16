@@ -9,19 +9,21 @@ Gets the configuration bits that are set in the microcontroller.
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef unsigned short \hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}
-\item 
-typedef unsigned long \hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}
-\end{DoxyCompactItemize}
+\hypertarget{get_p_i_c_configuration_bits_8c_a7e6e037c8cda24382b330f6b2cc44f95}{}typedef unsigned short \hyperlink{get_p_i_c_configuration_bits_8c_a7e6e037c8cda24382b330f6b2cc44f95}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16}\label{get_p_i_c_configuration_bits_8c_a7e6e037c8cda24382b330f6b2cc44f95}
+
+\begin{DoxyCompactList}\small\item\em Internal typedef for a 16-\/bit unsigned word. \end{DoxyCompactList}\item 
+\hypertarget{get_p_i_c_configuration_bits_8c_a34c6e297ffda828a288d1b9ad4ef7f53}{}typedef unsigned long \hyperlink{get_p_i_c_configuration_bits_8c_a34c6e297ffda828a288d1b9ad4ef7f53}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32}\label{get_p_i_c_configuration_bits_8c_a34c6e297ffda828a288d1b9ad4ef7f53}
+
+\begin{DoxyCompactList}\small\item\em Internal typedef for a 32-\/bit unsigned word. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \hyperlink{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch} (\hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16} addrhi, \hyperlink{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16} addrlo)
-\item 
-bool \hyperlink{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte} (\hyperlink{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \+\_\+\+C\+W)
-\item 
+\hyperlink{get_p_i_c_configuration_bits_8c_a34c6e297ffda828a288d1b9ad4ef7f53}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32} \hyperlink{get_p_i_c_configuration_bits_8c_a9ee0df6c56716678f3496bf7949764a0}{\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch} (\hyperlink{get_p_i_c_configuration_bits_8c_a7e6e037c8cda24382b330f6b2cc44f95}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16} addrhi, \hyperlink{get_p_i_c_configuration_bits_8c_a7e6e037c8cda24382b330f6b2cc44f95}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16} addrlo)
+\begin{DoxyCompactList}\small\item\em Internal function to read a 32-\/bit value from an address. \end{DoxyCompactList}\item 
+bool \hyperlink{get_p_i_c_configuration_bits_8c_a8fa1a07ca09b1acf41750a432e892082}{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte} (\hyperlink{get_p_i_c_configuration_bits_8c_a34c6e297ffda828a288d1b9ad4ef7f53}{\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32} \+\_\+\+C\+W)
+\begin{DoxyCompactList}\small\item\em Internal function to verify that the upper byte of a Flash Configuration Word is \textquotesingle{}1111 1111\textquotesingle{} as it should be according to the P\+I\+C24\+F\+J64\+G\+A004 Family Data Sheet.\+pdf (page 209). \end{DoxyCompactList}\item 
 void \hyperlink{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}{get\+P\+I\+C\+Config\+Bits} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -29,35 +31,20 @@ Gets the configuration bits that are set in the microcontroller.
 
 
 
-\subsection{Typedef Documentation}
-\hypertarget{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}
-\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
-\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}\label{get_p_i_c_configuration_bits_8c_a54e71f09750f99d53c221b91f33754fb}
-Internal typedef for a 16-\/bit unsigned word. 
-
-Definition at line 28 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
-
-\hypertarget{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}
-\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
-\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}\label{get_p_i_c_configuration_bits_8c_a9d97a65ab5c2112b8cffd544ebcdbb9e}
-Internal typedef for a 32-\/bit unsigned word. 
-
-Definition at line 30 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
-
-
-
 \subsection{Function Documentation}
-\hypertarget{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch}}
-\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
-\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch(\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16 addrhi, \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16 addrlo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32} \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch (
+\hypertarget{get_p_i_c_configuration_bits_8c_a9ee0df6c56716678f3496bf7949764a0}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch@{\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch}}
+\index{\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch@{\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+\+G\+P\+C\+B\+\_\+read\+Latch(\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16 addrhi, \+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16 addrlo)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32} \+\_\+\+G\+P\+C\+B\+\_\+read\+Latch (
 \begin{DoxyParamCaption}
-\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}]{addrhi, }
-\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word16}}]{addrlo}
+\item[{{\bf \+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16}}]{addrhi, }
+\item[{{\bf \+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word16}}]{addrlo}
 \end{DoxyParamCaption}
-)}\label{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}
-ignore Internal function to read a 32-\/bit value from an address.
+)}\label{get_p_i_c_configuration_bits_8c_a9ee0df6c56716678f3496bf7949764a0}
 
-\begin{DoxyNote}{Note}
+
+Internal function to read a 32-\/bit value from an address. 
+
+ignore \begin{DoxyNote}{Note}
 This gives a compiler warning because a value is not explicitly returned from the function. 
 \end{DoxyNote}
 
@@ -72,16 +59,18 @@ U\+Word32 32-\/bit value that was at the address of addrhi and addrlo.
 \end{DoxyReturn}
 
 
-Definition at line 143 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 145 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 
-\hypertarget{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte}}
-\index{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
-\subsubsection[{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte(\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32 \+\_\+\+C\+W)}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+verify\+Config\+Upper\+Byte (
+\hypertarget{get_p_i_c_configuration_bits_8c_a8fa1a07ca09b1acf41750a432e892082}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte}}
+\index{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
+\subsubsection[{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte(\+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32 \+\_\+\+C\+W)}]{\setlength{\rightskip}{0pt plus 5cm}bool \+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte (
 \begin{DoxyParamCaption}
-\item[{{\bf \+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+\+U\+Word32}}]{\+\_\+\+C\+W}
+\item[{{\bf \+\_\+\+G\+P\+C\+B\+\_\+\+U\+Word32}}]{\+\_\+\+C\+W}
 \end{DoxyParamCaption}
-)}\label{get_p_i_c_configuration_bits_8c_ac5c9c79aa40e3443da2693c9c2669ccf}
-Internal function to verify that the upper byte of a Flash Configuration Word is \textquotesingle{}1111 1111\textquotesingle{} as it should be according to the P\+I\+C24\+F\+J64\+G\+A004 Family Data Sheet.\+pdf (page 209).
+)}\label{get_p_i_c_configuration_bits_8c_a8fa1a07ca09b1acf41750a432e892082}
+
+
+Internal function to verify that the upper byte of a Flash Configuration Word is \textquotesingle{}1111 1111\textquotesingle{} as it should be according to the P\+I\+C24\+F\+J64\+G\+A004 Family Data Sheet.\+pdf (page 209). 
 
 
 \begin{DoxyParams}{Parameters}
@@ -93,7 +82,7 @@ bool True if the upper byte is successfully verified, false else.
 \end{DoxyReturn}
 
 
-Definition at line 169 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 171 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 
 \hypertarget{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}}
 \index{get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
@@ -102,7 +91,11 @@ Definition at line 169 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}
-Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \begin{DoxyNote}{Note}
+
+
+Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. 
+
+\begin{DoxyNote}{Note}
 The print of the read data is done using the \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F} wrapper.
 \end{DoxyNote}
 \subparagraph*{Example output (without the asterisks)\+:}
@@ -157,5 +150,5 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 * \end{DoxyVerb}
  
 
-Definition at line 179 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 180 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 

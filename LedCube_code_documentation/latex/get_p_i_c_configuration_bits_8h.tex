@@ -11,19 +11,23 @@ Gets the configuration bits that are set in the microcontroller.
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}~Uart1\+\_\+printf
-\item 
-\#define \hyperlink{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+E\+D}(x)~(void)(x)
-\item 
-\#define \hyperlink{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)
-\item 
-\#define \hyperlink{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)
-\end{DoxyCompactItemize}
+\hypertarget{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}~\hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf}\label{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}
+
+\begin{DoxyCompactList}\small\item\em Wrapper for P\+R\+I\+N\+T\+F to an actual printf function, in this case \hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf}. \end{DoxyCompactList}\item 
+\hypertarget{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+E\+D}(x)~(void)(x)\label{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}
+
+\begin{DoxyCompactList}\small\item\em Macro to suppress the \char`\"{}unused parameter\char`\"{} warnings. \end{DoxyCompactList}\item 
+\hypertarget{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}
+
+\begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit description with indent. \end{DoxyCompactList}\item 
+\hypertarget{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}
+
+\begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit result with indent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{get_p_i_c_configuration_bits_8h_a6cb24dac747d04d782a4810170da12d8}{get\+P\+I\+C\+Config\+Bits} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -33,52 +37,7 @@ Gets the configuration bits that are set in the microcontroller.
 This file is designed for the P\+I\+C24\+F\+J64\+G\+A004, so the documentation of the configuration bits can differ if a different P\+I\+C is used. The compiler will give a compiler warning if this file is not used with a P\+I\+C24\+F\+J64\+G\+A004. Also the structures for the Flash Configuration Words are based on that P\+I\+C. Therefore it\textquotesingle{}s recommended to check whether the documentation and structure layout is compatible to the used P\+I\+C microcontroller. 
 \end{DoxyNote}
 \begin{DoxyRefDesc}{Bug}
-\item[\hyperlink{bug__bug000001}{Bug}]\hyperlink{get_p_i_c_configuration_bits_8c_ae200dc6306b6e0b8a239633100921d3c}{\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch} gives a compiler warning \char`\"{}warning\+: control reaches end of non-\/void function\char`\"{}, because a value is not explicitly returned from the function.\end{DoxyRefDesc}
-
-
-\subsection{Macro Definition Documentation}
-\hypertarget{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!P\+R\+I\+N\+T\+F@{P\+R\+I\+N\+T\+F}}
-\index{P\+R\+I\+N\+T\+F@{P\+R\+I\+N\+T\+F}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
-\subsubsection[{P\+R\+I\+N\+T\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+F~Uart1\+\_\+printf}\label{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}
-Wrapper for P\+R\+I\+N\+T\+F to an actual printf function, in this case Uart1\+\_\+printf. 
-
-Definition at line 61 of file get\+P\+I\+C\+Configuration\+Bits.\+h.
-
-\hypertarget{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!U\+N\+U\+S\+E\+D@{U\+N\+U\+S\+E\+D}}
-\index{U\+N\+U\+S\+E\+D@{U\+N\+U\+S\+E\+D}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
-\subsubsection[{U\+N\+U\+S\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+U\+S\+E\+D(
-\begin{DoxyParamCaption}
-\item[{}]{x}
-\end{DoxyParamCaption}
-)~(void)(x)}\label{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}
-Macro to suppress the \char`\"{}unused parameter\char`\"{} warnings. 
-
-Definition at line 174 of file get\+P\+I\+C\+Configuration\+Bits.\+h.
-
-\hypertarget{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C@{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}}
-\index{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C@{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
-\subsubsection[{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C(
-\begin{DoxyParamCaption}
-\item[{}]{fmt, }
-\item[{}]{args...}
-\end{DoxyParamCaption}
-)~{\bf P\+R\+I\+N\+T\+F}(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)}\label{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}
-Macro for printing the configuration bit description with indent. 
-
-Definition at line 177 of file get\+P\+I\+C\+Configuration\+Bits.\+h.
-
-\hypertarget{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T@{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}}
-\index{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T@{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
-\subsubsection[{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T(
-\begin{DoxyParamCaption}
-\item[{}]{fmt, }
-\item[{}]{args...}
-\end{DoxyParamCaption}
-)~{\bf P\+R\+I\+N\+T\+F}(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)}\label{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}
-Macro for printing the configuration bit result with indent. 
-
-Definition at line 179 of file get\+P\+I\+C\+Configuration\+Bits.\+h.
-
+\item[\hyperlink{bug__bug000001}{Bug}]\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch gives a compiler warning \char`\"{}warning\+: control reaches end of non-\/void function\char`\"{}, because a value is not explicitly returned from the function.\end{DoxyRefDesc}
 
 
 \subsection{Function Documentation}
@@ -89,7 +48,11 @@ Definition at line 179 of file get\+P\+I\+C\+Configuration\+Bits.\+h.
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{get_p_i_c_configuration_bits_8h_a6cb24dac747d04d782a4810170da12d8}
-Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \begin{DoxyNote}{Note}
+
+
+Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. 
+
+\begin{DoxyNote}{Note}
 The print of the read data is done using the \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F} wrapper.
 \end{DoxyNote}
 \subparagraph*{Example output (without the asterisks)\+:}
@@ -144,5 +107,5 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 * \end{DoxyVerb}
  
 
-Definition at line 179 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 180 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 

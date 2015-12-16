@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['char_5fbit',['CHAR_BIT',['../_bit_operations_8h.html#a308d9dd2c0028ddb184b455bbd7865de',1,'BitOperations.h']]],
   ['colour_5fblack',['COLOUR_BLACK',['../_colours_8h.html#aa4e78168e129717e6a02803114183e90',1,'Colours.h']]],
   ['colour_5fblue',['COLOUR_BLUE',['../_colours_8h.html#acc6021b9d551dbccf8015c47d7bbc394',1,'Colours.h']]],
   ['colour_5fcyan',['COLOUR_CYAN',['../_colours_8h.html#a3a0eafb526c54d7e75c5c2fe795a7f5e',1,'Colours.h']]],
@@ -10,6 +11,7 @@ var searchData=
   ['colour_5fwhite',['COLOUR_WHITE',['../_colours_8h.html#a97c0133f41b76073396bbd4a26bb377c',1,'Colours.h']]],
   ['colour_5fyellow',['COLOUR_YELLOW',['../_colours_8h.html#ababdf2f2513286331fa11369077d4069',1,'Colours.h']]],
   ['colours_2eh',['Colours.h',['../_colours_8h.html',1,'']]],
+  ['configureoscillator',['ConfigureOscillator',['../_system_8c.html#a9cf05fad20cabd4ca4a12ab9b1c6e7ea',1,'ConfigureOscillator(void):&#160;System.c'],['../_system_8h.html#a9cf05fad20cabd4ca4a12ab9b1c6e7ea',1,'ConfigureOscillator(void):&#160;System.c']]],
   ['cubecontroldata',['CubeControlData',['../_cube_control_data_8c.html#ab0f2a4842fb487bd7dee12e22b81b5b3',1,'CubeControlData.c']]],
   ['cubecontroldata_2ec',['CubeControlData.c',['../_cube_control_data_8c.html',1,'']]],
   ['cubecontroldata_2eh',['CubeControlData.h',['../_cube_control_data_8h.html',1,'']]],

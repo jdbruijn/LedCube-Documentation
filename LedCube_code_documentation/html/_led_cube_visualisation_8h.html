@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_cube_control_data_8h_source.html">CubeControlData.h</a>&quot;</code><br />
-<code>#include &quot;Uart.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_uart_8h_source.html">Uart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_version_8h_source.html">Version.h</a>&quot;</code><br />
 </div>
 <p><a href="_led_cube_visualisation_8h_source.html">Go to the source code of this file.</a></p>
@@ -132,16 +132,16 @@ Macros</h2></td></tr>
 <tr class="memdesc:ae420b893b01bb667ddfad5fecd40018a"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of Transmission Block (ETB) character, decimal ASCII code 23. <br /></td></tr>
 <tr class="separator:ae420b893b01bb667ddfad5fecd40018a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73a39e23f191e81c33cd52a81feaefd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73a39e23f191e81c33cd52a81feaefd3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a73a39e23f191e81c33cd52a81feaefd3">LCV_SEND_CHAR</a>(c)&#160;&#160;&#160;Uart1_putc(c)</td></tr>
-<tr class="memdesc:a73a39e23f191e81c33cd52a81feaefd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_CHAR to a actual function, in this case Uart1_putc. <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a73a39e23f191e81c33cd52a81feaefd3">LCV_SEND_CHAR</a>(c)&#160;&#160;&#160;<a class="el" href="_uart_8h.html#a6572d5a9aefd29ac8be4b7190c35d93f">Uart1_putc</a>(c)</td></tr>
+<tr class="memdesc:a73a39e23f191e81c33cd52a81feaefd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_CHAR to a actual function, in this case <a class="el" href="_uart_8h.html#a6572d5a9aefd29ac8be4b7190c35d93f">Uart1_putc</a>. <br /></td></tr>
 <tr class="separator:a73a39e23f191e81c33cd52a81feaefd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2dadcfbb7c46b9c2752d353af45673"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d2dadcfbb7c46b9c2752d353af45673"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a8d2dadcfbb7c46b9c2752d353af45673">LCV_SEND_STR</a>(s)&#160;&#160;&#160;Uart1_puts(s)</td></tr>
-<tr class="memdesc:a8d2dadcfbb7c46b9c2752d353af45673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_STR to a actual function, in this case Uart1_puts. <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a8d2dadcfbb7c46b9c2752d353af45673">LCV_SEND_STR</a>(s)&#160;&#160;&#160;<a class="el" href="_uart_8h.html#abf908913993328fbf02cfb6cc47bec0d">Uart1_puts</a>(s)</td></tr>
+<tr class="memdesc:a8d2dadcfbb7c46b9c2752d353af45673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_STR to a actual function, in this case <a class="el" href="_uart_8h.html#abf908913993328fbf02cfb6cc47bec0d">Uart1_puts</a>. <br /></td></tr>
 <tr class="separator:a8d2dadcfbb7c46b9c2752d353af45673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09dd94179f6ffb8c53ef60b60d47373c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09dd94179f6ffb8c53ef60b60d47373c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a09dd94179f6ffb8c53ef60b60d47373c">LCV_SEND_HEX_NUM</a>(s)&#160;&#160;&#160;Uart1_putNum(s, 16, false)</td></tr>
-<tr class="memdesc:a09dd94179f6ffb8c53ef60b60d47373c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_HEX_NUM to a actual function, in this case Uart1_putNum. This does send the number in hexadecimal form without the 'h' suffix. <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a09dd94179f6ffb8c53ef60b60d47373c">LCV_SEND_HEX_NUM</a>(s)&#160;&#160;&#160;<a class="el" href="_uart_8h.html#a505ab248378a9dd26d0860bde9fff28f">Uart1_putNum</a>(s, 16, false)</td></tr>
+<tr class="memdesc:a09dd94179f6ffb8c53ef60b60d47373c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for LCV_SEND_HEX_NUM to a actual function, in this case <a class="el" href="_uart_8h.html#a505ab248378a9dd26d0860bde9fff28f">Uart1_putNum</a>. This does send the number in hexadecimal form without the 'h' suffix. <br /></td></tr>
 <tr class="separator:a09dd94179f6ffb8c53ef60b60d47373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1553b27cfe783f974f51b00bcd4bbdcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1553b27cfe783f974f51b00bcd4bbdcb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_cube_visualisation_8h.html#a1553b27cfe783f974f51b00bcd4bbdcb">LCV_START_TRANSMISSION</a>()&#160;&#160;&#160;<a class="el" href="_led_cube_visualisation_8h.html#a73a39e23f191e81c33cd52a81feaefd3">LCV_SEND_CHAR</a>(<a class="el" href="_led_cube_visualisation_8h.html#a4cf0dcec4dc39b57e31d43f4a7040753">LCV_START_TRANSMISSION_CHAR</a>)</td></tr>
@@ -299,7 +299,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

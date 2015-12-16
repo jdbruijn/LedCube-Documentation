@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span>(y = 0; y &lt; <a class="code" href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a>; y++) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a>(_x, y, _z, _red, _green, _blue);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Delay_ms(100);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a>(100);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span>;</div>
@@ -180,6 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/* End of file Fill.c */</span></div>
 <div class="ttc" id="_led_cube_8h_html_a78bca30cd17eb8dd2469d10be6dcc421"><div class="ttname"><a href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a></div><div class="ttdeci">void LedCube_setPixel(uint8_t const _x, uint8_t const _y, uint8_t const _z, uint8_t const _red, uint8_t const _green, uint8_t const _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00040">LedCube.c:40</a></div></div>
 <div class="ttc" id="_fill_8c_html_a09b84c509c15b03240ad89307cdb3aef"><div class="ttname"><a href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a></div><div class="ttdeci">void FillRowWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00043">Fill.c:43</a></div></div>
+<div class="ttc" id="_delay_8h_html_a36292b8e8931575a52f4184b89fd1018"><div class="ttname"><a href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a></div><div class="ttdeci">#define Delay_ms(t)</div><div class="ttdoc">Delay a certain number of milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="_delay_8h_source.html#l00071">Delay.h:71</a></div></div>
 <div class="ttc" id="_led_cube_8h_html_a3620b6696f75c8c5e4979576adf95aa2"><div class="ttname"><a href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a></div><div class="ttdeci">void LedCube_updateUsingCopy(void)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00123">LedCube.c:123</a></div></div>
 <div class="ttc" id="_fill_8c_html_ad3faad1cf94abc0cf376feecc0097ed7"><div class="ttname"><a href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">FillLayerWithSingleColour</a></div><div class="ttdeci">void FillLayerWithSingleColour(uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00072">Fill.c:72</a></div></div>
 <div class="ttc" id="_fill_8c_html_af45f203582b60cf270dccd3ffdc58a22"><div class="ttname"><a href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a></div><div class="ttdeci">void FillRowAtOnceWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00029">Fill.c:29</a></div></div>
@@ -190,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

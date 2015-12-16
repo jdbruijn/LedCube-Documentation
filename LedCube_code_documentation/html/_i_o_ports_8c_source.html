@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IOPorts.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<a href="_i_o_ports_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Begin of file IOPorts.c</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Author: Jeroen de Bruijn</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Created on 02 August 2015, 21:01</span></div>
@@ -109,95 +109,121 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Copyright (c) 2015 Jeroen de Bruijn &lt;vidavidorra@gmail.com&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * </span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This file is part of LedCube which is released under The MIT License (MIT).</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE.md&quot; or go to</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE&quot; or go to</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * https://opensource.org/licenses/MIT</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Includes</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;IOPorts.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Functions</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;IOPorts_init( ) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/********** Assign I/Os to functionalities ********************************/</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    PPSUnlock();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/* LedDriver */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    PPSOutput(SPI1_SDO, PPS_OUT_SDO1);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    PPSOutput(SPI1_SCK, PPS_OUT_SCK1OUT);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/* Anode Control */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    PPSOutput(SPI2_SDO, PPS_OUT_SDO2);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    PPSOutput(SPI2_SCK, PPS_OUT_SCK2OUT);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">/* USB to UART */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    PPSOutput(USB_TO_UART_TX, PPS_OUT_U1TX);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    PPSInput(PPS_IN_U1RX, USB_TO_UART_RX);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    PPSInput(PPS_IN_U1CTS, USB_TO_UART_CTS);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    PPSOutput(USB_TO_UART_RTS, PPS_OUT_U1RTS);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/* Bluetooth */</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//    PPSOutput(BT_UART_TX, PPS_OUT_U2TX);</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//    PPSInput(PPS_IN_U2RX, BT_UART_RX);</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//    PPSInput(PPS_IN_U2CTS, BT_UART_CTS);</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    PPSOutput(BT_UART_RTS, PPS_OUT_U2RTS);</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">/* Buzzer */</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    PPSOutput(BUZZER, PPS_OUT_OC1);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    PPSLock();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">/********** Configure I/Os ************************************************/</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Port_ConfigureAllPinsDigital();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">/* LedDriver */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Port_ConfigurePinDigitalOut(SPI1_SDO);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Port_ConfigurePinDigitalOut(SPI1_SCK);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Port_ConfigurePinDigitalOut(LD_LE);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/* Anode Conrol */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Port_ConfigurePinDigitalOut(SPI2_SDO);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Port_ConfigurePinDigitalOut(SPI2_SCK);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Port_ConfigurePinDigitalOut(ANODE_LATCH);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">/* LedDriver &amp; Anode Control */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#ifdef USE_OE_STATE_EXTENDER</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Port_ConfigurePinDigitalIn(OE);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Port_ConfigurePinDigitalOut(OE);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/* USB to UART */</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Port_ConfigurePinDigitalIn(USB_TO_UART_RX);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Port_ConfigurePinDigitalOut(USB_TO_UART_TX);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Port_ConfigurePinDigitalOut(USB_TO_UART_CTS);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Port_ConfigurePinDigitalIn(USB_TO_UART_RTS);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">/* Bluetooth */</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//    Port_SetPinDigitalIn(BT_UART_TX);</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_UART_RX);</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_UART_CTS);</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//    Port_SetPinDigitalIn(BT_UART_RTS);</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_CMD_MLDP);</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_WAKE_HW);</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_WAKE_SW);</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//    Port_SetPinDigitalIn(BT_CONNECTSTATUS);</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//    Port_SetPinDigitalIn(BT_MLDP_EV);</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//    Port_SetPinDigitalIn(BT_WS);</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//    Port_SetPinDigitalOut(BT_PIO7);   // Bidirectional port</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * Includes</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_o_ports_8h.html">IOPorts.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * Functions</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_i_o_ports_8c.html#a8214366d1cdd7794e70bbe2a22f6e66c">   28</a></span>&#160;<a class="code" href="_i_o_ports_8c.html#a8214366d1cdd7794e70bbe2a22f6e66c">IOPorts_init</a>( ) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/********** Configure I/Os ************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="_ports_8h.html#abd6cc207af38aaeeb3724bfcaac96e66">PORT_INITIALIZE_ALL_PINS</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/* LedDriver */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#aa77cb09989b5c805a7344022ae64fb4c">SPI1_SDO</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a241b59557c3e3c91418162ed4d682aaa">SPI1_SCK</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#afc08e0c3645b78b3f90c30556f760cbf">LD_LE</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/* Anode Conrol */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a7c7193eadd3932cba9dc8ed7f87dc38f">SPI2_SDO</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a63873141764c733446b85913b9eecab0">SPI2_SCK</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(ANODE_LATCH);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/* LedDriver &amp; Anode Control */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifdef USE_OE_STATE_EXTENDER</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="_ports_8h.html#a49b45b4bd73ded8147e8d740a5373f72">PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT</a>(<a class="code" href="_i_o_ports_8h.html#a7122a6e5d75b5f8b7f00c7130df40407">OE</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a7122a6e5d75b5f8b7f00c7130df40407">OE</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/* USB to UART */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="_ports_8h.html#a49b45b4bd73ded8147e8d740a5373f72">PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT</a>(<a class="code" href="_i_o_ports_8h.html#a749c2832c30db741b409369a3f96ab1b">USB_TO_UART_RX</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a5bf3f091a6c7fc0468eb55302a88111b">USB_TO_UART_TX</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a70fecc971886964f3ef112e49eccb9f8">USB_TO_UART_CTS</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="_ports_8h.html#a49b45b4bd73ded8147e8d740a5373f72">PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT</a>(<a class="code" href="_i_o_ports_8h.html#a25963cd05918ed960fbff9dfbdfdcefd">USB_TO_UART_RTS</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/* Bluetooth */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(BT_UART_TX);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_UART_RX);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_UART_CTS);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(BT_UART_RTS);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_CMD_MLDP);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_WAKE_HW);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_WAKE_SW);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(BT_CONNECTSTATUS);</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(BT_MLDP_EV);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(BT_WS);</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//    PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(BT_PIO7);   // Bidirectional port</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/* Buzzer */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a>(<a class="code" href="_i_o_ports_8h.html#a145103118f6d9d1129aa4509cf214a13">BUZZER</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/********** Initialize I/Os to a default value ****************************/</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="_ports_8h.html#a0c4f7aa2e42c71ce1663c96c672f7d2e">PORT_SET_PIN</a>(<a class="code" href="_i_o_ports_8h.html#a7122a6e5d75b5f8b7f00c7130df40407">OE</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/********** Assign I/Os to functionalities ********************************/</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#a799f2cf404247592113919718706fb98">PPS_UNLOCK</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/* LedDriver */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#aa77cb09989b5c805a7344022ae64fb4c">SPI1_SDO</a>, <a class="code" href="_peripheral_pin_select_8h.html#a0743430753b866241d280b204f45d20c">PPS_OUT_SDO1</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a241b59557c3e3c91418162ed4d682aaa">SPI1_SCK</a>, <a class="code" href="_peripheral_pin_select_8h.html#a790417d6f8ee16073934b401a2565305">PPS_OUT_SCK1OUT</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">/* Anode Control */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a7c7193eadd3932cba9dc8ed7f87dc38f">SPI2_SDO</a>, <a class="code" href="_peripheral_pin_select_8h.html#a718b5d9f539fad32073306a64eeb874b">PPS_OUT_SDO2</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a63873141764c733446b85913b9eecab0">SPI2_SCK</a>, <a class="code" href="_peripheral_pin_select_8h.html#afbc495c40d3825673533ab40441d1256">PPS_OUT_SCK2OUT</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">/* USB to UART */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a5bf3f091a6c7fc0468eb55302a88111b">USB_TO_UART_TX</a>, <a class="code" href="_peripheral_pin_select_8h.html#af3507974b957b7b193c4eb771301a1c8">PPS_OUT_U1TX</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#a8f7bebfc6cf9d62ff877e966e8a631ad">PPSInput</a>(<a class="code" href="_peripheral_pin_select_8h.html#ab8f3ada1914bf4374bd66f4501bc0c2d">PPS_IN_U1RX</a>, <a class="code" href="_i_o_ports_8h.html#a749c2832c30db741b409369a3f96ab1b">USB_TO_UART_RX</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#a8f7bebfc6cf9d62ff877e966e8a631ad">PPSInput</a>(<a class="code" href="_peripheral_pin_select_8h.html#a37895f3c6295f604d073852bfcb63604">PPS_IN_U1CTS</a>, <a class="code" href="_i_o_ports_8h.html#a70fecc971886964f3ef112e49eccb9f8">USB_TO_UART_CTS</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a25963cd05918ed960fbff9dfbdfdcefd">USB_TO_UART_RTS</a>, <a class="code" href="_peripheral_pin_select_8h.html#a6029fc412ac9b613faaf85b186a7e6c2">PPS_OUT_U1RTS</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">/* Bluetooth */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//    PPSOutput(BT_UART_TX, PPS_OUT_U2TX);</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//    PPSInput(PPS_IN_U2RX, BT_UART_RX);</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//    PPSInput(PPS_IN_U2CTS, BT_UART_CTS);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//    PPSOutput(BT_UART_RTS, PPS_OUT_U2RTS);</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">/* Buzzer */</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Port_ConfigurePinDigitalOut(BUZZER);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(<a class="code" href="_i_o_ports_8h.html#a145103118f6d9d1129aa4509cf214a13">BUZZER</a>, <a class="code" href="_peripheral_pin_select_8h.html#abca009cf89c1e8183450ef36221d8b07">PPS_OUT_OC1</a>);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">/********** Initialize I/Os to a default value ****************************/</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Port_ClearPin(LD_LE);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    Port_ClearPin(ANODE_LATCH);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    Port_SetPin(OE);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">/* End of file IOPorts.c */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="_peripheral_pin_select_8h.html#aa27a25803dad1664be4f5c615ffed36c">PPS_LOCK</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/* End of file IOPorts.c */</span></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a718b5d9f539fad32073306a64eeb874b"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a718b5d9f539fad32073306a64eeb874b">PPS_OUT_SDO2</a></div><div class="ttdeci">#define PPS_OUT_SDO2</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00075">PeripheralPinSelect.h:75</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a0743430753b866241d280b204f45d20c"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a0743430753b866241d280b204f45d20c">PPS_OUT_SDO1</a></div><div class="ttdeci">#define PPS_OUT_SDO1</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00072">PeripheralPinSelect.h:72</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a7c7193eadd3932cba9dc8ed7f87dc38f"><div class="ttname"><a href="_i_o_ports_8h.html#a7c7193eadd3932cba9dc8ed7f87dc38f">SPI2_SDO</a></div><div class="ttdeci">#define SPI2_SDO</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00042">IOPorts.h:42</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a145103118f6d9d1129aa4509cf214a13"><div class="ttname"><a href="_i_o_ports_8h.html#a145103118f6d9d1129aa4509cf214a13">BUZZER</a></div><div class="ttdeci">#define BUZZER</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00064">IOPorts.h:64</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_afbc495c40d3825673533ab40441d1256"><div class="ttname"><a href="_peripheral_pin_select_8h.html#afbc495c40d3825673533ab40441d1256">PPS_OUT_SCK2OUT</a></div><div class="ttdeci">#define PPS_OUT_SCK2OUT</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00076">PeripheralPinSelect.h:76</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_aa38a7fbbed458f8b7de52db73061a711"><div class="ttname"><a href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a></div><div class="ttdeci">#define PPSOutput(pin, fn)                                                                                                      </div><div class="ttdoc">Assign pin to an output functionality. </div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00270">PeripheralPinSelect.h:270</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_af3507974b957b7b193c4eb771301a1c8"><div class="ttname"><a href="_peripheral_pin_select_8h.html#af3507974b957b7b193c4eb771301a1c8">PPS_OUT_U1TX</a></div><div class="ttdeci">#define PPS_OUT_U1TX</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00068">PeripheralPinSelect.h:68</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_aa77cb09989b5c805a7344022ae64fb4c"><div class="ttname"><a href="_i_o_ports_8h.html#aa77cb09989b5c805a7344022ae64fb4c">SPI1_SDO</a></div><div class="ttdeci">#define SPI1_SDO</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00038">IOPorts.h:38</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a37895f3c6295f604d073852bfcb63604"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a37895f3c6295f604d073852bfcb63604">PPS_IN_U1CTS</a></div><div class="ttdeci">#define PPS_IN_U1CTS</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00052">PeripheralPinSelect.h:52</a></div></div>
+<div class="ttc" id="_ports_8h_html_abd6cc207af38aaeeb3724bfcaac96e66"><div class="ttname"><a href="_ports_8h.html#abd6cc207af38aaeeb3724bfcaac96e66">PORT_INITIALIZE_ALL_PINS</a></div><div class="ttdeci">#define PORT_INITIALIZE_ALL_PINS</div><div class="ttdoc">Configure all pins to be in digital mode and be outputs. </div><div class="ttdef"><b>Definition:</b> <a href="_ports_8h_source.html#l00134">Ports.h:134</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a5bf3f091a6c7fc0468eb55302a88111b"><div class="ttname"><a href="_i_o_ports_8h.html#a5bf3f091a6c7fc0468eb55302a88111b">USB_TO_UART_TX</a></div><div class="ttdeci">#define USB_TO_UART_TX</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00047">IOPorts.h:47</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a25963cd05918ed960fbff9dfbdfdcefd"><div class="ttname"><a href="_i_o_ports_8h.html#a25963cd05918ed960fbff9dfbdfdcefd">USB_TO_UART_RTS</a></div><div class="ttdeci">#define USB_TO_UART_RTS</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00050">IOPorts.h:50</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_afc08e0c3645b78b3f90c30556f760cbf"><div class="ttname"><a href="_i_o_ports_8h.html#afc08e0c3645b78b3f90c30556f760cbf">LD_LE</a></div><div class="ttdeci">#define LD_LE</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00040">IOPorts.h:40</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a241b59557c3e3c91418162ed4d682aaa"><div class="ttname"><a href="_i_o_ports_8h.html#a241b59557c3e3c91418162ed4d682aaa">SPI1_SCK</a></div><div class="ttdeci">#define SPI1_SCK</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00039">IOPorts.h:39</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html"><div class="ttname"><a href="_i_o_ports_8h.html">IOPorts.h</a></div><div class="ttdoc">Definitions for used I/O ports and initialize function. </div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_aa27a25803dad1664be4f5c615ffed36c"><div class="ttname"><a href="_peripheral_pin_select_8h.html#aa27a25803dad1664be4f5c615ffed36c">PPS_LOCK</a></div><div class="ttdeci">#define PPS_LOCK</div><div class="ttdoc">Follow the necessary process to set the IOLOCK bit to lock I/O mapping from being modified...</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00179">PeripheralPinSelect.h:179</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a790417d6f8ee16073934b401a2565305"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a790417d6f8ee16073934b401a2565305">PPS_OUT_SCK1OUT</a></div><div class="ttdeci">#define PPS_OUT_SCK1OUT</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00073">PeripheralPinSelect.h:73</a></div></div>
+<div class="ttc" id="_i_o_ports_8c_html_a8214366d1cdd7794e70bbe2a22f6e66c"><div class="ttname"><a href="_i_o_ports_8c.html#a8214366d1cdd7794e70bbe2a22f6e66c">IOPorts_init</a></div><div class="ttdeci">void IOPorts_init()</div><div class="ttdoc">Initialize all used I/Os. </div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8c_source.html#l00028">IOPorts.c:28</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a799f2cf404247592113919718706fb98"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a799f2cf404247592113919718706fb98">PPS_UNLOCK</a></div><div class="ttdeci">#define PPS_UNLOCK</div><div class="ttdoc">Follow the necessary process to clear the IOLOCK bit in order to allow I/O mapping to be modified...</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00157">PeripheralPinSelect.h:157</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a70fecc971886964f3ef112e49eccb9f8"><div class="ttname"><a href="_i_o_ports_8h.html#a70fecc971886964f3ef112e49eccb9f8">USB_TO_UART_CTS</a></div><div class="ttdeci">#define USB_TO_UART_CTS</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00049">IOPorts.h:49</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_ab8f3ada1914bf4374bd66f4501bc0c2d"><div class="ttname"><a href="_peripheral_pin_select_8h.html#ab8f3ada1914bf4374bd66f4501bc0c2d">PPS_IN_U1RX</a></div><div class="ttdeci">#define PPS_IN_U1RX</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00051">PeripheralPinSelect.h:51</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a63873141764c733446b85913b9eecab0"><div class="ttname"><a href="_i_o_ports_8h.html#a63873141764c733446b85913b9eecab0">SPI2_SCK</a></div><div class="ttdeci">#define SPI2_SCK</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00043">IOPorts.h:43</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_abca009cf89c1e8183450ef36221d8b07"><div class="ttname"><a href="_peripheral_pin_select_8h.html#abca009cf89c1e8183450ef36221d8b07">PPS_OUT_OC1</a></div><div class="ttdeci">#define PPS_OUT_OC1</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00078">PeripheralPinSelect.h:78</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a7122a6e5d75b5f8b7f00c7130df40407"><div class="ttname"><a href="_i_o_ports_8h.html#a7122a6e5d75b5f8b7f00c7130df40407">OE</a></div><div class="ttdeci">#define OE</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00045">IOPorts.h:45</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a8f7bebfc6cf9d62ff877e966e8a631ad"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a8f7bebfc6cf9d62ff877e966e8a631ad">PPSInput</a></div><div class="ttdeci">#define PPSInput(fn, pin)                                                                                                        </div><div class="ttdoc">Assign input functionality to a pin. </div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00233">PeripheralPinSelect.h:233</a></div></div>
+<div class="ttc" id="_i_o_ports_8h_html_a749c2832c30db741b409369a3f96ab1b"><div class="ttname"><a href="_i_o_ports_8h.html#a749c2832c30db741b409369a3f96ab1b">USB_TO_UART_RX</a></div><div class="ttdeci">#define USB_TO_UART_RX</div><div class="ttdef"><b>Definition:</b> <a href="_i_o_ports_8h_source.html#l00048">IOPorts.h:48</a></div></div>
+<div class="ttc" id="_ports_8h_html_a49b45b4bd73ded8147e8d740a5373f72"><div class="ttname"><a href="_ports_8h.html#a49b45b4bd73ded8147e8d740a5373f72">PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT</a></div><div class="ttdeci">#define PORT_CONFIGURE_PIN_AS_DIGITAL_INPUT(pin)                                                          </div><div class="ttdoc">Configure selected pin as digital input. </div><div class="ttdef"><b>Definition:</b> <a href="_ports_8h_source.html#l00185">Ports.h:185</a></div></div>
+<div class="ttc" id="_peripheral_pin_select_8h_html_a6029fc412ac9b613faaf85b186a7e6c2"><div class="ttname"><a href="_peripheral_pin_select_8h.html#a6029fc412ac9b613faaf85b186a7e6c2">PPS_OUT_U1RTS</a></div><div class="ttdeci">#define PPS_OUT_U1RTS</div><div class="ttdef"><b>Definition:</b> <a href="_peripheral_pin_select_8h_source.html#l00069">PeripheralPinSelect.h:69</a></div></div>
+<div class="ttc" id="_ports_8h_html_af23d66e0f1ab2cbf2e6ad30783aca8ee"><div class="ttname"><a href="_ports_8h.html#af23d66e0f1ab2cbf2e6ad30783aca8ee">PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT</a></div><div class="ttdeci">#define PORT_CONFIGURE_PIN_AS_DIGITAL_OUTPUT(pin)                                                        </div><div class="ttdoc">Configure selected pin as digital output. </div><div class="ttdef"><b>Definition:</b> <a href="_ports_8h_source.html#l00198">Ports.h:198</a></div></div>
+<div class="ttc" id="_ports_8h_html_a0c4f7aa2e42c71ce1663c96c672f7d2e"><div class="ttname"><a href="_ports_8h.html#a0c4f7aa2e42c71ce1663c96c672f7d2e">PORT_SET_PIN</a></div><div class="ttdeci">#define PORT_SET_PIN(pin)                                                                                                        </div><div class="ttdoc">Set selected pin, i.e make the output high. </div><div class="ttdef"><b>Definition:</b> <a href="_ports_8h_source.html#l00223">Ports.h:223</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 20:30:55 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

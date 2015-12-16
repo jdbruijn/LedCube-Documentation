@@ -1,5 +1,10 @@
 \hypertarget{_cube_control_data_8c}{}\section{source/\+Cube\+Control/src/\+Cube\+Control\+Data.c File Reference}
 \label{_cube_control_data_8c}\index{source/\+Cube\+Control/src/\+Cube\+Control\+Data.\+c@{source/\+Cube\+Control/src/\+Cube\+Control\+Data.\+c}}
+
+
+Provides Cube-\/ and Cube\+Control data structures and functions.  
+
+
 {\ttfamily \#include \char`\"{}Cube\+Control\+Data.\+h\char`\"{}}\\*
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -28,6 +33,8 @@ void \hyperlink{_cube_control_data_8c_a70edccbdd8cf75f052397b2d1e18e191}{Cube\+C
 
 
 \subsection{Detailed Description}
+Provides Cube-\/ and Cube\+Control data structures and functions. 
+
 Declares and controls the data of the whole L\+E\+D cube using several functions. 
 
 \subsection{Function Documentation}
@@ -47,7 +54,7 @@ Initialize a Cube\+Control\+Data structure. The \hyperlink{struct_cube_control_d
 \end{DoxyParams}
 
 
-Definition at line 116 of file Cube\+Control\+Data.\+c.
+Definition at line 117 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_a9309f328a589652ed37f92d561c38daa}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!Cube\+Control\+Data\+\_\+switch\+Cube\+Data@{Cube\+Control\+Data\+\_\+switch\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+switch\+Cube\+Data@{Cube\+Control\+Data\+\_\+switch\+Cube\+Data}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
@@ -61,7 +68,7 @@ Definition at line 116 of file Cube\+Control\+Data.\+c.
 Switch the Cube\+Data read-\/ and write pointers. 
 
 \begin{DoxyNote}{Note}
-The switch is performed with interrupts disabled using the I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L and I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L macros because the Cube\+Data read takes place in an interrupt service routine.
+The switch is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -70,7 +77,7 @@ The switch is performed with interrupts disabled using the I\+N\+T\+E\+R\+R\+U\+
 \end{DoxyParams}
 
 
-Definition at line 125 of file Cube\+Control\+Data.\+c.
+Definition at line 126 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_ae1422d16d0c9b80676ee3b2da685cfef}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!Cube\+Control\+Data\+\_\+reset\+Cube\+Data@{Cube\+Control\+Data\+\_\+reset\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+reset\+Cube\+Data@{Cube\+Control\+Data\+\_\+reset\+Cube\+Data}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
@@ -88,7 +95,7 @@ Reset a Cube\+Data structure array.
 \end{DoxyParams}
 
 
-Definition at line 149 of file Cube\+Control\+Data.\+c.
+Definition at line 150 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_ae0bb91ea8834b363a9fe43de4bb77c70}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!Cube\+Control\+Data\+\_\+copy\+Cube\+Data@{Cube\+Control\+Data\+\_\+copy\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+copy\+Cube\+Data@{Cube\+Control\+Data\+\_\+copy\+Cube\+Data}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
@@ -99,7 +106,7 @@ Definition at line 149 of file Cube\+Control\+Data.\+c.
 \end{DoxyParamCaption}
 )}\label{_cube_control_data_8c_ae0bb91ea8834b363a9fe43de4bb77c70}
 Copy a Cube\+Data structure array. \begin{DoxyNote}{Note}
-The copy is performed with interrupts disabled using the I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L and I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L macros because the Cube\+Data read takes place in an interrupt service routine.
+The copy is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -110,7 +117,7 @@ The copy is performed with interrupts disabled using the I\+N\+T\+E\+R\+R\+U\+P\
 \end{DoxyParams}
 
 
-Definition at line 165 of file Cube\+Control\+Data.\+c.
+Definition at line 166 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_a70edccbdd8cf75f052397b2d1e18e191}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data@{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data@{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
@@ -128,7 +135,7 @@ Print the contents of a Cube\+Data structure array hexadecimal.
 \end{DoxyParams}
 
 
-Definition at line 189 of file Cube\+Control\+Data.\+c.
+Definition at line 190 of file Cube\+Control\+Data.\+c.
 
 
 
@@ -138,26 +145,26 @@ Definition at line 189 of file Cube\+Control\+Data.\+c.
 \subsubsection[{Cube\+Control\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cube\+Control\+Data\+\_\+t} Cube\+Control\+Data}\label{_cube_control_data_8c_ab0f2a4842fb487bd7dee12e22b81b5b3}
 The global declaration of Cube\+Control\+Data containing two Cube\+Data structure arrays of the type \hyperlink{struct_row_data__t}{Row\+Data\+\_\+t}. This is where all the data for the L\+E\+D Cube is stored. 
 
-Definition at line 33 of file Cube\+Control\+Data.\+c.
+Definition at line 34 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_af2bcd585006c21d7500dde639c50d9e5}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!p\+Cube\+Control\+Data@{p\+Cube\+Control\+Data}}
 \index{p\+Cube\+Control\+Data@{p\+Cube\+Control\+Data}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
 \subsubsection[{p\+Cube\+Control\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Control\+Data\+\_\+t} const p\+Cube\+Control\+Data = \&{\bf Cube\+Control\+Data}}\label{_cube_control_data_8c_af2bcd585006c21d7500dde639c50d9e5}
 Constant pointer to the Cube\+Control\+Data structure 
 
-Definition at line 104 of file Cube\+Control\+Data.\+c.
+Definition at line 105 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!p\+Cube\+Data0\+Base@{p\+Cube\+Data0\+Base}}
 \index{p\+Cube\+Data0\+Base@{p\+Cube\+Data0\+Base}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
 \subsubsection[{p\+Cube\+Data0\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} const p\+Cube\+Data0\+Base = \&Cube\+Control\+Data.\+Cube\+Data0\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}}\label{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}
 Constant pointer to the Cube\+Data0 structure array 
 
-Definition at line 107 of file Cube\+Control\+Data.\+c.
+Definition at line 108 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8c_af5572749fda02c9b135e12dcdbfed600}{}\index{Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}!p\+Cube\+Data1\+Base@{p\+Cube\+Data1\+Base}}
 \index{p\+Cube\+Data1\+Base@{p\+Cube\+Data1\+Base}!Cube\+Control\+Data.\+c@{Cube\+Control\+Data.\+c}}
 \subsubsection[{p\+Cube\+Data1\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} const p\+Cube\+Data1\+Base = \&Cube\+Control\+Data.\+Cube\+Data1\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}}\label{_cube_control_data_8c_af5572749fda02c9b135e12dcdbfed600}
 Constant pointer to the Cube\+Data1 structure array 
 
-Definition at line 110 of file Cube\+Control\+Data.\+c.
+Definition at line 111 of file Cube\+Control\+Data.\+c.
 
