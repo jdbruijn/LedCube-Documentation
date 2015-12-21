@@ -1,0 +1,71 @@
+\hypertarget{System_8h}{}\section{Library\+Files/\+System.h File Reference}
+\label{System_8h}\index{Library\+Files/\+System.\+h@{Library\+Files/\+System.\+h}}
+
+
+Sets the system settings.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{System_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+S\+C}~8000000\+U\+L
+\item 
+\#define \hyperlink{System_8h_a818b0c17e45483794fb99a7928e02551}{F\+R\+C\+D\+I\+V}~1
+\item 
+\#define \hyperlink{System_8h_a43abb7ff318cb315c8b5134ee8d96fd2}{P\+L\+L\+\_\+\+M\+U\+L}~4
+\item 
+\#define \hyperlink{System_8h_a7d5ce7b79462bbfb630ee53075540b65}{S\+Y\+S\+\_\+\+F\+R\+E\+Q}~((\hyperlink{System_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+S\+C} $\ast$ \hyperlink{System_8h_a43abb7ff318cb315c8b5134ee8d96fd2}{P\+L\+L\+\_\+\+M\+U\+L}) / \hyperlink{System_8h_a818b0c17e45483794fb99a7928e02551}{F\+R\+C\+D\+I\+V})
+\item 
+\#define \hyperlink{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+C\+Y}~(\hyperlink{System_8h_a7d5ce7b79462bbfb630ee53075540b65}{S\+Y\+S\+\_\+\+F\+R\+E\+Q} / 2)
+\item 
+\#define \hyperlink{System_8h_a2a5de2acdd9267b75652bdc1d9a251a7}{F\+P\+B}~\hyperlink{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+C\+Y}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{System_8h_a9cf05fad20cabd4ca4a12ab9b1c6e7ea}{Configure\+Oscillator} (void)
+\begin{DoxyCompactList}\small\item\em Configure the system oscillator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sets the system settings. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{}\index{System.\+h@{System.\+h}!F\+C\+Y@{F\+C\+Y}}
+\index{F\+C\+Y@{F\+C\+Y}!System.\+h@{System.\+h}}
+\subsubsection[{F\+C\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+C\+Y~({\bf S\+Y\+S\+\_\+\+F\+R\+E\+Q} / 2)}\label{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}
+Instruction Cycle Frequency. \hypertarget{System_8h_a802b2b582b121e4632aa9a491d503720}{}\index{System.\+h@{System.\+h}!F\+O\+S\+C@{F\+O\+S\+C}}
+\index{F\+O\+S\+C@{F\+O\+S\+C}!System.\+h@{System.\+h}}
+\subsubsection[{F\+O\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+S\+C~8000000\+U\+L}\label{System_8h_a802b2b582b121e4632aa9a491d503720}
+Frequency of the device oscillator. \hypertarget{System_8h_a2a5de2acdd9267b75652bdc1d9a251a7}{}\index{System.\+h@{System.\+h}!F\+P\+B@{F\+P\+B}}
+\index{F\+P\+B@{F\+P\+B}!System.\+h@{System.\+h}}
+\subsubsection[{F\+P\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+P\+B~{\bf F\+C\+Y}}\label{System_8h_a2a5de2acdd9267b75652bdc1d9a251a7}
+Peripheral Bus Clock Frequency. \hypertarget{System_8h_a818b0c17e45483794fb99a7928e02551}{}\index{System.\+h@{System.\+h}!F\+R\+C\+D\+I\+V@{F\+R\+C\+D\+I\+V}}
+\index{F\+R\+C\+D\+I\+V@{F\+R\+C\+D\+I\+V}!System.\+h@{System.\+h}}
+\subsubsection[{F\+R\+C\+D\+I\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+R\+C\+D\+I\+V~1}\label{System_8h_a818b0c17e45483794fb99a7928e02551}
+F\+R\+C Postscaler (see settings in \hyperlink{System_8h_a9cf05fad20cabd4ca4a12ab9b1c6e7ea}{Configure\+Oscillator()}). \hypertarget{System_8h_a43abb7ff318cb315c8b5134ee8d96fd2}{}\index{System.\+h@{System.\+h}!P\+L\+L\+\_\+\+M\+U\+L@{P\+L\+L\+\_\+\+M\+U\+L}}
+\index{P\+L\+L\+\_\+\+M\+U\+L@{P\+L\+L\+\_\+\+M\+U\+L}!System.\+h@{System.\+h}}
+\subsubsection[{P\+L\+L\+\_\+\+M\+U\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+L\+L\+\_\+\+M\+U\+L~4}\label{System_8h_a43abb7ff318cb315c8b5134ee8d96fd2}
+P\+L\+L, if configured (F\+N\+O\+S\+C setting). \hypertarget{System_8h_a7d5ce7b79462bbfb630ee53075540b65}{}\index{System.\+h@{System.\+h}!S\+Y\+S\+\_\+\+F\+R\+E\+Q@{S\+Y\+S\+\_\+\+F\+R\+E\+Q}}
+\index{S\+Y\+S\+\_\+\+F\+R\+E\+Q@{S\+Y\+S\+\_\+\+F\+R\+E\+Q}!System.\+h@{System.\+h}}
+\subsubsection[{S\+Y\+S\+\_\+\+F\+R\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+S\+\_\+\+F\+R\+E\+Q~(({\bf F\+O\+S\+C} $\ast$ {\bf P\+L\+L\+\_\+\+M\+U\+L}) / {\bf F\+R\+C\+D\+I\+V})}\label{System_8h_a7d5ce7b79462bbfb630ee53075540b65}
+System frequency (device oscillator frequency times \hyperlink{System_8h_a43abb7ff318cb315c8b5134ee8d96fd2}{P\+L\+L\+\_\+\+M\+U\+L}). 
+
+\subsection{Function Documentation}
+\hypertarget{System_8h_a9cf05fad20cabd4ca4a12ab9b1c6e7ea}{}\index{System.\+h@{System.\+h}!Configure\+Oscillator@{Configure\+Oscillator}}
+\index{Configure\+Oscillator@{Configure\+Oscillator}!System.\+h@{System.\+h}}
+\subsubsection[{Configure\+Oscillator(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Configure\+Oscillator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{System_8h_a9cf05fad20cabd4ca4a12ab9b1c6e7ea}
+
+
+Configure the system oscillator. 
+
+\begin{DoxyNote}{Note}
+Settings must be confirm Configuration Bits Settings. 
+\end{DoxyNote}

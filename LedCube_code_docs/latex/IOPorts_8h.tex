@@ -1,0 +1,141 @@
+\hypertarget{IOPorts_8h}{}\section{Library\+Files/\+I\+O\+Ports.h File Reference}
+\label{IOPorts_8h}\index{Library\+Files/\+I\+O\+Ports.\+h@{Library\+Files/\+I\+O\+Ports.\+h}}
+
+
+Definitions for used I/\+O ports and initialize function.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Peripheral\+Pin\+Select.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ports.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{IOPorts_8h_aa77cb09989b5c805a7344022ae64fb4c}{S\+P\+I1\+\_\+\+S\+D\+O}~\hyperlink{Ports_8h_aaca08933f20015b272955bc7aeb2e964}{P\+O\+R\+T\+\_\+\+R\+P19}
+\item 
+\#define \hyperlink{IOPorts_8h_a241b59557c3e3c91418162ed4d682aaa}{S\+P\+I1\+\_\+\+S\+C\+K}~\hyperlink{Ports_8h_aa2b109b17a5e3af63c96201e72709277}{P\+O\+R\+T\+\_\+\+R\+P21}
+\item 
+\#define \hyperlink{IOPorts_8h_afc08e0c3645b78b3f90c30556f760cbf}{L\+D\+\_\+\+L\+E}~\hyperlink{Ports_8h_afe27e763675eeaf926bd860d0ec95f55}{P\+O\+R\+T\+\_\+\+R\+P20}
+\item 
+\#define \hyperlink{IOPorts_8h_a7c7193eadd3932cba9dc8ed7f87dc38f}{S\+P\+I2\+\_\+\+S\+D\+O}~\hyperlink{Ports_8h_ae58e3eb2b602c781b20c5484f0f2a165}{P\+O\+R\+T\+\_\+\+R\+P3}
+\item 
+\#define \hyperlink{IOPorts_8h_a63873141764c733446b85913b9eecab0}{S\+P\+I2\+\_\+\+S\+C\+K}~\hyperlink{Ports_8h_a58cdfb63836ee6a65a85fc4e2371cf64}{P\+O\+R\+T\+\_\+\+R\+P18}
+\item 
+\hypertarget{IOPorts_8h_aa44e2c1f94e2b449d84d92f3492972ad}{}\#define {\bfseries A\+N\+O\+D\+E\+\_\+\+L\+A\+T\+C\+H}~\hyperlink{Ports_8h_aa9b1bf6e5b88cbdebd184d92b67d0197}{P\+O\+R\+T\+\_\+\+R\+P17}\label{IOPorts_8h_aa44e2c1f94e2b449d84d92f3492972ad}
+
+\item 
+\#define \hyperlink{IOPorts_8h_a7122a6e5d75b5f8b7f00c7130df40407}{O\+E}~\hyperlink{Ports_8h_ac9f448d2fe5dfd2551d6390c9da38bf4}{P\+O\+R\+T\+\_\+\+R\+P16}
+\item 
+\#define \hyperlink{IOPorts_8h_a5bf3f091a6c7fc0468eb55302a88111b}{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}~\hyperlink{Ports_8h_a3293a32e20da6a6175901636d9f417c7}{P\+O\+R\+T\+\_\+\+R\+P14}
+\item 
+\#define \hyperlink{IOPorts_8h_a749c2832c30db741b409369a3f96ab1b}{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}~\hyperlink{Ports_8h_a235f2cc7b20e8c9f2a94566e7e047cf6}{P\+O\+R\+T\+\_\+\+R\+P12}
+\item 
+\#define \hyperlink{IOPorts_8h_a70fecc971886964f3ef112e49eccb9f8}{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}~\hyperlink{Ports_8h_a0b65c2065e222a6fb25e39b7195edc5d}{P\+O\+R\+T\+\_\+\+R\+P13}
+\item 
+\#define \hyperlink{IOPorts_8h_a25963cd05918ed960fbff9dfbdfdcefd}{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}~\hyperlink{Ports_8h_a0c6dc05339ec55f377f8e83cefd3f1eb}{P\+O\+R\+T\+\_\+\+R\+P15}
+\item 
+\#define \hyperlink{IOPorts_8h_a0420f7c5cadb2f351c574f9fc8f8148d}{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}~\hyperlink{Ports_8h_adc3338fa10736a95f9a0d7f9083773cf}{P\+O\+R\+T\+\_\+\+R\+P10}
+\item 
+\#define \hyperlink{IOPorts_8h_a8e5b7c0a39cc269da3c337912608d002}{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}~\hyperlink{Ports_8h_a2e89fe848be6c4b90d14687d56c1faa1}{P\+O\+R\+T\+\_\+\+R\+P11}
+\item 
+\#define \hyperlink{IOPorts_8h_aac29686a7a20a266c34fd1d0fbe7a4bc}{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}~\hyperlink{Ports_8h_a8bd81ab369964dacf3d226759439038a}{P\+O\+R\+T\+\_\+\+R\+P6}
+\item 
+\#define \hyperlink{IOPorts_8h_ad70340c11a3fc5377b61289e920f65ef}{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}~\hyperlink{Ports_8h_aa585ddffcf4a5157b601e10407202299}{P\+O\+R\+T\+\_\+\+R\+P22}
+\item 
+\#define \hyperlink{IOPorts_8h_a2429598577785b17d1e1098fd846a26a}{B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P}~\hyperlink{Ports_8h_aa26b320ebc517602094db11a0507af03}{P\+O\+R\+T\+\_\+\+R\+P24}
+\item 
+\#define \hyperlink{IOPorts_8h_a9d914e6bac9f4c1b1b04042a614d14eb}{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W}~\hyperlink{Ports_8h_a15a105e65f9e63141c604db456a1cccb}{P\+O\+R\+T\+\_\+\+R\+P9}
+\item 
+\#define \hyperlink{IOPorts_8h_a06ab137eab09cead1e4d3ab044b81ba3}{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W}~\hyperlink{Ports_8h_abbea9f476c66c43b12992b4b4b28bab3}{P\+O\+R\+T\+\_\+\+R\+P25}
+\item 
+\#define \hyperlink{IOPorts_8h_a1b079ac95c4f2e1ab333434e07eb0955}{B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S}~\hyperlink{Ports_8h_a1be5c16c77cb23d5820c7fa4e2b73d70}{P\+O\+R\+T\+\_\+\+R\+P8}
+\item 
+\#define \hyperlink{IOPorts_8h_aa6d965d9a428a747f4982fcada1df564}{B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V}~\hyperlink{Ports_8h_ab67e863e1477d9aafd2567a7736bd839}{P\+O\+R\+T\+\_\+\+R\+P7}
+\item 
+\#define \hyperlink{IOPorts_8h_a33c3e3ecbf6aed12bb34e02d5e073167}{B\+T\+\_\+\+W\+S}~\hyperlink{Ports_8h_a912474b43f0f9fa17b8848c7cbd300ae}{P\+O\+R\+T\+\_\+\+R\+P23}
+\item 
+\#define \hyperlink{IOPorts_8h_a8312d218f200ac51487f9860d6fc5e8e}{B\+T\+\_\+\+P\+I\+O7}~\hyperlink{Ports_8h_a112e22f3352ebaaace3f0d907573b792}{P\+O\+R\+T\+\_\+\+R\+P5}
+\item 
+\#define \hyperlink{IOPorts_8h_a145103118f6d9d1129aa4509cf214a13}{B\+U\+Z\+Z\+E\+R}~\hyperlink{Ports_8h_a31b8c0bced7d0ca367ba28fefe216cc4}{P\+O\+R\+T\+\_\+\+R\+P2}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{IOPorts_8h_a8f5ec0d1281e1e90818c1f027002185a}{}void \hyperlink{IOPorts_8h_a8f5ec0d1281e1e90818c1f027002185a}{I\+O\+Ports\+\_\+init} (void)\label{IOPorts_8h_a8f5ec0d1281e1e90818c1f027002185a}
+
+\begin{DoxyCompactList}\small\item\em Initialize all used I/\+Os. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions for used I/\+O ports and initialize function. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{IOPorts_8h_a2429598577785b17d1e1098fd846a26a}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P@{B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P}}
+\index{B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P@{B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+C\+M\+D\+\_\+\+M\+L\+D\+P~{\bf P\+O\+R\+T\+\_\+\+R\+P24}}\label{IOPorts_8h_a2429598577785b17d1e1098fd846a26a}
+Bluetooth Command or M\+L\+D\+P mode \hypertarget{IOPorts_8h_a1b079ac95c4f2e1ab333434e07eb0955}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S@{B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S}}
+\index{B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S@{B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+S\+T\+A\+T\+U\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P8}}\label{IOPorts_8h_a1b079ac95c4f2e1ab333434e07eb0955}
+Bluetooth Connected Status \hypertarget{IOPorts_8h_aa6d965d9a428a747f4982fcada1df564}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V@{B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V}}
+\index{B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V@{B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+M\+L\+D\+P\+\_\+\+E\+V~{\bf P\+O\+R\+T\+\_\+\+R\+P7}}\label{IOPorts_8h_aa6d965d9a428a747f4982fcada1df564}
+Bluetooth M\+L\+D\+P Data Event \hypertarget{IOPorts_8h_a8312d218f200ac51487f9860d6fc5e8e}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+P\+I\+O7@{B\+T\+\_\+\+P\+I\+O7}}
+\index{B\+T\+\_\+\+P\+I\+O7@{B\+T\+\_\+\+P\+I\+O7}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+P\+I\+O7}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+P\+I\+O7~{\bf P\+O\+R\+T\+\_\+\+R\+P5}}\label{IOPorts_8h_a8312d218f200ac51487f9860d6fc5e8e}
+Bluetooth P\+I\+O7 \hypertarget{IOPorts_8h_aac29686a7a20a266c34fd1d0fbe7a4bc}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}}
+\index{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P6}}\label{IOPorts_8h_aac29686a7a20a266c34fd1d0fbe7a4bc}
+Bluetooth U\+A\+R\+T Clear To Send \hypertarget{IOPorts_8h_ad70340c11a3fc5377b61289e920f65ef}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}}
+\index{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P22}}\label{IOPorts_8h_ad70340c11a3fc5377b61289e920f65ef}
+Bluetooth U\+A\+R\+T Ready To Send \hypertarget{IOPorts_8h_a8e5b7c0a39cc269da3c337912608d002}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}}
+\index{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X~{\bf P\+O\+R\+T\+\_\+\+R\+P11}}\label{IOPorts_8h_a8e5b7c0a39cc269da3c337912608d002}
+Bluetooth U\+A\+R\+T Rx \hypertarget{IOPorts_8h_a0420f7c5cadb2f351c574f9fc8f8148d}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}}
+\index{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X@{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X~{\bf P\+O\+R\+T\+\_\+\+R\+P10}}\label{IOPorts_8h_a0420f7c5cadb2f351c574f9fc8f8148d}
+Bluetooth U\+A\+R\+T Tx \hypertarget{IOPorts_8h_a9d914e6bac9f4c1b1b04042a614d14eb}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W@{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W}}
+\index{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W@{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+H\+W~{\bf P\+O\+R\+T\+\_\+\+R\+P9}}\label{IOPorts_8h_a9d914e6bac9f4c1b1b04042a614d14eb}
+Bluetooth Hardware Wake \hypertarget{IOPorts_8h_a06ab137eab09cead1e4d3ab044b81ba3}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W@{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W}}
+\index{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W@{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+W\+A\+K\+E\+\_\+\+S\+W~{\bf P\+O\+R\+T\+\_\+\+R\+P25}}\label{IOPorts_8h_a06ab137eab09cead1e4d3ab044b81ba3}
+Bluetooth Deep Sleep Wake \hypertarget{IOPorts_8h_a33c3e3ecbf6aed12bb34e02d5e073167}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+T\+\_\+\+W\+S@{B\+T\+\_\+\+W\+S}}
+\index{B\+T\+\_\+\+W\+S@{B\+T\+\_\+\+W\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+T\+\_\+\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+T\+\_\+\+W\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P23}}\label{IOPorts_8h_a33c3e3ecbf6aed12bb34e02d5e073167}
+Bluetooth Activity indicator \hypertarget{IOPorts_8h_a145103118f6d9d1129aa4509cf214a13}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!B\+U\+Z\+Z\+E\+R@{B\+U\+Z\+Z\+E\+R}}
+\index{B\+U\+Z\+Z\+E\+R@{B\+U\+Z\+Z\+E\+R}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{B\+U\+Z\+Z\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R~{\bf P\+O\+R\+T\+\_\+\+R\+P2}}\label{IOPorts_8h_a145103118f6d9d1129aa4509cf214a13}
+On-\/board buzzer \hypertarget{IOPorts_8h_afc08e0c3645b78b3f90c30556f760cbf}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!L\+D\+\_\+\+L\+E@{L\+D\+\_\+\+L\+E}}
+\index{L\+D\+\_\+\+L\+E@{L\+D\+\_\+\+L\+E}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{L\+D\+\_\+\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+D\+\_\+\+L\+E~{\bf P\+O\+R\+T\+\_\+\+R\+P20}}\label{IOPorts_8h_afc08e0c3645b78b3f90c30556f760cbf}
+L\+E to Led\+Driver \hypertarget{IOPorts_8h_a7122a6e5d75b5f8b7f00c7130df40407}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!O\+E@{O\+E}}
+\index{O\+E@{O\+E}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{O\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+E~{\bf P\+O\+R\+T\+\_\+\+R\+P16}}\label{IOPorts_8h_a7122a6e5d75b5f8b7f00c7130df40407}
+For both Led\+Driver and Anode Control \hypertarget{IOPorts_8h_a241b59557c3e3c91418162ed4d682aaa}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!S\+P\+I1\+\_\+\+S\+C\+K@{S\+P\+I1\+\_\+\+S\+C\+K}}
+\index{S\+P\+I1\+\_\+\+S\+C\+K@{S\+P\+I1\+\_\+\+S\+C\+K}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{S\+P\+I1\+\_\+\+S\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I1\+\_\+\+S\+C\+K~{\bf P\+O\+R\+T\+\_\+\+R\+P21}}\label{IOPorts_8h_a241b59557c3e3c91418162ed4d682aaa}
+Serial Clock to Led\+Driver \hypertarget{IOPorts_8h_aa77cb09989b5c805a7344022ae64fb4c}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!S\+P\+I1\+\_\+\+S\+D\+O@{S\+P\+I1\+\_\+\+S\+D\+O}}
+\index{S\+P\+I1\+\_\+\+S\+D\+O@{S\+P\+I1\+\_\+\+S\+D\+O}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{S\+P\+I1\+\_\+\+S\+D\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I1\+\_\+\+S\+D\+O~{\bf P\+O\+R\+T\+\_\+\+R\+P19}}\label{IOPorts_8h_aa77cb09989b5c805a7344022ae64fb4c}
+Serial Data Out to Led\+Driver \hypertarget{IOPorts_8h_a63873141764c733446b85913b9eecab0}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!S\+P\+I2\+\_\+\+S\+C\+K@{S\+P\+I2\+\_\+\+S\+C\+K}}
+\index{S\+P\+I2\+\_\+\+S\+C\+K@{S\+P\+I2\+\_\+\+S\+C\+K}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{S\+P\+I2\+\_\+\+S\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I2\+\_\+\+S\+C\+K~{\bf P\+O\+R\+T\+\_\+\+R\+P18}}\label{IOPorts_8h_a63873141764c733446b85913b9eecab0}
+Serial Clock to Anode Control \hypertarget{IOPorts_8h_a7c7193eadd3932cba9dc8ed7f87dc38f}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!S\+P\+I2\+\_\+\+S\+D\+O@{S\+P\+I2\+\_\+\+S\+D\+O}}
+\index{S\+P\+I2\+\_\+\+S\+D\+O@{S\+P\+I2\+\_\+\+S\+D\+O}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{S\+P\+I2\+\_\+\+S\+D\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I2\+\_\+\+S\+D\+O~{\bf P\+O\+R\+T\+\_\+\+R\+P3}}\label{IOPorts_8h_a7c7193eadd3932cba9dc8ed7f87dc38f}
+Serial Data Out to Anode Control \hypertarget{IOPorts_8h_a70fecc971886964f3ef112e49eccb9f8}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}}
+\index{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+C\+T\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P13}}\label{IOPorts_8h_a70fecc971886964f3ef112e49eccb9f8}
+U\+S\+B to U\+A\+R\+T Clear To Send \hypertarget{IOPorts_8h_a25963cd05918ed960fbff9dfbdfdcefd}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}}
+\index{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+T\+S~{\bf P\+O\+R\+T\+\_\+\+R\+P15}}\label{IOPorts_8h_a25963cd05918ed960fbff9dfbdfdcefd}
+U\+S\+B to U\+A\+R\+T Ready To Send \hypertarget{IOPorts_8h_a749c2832c30db741b409369a3f96ab1b}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}}
+\index{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+R\+X~{\bf P\+O\+R\+T\+\_\+\+R\+P12}}\label{IOPorts_8h_a749c2832c30db741b409369a3f96ab1b}
+U\+S\+B to U\+A\+R\+T Rx \hypertarget{IOPorts_8h_a5bf3f091a6c7fc0468eb55302a88111b}{}\index{I\+O\+Ports.\+h@{I\+O\+Ports.\+h}!U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}}
+\index{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X@{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}!I\+O\+Ports.\+h@{I\+O\+Ports.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+T\+O\+\_\+\+U\+A\+R\+T\+\_\+\+T\+X~{\bf P\+O\+R\+T\+\_\+\+R\+P14}}\label{IOPorts_8h_a5bf3f091a6c7fc0468eb55302a88111b}
+U\+S\+B to U\+A\+R\+T Tx 

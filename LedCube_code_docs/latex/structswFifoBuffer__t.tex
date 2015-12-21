@@ -1,0 +1,48 @@
+\hypertarget{structswFifoBuffer__t}{}\section{sw\+Fifo\+Buffer\+\_\+t Struct Reference}
+\label{structswFifoBuffer__t}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structswFifoBuffer__t_aba90ad8f44ca440bd612c44382c8e144}{buffer\+Not\+Empty\+Flag}
+\item 
+uint8\+\_\+t \hyperlink{structswFifoBuffer__t_ab14db1b80eab76b7ca4e470a6a9542aa}{buffer\+Full\+Flag}
+\item 
+uint8\+\_\+t \hyperlink{structswFifoBuffer__t_a7622d9e973da2062ff513cdc76f1d933}{buffer\+Overflow\+Flag}
+\item 
+char \hyperlink{structswFifoBuffer__t_a1403b7b4337149b3c95e6f17561c621c}{data} \mbox{[}\hyperlink{SwFifoBuffer_8h_ad73fd7fab7940b2765b6a7054fc591dd}{F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+uint16\+\_\+t \hyperlink{structswFifoBuffer__t_aff41afe29075c1ce77eebb0ef1811a15}{i\+First}
+\item 
+uint16\+\_\+t \hyperlink{structswFifoBuffer__t_ab32da8ee445dbe861a5c5a244c5d3691}{i\+Last}
+\item 
+uint16\+\_\+t \hyperlink{structswFifoBuffer__t_a625d064298a0c5f99429e3be56b16f18}{num\+Bytes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structswFifoBuffer__t_ab14db1b80eab76b7ca4e470a6a9542aa}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Full\+Flag@{buffer\+Full\+Flag}}
+\index{buffer\+Full\+Flag@{buffer\+Full\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{buffer\+Full\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t buffer\+Full\+Flag}\label{structswFifoBuffer__t_ab14db1b80eab76b7ca4e470a6a9542aa}
+This flag is automatically set and cleared by the software buffer \hypertarget{structswFifoBuffer__t_aba90ad8f44ca440bd612c44382c8e144}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Not\+Empty\+Flag@{buffer\+Not\+Empty\+Flag}}
+\index{buffer\+Not\+Empty\+Flag@{buffer\+Not\+Empty\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{buffer\+Not\+Empty\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t buffer\+Not\+Empty\+Flag}\label{structswFifoBuffer__t_aba90ad8f44ca440bd612c44382c8e144}
+This flag is automatically set and cleared by the software buffer \hypertarget{structswFifoBuffer__t_a7622d9e973da2062ff513cdc76f1d933}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Overflow\+Flag@{buffer\+Overflow\+Flag}}
+\index{buffer\+Overflow\+Flag@{buffer\+Overflow\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{buffer\+Overflow\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t buffer\+Overflow\+Flag}\label{structswFifoBuffer__t_a7622d9e973da2062ff513cdc76f1d933}
+This flag is not automatically cleared by the software buffer \hypertarget{structswFifoBuffer__t_a1403b7b4337149b3c95e6f17561c621c}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!data@{data}}
+\index{data@{data}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}char data\mbox{[}{\bf F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{structswFifoBuffer__t_a1403b7b4337149b3c95e6f17561c621c}
+The actual F\+I\+F\+O buffer. \hypertarget{structswFifoBuffer__t_aff41afe29075c1ce77eebb0ef1811a15}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!i\+First@{i\+First}}
+\index{i\+First@{i\+First}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{i\+First}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t i\+First}\label{structswFifoBuffer__t_aff41afe29075c1ce77eebb0ef1811a15}
+Index of oldest data byte in the buffer. \hypertarget{structswFifoBuffer__t_ab32da8ee445dbe861a5c5a244c5d3691}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!i\+Last@{i\+Last}}
+\index{i\+Last@{i\+Last}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{i\+Last}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t i\+Last}\label{structswFifoBuffer__t_ab32da8ee445dbe861a5c5a244c5d3691}
+Index of newest data byte in the buffer. \hypertarget{structswFifoBuffer__t_a625d064298a0c5f99429e3be56b16f18}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!num\+Bytes@{num\+Bytes}}
+\index{num\+Bytes@{num\+Bytes}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
+\subsubsection[{num\+Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t num\+Bytes}\label{structswFifoBuffer__t_a625d064298a0c5f99429e3be56b16f18}
+Number of bytes currently stored in the buffer. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library\+Files/\hyperlink{SwFifoBuffer_8h}{Sw\+Fifo\+Buffer.\+h}\end{DoxyCompactItemize}

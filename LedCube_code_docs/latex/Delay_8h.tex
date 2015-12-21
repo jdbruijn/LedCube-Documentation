@@ -1,0 +1,83 @@
+\hypertarget{Delay_8h}{}\section{Library\+Files/\+Delay.h File Reference}
+\label{Delay_8h}\index{Library\+Files/\+Delay.\+h@{Library\+Files/\+Delay.\+h}}
+
+
+Delay macros and wrappers to the delay macros in libpic32.\+h.  
+
+
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libpic30.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{Delay_8h_a62c80f08550c22513b411f2f07de57c3}{}\#define \hyperlink{Delay_8h_a62c80f08550c22513b411f2f07de57c3}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+S}~134\+U\label{Delay_8h_a62c80f08550c22513b411f2f07de57c3}
+
+\begin{DoxyCompactList}\small\item\em Maximum amount of seconds to delay. \end{DoxyCompactList}\item 
+\hypertarget{Delay_8h_a93a155546ce00a43005a47c980a71652}{}\#define \hyperlink{Delay_8h_a93a155546ce00a43005a47c980a71652}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+M\+S}~134217\+U\+L\label{Delay_8h_a93a155546ce00a43005a47c980a71652}
+
+\begin{DoxyCompactList}\small\item\em Maximum amount of milliseconds to delay. \end{DoxyCompactList}\item 
+\hypertarget{Delay_8h_ace5b694acf827601105905f4ec93f154}{}\#define \hyperlink{Delay_8h_ace5b694acf827601105905f4ec93f154}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+U\+S}~134217727\+U\+L\label{Delay_8h_ace5b694acf827601105905f4ec93f154}
+
+\begin{DoxyCompactList}\small\item\em Maximum amount of microseconds to delay. \end{DoxyCompactList}\item 
+\#define \hyperlink{Delay_8h_afd020fd3c408ff4c36e0e0378f4d6b61}{D\+E\+L\+A\+Y\+\_\+\+S}(t)                                                                                                                      ~\{ \+\_\+\+\_\+delay32((unsigned long)( ((unsigned long long)(t))$\ast$(\hyperlink{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+C\+Y}))); \}
+\begin{DoxyCompactList}\small\item\em Delay a certain number of seconds. \end{DoxyCompactList}\item 
+\#define \hyperlink{Delay_8h_aa200ec1d06dc0db47076ae3d61936b65}{D\+E\+L\+A\+Y\+\_\+\+M\+S}(t)~\+\_\+\+\_\+delay\+\_\+ms((t))
+\begin{DoxyCompactList}\small\item\em Delay a certain number of milliseconds. \end{DoxyCompactList}\item 
+\#define \hyperlink{Delay_8h_a9c373e43e5b49ed95c3acdb84c4d49e5}{D\+E\+L\+A\+Y\+\_\+\+U\+S}(t)~\+\_\+\+\_\+delay\+\_\+us((t))
+\begin{DoxyCompactList}\small\item\em Delay a certain number of microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Delay macros and wrappers to the delay macros in libpic32.\+h. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Delay_8h_aa200ec1d06dc0db47076ae3d61936b65}{}\index{Delay.\+h@{Delay.\+h}!D\+E\+L\+A\+Y\+\_\+\+M\+S@{D\+E\+L\+A\+Y\+\_\+\+M\+S}}
+\index{D\+E\+L\+A\+Y\+\_\+\+M\+S@{D\+E\+L\+A\+Y\+\_\+\+M\+S}!Delay.\+h@{Delay.\+h}}
+\subsubsection[{D\+E\+L\+A\+Y\+\_\+\+M\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+M\+S(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~\+\_\+\+\_\+delay\+\_\+ms((t))}\label{Delay_8h_aa200ec1d06dc0db47076ae3d61936b65}
+
+
+Delay a certain number of milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Milliseconds to delay. Ranging from 1 to \hyperlink{Delay_8h_a93a155546ce00a43005a47c980a71652}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+M\+S}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{Delay_8h_afd020fd3c408ff4c36e0e0378f4d6b61}{}\index{Delay.\+h@{Delay.\+h}!D\+E\+L\+A\+Y\+\_\+\+S@{D\+E\+L\+A\+Y\+\_\+\+S}}
+\index{D\+E\+L\+A\+Y\+\_\+\+S@{D\+E\+L\+A\+Y\+\_\+\+S}!Delay.\+h@{Delay.\+h}}
+\subsubsection[{D\+E\+L\+A\+Y\+\_\+\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+S(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~\{ \+\_\+\+\_\+delay32((unsigned long)( ((unsigned long long)(t))$\ast$({\bf F\+C\+Y}))); \}}\label{Delay_8h_afd020fd3c408ff4c36e0e0378f4d6b61}
+
+
+Delay a certain number of seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Number of seconds to delay. Ranging from 1 to \hyperlink{Delay_8h_a62c80f08550c22513b411f2f07de57c3}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+S}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{Delay_8h_a9c373e43e5b49ed95c3acdb84c4d49e5}{}\index{Delay.\+h@{Delay.\+h}!D\+E\+L\+A\+Y\+\_\+\+U\+S@{D\+E\+L\+A\+Y\+\_\+\+U\+S}}
+\index{D\+E\+L\+A\+Y\+\_\+\+U\+S@{D\+E\+L\+A\+Y\+\_\+\+U\+S}!Delay.\+h@{Delay.\+h}}
+\subsubsection[{D\+E\+L\+A\+Y\+\_\+\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+L\+A\+Y\+\_\+\+U\+S(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~\+\_\+\+\_\+delay\+\_\+us((t))}\label{Delay_8h_a9c373e43e5b49ed95c3acdb84c4d49e5}
+
+
+Delay a certain number of microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d,number} & of microseconds to delay. Ranging from 1 to \hyperlink{Delay_8h_ace5b694acf827601105905f4ec93f154}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+U\+S}. \\
+\hline
+\end{DoxyParams}

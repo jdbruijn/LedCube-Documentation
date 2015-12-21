@@ -1,0 +1,92 @@
+\hypertarget{Buzzer_8h}{}\section{Library\+Files/\+Buzzer.h File Reference}
+\label{Buzzer_8h}\index{Library\+Files/\+Buzzer.\+h@{Library\+Files/\+Buzzer.\+h}}
+
+
+Controls a buzzer using the Output Compare peripheral.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Delay.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}My\+Assert.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{Buzzer_8h_a6c70d1dacc40376ad317856a71790dc2}{}\#define {\bfseries B\+U\+Z\+Z\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+S\+E\+L\+F\+\_\+\+T\+E\+S\+T\+\_\+\+N\+O}\label{Buzzer_8h_a6c70d1dacc40376ad317856a71790dc2}
+
+\item 
+\#define \hyperlink{Buzzer_8h_a83a0b28f5714c9323dbb9c5db44c1820}{T2\+\_\+\+T\+C\+K\+P\+S}~8
+\item 
+\#define \hyperlink{Buzzer_8h_afdb978502460ffda1bda4f9a0d9db24e}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}~40
+\item 
+\#define \hyperlink{Buzzer_8h_a6009a054be83037a32067d8024113483}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}~16000
+\item 
+\#define \hyperlink{Buzzer_8h_ab6579044a020992e3434c6cedb70197f}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E}~10
+\item 
+\#define \hyperlink{Buzzer_8h_a08068b81ca2f024ea304a38f72bf2bef}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}~\hyperlink{Delay_8h_a93a155546ce00a43005a47c980a71652}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+M\+S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{Buzzer_8h_a63b14dc978d082a9bf2f230083c94e0c}{}void \hyperlink{Buzzer_8h_a63b14dc978d082a9bf2f230083c94e0c}{Buzzer\+\_\+init} (void)\label{Buzzer_8h_a63b14dc978d082a9bf2f230083c94e0c}
+
+\begin{DoxyCompactList}\small\item\em Initialize the on-\/board buzzer. \end{DoxyCompactList}\item 
+\hypertarget{Buzzer_8h_a218af7115d48a5574f7463671ee2d947}{}void \hyperlink{Buzzer_8h_a218af7115d48a5574f7463671ee2d947}{Buzzer\+\_\+beep} (void)\label{Buzzer_8h_a218af7115d48a5574f7463671ee2d947}
+
+\begin{DoxyCompactList}\small\item\em Create a short (250 ms) beep with a frequency of 4 k\+Hz. \end{DoxyCompactList}\item 
+\hypertarget{Buzzer_8h_a62f895374e11d0f54dbecb4df0d1a2a9}{}void \hyperlink{Buzzer_8h_a62f895374e11d0f54dbecb4df0d1a2a9}{Buzzer\+\_\+short\+Beep} (void)\label{Buzzer_8h_a62f895374e11d0f54dbecb4df0d1a2a9}
+
+\begin{DoxyCompactList}\small\item\em Create a very short (50 ms) beep with a frequency of 4 k\+Hz. \end{DoxyCompactList}\item 
+void \hyperlink{Buzzer_8h_a537dbbd99d6dc1681c7c781b8717cd3c}{Buzzer\+\_\+set} (uint16\+\_\+t \+\_\+frequency, uint32\+\_\+t \+\_\+time)
+\begin{DoxyCompactList}\small\item\em Make a sound with adjustable frequency and duration time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls a buzzer using the Output Compare peripheral. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Buzzer_8h_a6009a054be83037a32067d8024113483}{}\index{Buzzer.\+h@{Buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y~16000}\label{Buzzer_8h_a6009a054be83037a32067d8024113483}
+Maximum buzzer frequency in Hz. \hypertarget{Buzzer_8h_a08068b81ca2f024ea304a38f72bf2bef}{}\index{Buzzer.\+h@{Buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E~{\bf D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+M\+S}}\label{Buzzer_8h_a08068b81ca2f024ea304a38f72bf2bef}
+Maximum buzzer time in ms. Same as maximum delay time \hyperlink{Delay_8h_a93a155546ce00a43005a47c980a71652}{D\+E\+L\+A\+Y\+\_\+\+M\+A\+X\+\_\+\+M\+S}. \hypertarget{Buzzer_8h_afdb978502460ffda1bda4f9a0d9db24e}{}\index{Buzzer.\+h@{Buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y~40}\label{Buzzer_8h_afdb978502460ffda1bda4f9a0d9db24e}
+Minimum buzzer frequency in Hz. \hypertarget{Buzzer_8h_ab6579044a020992e3434c6cedb70197f}{}\index{Buzzer.\+h@{Buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E@{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E~10}\label{Buzzer_8h_ab6579044a020992e3434c6cedb70197f}
+Minimum buzzer time in ms. \hypertarget{Buzzer_8h_a83a0b28f5714c9323dbb9c5db44c1820}{}\index{Buzzer.\+h@{Buzzer.\+h}!T2\+\_\+\+T\+C\+K\+P\+S@{T2\+\_\+\+T\+C\+K\+P\+S}}
+\index{T2\+\_\+\+T\+C\+K\+P\+S@{T2\+\_\+\+T\+C\+K\+P\+S}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{T2\+\_\+\+T\+C\+K\+P\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\+\_\+\+T\+C\+K\+P\+S~8}\label{Buzzer_8h_a83a0b28f5714c9323dbb9c5db44c1820}
+Timer 2 prescaler. 
+
+\subsection{Function Documentation}
+\hypertarget{Buzzer_8h_a537dbbd99d6dc1681c7c781b8717cd3c}{}\index{Buzzer.\+h@{Buzzer.\+h}!Buzzer\+\_\+set@{Buzzer\+\_\+set}}
+\index{Buzzer\+\_\+set@{Buzzer\+\_\+set}!Buzzer.\+h@{Buzzer.\+h}}
+\subsubsection[{Buzzer\+\_\+set(uint16\+\_\+t \+\_\+frequency, uint32\+\_\+t \+\_\+time)}]{\setlength{\rightskip}{0pt plus 5cm}void Buzzer\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{\+\_\+frequency, }
+\item[{uint32\+\_\+t}]{\+\_\+time}
+\end{DoxyParamCaption}
+)}\label{Buzzer_8h_a537dbbd99d6dc1681c7c781b8717cd3c}
+
+
+Make a sound with adjustable frequency and duration time. 
+
+The sound is created using a P\+W\+M-\/signal with a duty cycle of fifty percent. \begin{DoxyNote}{Note}
+\+\_\+frequency must be between \hyperlink{Buzzer_8h_afdb978502460ffda1bda4f9a0d9db24e}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y} and \hyperlink{Buzzer_8h_a6009a054be83037a32067d8024113483}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}, and \+\_\+time must be between \hyperlink{Buzzer_8h_ab6579044a020992e3434c6cedb70197f}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E} and \hyperlink{Buzzer_8h_a08068b81ca2f024ea304a38f72bf2bef}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}. 
+
+The output frequency has a maximum deviation of 1.\+1\%. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+frequency} & Frequency of the sound in Hz. Ranging from \hyperlink{Buzzer_8h_afdb978502460ffda1bda4f9a0d9db24e}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y} to \hyperlink{Buzzer_8h_a6009a054be83037a32067d8024113483}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}. \\
+\hline
+{\em \+\_\+time} & Duration of the sound in ms. Ranging from \hyperlink{Buzzer_8h_ab6579044a020992e3434c6cedb70197f}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+I\+N\+\_\+\+T\+I\+M\+E} to \hyperlink{Buzzer_8h_a08068b81ca2f024ea304a38f72bf2bef}{B\+U\+Z\+Z\+E\+R\+\_\+\+M\+A\+X\+\_\+\+T\+I\+M\+E}. \\
+\hline
+\end{DoxyParams}

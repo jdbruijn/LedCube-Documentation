@@ -1,0 +1,432 @@
+\hypertarget{getPICConfigurationBits_8h}{}\section{Library\+Files/get\+P\+I\+C\+Configuration\+Bits.h File Reference}
+\label{getPICConfigurationBits_8h}\index{Library\+Files/get\+P\+I\+C\+Configuration\+Bits.\+h@{Library\+Files/get\+P\+I\+C\+Configuration\+Bits.\+h}}
+
+
+Gets the configuration bits that are set in the microcontroller.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Uart.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{getPICConfigurationBits_8h_a59fc9fb57b9d3635dbb90b70ff8bdaa8}{}\#define {\bfseries J\+T\+A\+G\+E\+N\+\_\+\+D\+E\+S\+C}~\char`\"{}J\+T\+A\+G\+E\+N\+: J\+T\+A\+G Port Enable bit\char`\"{}\label{getPICConfigurationBits_8h_a59fc9fb57b9d3635dbb90b70ff8bdaa8}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a6f465aab4182bb4701b66bfd1837e1a9}{}\#define {\bfseries J\+T\+A\+G\+E\+N\+\_\+1}~\char`\"{}\mbox{[}J\+T\+A\+G\+E\+N\+\_\+\+O\+N\mbox{]} J\+T\+A\+G port is enabled\char`\"{}\label{getPICConfigurationBits_8h_a6f465aab4182bb4701b66bfd1837e1a9}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a939a283a563c644f93d59e3355aeec4d}{}\#define {\bfseries J\+T\+A\+G\+E\+N\+\_\+0}~\char`\"{}\mbox{[}J\+T\+A\+G\+E\+N\+\_\+\+O\+F\+F\mbox{]} J\+T\+A\+G port is disabled\char`\"{}\label{getPICConfigurationBits_8h_a939a283a563c644f93d59e3355aeec4d}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a2add16cc0fe58bfd3f547b2355a9a9cc}{}\#define {\bfseries G\+C\+P\+\_\+\+D\+E\+S\+C}~\char`\"{}G\+C\+P\+: General Segment Program Memory Code Protection bit\char`\"{}\label{getPICConfigurationBits_8h_a2add16cc0fe58bfd3f547b2355a9a9cc}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a84995f7f3af94fa4a788abee8fdece91}{}\#define {\bfseries G\+C\+P\+\_\+1}~\char`\"{}\mbox{[}G\+C\+P\+\_\+\+O\+F\+F\mbox{]} Code protection is disabled\char`\"{}\label{getPICConfigurationBits_8h_a84995f7f3af94fa4a788abee8fdece91}
+
+\item 
+\#define {\bfseries G\+C\+P\+\_\+0}
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae73d02fe377a05ee3cac75c4cac27212}{}\#define {\bfseries G\+W\+R\+P\+\_\+\+D\+E\+S\+C}~\char`\"{}G\+W\+R\+P\+: General Segment Code Flash Write Protection bit\char`\"{}\label{getPICConfigurationBits_8h_ae73d02fe377a05ee3cac75c4cac27212}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_acf05ae441b2c203ce4265fcf8b5acd32}{}\#define {\bfseries G\+W\+R\+P\+\_\+1}~\char`\"{}\mbox{[}G\+W\+R\+P\+\_\+\+O\+F\+F\mbox{]} Writes to program memory are allowed\char`\"{}\label{getPICConfigurationBits_8h_acf05ae441b2c203ce4265fcf8b5acd32}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ab4c3a8dbbd262817e0f5fe2a2b801de4}{}\#define {\bfseries G\+W\+R\+P\+\_\+0}~\char`\"{}\mbox{[}G\+W\+R\+P\+\_\+\+O\+N\mbox{]} Writes to program memory are disabled\char`\"{}\label{getPICConfigurationBits_8h_ab4c3a8dbbd262817e0f5fe2a2b801de4}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a770d6f9c565db5ea8faedcb9d4a3c45e}{}\#define {\bfseries B\+K\+B\+U\+G\+\_\+\+D\+E\+S\+C}~\char`\"{}!D\+E\+B\+U\+G\+: Background Debugger Enable bit\char`\"{}\label{getPICConfigurationBits_8h_a770d6f9c565db5ea8faedcb9d4a3c45e}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a98c1d45e4096c3eab2fbba123251ead0}{}\#define {\bfseries B\+K\+B\+U\+G\+\_\+1}~\char`\"{}\mbox{[}B\+K\+B\+U\+G\+\_\+\+O\+F\+F\mbox{]} Device resets into Operational mode\char`\"{}\label{getPICConfigurationBits_8h_a98c1d45e4096c3eab2fbba123251ead0}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a77fa73a84092fb4299e4db7631c6f7d7}{}\#define {\bfseries B\+K\+B\+U\+G\+\_\+0}~\char`\"{}\mbox{[}B\+K\+B\+U\+G\+\_\+\+O\+N\mbox{]} Device resets into Debug mode\char`\"{}\label{getPICConfigurationBits_8h_a77fa73a84092fb4299e4db7631c6f7d7}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a08101ba00fd52aae3afbe4b5927a4ee3}{}\#define {\bfseries I\+C\+S\+\_\+\+D\+E\+S\+C}~\char`\"{}I\+C\+S$<$1\+:0$>$\+: Emulator Pin Placement Select bits\char`\"{}\label{getPICConfigurationBits_8h_a08101ba00fd52aae3afbe4b5927a4ee3}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a3952b123ae750e032265faae267f28d9}{}\#define {\bfseries I\+C\+S\+\_\+11}~\char`\"{}\mbox{[}I\+C\+S\+\_\+\+P\+Gx1\mbox{]} Emulator E\+M\+U\+C1/E\+M\+U\+D1 pins are shared with P\+G\+C1/P\+G\+D1\char`\"{}\label{getPICConfigurationBits_8h_a3952b123ae750e032265faae267f28d9}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_af872e63a8124f939c70c36073037b692}{}\#define {\bfseries I\+C\+S\+\_\+10}~\char`\"{}\mbox{[}I\+C\+S\+\_\+\+P\+Gx2\mbox{]} Emulator E\+M\+U\+C2/E\+M\+U\+D2 pins are shared with P\+G\+C2/P\+G\+D2\char`\"{}\label{getPICConfigurationBits_8h_af872e63a8124f939c70c36073037b692}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a0f16a8cacf277e3411ed9491544ed70e}{}\#define {\bfseries I\+C\+S\+\_\+01}~\char`\"{}\mbox{[}I\+C\+S\+\_\+\+P\+Gx3\mbox{]} Emulator E\+M\+U\+C3/E\+M\+U\+D3 pins are shared with P\+G\+C3/P\+G\+D3\char`\"{}\label{getPICConfigurationBits_8h_a0f16a8cacf277e3411ed9491544ed70e}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a5db94acf33bed8cf18969df66964bd7c}{}\#define {\bfseries I\+C\+S\+\_\+00}~\char`\"{}Reserved; do not use\char`\"{}\label{getPICConfigurationBits_8h_a5db94acf33bed8cf18969df66964bd7c}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a079a17fa7745eaae87696405ce143cbc}{}\#define {\bfseries F\+W\+D\+T\+E\+N\+\_\+\+D\+E\+S\+C}~\char`\"{}F\+W\+D\+T\+E\+N\+: Watchdog Timer Enable bit\char`\"{}\label{getPICConfigurationBits_8h_a079a17fa7745eaae87696405ce143cbc}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a33775e79bf10f04e93dbf0254f54d9d3}{}\#define {\bfseries F\+W\+D\+T\+E\+N\+\_\+1}~\char`\"{}\mbox{[}F\+W\+D\+T\+E\+N\+\_\+\+O\+N\mbox{]} Watchdog Timer is enabled\char`\"{}\label{getPICConfigurationBits_8h_a33775e79bf10f04e93dbf0254f54d9d3}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a505d6353ff7b7baff9b0abe5f9e1fdd3}{}\#define {\bfseries F\+W\+D\+T\+E\+N\+\_\+0}~\char`\"{}\mbox{[}F\+W\+D\+T\+E\+N\+\_\+\+O\+F\+F\mbox{]} Watchdog Timer is disabled\char`\"{}\label{getPICConfigurationBits_8h_a505d6353ff7b7baff9b0abe5f9e1fdd3}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a3fcb95e1fee258107bdbdb27119a4794}{}\#define {\bfseries W\+I\+N\+D\+I\+S\+\_\+\+D\+E\+S\+C}~\char`\"{}W\+I\+N\+D\+I\+S\+: Windowed Watchdog Timer Disable bit\char`\"{}\label{getPICConfigurationBits_8h_a3fcb95e1fee258107bdbdb27119a4794}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_aa5f86beef4d195546b29466563406e66}{}\#define {\bfseries W\+I\+N\+D\+I\+S\+\_\+1}~\char`\"{}\mbox{[}W\+I\+N\+D\+I\+S\+\_\+\+O\+N\mbox{]} Standard Watchdog Timer is enabled\char`\"{}\label{getPICConfigurationBits_8h_aa5f86beef4d195546b29466563406e66}
+
+\item 
+\#define {\bfseries W\+I\+N\+D\+I\+S\+\_\+0}
+\item 
+\hypertarget{getPICConfigurationBits_8h_ab75a675beaf3b23296e0fddedbc3db00}{}\#define {\bfseries F\+W\+P\+S\+A\+\_\+\+D\+E\+S\+C}~\char`\"{}F\+W\+P\+S\+A\+: W\+D\+T Prescaler Ratio Select bit\char`\"{}\label{getPICConfigurationBits_8h_ab75a675beaf3b23296e0fddedbc3db00}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a6d33b1183cb4bd5379aab48c1ebe5f4e}{}\#define {\bfseries F\+W\+P\+S\+A\+\_\+1}~\char`\"{}\mbox{[}F\+W\+P\+S\+A\+\_\+\+P\+R128\mbox{]} Prescaler ratio of 1\+:128\char`\"{}\label{getPICConfigurationBits_8h_a6d33b1183cb4bd5379aab48c1ebe5f4e}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a74f671a49bcedf26453e687b1e8f2bdd}{}\#define {\bfseries F\+W\+P\+S\+A\+\_\+0}~\char`\"{}\mbox{[}F\+W\+P\+S\+A\+\_\+\+P\+R32\mbox{]} Prescaler ratio of 1\+:32\char`\"{}\label{getPICConfigurationBits_8h_a74f671a49bcedf26453e687b1e8f2bdd}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a60e292d100a3172320aaada54768166b}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+\+D\+E\+S\+C}~\char`\"{}W\+D\+T\+P\+S$<$3\+:0$>$\+: Watchdog Timer Postscaler Select bits\char`\"{}\label{getPICConfigurationBits_8h_a60e292d100a3172320aaada54768166b}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a5f50b077ec2d5ea0679cf208e8e9093a}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1111}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+\+P\+S32768\mbox{]} 1\+:32768\char`\"{}\label{getPICConfigurationBits_8h_a5f50b077ec2d5ea0679cf208e8e9093a}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a977d003794771dbefbc6585fc50b3f26}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1110}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+16384\mbox{]} 1\+:16384\char`\"{}\label{getPICConfigurationBits_8h_a977d003794771dbefbc6585fc50b3f26}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_adbb024dcc0c72305ec67b4fa5b22cb48}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1101}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+8192\mbox{]} 1\+:8192\char`\"{}\label{getPICConfigurationBits_8h_adbb024dcc0c72305ec67b4fa5b22cb48}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae3b1456bd3021ac25a41fc61585762d1}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1100}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+4096\mbox{]} 1\+:4096\char`\"{}\label{getPICConfigurationBits_8h_ae3b1456bd3021ac25a41fc61585762d1}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_aec8c4b3ed57a8eeac4641fc6ddcb434c}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1011}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+2048\mbox{]} 1\+:2048\char`\"{}\label{getPICConfigurationBits_8h_aec8c4b3ed57a8eeac4641fc6ddcb434c}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a12f0003c6de0b272d16ebb6af7478f9f}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1010}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+1024\mbox{]} 1\+:1024\char`\"{}\label{getPICConfigurationBits_8h_a12f0003c6de0b272d16ebb6af7478f9f}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a4539fd9be2a81880f6da5d32af5c8070}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1001}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+512\mbox{]} 1\+:512\char`\"{}\label{getPICConfigurationBits_8h_a4539fd9be2a81880f6da5d32af5c8070}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae8215f74a5bd4d3a381f45894e7aceb7}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+1000}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+256\mbox{]} 1\+:256\char`\"{}\label{getPICConfigurationBits_8h_ae8215f74a5bd4d3a381f45894e7aceb7}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a6e0a99c7857a898097caa54884dc8555}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0111}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+128\mbox{]} 1\+:128\char`\"{}\label{getPICConfigurationBits_8h_a6e0a99c7857a898097caa54884dc8555}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a0a1ea69a867b46fc597250230c2f215d}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0110}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+64\mbox{]} 1\+:64\char`\"{}\label{getPICConfigurationBits_8h_a0a1ea69a867b46fc597250230c2f215d}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_aee7a1bf11d8f5a5c1d669962f9f7ad46}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0101}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+32\mbox{]} 1\+:32\char`\"{}\label{getPICConfigurationBits_8h_aee7a1bf11d8f5a5c1d669962f9f7ad46}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a310a314ee08a38b3e04ee564af4d61a2}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0100}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+16\mbox{]} 1\+:16\char`\"{}\label{getPICConfigurationBits_8h_a310a314ee08a38b3e04ee564af4d61a2}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_aa1b7aa73677bb358ab5fd1c03ec1dab9}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0011}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+8\mbox{]} 1\+:8\char`\"{}\label{getPICConfigurationBits_8h_aa1b7aa73677bb358ab5fd1c03ec1dab9}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a4eb1321f9cebe9e8eddeeb2c936e877a}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0010}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+4\mbox{]} 1\+:4\char`\"{}\label{getPICConfigurationBits_8h_a4eb1321f9cebe9e8eddeeb2c936e877a}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a3a5acb8e39f5b229158a59c5caf60b62}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0001}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+2\mbox{]} 1\+:2\char`\"{}\label{getPICConfigurationBits_8h_a3a5acb8e39f5b229158a59c5caf60b62}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a36a844a1d6c8deea3c64a4ce394f7dbb}{}\#define {\bfseries W\+D\+T\+P\+S\+\_\+0000}~\char`\"{}\mbox{[}W\+D\+T\+P\+S\+\_\+1\mbox{]} 1\+:1\char`\"{}\label{getPICConfigurationBits_8h_a36a844a1d6c8deea3c64a4ce394f7dbb}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ad1ab00c561cf2ab44aa9179d8b42bb57}{}\#define {\bfseries I\+E\+S\+O\+\_\+\+D\+E\+S\+C}~\char`\"{}I\+E\+S\+O\+: Internal External Switchover bit\char`\"{}\label{getPICConfigurationBits_8h_ad1ab00c561cf2ab44aa9179d8b42bb57}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a3959a434512eac2366085909ba7acf2d}{}\#define {\bfseries I\+E\+S\+O\+\_\+1}~\char`\"{}\mbox{[}I\+E\+S\+O\+\_\+\+O\+N\mbox{]} I\+E\+S\+O mode (Two-\/Speed Start-\/up) is enabled\char`\"{}\label{getPICConfigurationBits_8h_a3959a434512eac2366085909ba7acf2d}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a10c00edb79b4817cfb6a8a2ef56dcc30}{}\#define {\bfseries I\+E\+S\+O\+\_\+0}~\char`\"{}\mbox{[}I\+E\+S\+O\+\_\+\+O\+F\+F\mbox{]} I\+E\+S\+O mode (Two-\/Speed Start-\/up) is disabled\char`\"{}\label{getPICConfigurationBits_8h_a10c00edb79b4817cfb6a8a2ef56dcc30}
+
+\item 
+\#define {\bfseries W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C}
+\item 
+\hypertarget{getPICConfigurationBits_8h_aa3159882a8d38f4c0472833059339f49}{}\#define {\bfseries W\+U\+T\+S\+E\+L\+\_\+11}~\char`\"{}\mbox{[}W\+U\+T\+S\+E\+L\+\_\+\+L\+E\+G\mbox{]} Default regulator start-\/up time is used\char`\"{}\label{getPICConfigurationBits_8h_aa3159882a8d38f4c0472833059339f49}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae0165ccc62b5cd48dfbbdebc9797d5f2}{}\#define {\bfseries W\+U\+T\+S\+E\+L\+\_\+01}~\char`\"{}\mbox{[}W\+U\+T\+S\+E\+L\+\_\+\+F\+S\+T\mbox{]} Fast regulator start-\/up time is used\char`\"{}\label{getPICConfigurationBits_8h_ae0165ccc62b5cd48dfbbdebc9797d5f2}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ad90e255507ce2e969ff101fe39eec41e}{}\#define {\bfseries W\+U\+T\+S\+E\+L\+\_\+x0}~\char`\"{}Reserved; do not use\char`\"{}\label{getPICConfigurationBits_8h_ad90e255507ce2e969ff101fe39eec41e}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae94916d62aab66c2e0bed965a33298fe}{}\#define {\bfseries S\+O\+S\+C\+S\+E\+L\+\_\+\+D\+E\+S\+C}~\char`\"{}S\+O\+S\+C\+S\+E\+L$<$1\+:0$>$\+: Secondary Oscillator Power Mode Select bits\char`\"{}\label{getPICConfigurationBits_8h_ae94916d62aab66c2e0bed965a33298fe}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a50b0519fa3697faae7426b873807832c}{}\#define {\bfseries S\+O\+S\+C\+S\+E\+L\+\_\+11}~\char`\"{}\mbox{[}S\+O\+S\+C\+S\+E\+L\+\_\+\+S\+O\+S\+C\mbox{]} Default (High Drive Strength) mode\char`\"{}\label{getPICConfigurationBits_8h_a50b0519fa3697faae7426b873807832c}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a95a505d6cef5d81d8afc06bc6ffc55b8}{}\#define {\bfseries S\+O\+S\+C\+S\+E\+L\+\_\+01}~\char`\"{}\mbox{[}S\+O\+S\+C\+S\+E\+L\+\_\+\+L\+P\+S\+O\+S\+C\mbox{]} Low-\/Power (Low Drive Strength) mode\char`\"{}\label{getPICConfigurationBits_8h_a95a505d6cef5d81d8afc06bc6ffc55b8}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_ac7bfb432cbbea14a9fcc1d5b989f83a4}{}\#define {\bfseries S\+O\+S\+C\+S\+E\+L\+\_\+x0}~\char`\"{}Reserved; do not use\char`\"{}\label{getPICConfigurationBits_8h_ac7bfb432cbbea14a9fcc1d5b989f83a4}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a5f9f942d0b394f62b8e3ca533045a929}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+\+D\+E\+S\+C}~\char`\"{}F\+N\+O\+S\+C$<$2\+:0$>$\+: Initial Oscillator Select bits\char`\"{}\label{getPICConfigurationBits_8h_a5f9f942d0b394f62b8e3ca533045a929}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a66a2660f9ea2f75ac91b6bb35fe2d969}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+111}~\char`\"{}\mbox{[}F\+N\+O\+S\+C\+\_\+\+F\+R\+C\+D\+I\+V\mbox{]} Fast R\+C Oscillator with Postscaler (\hyperlink{System_8h_a818b0c17e45483794fb99a7928e02551}{F\+R\+C\+D\+I\+V})\char`\"{}\label{getPICConfigurationBits_8h_a66a2660f9ea2f75ac91b6bb35fe2d969}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_af8aac6f1f9a4fb16fc7ae599b61a20a0}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+110}~\char`\"{}Reserved\char`\"{}\label{getPICConfigurationBits_8h_af8aac6f1f9a4fb16fc7ae599b61a20a0}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a6e710b5634151c19a370abfec4ea473e}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+101}~\char`\"{}\mbox{[}F\+N\+O\+S\+C\+\_\+\+L\+P\+R\+C\mbox{]} Low-\/Power R\+C Oscillator (L\+P\+R\+C)\char`\"{}\label{getPICConfigurationBits_8h_a6e710b5634151c19a370abfec4ea473e}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a9e621b574bed6564b0546a7464c9a0cc}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+100}~\char`\"{}\mbox{[}F\+N\+O\+S\+C\+\_\+\+S\+O\+S\+C\mbox{]} Secondary Oscillator (S\+O\+S\+C)\char`\"{}\label{getPICConfigurationBits_8h_a9e621b574bed6564b0546a7464c9a0cc}
+
+\item 
+\#define {\bfseries F\+N\+O\+S\+C\+\_\+011}
+\item 
+\hypertarget{getPICConfigurationBits_8h_a86a140d4875f163f76ba8e69b01cc5c9}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+010}~\char`\"{}\mbox{[}F\+N\+O\+S\+C\+\_\+\+P\+R\+I\mbox{]} Primary Oscillator (X\+T, H\+S, E\+C)\char`\"{}\label{getPICConfigurationBits_8h_a86a140d4875f163f76ba8e69b01cc5c9}
+
+\item 
+\#define {\bfseries F\+N\+O\+S\+C\+\_\+001}
+\item 
+\hypertarget{getPICConfigurationBits_8h_aa0cab34cbe2f1320a0408db15a99cad9}{}\#define {\bfseries F\+N\+O\+S\+C\+\_\+000}~\char`\"{}\mbox{[}F\+N\+O\+S\+C\+\_\+\+F\+R\+C\mbox{]} Fast R\+C Oscillator (F\+R\+C)\char`\"{}\label{getPICConfigurationBits_8h_aa0cab34cbe2f1320a0408db15a99cad9}
+
+\item 
+\#define {\bfseries F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C}
+\item 
+\#define {\bfseries F\+C\+K\+S\+M\+\_\+1x}
+\item 
+\#define {\bfseries F\+C\+K\+S\+M\+\_\+01}
+\item 
+\#define {\bfseries F\+C\+K\+S\+M\+\_\+00}
+\item 
+\hypertarget{getPICConfigurationBits_8h_a0a2e8f1da671c7aaa776c574ccd1c109}{}\#define {\bfseries O\+S\+C\+I\+O\+F\+C\+N\+\_\+\+D\+E\+S\+C}~\char`\"{}O\+S\+C\+I\+O\+F\+C\+N\+: O\+S\+C\+O Pin Configuration bit\+:\char`\"{}\label{getPICConfigurationBits_8h_a0a2e8f1da671c7aaa776c574ccd1c109}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a75b74ada5edd7cd9cab67aa1a5202d42}{}\#define {\bfseries O\+S\+C\+I\+O\+F\+C\+N\+\_\+1}~\char`\"{}\mbox{[}O\+S\+C\+I\+O\+F\+N\+C\+\_\+\+O\+F\+F\mbox{]} O\+S\+C\+O/C\+L\+K\+O/R\+A3 functions as C\+L\+K\+O (\hyperlink{System_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+S\+C}/2)\char`\"{}\label{getPICConfigurationBits_8h_a75b74ada5edd7cd9cab67aa1a5202d42}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a72a7d779578c07b0cfb04197d367589f}{}\#define {\bfseries O\+S\+C\+I\+O\+F\+C\+N\+\_\+0}~\char`\"{}\mbox{[}O\+S\+C\+I\+O\+F\+N\+C\+\_\+\+O\+N\mbox{]} O\+S\+C\+O/C\+L\+K\+O/R\+A3 functions as port I/O (R\+A3)\char`\"{}\label{getPICConfigurationBits_8h_a72a7d779578c07b0cfb04197d367589f}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a7f4a608aec5f49242e6a0e65a4f76b68}{}\#define {\bfseries O\+S\+C\+I\+O\+F\+C\+N\+\_\+x}~\char`\"{}O\+S\+C\+I\+O\+F\+C\+N has no effect on O\+S\+C\+O/C\+L\+K\+O/R\+A3\char`\"{}\label{getPICConfigurationBits_8h_a7f4a608aec5f49242e6a0e65a4f76b68}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_aa9154beba45382dd2da3667322d37cc0}{}\#define {\bfseries I\+O\+L1\+W\+A\+Y\+\_\+\+D\+E\+S\+C}~\char`\"{}I\+O\+L1\+W\+A\+Y\+: I\+O\+L\+O\+C\+K One-\/Way Set Enable bit\char`\"{}\label{getPICConfigurationBits_8h_aa9154beba45382dd2da3667322d37cc0}
+
+\item 
+\#define {\bfseries I\+O\+L1\+W\+A\+Y\+\_\+1}
+\item 
+\#define {\bfseries I\+O\+L1\+W\+A\+Y\+\_\+0}
+\item 
+\hypertarget{getPICConfigurationBits_8h_ae33dac3ff34c25cf82714173637ede60}{}\#define {\bfseries I2\+C1\+S\+E\+L\+\_\+\+D\+E\+S\+C}~\char`\"{}I2\+C1\+S\+E\+L\+: I2\+C1 Pin Select bit\char`\"{}\label{getPICConfigurationBits_8h_ae33dac3ff34c25cf82714173637ede60}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a588984118eb764df6312e39f1e20a053}{}\#define {\bfseries I2\+C1\+S\+E\+L\+\_\+1}~\char`\"{}\mbox{[}I2\+C1\+S\+E\+L\+\_\+\+P\+R\+I\mbox{]} Use default S\+C\+L1/S\+D\+A1 pins\char`\"{}\label{getPICConfigurationBits_8h_a588984118eb764df6312e39f1e20a053}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a1ca998e8469bb5f62878602d2bcfacf7}{}\#define {\bfseries I2\+C1\+S\+E\+L\+\_\+0}~\char`\"{}\mbox{[}I2\+C1\+S\+E\+L\+\_\+\+S\+E\+C\mbox{]} Use alternate S\+C\+L1/S\+D\+A1 pins\char`\"{}\label{getPICConfigurationBits_8h_a1ca998e8469bb5f62878602d2bcfacf7}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a21dff1aff3520bb9e704f1570f933e53}{}\#define {\bfseries P\+O\+S\+C\+M\+D\+\_\+\+D\+E\+S\+C}~\char`\"{}P\+O\+S\+C\+M\+D$<$1\+:0\+:$>$ Primary Oscillator Configuration bits\char`\"{}\label{getPICConfigurationBits_8h_a21dff1aff3520bb9e704f1570f933e53}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a865c5c43e38ee24a7308f11d3b215fa5}{}\#define {\bfseries P\+O\+S\+C\+M\+D\+\_\+11}~\char`\"{}\mbox{[}P\+O\+S\+C\+M\+O\+D\+\_\+\+N\+O\+N\+E\mbox{]} Primary oscillator is disabled\char`\"{}\label{getPICConfigurationBits_8h_a865c5c43e38ee24a7308f11d3b215fa5}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a058726277d69c2cab2a0903f5257c055}{}\#define {\bfseries P\+O\+S\+C\+M\+D\+\_\+10}~\char`\"{}\mbox{[}P\+O\+S\+C\+M\+O\+D\+\_\+\+H\+S\mbox{]} H\+S Oscillator mode is selected\char`\"{}\label{getPICConfigurationBits_8h_a058726277d69c2cab2a0903f5257c055}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a697057311551c922299cde000fab019c}{}\#define {\bfseries P\+O\+S\+C\+M\+D\+\_\+01}~\char`\"{}\mbox{[}P\+O\+S\+C\+M\+O\+D\+\_\+\+X\+T\mbox{]} X\+T Oscillator mode is selected\char`\"{}\label{getPICConfigurationBits_8h_a697057311551c922299cde000fab019c}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a2e3d765f896d0e3955dc5f8c5abe8d1f}{}\#define {\bfseries P\+O\+S\+C\+M\+D\+\_\+00}~\char`\"{}\mbox{[}P\+O\+S\+C\+M\+O\+D\+\_\+\+E\+C\mbox{]} E\+C Oscillator mode is selected\char`\"{}\label{getPICConfigurationBits_8h_a2e3d765f896d0e3955dc5f8c5abe8d1f}
+
+\item 
+\hypertarget{getPICConfigurationBits_8h_a522aa29295ebb2aa65ea06b325947f26}{}\#define \hyperlink{getPICConfigurationBits_8h_a522aa29295ebb2aa65ea06b325947f26}{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}(fmt,  args...)~P\+R\+I\+N\+T\+F(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{getPICConfigurationBits_8h_a522aa29295ebb2aa65ea06b325947f26}
+
+\begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit description with indent. \end{DoxyCompactList}\item 
+\hypertarget{getPICConfigurationBits_8h_a2237654922519f9d189b65b6ccad362e}{}\#define \hyperlink{getPICConfigurationBits_8h_a2237654922519f9d189b65b6ccad362e}{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}(fmt,  args...)~P\+R\+I\+N\+T\+F(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{getPICConfigurationBits_8h_a2237654922519f9d189b65b6ccad362e}
+
+\begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit result with indent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{getPICConfigurationBits_8h_a6cb24dac747d04d782a4810170da12d8}{get\+P\+I\+C\+Config\+Bits} (void)
+\begin{DoxyCompactList}\small\item\em Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gets the configuration bits that are set in the microcontroller. 
+
+\begin{DoxyNote}{Note}
+This file is designed for the P\+I\+C24\+F\+J64\+G\+A004, so the documentation of the configuration bits can differ if a different P\+I\+C is used. The compiler will give a compiler warning if this file is not used with a P\+I\+C24\+F\+J64\+G\+A004. Also the structures for the Flash Configuration Words are based on that P\+I\+C. Therefore it\textquotesingle{}s recommended to check whether the documentation and structure layout is compatible to the used P\+I\+C microcontroller. 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]\+\_\+get\+P\+I\+C\+Configuration\+Bits\+\_\+read\+Latch gives a compiler warning \char`\"{}warning\+: control reaches end of non-\/void function\char`\"{}, because a value is not explicitly returned from the function.\end{DoxyRefDesc}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{getPICConfigurationBits_8h_a16e9d184fd19538389db1371231bf09f}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+C\+K\+S\+M\+\_\+00@{F\+C\+K\+S\+M\+\_\+00}}
+\index{F\+C\+K\+S\+M\+\_\+00@{F\+C\+K\+S\+M\+\_\+00}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+C\+K\+S\+M\+\_\+00}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+C\+K\+S\+M\+\_\+00}\label{getPICConfigurationBits_8h_a16e9d184fd19538389db1371231bf09f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[FCKSM\_CSECME] Clock switching is enabled, Fail-Safe Clock "} \(\backslash\)
+    \textcolor{stringliteral}{"Monitor is enabled"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_ae9e2051a5fab1eb60105cd12ead0ded1}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+C\+K\+S\+M\+\_\+01@{F\+C\+K\+S\+M\+\_\+01}}
+\index{F\+C\+K\+S\+M\+\_\+01@{F\+C\+K\+S\+M\+\_\+01}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+C\+K\+S\+M\+\_\+01}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+C\+K\+S\+M\+\_\+01}\label{getPICConfigurationBits_8h_ae9e2051a5fab1eb60105cd12ead0ded1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[FCKSM\_CSECMD] Clock switching is enabled, Fail-Safe Clock "} \(\backslash\)
+    \textcolor{stringliteral}{"Monitor is disabled"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_ac1e81b95ab7d74aabb5a2ea31d95c163}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+C\+K\+S\+M\+\_\+1x@{F\+C\+K\+S\+M\+\_\+1x}}
+\index{F\+C\+K\+S\+M\+\_\+1x@{F\+C\+K\+S\+M\+\_\+1x}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+C\+K\+S\+M\+\_\+1x}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+C\+K\+S\+M\+\_\+1x}\label{getPICConfigurationBits_8h_ac1e81b95ab7d74aabb5a2ea31d95c163}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[FCKSM\_CSDCMD] Clock switching and Fail-Safe Clock Monitor "} \(\backslash\)
+    \textcolor{stringliteral}{"are disabled"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_a539737c4580222e2fe64772a58fb85f1}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C@{F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C}}
+\index{F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C@{F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+C\+K\+S\+M\+\_\+\+D\+E\+S\+C}\label{getPICConfigurationBits_8h_a539737c4580222e2fe64772a58fb85f1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"FCKSM<1:0>: Clock Switching and Fail-Safe Clock Monitor "}  \(\backslash\)
+    \textcolor{stringliteral}{"Configuration bits"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_af11e02fc7c0e68d05cc9881d61cab78a}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+N\+O\+S\+C\+\_\+001@{F\+N\+O\+S\+C\+\_\+001}}
+\index{F\+N\+O\+S\+C\+\_\+001@{F\+N\+O\+S\+C\+\_\+001}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+N\+O\+S\+C\+\_\+001}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+N\+O\+S\+C\+\_\+001}\label{getPICConfigurationBits_8h_af11e02fc7c0e68d05cc9881d61cab78a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[FNOSC\_FRCPLL] Fast RC Oscillator with Postscaler and PLL "} \(\backslash\)
+    \textcolor{stringliteral}{"module (FRCPLL)"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_aaeac04465293cc0b9167fd3194c823be}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!F\+N\+O\+S\+C\+\_\+011@{F\+N\+O\+S\+C\+\_\+011}}
+\index{F\+N\+O\+S\+C\+\_\+011@{F\+N\+O\+S\+C\+\_\+011}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{F\+N\+O\+S\+C\+\_\+011}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+N\+O\+S\+C\+\_\+011}\label{getPICConfigurationBits_8h_aaeac04465293cc0b9167fd3194c823be}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[FNOSC\_PRIPLL] Primary Oscillator with PLL module (XTPLL, "} \(\backslash\)
+    \textcolor{stringliteral}{"HSPLL, ECPLL)"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_afa597f384270ab7d4d14c0b2e8a90f09}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!G\+C\+P\+\_\+0@{G\+C\+P\+\_\+0}}
+\index{G\+C\+P\+\_\+0@{G\+C\+P\+\_\+0}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{G\+C\+P\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+C\+P\+\_\+0}\label{getPICConfigurationBits_8h_afa597f384270ab7d4d14c0b2e8a90f09}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[GCP\_ON] Code protection is enabled for the entire program "}    \(\backslash\)
+    \textcolor{stringliteral}{"memory space"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_aa34dc1e096cb5e86ae2385f1a62ae44d}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!I\+O\+L1\+W\+A\+Y\+\_\+0@{I\+O\+L1\+W\+A\+Y\+\_\+0}}
+\index{I\+O\+L1\+W\+A\+Y\+\_\+0@{I\+O\+L1\+W\+A\+Y\+\_\+0}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{I\+O\+L1\+W\+A\+Y\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+O\+L1\+W\+A\+Y\+\_\+0}\label{getPICConfigurationBits_8h_aa34dc1e096cb5e86ae2385f1a62ae44d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[IOL1WAY\_OFF] The IOLOCK (OSCCON<6>) bit can be set and "}   \(\backslash\)
+    \textcolor{stringliteral}{"cleared as needed, provided the unlock sequence has been completed"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_a42d553cc2215baf6daa662c438c62eae}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!I\+O\+L1\+W\+A\+Y\+\_\+1@{I\+O\+L1\+W\+A\+Y\+\_\+1}}
+\index{I\+O\+L1\+W\+A\+Y\+\_\+1@{I\+O\+L1\+W\+A\+Y\+\_\+1}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{I\+O\+L1\+W\+A\+Y\+\_\+1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+O\+L1\+W\+A\+Y\+\_\+1}\label{getPICConfigurationBits_8h_a42d553cc2215baf6daa662c438c62eae}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[IOL1WAY\_ON] The IOLOCK (OSCCON<6>) bit can be set once, "}  \(\backslash\)
+    \textcolor{stringliteral}{"provided the unlock sequence has been completed. Once set, the "}          \(\backslash\)
+    \textcolor{stringliteral}{"Peripheral Pin Select registers cannot be written to a second time."}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_a5ef5c4c7415d119263745015157a71cd}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!W\+I\+N\+D\+I\+S\+\_\+0@{W\+I\+N\+D\+I\+S\+\_\+0}}
+\index{W\+I\+N\+D\+I\+S\+\_\+0@{W\+I\+N\+D\+I\+S\+\_\+0}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{W\+I\+N\+D\+I\+S\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+I\+N\+D\+I\+S\+\_\+0}\label{getPICConfigurationBits_8h_a5ef5c4c7415d119263745015157a71cd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"[WINDIS\_OFF] Windowed Watchdog Timer is enabled; FWDTEN "}    \(\backslash\)
+    \textcolor{stringliteral}{"must be '1'"}
+\end{DoxyCode}
+\hypertarget{getPICConfigurationBits_8h_a6e3f4413c04bfc72411d0ce41c6ef90a}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C@{W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C}}
+\index{W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C@{W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+U\+T\+S\+E\+L\+\_\+\+D\+E\+S\+C}\label{getPICConfigurationBits_8h_a6e3f4413c04bfc72411d0ce41c6ef90a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"WUTSEL<1:0>: Voltage Regulator Standby Mode Wake-up Time "}\(\backslash\)
+    \textcolor{stringliteral}{"Select bits"}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{getPICConfigurationBits_8h_a6cb24dac747d04d782a4810170da12d8}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}!get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}}
+\index{get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}!get\+P\+I\+C\+Configuration\+Bits.\+h@{get\+P\+I\+C\+Configuration\+Bits.\+h}}
+\subsubsection[{get\+P\+I\+C\+Config\+Bits(void)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+P\+I\+C\+Config\+Bits (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{getPICConfigurationBits_8h_a6cb24dac747d04d782a4810170da12d8}
+
+
+Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. 
+
+\begin{DoxyNote}{Note}
+The print of the read data is done using the P\+R\+I\+N\+T\+F wrapper.
+\end{DoxyNote}
+\subparagraph*{Example output (without the asterisks)\+:}
+
+\begin{DoxyVerb}* Reading Flash Configuration Word 1...
+* Binary read value:
+* 111111110011111101111111
+* Successfully verified the Flash Configuration Word 1 with address 0x00ABFE
+*  JTAGEN: JTAG Port Enable bit
+*   [JTAGEN_OFF] JTAG port is disabled
+*  GCP: General Segment Program Memory Code Protection bit
+*   [GCP_OFF] Code protection is disabled
+*  GWRP: General Segment Code Flash Write Protection bit
+*   [GWRP_OFF] Writes to program memory are allowed
+*  !DEBUG: Background Debugger Enable bit
+*   [BKBUG_OFF] Device resets into Operational mode
+*  ICS<1:0>: Emulator Pin Placement Select bits
+*   [ICS_PGx1] Emulator EMUC1/EMUD1 pins are shared with PGC1/PGD1
+*  FWDTEN: Watchdog Timer Enable bit
+*   [FWDTEN_OFF] Watchdog Timer is disabled
+*  WINDIS: Windowed Watchdog Timer Disable bit
+*   [WINDIS_ON] Standard Watchdog Timer is enabled
+*  FWPSA: WDT Prescaler Ratio Select bit
+*   [FWPSA_PR128] Prescaler ratio of 1:128
+*  WDTPS<3:0>: Watchdog Timer Postscaler Select bits
+*   [WDTPS_PS32768] 1:32768
+* Done Reading Flash Configuration Word 1.
+* 
+* Reading Flash Configuration Word 2...
+* Binary read value:
+* 111111111111100101101101
+* Successfully verified the Flash Configuration Word 2 with address 0x00ABFC
+*  IESO: Internal External Switchover bit
+*   [IESO_ON] IESO mode (Two-Speed Start-up) is enabled
+*  WUTSEL<1:0>: Voltage Regulator Standby Mode Wake-up Time Select bits
+*   [WUTSEL_LEG] Default regulator start-up time is used
+*  SOSCSEL<1:0>: Secondary Oscillator Power Mode Select bits
+*   [SOSCSEL_SOSC] Default (High Drive Strength) mode
+*  FNOSC<2:0>: Initial Oscillator Select bits
+*   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
+*  FCKSM<1:0>: Clock Switching and Fail-Safe Clock Monitor Configuration bits
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is
+*   disabled
+*  OSCIOFCN: OSCO Pin Configuration bit:
+*   OSCIOFCN has no effect on OSCO/CLKO/RA3
+*  IOL1WAY: IOLOCK One-Way Set Enable bit
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed,
+*   provided the unlock sequence has been completed
+*  I2C1SEL: I2C1 Pin Select bit
+*   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
+*  POSCMD<1:0:> Primary Oscillator Configuration bits
+*   [POSCMOD_XT] XT Oscillator mode is selected
+* Done Reading Flash Configuration Word 2.
+* \end{DoxyVerb}
+ 

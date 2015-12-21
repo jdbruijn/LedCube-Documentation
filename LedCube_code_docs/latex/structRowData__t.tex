@@ -1,0 +1,52 @@
+\hypertarget{structRowData__t}{}\section{Row\+Data\+\_\+t Struct Reference}
+\label{structRowData__t}\index{Row\+Data\+\_\+t@{Row\+Data\+\_\+t}}
+
+
+Structure of the R\+G\+B values of a single row of L\+E\+Ds.  
+
+
+
+
+{\ttfamily \#include $<$Cube\+Control\+Data.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{structRowData__t_a2b653f0aa4b2ac6738229ea1221c4cc5}{red}
+\item 
+uint32\+\_\+t \hyperlink{structRowData__t_a80d348ad378ca0edf433f68bba488fbe}{green}
+\item 
+uint32\+\_\+t \hyperlink{structRowData__t_a3e56de02abd941af2445699dbde7151f}{blue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure of the R\+G\+B values of a single row of L\+E\+Ds. 
+
+This contains 32-\/bit red, green and blue values where the data of a single row with \hyperlink{CubeControlData_8h_ad81929089053d6c5d380dbbce3832272}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C} L\+E\+Ds in it. These 32-\/bit values contains the state of the L\+E\+Ds for the \hyperlink{CubeControlData_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S} B\+A\+M rounds and are classified as follows. \begin{DoxyNote}{Note}
+The uint32\+\_\+t value is in binary format and spans all the columns in that row.
+\end{DoxyNote}
+\begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf Description }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }&\PBS\centering {\bf }\\\cline{1-5}
+B\+A\+M round &\PBS\centering 3 &\PBS\centering 2 &\PBS\centering 1 &\PBS\centering 0 \\\cline{1-5}
+uint32\+\_\+t value (binary) &\PBS\centering 00000000 &\PBS\centering 00000000 &\PBS\centering 00000000 &\PBS\centering 00000000 \\\cline{1-5}
+Column (y-\/value) &\PBS\centering 76543210 &\PBS\centering 76543210 &\PBS\centering 76543210 &\PBS\centering 76543210 \\\cline{1-5}
+\end{TabularC}
+
+
+\subsection{Field Documentation}
+\hypertarget{structRowData__t_a3e56de02abd941af2445699dbde7151f}{}\index{Row\+Data\+\_\+t@{Row\+Data\+\_\+t}!blue@{blue}}
+\index{blue@{blue}!Row\+Data\+\_\+t@{Row\+Data\+\_\+t}}
+\subsubsection[{blue}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t blue}\label{structRowData__t_a3e56de02abd941af2445699dbde7151f}
+Blue colour data of a single row with \hyperlink{CubeControlData_8h_ad81929089053d6c5d380dbbce3832272}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C} L\+E\+Ds in it. \hypertarget{structRowData__t_a80d348ad378ca0edf433f68bba488fbe}{}\index{Row\+Data\+\_\+t@{Row\+Data\+\_\+t}!green@{green}}
+\index{green@{green}!Row\+Data\+\_\+t@{Row\+Data\+\_\+t}}
+\subsubsection[{green}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t green}\label{structRowData__t_a80d348ad378ca0edf433f68bba488fbe}
+Green colour data of a single row with \hyperlink{CubeControlData_8h_ad81929089053d6c5d380dbbce3832272}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C} L\+E\+Ds in it. \hypertarget{structRowData__t_a2b653f0aa4b2ac6738229ea1221c4cc5}{}\index{Row\+Data\+\_\+t@{Row\+Data\+\_\+t}!red@{red}}
+\index{red@{red}!Row\+Data\+\_\+t@{Row\+Data\+\_\+t}}
+\subsubsection[{red}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t red}\label{structRowData__t_a2b653f0aa4b2ac6738229ea1221c4cc5}
+Red colour data of a single row with \hyperlink{CubeControlData_8h_ad81929089053d6c5d380dbbce3832272}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C} L\+E\+Ds in it. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Cube\+Control/\hyperlink{CubeControlData_8h}{Cube\+Control\+Data.\+h}\end{DoxyCompactItemize}

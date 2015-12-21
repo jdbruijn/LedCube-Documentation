@@ -1,0 +1,57 @@
+\hypertarget{structCubeControlData__t}{}\section{Cube\+Control\+Data\+\_\+t Struct Reference}
+\label{structCubeControlData__t}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+
+
+Structure with Cube-\/ and Cube\+Control data.  
+
+
+
+
+{\ttfamily \#include $<$Cube\+Control\+Data.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structRowData__t}{Row\+Data\+\_\+t} \hyperlink{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}{Cube\+Data0} \mbox{[}\hyperlink{CubeControlData_8h_af8a3cd66f1181d1c4119a4e51a4015f8}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}\hyperlink{CubeControlData_8h_aaf8754e50e21c648edd86850eedb5a63}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}
+\item 
+\hyperlink{structRowData__t}{Row\+Data\+\_\+t} \hyperlink{structCubeControlData__t_aed097662b3a0f9935e47ee9d209b8da0}{Cube\+Data1} \mbox{[}\hyperlink{CubeControlData_8h_af8a3cd66f1181d1c4119a4e51a4015f8}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}\hyperlink{CubeControlData_8h_aaf8754e50e21c648edd86850eedb5a63}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}
+\item 
+\hyperlink{structRowData__t}{p\+Cube\+Data\+\_\+t} \hyperlink{structCubeControlData__t_ac61459fc1e13ce1d7fb20222c6d07214}{p\+Cube\+Data\+Read}
+\item 
+\hyperlink{structRowData__t}{p\+Cube\+Data\+\_\+t} \hyperlink{structCubeControlData__t_a6ced180bdd8e8518a86f8f40888fddf2}{p\+Cube\+Data\+Write}
+\item 
+\hyperlink{CubeControlData_8h_a2b6850a8815b785ea51f17c4d979706e}{Bam\+Round\+Masks\+\_\+t} const \hyperlink{structCubeControlData__t_acf3c32d2a6071404856c5db95846864c}{Bam\+Round\+Mask} \mbox{[}\hyperlink{CubeControlData_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{structCubeControlData__t_aa97c584a57c1f2500791985bbe8aef89}{Bam\+Round\+Shift} \mbox{[}\hyperlink{CubeControlData_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure with Cube-\/ and Cube\+Control data. 
+
+This contains two \hyperlink{structRowData__t}{Row\+Data\+\_\+t} structure arrays, pointers to the current read and write structure arrays, masks for the B\+A\+M rounds and the shift needed for each B\+A\+M round. 
+
+\subsection{Field Documentation}
+\hypertarget{structCubeControlData__t_acf3c32d2a6071404856c5db95846864c}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Bam\+Round\+Mask@{Bam\+Round\+Mask}}
+\index{Bam\+Round\+Mask@{Bam\+Round\+Mask}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{Bam\+Round\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bam\+Round\+Masks\+\_\+t} const Bam\+Round\+Mask\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}}\label{structCubeControlData__t_acf3c32d2a6071404856c5db95846864c}
+Constant array of type \hyperlink{CubeControlData_8h_a2b6850a8815b785ea51f17c4d979706e}{Bam\+Round\+Masks\+\_\+t} that is used as a B\+A\+M mask for each B\+A\+M round. \hypertarget{structCubeControlData__t_aa97c584a57c1f2500791985bbe8aef89}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Bam\+Round\+Shift@{Bam\+Round\+Shift}}
+\index{Bam\+Round\+Shift@{Bam\+Round\+Shift}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{Bam\+Round\+Shift}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Bam\+Round\+Shift\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}}\label{structCubeControlData__t_aa97c584a57c1f2500791985bbe8aef89}
+Constant array containing the shift needed for each B\+A\+M round \hypertarget{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Cube\+Data0@{Cube\+Data0}}
+\index{Cube\+Data0@{Cube\+Data0}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{Cube\+Data0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Row\+Data\+\_\+t} Cube\+Data0\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}}\label{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}
+First Cube\+Data structure array where the L\+E\+D data of the whole Led\+Cube is stored in. So this is the data for all 512 L\+E\+Ds $ { (8 \times 8 \times 8) } $ and the \hyperlink{CubeControlData_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S} B\+A\+M rounds. \hypertarget{structCubeControlData__t_aed097662b3a0f9935e47ee9d209b8da0}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Cube\+Data1@{Cube\+Data1}}
+\index{Cube\+Data1@{Cube\+Data1}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{Cube\+Data1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Row\+Data\+\_\+t} Cube\+Data1\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}}\label{structCubeControlData__t_aed097662b3a0f9935e47ee9d209b8da0}
+Second Cube\+Data structure array where the L\+E\+D data of the whole Led\+Cube is stored in. For more info see \hyperlink{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}{Cube\+Data0}. \hypertarget{structCubeControlData__t_ac61459fc1e13ce1d7fb20222c6d07214}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!p\+Cube\+Data\+Read@{p\+Cube\+Data\+Read}}
+\index{p\+Cube\+Data\+Read@{p\+Cube\+Data\+Read}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{p\+Cube\+Data\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} p\+Cube\+Data\+Read}\label{structCubeControlData__t_ac61459fc1e13ce1d7fb20222c6d07214}
+Pointer to the current Cube\+Data structure array where is read from. This can point to either \hyperlink{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}{Cube\+Data0} using \hyperlink{CubeControlData_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base} or to \hyperlink{structCubeControlData__t_aed097662b3a0f9935e47ee9d209b8da0}{Cube\+Data1} using \hyperlink{CubeControlData_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base}. \hypertarget{structCubeControlData__t_a6ced180bdd8e8518a86f8f40888fddf2}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!p\+Cube\+Data\+Write@{p\+Cube\+Data\+Write}}
+\index{p\+Cube\+Data\+Write@{p\+Cube\+Data\+Write}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
+\subsubsection[{p\+Cube\+Data\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} p\+Cube\+Data\+Write}\label{structCubeControlData__t_a6ced180bdd8e8518a86f8f40888fddf2}
+Pointer to the current Cube\+Data structure array where is written to. This can point to either \hyperlink{structCubeControlData__t_a1cf738638ac947d80a643d159c8eb2a2}{Cube\+Data0} using \hyperlink{CubeControlData_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base} or to \hyperlink{structCubeControlData__t_aed097662b3a0f9935e47ee9d209b8da0}{Cube\+Data1} using \hyperlink{CubeControlData_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Cube\+Control/\hyperlink{CubeControlData_8h}{Cube\+Control\+Data.\+h}\end{DoxyCompactItemize}

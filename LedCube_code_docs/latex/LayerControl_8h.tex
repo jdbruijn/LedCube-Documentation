@@ -1,0 +1,123 @@
+\hypertarget{LayerControl_8h}{}\section{Cube\+Control/\+Layer\+Control.h File Reference}
+\label{LayerControl_8h}\index{Cube\+Control/\+Layer\+Control.\+h@{Cube\+Control/\+Layer\+Control.\+h}}
+
+
+Controls a single layer of the 8x8x8 L\+E\+D cube.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Panel\+Control.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Interrupts.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cube\+Control\+Data.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{LayerControl_8h_a816c836589db27dcd3632fade8f0f6f3}{}\#define {\bfseries L\+C\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+S\+E\+L\+F\+\_\+\+T\+E\+S\+T\+\_\+\+N\+O}\label{LayerControl_8h_a816c836589db27dcd3632fade8f0f6f3}
+
+\item 
+\hypertarget{LayerControl_8h_a06153a40508dfb2456f40e344e145c08}{}\#define \hyperlink{LayerControl_8h_a06153a40508dfb2456f40e344e145c08}{N\+\_\+\+P\+A\+N\+E\+L\+C\+O\+N\+T\+R\+O\+L\+S}~4\label{LayerControl_8h_a06153a40508dfb2456f40e344e145c08}
+
+\begin{DoxyCompactList}\small\item\em Number of Panel\+Control P\+C\+Bs in the Led\+Cube. \end{DoxyCompactList}\item 
+\hypertarget{LayerControl_8h_a3803422d5b72bc334d89f842fce61bc1}{}\#define \hyperlink{LayerControl_8h_a3803422d5b72bc334d89f842fce61bc1}{S\+P\+I2\+\_\+\+P\+P\+R\+E}~1\label{LayerControl_8h_a3803422d5b72bc334d89f842fce61bc1}
+
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Primary Prescale bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{LayerControl_8h_a94c1358c7fa1ff049de00d5a18b1ea69}{S\+P\+I2\+\_\+\+S\+P\+R\+E}~2
+\item 
+\#define \hyperlink{LayerControl_8h_aad30ac9bd7a1274ab1bc3c708f5663a7}{S\+P\+I2\+\_\+\+F\+S\+C\+K}~(\hyperlink{System_8h_a99d7c812ba23bfdba5d29ec2fddf1e83}{F\+C\+Y} / (\hyperlink{LayerControl_8h_a3803422d5b72bc334d89f842fce61bc1}{S\+P\+I2\+\_\+\+P\+P\+R\+E} $\ast$ \hyperlink{LayerControl_8h_a94c1358c7fa1ff049de00d5a18b1ea69}{S\+P\+I2\+\_\+\+S\+P\+R\+E}))
+\item 
+\#define \hyperlink{LayerControl_8h_a90e188c122f5e86219eda798e7bfd89d}{L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}~(\hyperlink{CubeControlData_8h_aaf8754e50e21c648edd86850eedb5a63}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C} -\/ 1)
+\item 
+\#define \hyperlink{LayerControl_8h_aa3c0db3dd7c1f9929e555bf24ee611a7}{L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L}~(\hyperlink{CubeControlData_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S} -\/ 1)
+\item 
+\hypertarget{LayerControl_8h_ae5ec1f9f80a945d02a7d3c5a98a97804}{}\#define {\bfseries L\+A\+Y\+E\+R\+C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+U\+L\+S\+E\+\_\+\+L\+A\+T\+C\+H}~\hyperlink{Ports_8h_a48a2d7676162abe5ea7f4bd4f3ad4f5f}{P\+O\+R\+T\+\_\+\+P\+U\+L\+S\+E\+\_\+\+P\+I\+N}(A\+N\+O\+D\+E\+\_\+\+L\+A\+T\+C\+H)\label{LayerControl_8h_ae5ec1f9f80a945d02a7d3c5a98a97804}
+
+\item 
+\hypertarget{LayerControl_8h_a8e32b79603a3d104135e389295d6b2d1}{}\#define {\bfseries S\+P\+I2\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+L\+L\+\_\+\+T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+S\+\_\+\+E\+M\+P\+T\+Y}~while( S\+P\+I2\+S\+T\+A\+Tbits.\+S\+P\+I\+T\+B\+F == 1 )\label{LayerControl_8h_a8e32b79603a3d104135e389295d6b2d1}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{LayerControl_8h_a7e2027e2584c2ecb5f5f232215f88a94}{Layer\+Control\+\_\+init} (void)
+\item 
+void \hyperlink{LayerControl_8h_a91da6a5e378f6eb44818fd12c4ef383f}{Layer\+Control\+\_\+update} (const \hyperlink{structCubeControlData__t}{p\+Cube\+Control\+Data\+\_\+t} \+\_\+p\+Cube\+Control\+Data, const \hyperlink{structRowData__t}{p\+Cube\+Data\+\_\+t} \+\_\+p\+Cube\+Data, const uint8\+\_\+t \+\_\+layer, const uint8\+\_\+t \+\_\+bam\+Round)
+\item 
+void \hyperlink{LayerControl_8h_a39e071a2e648a1a3623645f5ae2d5fb7}{Layer\+Control\+\_\+all\+Off} (void)
+\item 
+void \hyperlink{LayerControl_8h_a9229038b5c14777110aec37681baf904}{Layer\+Control\+\_\+all\+On} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls a single layer of the 8x8x8 L\+E\+D cube. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{LayerControl_8h_aa3c0db3dd7c1f9929e555bf24ee611a7}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L@{L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L}}
+\index{L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L@{L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+\_\+\+M\+A\+X\+\_\+\+B\+A\+M\+\_\+\+V\+A\+L~({\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S} -\/ 1)}\label{LayerControl_8h_aa3c0db3dd7c1f9929e555bf24ee611a7}
+Maximum B\+A\+M value for the Led\+Cube. \hypertarget{LayerControl_8h_a90e188c122f5e86219eda798e7bfd89d}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C@{L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}}
+\index{L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C@{L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C~({\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C} -\/ 1)}\label{LayerControl_8h_a90e188c122f5e86219eda798e7bfd89d}
+Maximum z-\/coordinate for the Led\+Cube. \hypertarget{LayerControl_8h_aad30ac9bd7a1274ab1bc3c708f5663a7}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!S\+P\+I2\+\_\+\+F\+S\+C\+K@{S\+P\+I2\+\_\+\+F\+S\+C\+K}}
+\index{S\+P\+I2\+\_\+\+F\+S\+C\+K@{S\+P\+I2\+\_\+\+F\+S\+C\+K}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{S\+P\+I2\+\_\+\+F\+S\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I2\+\_\+\+F\+S\+C\+K~({\bf F\+C\+Y} / ({\bf S\+P\+I2\+\_\+\+P\+P\+R\+E} $\ast$ {\bf S\+P\+I2\+\_\+\+S\+P\+R\+E}))}\label{LayerControl_8h_aad30ac9bd7a1274ab1bc3c708f5663a7}
+S\+P\+I2 clock speed. \hypertarget{LayerControl_8h_a94c1358c7fa1ff049de00d5a18b1ea69}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!S\+P\+I2\+\_\+\+S\+P\+R\+E@{S\+P\+I2\+\_\+\+S\+P\+R\+E}}
+\index{S\+P\+I2\+\_\+\+S\+P\+R\+E@{S\+P\+I2\+\_\+\+S\+P\+R\+E}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{S\+P\+I2\+\_\+\+S\+P\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+I2\+\_\+\+S\+P\+R\+E~2}\label{LayerControl_8h_a94c1358c7fa1ff049de00d5a18b1ea69}
+S\+P\+I2 Secondary Prescale bits. 
+
+\subsection{Function Documentation}
+\hypertarget{LayerControl_8h_a39e071a2e648a1a3623645f5ae2d5fb7}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!Layer\+Control\+\_\+all\+Off@{Layer\+Control\+\_\+all\+Off}}
+\index{Layer\+Control\+\_\+all\+Off@{Layer\+Control\+\_\+all\+Off}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{Layer\+Control\+\_\+all\+Off(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Control\+\_\+all\+Off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LayerControl_8h_a39e071a2e648a1a3623645f5ae2d5fb7}
+Turn all the L\+E\+Ds of a layer off using \hyperlink{PanelControl_8c_a7b7be44baa16fe021aa42b1eba9406aa}{Panel\+Control\+\_\+all\+Off}. \hypertarget{LayerControl_8h_a9229038b5c14777110aec37681baf904}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!Layer\+Control\+\_\+all\+On@{Layer\+Control\+\_\+all\+On}}
+\index{Layer\+Control\+\_\+all\+On@{Layer\+Control\+\_\+all\+On}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{Layer\+Control\+\_\+all\+On(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Control\+\_\+all\+On (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LayerControl_8h_a9229038b5c14777110aec37681baf904}
+Turn all the L\+E\+Ds of a layer on using \hyperlink{PanelControl_8c_a2a56611f2abac08f8558ddeb1b19cad8}{Panel\+Control\+\_\+all\+On}. \hypertarget{LayerControl_8h_a7e2027e2584c2ecb5f5f232215f88a94}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!Layer\+Control\+\_\+init@{Layer\+Control\+\_\+init}}
+\index{Layer\+Control\+\_\+init@{Layer\+Control\+\_\+init}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{Layer\+Control\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Control\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LayerControl_8h_a7e2027e2584c2ecb5f5f232215f88a94}
+Initialize everything needed for controlling the layers by configuring the S\+P\+Ix peripheral.
+
+\begin{DoxyNote}{Note}
+This also initializes everything needed for a Panel\+Control P\+C\+B using the \hyperlink{PanelControl_8c_aef253c0667beeb546a7eff1cf564e3a5}{Panel\+Control\+\_\+init} function. 
+\end{DoxyNote}
+\hypertarget{LayerControl_8h_a91da6a5e378f6eb44818fd12c4ef383f}{}\index{Layer\+Control.\+h@{Layer\+Control.\+h}!Layer\+Control\+\_\+update@{Layer\+Control\+\_\+update}}
+\index{Layer\+Control\+\_\+update@{Layer\+Control\+\_\+update}!Layer\+Control.\+h@{Layer\+Control.\+h}}
+\subsubsection[{Layer\+Control\+\_\+update(const p\+Cube\+Control\+Data\+\_\+t \+\_\+p\+Cube\+Control\+Data, const p\+Cube\+Data\+\_\+t \+\_\+p\+Cube\+Data, const uint8\+\_\+t \+\_\+layer, const uint8\+\_\+t \+\_\+bam\+Round)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Control\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const {\bf p\+Cube\+Control\+Data\+\_\+t}}]{\+\_\+p\+Cube\+Control\+Data, }
+\item[{const {\bf p\+Cube\+Data\+\_\+t}}]{\+\_\+p\+Cube\+Data, }
+\item[{const uint8\+\_\+t}]{\+\_\+layer, }
+\item[{const uint8\+\_\+t}]{\+\_\+bam\+Round}
+\end{DoxyParamCaption}
+)}\label{LayerControl_8h_a91da6a5e378f6eb44818fd12c4ef383f}
+Update the output of a single layer in the L\+E\+D cube by calling the \hyperlink{PanelControl_8c_a9cca035778989fdd5e4651c52a813c8b}{Panel\+Control\+\_\+update} function four times.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+p\+Cube\+Control\+Data} & Pointer to Cube\+Control\+Data structure. \\
+\hline
+{\em \+\_\+p\+Cube\+Data} & Pointer to the first element of a Cube\+Data structure array. \\
+\hline
+{\em \+\_\+layer} & The layer to update. \\
+\hline
+{\em \+\_\+bam\+Round} & The B\+A\+M-\/round to update. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,171 @@
+\hypertarget{LedCube_8h}{}\section{Cube\+Control/\+Led\+Cube.h File Reference}
+\label{LedCube_8h}\index{Cube\+Control/\+Led\+Cube.\+h@{Cube\+Control/\+Led\+Cube.\+h}}
+
+
+Controls the whole Led\+Cube.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Layer\+Control.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cube\+Control\+Data.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}My\+Assert.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{LedCube_8h_a6f0d435dc3c34bb8ba881be1e7a92069}{}\#define {\bfseries L\+E\+D\+C\+U\+B\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+S\+E\+L\+F\+\_\+\+T\+E\+S\+T\+\_\+\+Y\+E\+S}\label{LedCube_8h_a6f0d435dc3c34bb8ba881be1e7a92069}
+
+\item 
+\#define \hyperlink{LedCube_8h_ab1dc4c761ecf0dd383f66adbd1d6cd2b}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z}~0
+\item 
+\#define \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}~(\hyperlink{CubeControlData_8h_aaf8754e50e21c648edd86850eedb5a63}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C} -\/ 1)
+\item 
+\#define \hyperlink{LedCube_8h_a5cd4a1b9df031f73579cab4bbb8856ed}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}~0
+\item 
+\#define \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}~15
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{LedCube_8h_a803f17d564c4dca5afb017f348ad2dc0}{Led\+Cube\+\_\+init} (void)
+\item 
+void \hyperlink{LedCube_8h_a78bca30cd17eb8dd2469d10be6dcc421}{Led\+Cube\+\_\+set\+Pixel} (uint8\+\_\+t const \+\_\+x, uint8\+\_\+t const \+\_\+y, uint8\+\_\+t const \+\_\+z, uint8\+\_\+t const \+\_\+red, uint8\+\_\+t const \+\_\+green, uint8\+\_\+t const \+\_\+blue)
+\item 
+void \hyperlink{LedCube_8h_a0828c53a992af0998699c34f9938f8d3}{Led\+Cube\+\_\+update} (void)
+\item 
+void \hyperlink{LedCube_8h_a3620b6696f75c8c5e4979576adf95aa2}{Led\+Cube\+\_\+update\+Using\+Copy} (void)
+\item 
+void \hyperlink{LedCube_8h_a90b3db3cbf4d7ad24f4f8fd743bfab51}{Led\+Cube\+\_\+reset\+Data} (void)
+\item 
+void \hyperlink{LedCube_8h_aed17367baf1ef358d44d5010a4e8b1e3}{Led\+Cube\+\_\+print\+Hex\+Write\+Data} (void)
+\item 
+void \hyperlink{LedCube_8h_a02d010cd8f19ee8d4d6776028d77b3ed}{Led\+Cube\+\_\+print\+Hex\+Read\+Data} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controls the whole Led\+Cube. 
+
+All 512 R\+G\+B L\+E\+Ds are (indirectly) controlled by this file. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{LedCube_8h_a069d611441d73edaca361417c5b260d9}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}}
+\index{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y~15}\label{LedCube_8h_a069d611441d73edaca361417c5b260d9}
+Maximum value for the L\+E\+Ds intensity. \hypertarget{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}}
+\index{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z~({\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C} -\/ 1)}\label{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}
+Maximum value for the x-\/, y-\/ and z-\/axis. \hypertarget{LedCube_8h_a5cd4a1b9df031f73579cab4bbb8856ed}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}}
+\index{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y~0}\label{LedCube_8h_a5cd4a1b9df031f73579cab4bbb8856ed}
+Minimum value for the L\+E\+Ds intensity. \hypertarget{LedCube_8h_ab1dc4c761ecf0dd383f66adbd1d6cd2b}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z}}
+\index{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z@{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+I\+N\+\_\+\+X\+Y\+Z~0}\label{LedCube_8h_ab1dc4c761ecf0dd383f66adbd1d6cd2b}
+Minimum value for the x-\/, y-\/ and z-\/axis. 
+
+\subsection{Function Documentation}
+\hypertarget{LedCube_8h_a803f17d564c4dca5afb017f348ad2dc0}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+init@{Led\+Cube\+\_\+init}}
+\index{Led\+Cube\+\_\+init@{Led\+Cube\+\_\+init}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a803f17d564c4dca5afb017f348ad2dc0}
+Initialize everything needed for controlling the layers using the the \hyperlink{LayerControl_8c_a7e2027e2584c2ecb5f5f232215f88a94}{Layer\+Control\+\_\+init} function and initialize the \hyperlink{CubeControlData_8c_ab0f2a4842fb487bd7dee12e22b81b5b3}{Cube\+Control\+Data} using the \hyperlink{CubeControlData_8c_a410a852d3bbe89efd83fd0575ebbdd84}{Cube\+Control\+Data\+\_\+init} function. \begin{DoxyNote}{Note}
+This also initializes everything needed for controlling the layers using \hyperlink{LayerControl_8c_a7e2027e2584c2ecb5f5f232215f88a94}{Layer\+Control\+\_\+init}. 
+\end{DoxyNote}
+\hypertarget{LedCube_8h_a02d010cd8f19ee8d4d6776028d77b3ed}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+print\+Hex\+Read\+Data@{Led\+Cube\+\_\+print\+Hex\+Read\+Data}}
+\index{Led\+Cube\+\_\+print\+Hex\+Read\+Data@{Led\+Cube\+\_\+print\+Hex\+Read\+Data}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+print\+Hex\+Read\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+print\+Hex\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a02d010cd8f19ee8d4d6776028d77b3ed}
+Print all the Led\+Cube\textquotesingle{}s L\+E\+D data pointed to by \hyperlink{structCubeControlData__t_ac61459fc1e13ce1d7fb20222c6d07214}{Cube\+Control\+Data\+\_\+t\+::p\+Cube\+Data\+Read} using \hyperlink{CubeControlData_8c_a70edccbdd8cf75f052397b2d1e18e191}{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}. \hypertarget{LedCube_8h_aed17367baf1ef358d44d5010a4e8b1e3}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+print\+Hex\+Write\+Data@{Led\+Cube\+\_\+print\+Hex\+Write\+Data}}
+\index{Led\+Cube\+\_\+print\+Hex\+Write\+Data@{Led\+Cube\+\_\+print\+Hex\+Write\+Data}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+print\+Hex\+Write\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+print\+Hex\+Write\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_aed17367baf1ef358d44d5010a4e8b1e3}
+Print all the Led\+Cube\textquotesingle{}s L\+E\+D data pointed to by \hyperlink{structCubeControlData__t_a6ced180bdd8e8518a86f8f40888fddf2}{Cube\+Control\+Data\+\_\+t\+::p\+Cube\+Data\+Write} using \hyperlink{CubeControlData_8c_a70edccbdd8cf75f052397b2d1e18e191}{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}. \hypertarget{LedCube_8h_a90b3db3cbf4d7ad24f4f8fd743bfab51}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+reset\+Data@{Led\+Cube\+\_\+reset\+Data}}
+\index{Led\+Cube\+\_\+reset\+Data@{Led\+Cube\+\_\+reset\+Data}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+reset\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+reset\+Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a90b3db3cbf4d7ad24f4f8fd743bfab51}
+Reset all the Led\+Cube\textquotesingle{}s L\+E\+D data pointed to by \hyperlink{structCubeControlData__t_a6ced180bdd8e8518a86f8f40888fddf2}{Cube\+Control\+Data\+\_\+t\+::p\+Cube\+Data\+Write} using \hyperlink{CubeControlData_8c_ae1422d16d0c9b80676ee3b2da685cfef}{Cube\+Control\+Data\+\_\+reset\+Cube\+Data}. \hypertarget{LedCube_8h_a78bca30cd17eb8dd2469d10be6dcc421}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+set\+Pixel@{Led\+Cube\+\_\+set\+Pixel}}
+\index{Led\+Cube\+\_\+set\+Pixel@{Led\+Cube\+\_\+set\+Pixel}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+set\+Pixel(uint8\+\_\+t const \+\_\+x, uint8\+\_\+t const \+\_\+y, uint8\+\_\+t const \+\_\+z, uint8\+\_\+t const \+\_\+red, uint8\+\_\+t const \+\_\+green, uint8\+\_\+t const \+\_\+blue)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+set\+Pixel (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t const}]{\+\_\+x, }
+\item[{uint8\+\_\+t const}]{\+\_\+y, }
+\item[{uint8\+\_\+t const}]{\+\_\+z, }
+\item[{uint8\+\_\+t const}]{\+\_\+red, }
+\item[{uint8\+\_\+t const}]{\+\_\+green, }
+\item[{uint8\+\_\+t const}]{\+\_\+blue}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a78bca30cd17eb8dd2469d10be6dcc421}
+Set a single pixel in the Led\+Cube\textquotesingle{}s data.
+
+\begin{DoxyNote}{Note}
+See the following \textquotesingle{}image\textquotesingle{} of how the axis of the L\+E\+D cube are set.~\newline
+ \textquotesingle{}O\textquotesingle{} is the origin and represents coordinate (0, 0, 0).~\newline
+ \textquotesingle{}A\textquotesingle{} is the right back bottom corner of the cube and represents coordinate (7, 0, 0).~\newline
+ \textquotesingle{}B\textquotesingle{} is the right front bottom corner of the cube and represents coordinate (7, 7, 0).~\newline
+ \textquotesingle{}C\textquotesingle{} is the left front bottom corner of the cube and represents coordinate (0, 7, 0).~\newline
+ \textquotesingle{}D\textquotesingle{} is the right front top corner of the cube and represents coordinate (7, 7, 7).~\newline
+\begin{DoxyVerb}*       +------------------+ - x-axis
+*      /'                 /|
+*     / '                / |
+*    /  '               /  |
+*   /   '              /   |
+*  +------------------D    |
+*  |    '             |    |
+*  |    '             |    |
+*  |    '             |    |
+*  |    O ~~~~~~~~~~~ | ~~ A
+*  |   ,              |   /
+*  |  ,               |  /
+*  | ,                | /
+*  |,                 |/
+*  C------------------B
+*  |                 /
+*  z-axis(vertical) y-axis (horizontal)
+* \end{DoxyVerb}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & Selects the row. Ranges from 0 to \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}, 0 for the back row and \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z} for the front row. \\
+\hline
+{\em \+\_\+y} & Selects the column. Ranges from 0 to \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}, 0 for the left column and \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z} for the right column. \\
+\hline
+{\em \+\_\+z} & Selects the layer. Ranges from 0 to \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z}, 0 for the bottom layer and \hyperlink{LedCube_8h_a964fe819c6679fc763b757c4dd025eca}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+X\+Y\+Z} for the top layer. \\
+\hline
+{\em \+\_\+red} & Intensity of the red colour. Ranges from 0 to \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}, 0 for the lowest intensity (off) and \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y} for the brightest intensity. \\
+\hline
+{\em \+\_\+green} & Intensity of the green colour. Ranges from 0 to \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}, 0 for the lowest intensity (off) and \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y} for the brightest intensity. \\
+\hline
+{\em \+\_\+blue} & Intensity of the blue colour. Ranges from 0 to \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y}, 0 for the lowest intensity (off) and \hyperlink{LedCube_8h_a069d611441d73edaca361417c5b260d9}{L\+E\+D\+C\+U\+B\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+N\+S\+I\+T\+Y} for the brightest intensity. \\
+\hline
+\end{DoxyParams}
+\hypertarget{LedCube_8h_a0828c53a992af0998699c34f9938f8d3}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+update@{Led\+Cube\+\_\+update}}
+\index{Led\+Cube\+\_\+update@{Led\+Cube\+\_\+update}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+update(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a0828c53a992af0998699c34f9938f8d3}
+Update the outputs of the Led\+Cube with the data that is currently set in the Cube\+Data structure array using a read-\/write pointer switch. \hypertarget{LedCube_8h_a3620b6696f75c8c5e4979576adf95aa2}{}\index{Led\+Cube.\+h@{Led\+Cube.\+h}!Led\+Cube\+\_\+update\+Using\+Copy@{Led\+Cube\+\_\+update\+Using\+Copy}}
+\index{Led\+Cube\+\_\+update\+Using\+Copy@{Led\+Cube\+\_\+update\+Using\+Copy}!Led\+Cube.\+h@{Led\+Cube.\+h}}
+\subsubsection[{Led\+Cube\+\_\+update\+Using\+Copy(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Led\+Cube\+\_\+update\+Using\+Copy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{LedCube_8h_a3620b6696f75c8c5e4979576adf95aa2}
+Update the outputs of the Led\+Cube with the data that is currently set in the Cube\+Data structure array using a copy. This copies the Cube\+Data\+Write structure array to the Cube\+Data\+Read structure array so the data previously written thus far in Cube\+Data\+Write structure array becomes the Led\+Cube\textquotesingle{}s output. 
