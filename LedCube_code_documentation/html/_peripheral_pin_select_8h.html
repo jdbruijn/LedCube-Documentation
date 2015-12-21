@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -303,12 +303,12 @@ Macros</h2></td></tr>
 <tr class="memitem:aa27a25803dad1664be4f5c615ffed36c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_peripheral_pin_select_8h.html#aa27a25803dad1664be4f5c615ffed36c">PPS_LOCK</a></td></tr>
 <tr class="memdesc:aa27a25803dad1664be4f5c615ffed36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Follow the necessary process to set the IOLOCK bit to lock I/O mapping from being modified.  <a href="#aa27a25803dad1664be4f5c615ffed36c">More...</a><br /></td></tr>
 <tr class="separator:aa27a25803dad1664be4f5c615ffed36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7bebfc6cf9d62ff877e966e8a631ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_peripheral_pin_select_8h.html#a8f7bebfc6cf9d62ff877e966e8a631ad">PPSInput</a>(fn,  pin)                                                                                                        </td></tr>
-<tr class="memdesc:a8f7bebfc6cf9d62ff877e966e8a631ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign input functionality to a pin.  <a href="#a8f7bebfc6cf9d62ff877e966e8a631ad">More...</a><br /></td></tr>
-<tr class="separator:a8f7bebfc6cf9d62ff877e966e8a631ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa38a7fbbed458f8b7de52db73061a711"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_peripheral_pin_select_8h.html#aa38a7fbbed458f8b7de52db73061a711">PPSOutput</a>(pin,  fn)                                                                                                      </td></tr>
-<tr class="memdesc:aa38a7fbbed458f8b7de52db73061a711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign pin to an output functionality.  <a href="#aa38a7fbbed458f8b7de52db73061a711">More...</a><br /></td></tr>
-<tr class="separator:aa38a7fbbed458f8b7de52db73061a711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495116da84367f5ff3415619fbf77642"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_peripheral_pin_select_8h.html#a495116da84367f5ff3415619fbf77642">PPS_ASSIGN_INPUT</a>(fn,  pin)                                                                                        </td></tr>
+<tr class="memdesc:a495116da84367f5ff3415619fbf77642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign input functionality to a pin.  <a href="#a495116da84367f5ff3415619fbf77642">More...</a><br /></td></tr>
+<tr class="separator:a495116da84367f5ff3415619fbf77642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad863e759cda74bb8913c252ec3859f87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_peripheral_pin_select_8h.html#ad863e759cda74bb8913c252ec3859f87">PPS_ASSIGN_OUTPUT</a>(pin,  fn)                                                                                      </td></tr>
+<tr class="memdesc:ad863e759cda74bb8913c252ec3859f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign pin to an output functionality.  <a href="#ad863e759cda74bb8913c252ec3859f87">More...</a><br /></td></tr>
+<tr class="separator:ad863e759cda74bb8913c252ec3859f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Links the microcontroller peripherals to specified ports. </p>
@@ -326,7 +326,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>External Interrupt 1 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00038">38</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00049">49</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -341,7 +341,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>External Interrupt 2 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00039">39</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00050">50</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Timer2 External Clock tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00040">40</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00051">51</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Timer3 External Clock tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00041">41</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00052">52</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Timer4 External Clock tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00042">42</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00053">53</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -401,7 +401,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Timer5 External Clock tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00043">43</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00054">54</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input Capture 1 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00044">44</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00055">55</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +431,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input Capture 2 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00045">45</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00056">56</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input Capture 3 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00046">46</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00057">57</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +461,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input Capture 4 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00047">47</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00058">58</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +476,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input Capture 5 tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00048">48</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00059">59</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +491,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Output Compare Fault A tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00049">49</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00060">60</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -506,7 +506,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Output Compare Fault B tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00050">50</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00061">61</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>UART1 Receive tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00051">51</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00062">62</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -536,7 +536,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>UART1 Clear-to-Send tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00052">52</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00063">63</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>UART2 Receive tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00053">53</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00064">64</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>UART2 Clear-to-Send tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00054">54</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00065">65</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +581,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI1 Data Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00055">55</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00066">66</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -596,7 +596,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI1 Clock Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00056">56</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00067">67</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -611,7 +611,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI1 Slave Select Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00057">57</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00068">68</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +626,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI2 Data Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00058">58</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00069">69</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -641,7 +641,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI2 Clock Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00059">59</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00070">70</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -656,7 +656,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>SPI2 Slave Select Input tied to RPn </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00060">60</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00071">71</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>The pin is an I/O Port pin </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00065">65</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00076">76</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -686,7 +686,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Comparator 1 Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00066">66</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00077">77</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -701,7 +701,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Comparator 2 Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00067">67</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00078">78</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -716,7 +716,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to UART1 Transmit </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00068">68</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00079">79</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -731,7 +731,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to UART1 Ready To Send </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00069">69</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00080">80</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to UART2 Transmit </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00070">70</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00081">81</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -761,7 +761,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to UART2 Ready To Send </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00071">71</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00082">82</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -776,7 +776,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI1 Data Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00072">72</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00083">83</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -791,7 +791,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI1 Clock Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00073">73</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00084">84</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +806,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI1 Slave Select Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00074">74</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00085">85</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -821,7 +821,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI2 Data Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00075">75</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00086">86</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +836,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI2 Clock Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00076">76</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00087">87</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -851,7 +851,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to SPI2 Slave Select Output </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00077">77</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00088">88</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -866,7 +866,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Output Compare 1 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00078">78</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00089">89</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -881,7 +881,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Output Compare 2 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00079">79</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00090">90</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +896,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Output Compare 3 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00080">80</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00091">91</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Output Compare 4 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00081">81</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00092">92</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -926,7 +926,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RPn tied to Output Compare 5 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00082">82</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00093">93</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -941,7 +941,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP0 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00087">87</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00098">98</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -956,7 +956,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP1 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00088">88</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00099">99</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -971,7 +971,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP2 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00089">89</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00100">100</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -986,7 +986,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP3 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00090">90</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00101">101</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1001,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP4 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00091">91</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00102">102</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1016,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP5 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00092">92</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00103">103</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1031,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP6 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00093">93</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00104">104</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1046,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP7 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00094">94</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00105">105</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1061,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP8 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00095">95</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00106">106</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1076,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP9 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00096">96</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00107">107</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1091,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP10 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00097">97</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00108">108</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1106,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP11 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00098">98</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00109">109</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1121,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP12 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00099">99</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00110">110</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1136,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP13 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00100">100</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00111">111</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1151,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP14 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00101">101</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00112">112</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1166,7 +1166,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP15 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00102">102</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00113">113</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1181,7 +1181,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP16 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00103">103</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00114">114</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1196,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP17 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00104">104</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00115">115</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1211,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP18 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00105">105</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00116">116</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1226,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP19 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00106">106</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00117">117</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1241,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP20 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00107">107</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00118">118</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1256,7 +1256,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP21 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00108">108</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00119">119</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1271,7 +1271,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP22 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00109">109</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00120">120</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1286,7 +1286,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP23 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00110">110</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00121">121</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1301,7 +1301,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP24 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00111">111</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00122">122</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1316,7 +1316,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Input function tied to RP25 </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00112">112</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00123">123</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1331,7 +1331,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP0 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00117">117</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00128">128</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1346,7 +1346,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP1 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00118">118</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00129">129</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1361,7 +1361,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP2 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00119">119</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00130">130</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1376,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP3 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00120">120</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00131">131</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1391,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP4 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00121">121</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00132">132</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1406,7 +1406,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP5 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00122">122</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00133">133</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1421,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP6 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00123">123</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00134">134</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1436,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP7 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00124">124</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00135">135</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1451,7 +1451,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP8 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00125">125</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00136">136</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1466,7 +1466,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP9 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00126">126</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00137">137</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1481,7 +1481,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP10 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00127">127</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00138">138</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1496,7 +1496,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP11 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00128">128</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00139">139</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1511,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP12 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00129">129</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00140">140</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1526,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP13 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00130">130</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00141">141</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1541,7 +1541,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP14 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00131">131</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00142">142</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1556,7 +1556,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP15 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00132">132</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00143">143</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1571,7 +1571,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP16 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00133">133</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00144">144</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1586,7 +1586,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP17 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00134">134</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00145">145</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1601,7 +1601,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP18 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00135">135</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00146">146</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1616,7 +1616,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP19 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00136">136</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00147">147</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1631,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP20 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00137">137</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00148">148</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1646,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP21 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00138">138</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00149">149</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1661,7 +1661,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP22 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00139">139</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00150">150</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1676,7 +1676,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP23 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00140">140</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00151">151</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1691,7 +1691,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP24 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00141">141</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00152">152</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1706,7 +1706,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>RP25 tied to output function </p>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00142">142</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00153">153</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1735,7 +1735,7 @@ Macros</h2></td></tr>
 <p>Follow the necessary process to clear the IOLOCK bit in order to allow I/O mapping to be modified. </p>
 <p>IOL1WAY in the Configuration Bits must be OFF </p><dl class="section note"><dt>Note</dt><dd>Use inline assembly to unlock the Peripheral Pin Selection (PPS). First writing the unlock sequence (46h followed by 57h) to OSCCON&lt;7:0&gt; and than clear the IOLOCK bit in the OSCCON to disable the I/O Lock. </dd></dl>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00157">157</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00168">168</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
@@ -1764,16 +1764,16 @@ Macros</h2></td></tr>
 <p>Follow the necessary process to set the IOLOCK bit to lock I/O mapping from being modified. </p>
 <p>IOL1WAY in the Configuration Bits must be OFF </p><dl class="section note"><dt>Note</dt><dd>Use inline assembly to lock the Peripheral Pin Selection (PPS). First writing the unlock sequence (46h followed by 57h) to OSCCON&lt;7:0&gt; and than set the IOLOCK bit in the OSCCON to enable the I/O Lock. </dd></dl>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00179">179</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00190">190</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8f7bebfc6cf9d62ff877e966e8a631ad"></a>
+<a class="anchor" id="a495116da84367f5ff3415619fbf77642"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PPSInput</td>
+          <td class="memname">#define PPS_ASSIGN_INPUT</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">fn, </td>
@@ -1793,63 +1793,63 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">fn = <a class="code" href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a>(_PPS_IN_PORT_, pin);                     \</div>
 <div class="line">    Nop()</div>
-<div class="ttc" id="_macro_8h_html_a3b5b02cafb079a66411e4e709ef00051"><div class="ttname"><a href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a></div><div class="ttdeci">#define MACRO_EXPAND_CONCATENATE_TWO(a, b)                                                                      </div><div class="ttdoc">Expand and concatenate two arguments. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_8h_source.html#l00046">Macro.h:46</a></div></div>
+<div class="ttc" id="_macro_8h_html_a3b5b02cafb079a66411e4e709ef00051"><div class="ttname"><a href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a></div><div class="ttdeci">#define MACRO_EXPAND_CONCATENATE_TWO(a, b)                                                                      </div><div class="ttdoc">Expand and concatenate two arguments. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_8h_source.html#l00065">Macro.h:65</a></div></div>
 </div><!-- fragment -->
 <p>Assign input functionality to a pin. </p>
 <p>IOLOCK must be cleared. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fn</td><td>Function to be assigned to the pin.<br />
-FUNCTION DESCRIPTION<br />
+    <tr><td class="paramname">fn</td><td>Function to be assigned to the pin. <br />
+FUNCTION DESCRIPTION <br />
 <ul>
-<li><a class="el" href="_peripheral_pin_select_8h.html#add7686e91ff1dfab455b5a30d35998f6">PPS_IN_INT1</a> External Interrupt 1<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#add7686e91ff1dfab455b5a30d35998f6">PPS_IN_INT1</a> External Interrupt 1 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a41ad19a2c9f150851f7c9c5d469043d2">PPS_IN_INT2</a> External Interrupt 2<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a41ad19a2c9f150851f7c9c5d469043d2">PPS_IN_INT2</a> External Interrupt 2 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a3b415b8f04f37ef4a7b38f31c54ae064">PPS_IN_T2CK</a> Timer2 External Clock<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a3b415b8f04f37ef4a7b38f31c54ae064">PPS_IN_T2CK</a> Timer2 External Clock <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#af9742a17de8278eb86105c89cd7b979f">PPS_IN_T3CK</a> Timer3 External Clock<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#af9742a17de8278eb86105c89cd7b979f">PPS_IN_T3CK</a> Timer3 External Clock <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a273ff459b8f1b53ac38d723cb250b105">PPS_IN_T4CK</a> Timer4 External Clock<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a273ff459b8f1b53ac38d723cb250b105">PPS_IN_T4CK</a> Timer4 External Clock <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ae7282f570b9871f14563b17b9e165093">PPS_IN_T5CK</a> Timer5 External Clock<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ae7282f570b9871f14563b17b9e165093">PPS_IN_T5CK</a> Timer5 External Clock <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a9e6d3cbfaf0a982470ae37ed22405077">PPS_IN_IC1</a> Input Capture 1<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a9e6d3cbfaf0a982470ae37ed22405077">PPS_IN_IC1</a> Input Capture 1 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a156517c3238d65b5a8238f04b18997b2">PPS_IN_IC2</a> Input Capture 2<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a156517c3238d65b5a8238f04b18997b2">PPS_IN_IC2</a> Input Capture 2 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#acd1ccec3d7bf457d6802424d07598882">PPS_IN_IC3</a> Input Capture 3<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#acd1ccec3d7bf457d6802424d07598882">PPS_IN_IC3</a> Input Capture 3 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ac5e80e2d1a207bdf2e8182d964a5f8ec">PPS_IN_IC4</a> Input Capture 4<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ac5e80e2d1a207bdf2e8182d964a5f8ec">PPS_IN_IC4</a> Input Capture 4 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#afaa34e676f1503cefef6a068e4c79d88">PPS_IN_IC5</a> Input Capture 5<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#afaa34e676f1503cefef6a068e4c79d88">PPS_IN_IC5</a> Input Capture 5 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#af2cf3d65c80de2be10a40ff51312d4a9">PPS_IN_OCFA</a> Output Compare Fault A<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#af2cf3d65c80de2be10a40ff51312d4a9">PPS_IN_OCFA</a> Output Compare Fault A <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a81d1028e39e0385730a6f89533b57b51">PPS_IN_OCFB</a> Output Compare Fault B<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a81d1028e39e0385730a6f89533b57b51">PPS_IN_OCFB</a> Output Compare Fault B <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ab8f3ada1914bf4374bd66f4501bc0c2d">PPS_IN_U1RX</a> UART1 Receive<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ab8f3ada1914bf4374bd66f4501bc0c2d">PPS_IN_U1RX</a> UART1 Receive <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a37895f3c6295f604d073852bfcb63604">PPS_IN_U1CTS</a> UART1 Clear-to-Send<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a37895f3c6295f604d073852bfcb63604">PPS_IN_U1CTS</a> UART1 Clear-to-Send <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a0e0e94cd1c39a7375ac782dcf5801fe5">PPS_IN_U2RX</a> UART2 Receive<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a0e0e94cd1c39a7375ac782dcf5801fe5">PPS_IN_U2RX</a> UART2 Receive <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a320251032ed57fefe52eb640629368d8">PPS_IN_U2CTS</a> UART2 Clear-to-Send<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a320251032ed57fefe52eb640629368d8">PPS_IN_U2CTS</a> UART2 Clear-to-Send <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a32324f8dd1658c98f9518bc7b9714a1f">PPS_IN_SDI1</a> SPI1 Data Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a32324f8dd1658c98f9518bc7b9714a1f">PPS_IN_SDI1</a> SPI1 Data Input <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a141604ef5d12d279da3b20cf4bbfea22">PPS_IN_SCK1IN</a> SPI1 Clock Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a141604ef5d12d279da3b20cf4bbfea22">PPS_IN_SCK1IN</a> SPI1 Clock Input <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#af7f005c6988a77ff6219e79652d0b213">PPS_IN_SS1IN</a> SPI1 Slave Select Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#af7f005c6988a77ff6219e79652d0b213">PPS_IN_SS1IN</a> SPI1 Slave Select Input <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#aa0ffba1331183ad1b397e5dac2ca071a">PPS_IN_SDI2</a> SPI2 Data Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#aa0ffba1331183ad1b397e5dac2ca071a">PPS_IN_SDI2</a> SPI2 Data Input <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a11f2dc29007425345cd98596651d0275">PPS_IN_SCK2IN</a> SPI2 Clock Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a11f2dc29007425345cd98596651d0275">PPS_IN_SCK2IN</a> SPI2 Clock Input <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ab93336e38b18fab15c6f95f85ff7f1c0">PPS_IN_SS2IN</a> SPI2 Slave Select Input<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ab93336e38b18fab15c6f95f85ff7f1c0">PPS_IN_SS2IN</a> SPI2 Slave Select Input <br />
 </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">pin</td><td>Pin which the functionality has to be assigned to.<br />
+    <tr><td class="paramname">pin</td><td>Pin which the functionality has to be assigned to. <br />
 <ul>
 <li><a class="el" href="_ports_8h.html#a71c9223f6b86b4e5fc1c9aa698090cd4">PORT_RP0</a> <br />
 </li>
@@ -1867,16 +1867,16 @@ For the complete list of possible pins see the list of defines above, starting w
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00233">233</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00244">244</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa38a7fbbed458f8b7de52db73061a711"></a>
+<a class="anchor" id="ad863e759cda74bb8913c252ec3859f87"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PPSOutput</td>
+          <td class="memname">#define PPS_ASSIGN_OUTPUT</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">pin, </td>
@@ -1896,12 +1896,12 @@ For the complete list of possible pins see the list of defines above, starting w
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a>(_PPS_OUT_PORT_, pin) = fn;                    \</div>
 <div class="line">    Nop()</div>
-<div class="ttc" id="_macro_8h_html_a3b5b02cafb079a66411e4e709ef00051"><div class="ttname"><a href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a></div><div class="ttdeci">#define MACRO_EXPAND_CONCATENATE_TWO(a, b)                                                                      </div><div class="ttdoc">Expand and concatenate two arguments. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_8h_source.html#l00046">Macro.h:46</a></div></div>
+<div class="ttc" id="_macro_8h_html_a3b5b02cafb079a66411e4e709ef00051"><div class="ttname"><a href="_macro_8h.html#a3b5b02cafb079a66411e4e709ef00051">MACRO_EXPAND_CONCATENATE_TWO</a></div><div class="ttdeci">#define MACRO_EXPAND_CONCATENATE_TWO(a, b)                                                                      </div><div class="ttdoc">Expand and concatenate two arguments. </div><div class="ttdef"><b>Definition:</b> <a href="_macro_8h_source.html#l00065">Macro.h:65</a></div></div>
 </div><!-- fragment -->
 <p>Assign pin to an output functionality. </p>
 <p>IOLOCK must be cleared. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pin</td><td>Pin which the functionality has to be assigned to.<br />
+    <tr><td class="paramname">pin</td><td>Pin which the functionality has to be assigned to. <br />
 <ul>
 <li><a class="el" href="_ports_8h.html#a71c9223f6b86b4e5fc1c9aa698090cd4">PORT_RP0</a> <br />
 </li>
@@ -1915,44 +1915,44 @@ For the complete list of possible pins see the list of defines above, starting w
 For the complete list of possible pins see the list of defines above, starting with <a class="el" href="_ports_8h.html#a71c9223f6b86b4e5fc1c9aa698090cd4">PORT_RP0</a>. </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">fn</td><td>Function to be assigned to the pin.<br />
-FUNCTION DESCRIPTION<br />
+    <tr><td class="paramname">fn</td><td>Function to be assigned to the pin. <br />
+FUNCTION DESCRIPTION <br />
 <ul>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ad778016265033c7c8c09ccdb3d3a7e46">PPS_OUT_NULL</a> The pin is an I/O Port pin<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ad778016265033c7c8c09ccdb3d3a7e46">PPS_OUT_NULL</a> The pin is an I/O Port pin <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ae18cb59f8d1833d3f8e5fd08ef6babc1">PPS_OUT_C1OUT</a> Comparator 1 Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ae18cb59f8d1833d3f8e5fd08ef6babc1">PPS_OUT_C1OUT</a> Comparator 1 Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#af05a3d0b7a65c65702df03317c42bc4e">PPS_OUT_C2OUT</a> Comparator 2 Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#af05a3d0b7a65c65702df03317c42bc4e">PPS_OUT_C2OUT</a> Comparator 2 Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#af3507974b957b7b193c4eb771301a1c8">PPS_OUT_U1TX</a> UART1 Transmit<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#af3507974b957b7b193c4eb771301a1c8">PPS_OUT_U1TX</a> UART1 Transmit <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a6029fc412ac9b613faaf85b186a7e6c2">PPS_OUT_U1RTS</a> UART1 Ready To Send<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a6029fc412ac9b613faaf85b186a7e6c2">PPS_OUT_U1RTS</a> UART1 Ready To Send <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#aad2b611a5a405f07302704550c066ffa">PPS_OUT_U2TX</a> UART2 Transmit<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#aad2b611a5a405f07302704550c066ffa">PPS_OUT_U2TX</a> UART2 Transmit <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a0f068644a1d914d4eef1e0376491abc2">PPS_OUT_U2RTS</a> UART2 Ready To Send<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a0f068644a1d914d4eef1e0376491abc2">PPS_OUT_U2RTS</a> UART2 Ready To Send <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a0743430753b866241d280b204f45d20c">PPS_OUT_SDO1</a> SPI1 Data Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a0743430753b866241d280b204f45d20c">PPS_OUT_SDO1</a> SPI1 Data Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a790417d6f8ee16073934b401a2565305">PPS_OUT_SCK1OUT</a> SPI1 Clock Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a790417d6f8ee16073934b401a2565305">PPS_OUT_SCK1OUT</a> SPI1 Clock Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a8e4b76f1f550b3e7d292e47e33e069d6">PPS_OUT_SS1OUT</a> SPI1 Slave Select Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a8e4b76f1f550b3e7d292e47e33e069d6">PPS_OUT_SS1OUT</a> SPI1 Slave Select Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a718b5d9f539fad32073306a64eeb874b">PPS_OUT_SDO2</a> SPI2 Data Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a718b5d9f539fad32073306a64eeb874b">PPS_OUT_SDO2</a> SPI2 Data Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#afbc495c40d3825673533ab40441d1256">PPS_OUT_SCK2OUT</a> SPI2 Clock Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#afbc495c40d3825673533ab40441d1256">PPS_OUT_SCK2OUT</a> SPI2 Clock Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ace3404e6aed58f7b105d08aacfbf2dd3">PPS_OUT_SS2OUT</a> SPI2 Slave Select Output<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ace3404e6aed58f7b105d08aacfbf2dd3">PPS_OUT_SS2OUT</a> SPI2 Slave Select Output <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#abca009cf89c1e8183450ef36221d8b07">PPS_OUT_OC1</a> Output Compare 1<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#abca009cf89c1e8183450ef36221d8b07">PPS_OUT_OC1</a> Output Compare 1 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#ad43cfdd7854f10fab3275555cb514046">PPS_OUT_OC2</a> Output Compare 2<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#ad43cfdd7854f10fab3275555cb514046">PPS_OUT_OC2</a> Output Compare 2 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a55008d9776c8e601574e57694470588a">PPS_OUT_OC3</a> Output Compare 3<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a55008d9776c8e601574e57694470588a">PPS_OUT_OC3</a> Output Compare 3 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a503e0ea1118a7a1243ae477a6a918d24">PPS_OUT_OC4</a> Output Compare 4<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a503e0ea1118a7a1243ae477a6a918d24">PPS_OUT_OC4</a> Output Compare 4 <br />
 </li>
-<li><a class="el" href="_peripheral_pin_select_8h.html#a4806d8ae20ae2273caccd072e0a840c1">PPS_OUT_OC5</a> Output Compare 5<br />
+<li><a class="el" href="_peripheral_pin_select_8h.html#a4806d8ae20ae2273caccd072e0a840c1">PPS_OUT_OC5</a> Output Compare 5 <br />
 </li>
 </ul>
 </td></tr>
@@ -1960,14 +1960,14 @@ FUNCTION DESCRIPTION<br />
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00270">270</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
+<p>Definition at line <a class="el" href="_peripheral_pin_select_8h_source.html#l00281">281</a> of file <a class="el" href="_peripheral_pin_select_8h_source.html">PeripheralPinSelect.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

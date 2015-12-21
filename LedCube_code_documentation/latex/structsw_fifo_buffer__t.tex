@@ -1,6 +1,6 @@
 \hypertarget{structsw_fifo_buffer__t}{}\section{sw\+Fifo\+Buffer\+\_\+t Struct Reference}
 \label{structsw_fifo_buffer__t}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
-\subsection*{Public Attributes}
+\subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 uint8\+\_\+t \hyperlink{structsw_fifo_buffer__t_a5c7c40846fb9a0ce25dba8e99824ad8a}{buffer\+Not\+Empty\+Flag}
@@ -22,59 +22,59 @@ uint16\+\_\+t \hyperlink{structsw_fifo_buffer__t_a05db6308e5fee7d2591c4bc4e21505
 \subsection{Detailed Description}
 
 
-Definition at line 52 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 63 of file Sw\+Fifo\+Buffer.\+h.
 
 
 
-\subsection{Member Data Documentation}
+\subsection{Field Documentation}
 \hypertarget{structsw_fifo_buffer__t_a5c7c40846fb9a0ce25dba8e99824ad8a}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Not\+Empty\+Flag@{buffer\+Not\+Empty\+Flag}}
 \index{buffer\+Not\+Empty\+Flag@{buffer\+Not\+Empty\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{buffer\+Not\+Empty\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::buffer\+Not\+Empty\+Flag}\label{structsw_fifo_buffer__t_a5c7c40846fb9a0ce25dba8e99824ad8a}
 This flag is automatically set and cleared by the software buffer 
 
-Definition at line 55 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 66 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a8c291f4e2fda846402115081e5a750e7}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Full\+Flag@{buffer\+Full\+Flag}}
 \index{buffer\+Full\+Flag@{buffer\+Full\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{buffer\+Full\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::buffer\+Full\+Flag}\label{structsw_fifo_buffer__t_a8c291f4e2fda846402115081e5a750e7}
 This flag is automatically set and cleared by the software buffer 
 
-Definition at line 57 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 68 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a9bbab1b668fb5a7f96f07478634a50f6}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!buffer\+Overflow\+Flag@{buffer\+Overflow\+Flag}}
 \index{buffer\+Overflow\+Flag@{buffer\+Overflow\+Flag}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{buffer\+Overflow\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::buffer\+Overflow\+Flag}\label{structsw_fifo_buffer__t_a9bbab1b668fb5a7f96f07478634a50f6}
 This flag is not automatically cleared by the software buffer 
 
-Definition at line 59 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 70 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a0b595a1d13af47083fedafee8e29e26e}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!data@{data}}
 \index{data@{data}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}char sw\+Fifo\+Buffer\+\_\+t\+::data\mbox{[}{\bf F\+I\+F\+O\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{structsw_fifo_buffer__t_a0b595a1d13af47083fedafee8e29e26e}
 The actual F\+I\+F\+O buffer. 
 
-Definition at line 63 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 74 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a407513a78db2ae65a38a95646668164e}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!i\+First@{i\+First}}
 \index{i\+First@{i\+First}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{i\+First}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::i\+First}\label{structsw_fifo_buffer__t_a407513a78db2ae65a38a95646668164e}
 Index of oldest data byte in the buffer. 
 
-Definition at line 65 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 76 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a37b7c86bf28a0d6c402cd80d41a7abd1}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!i\+Last@{i\+Last}}
 \index{i\+Last@{i\+Last}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{i\+Last}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::i\+Last}\label{structsw_fifo_buffer__t_a37b7c86bf28a0d6c402cd80d41a7abd1}
 Index of newest data byte in the buffer. 
 
-Definition at line 67 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 78 of file Sw\+Fifo\+Buffer.\+h.
 
 \hypertarget{structsw_fifo_buffer__t_a05db6308e5fee7d2591c4bc4e21505da}{}\index{sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}!num\+Bytes@{num\+Bytes}}
 \index{num\+Bytes@{num\+Bytes}!sw\+Fifo\+Buffer\+\_\+t@{sw\+Fifo\+Buffer\+\_\+t}}
 \subsubsection[{num\+Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sw\+Fifo\+Buffer\+\_\+t\+::num\+Bytes}\label{structsw_fifo_buffer__t_a05db6308e5fee7d2591c4bc4e21505da}
 Number of bytes currently stored in the buffer. 
 
-Definition at line 69 of file Sw\+Fifo\+Buffer.\+h.
+Definition at line 80 of file Sw\+Fifo\+Buffer.\+h.
 
 
 

@@ -14,9 +14,9 @@ Definitions for the interrupt priority.
 \item 
 \#define \hyperlink{_interrupts_8h_a3062d103ca3d5d29b5fecd2f0813bf8f}{I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O}~1
 \item 
-\#define \hyperlink{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}()
+\#define \hyperlink{_interrupts_8h_a569583c12bf384c13bcd2ea5f46fc9ab}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}
 \begin{DoxyCompactList}\small\item\em Disable interrupts. \end{DoxyCompactList}\item 
-\#define \hyperlink{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}()~R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(cpu\+Int\+Prio)
+\#define \hyperlink{_interrupts_8h_a994db87576912eea693503f28003cb21}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}~R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(cpu\+Int\+Prio)
 \begin{DoxyCompactList}\small\item\em Restore the previous C\+P\+U interrupt priority level from the saved variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -31,26 +31,22 @@ Definitions for the interrupt priority.
 \subsubsection[{I\+N\+T\+\_\+\+U1\+R\+X\+\_\+\+P\+R\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+\_\+\+U1\+R\+X\+\_\+\+P\+R\+I\+O~1}\label{_interrupts_8h_a8e19b93b6345b31b628791f64a5e7596}
 Interrupt priority for U\+A\+R\+T1 receive 
 
-Definition at line 46 of file Interrupts.\+h.
+Definition at line 57 of file Interrupts.\+h.
 
 \hypertarget{_interrupts_8h_a3062d103ca3d5d29b5fecd2f0813bf8f}{}\index{Interrupts.\+h@{Interrupts.\+h}!I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O@{I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O}}
 \index{I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O@{I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O}!Interrupts.\+h@{Interrupts.\+h}}
 \subsubsection[{I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+\_\+\+T3\+\_\+\+P\+R\+I\+O~1}\label{_interrupts_8h_a3062d103ca3d5d29b5fecd2f0813bf8f}
 Interrupt priority for timer 3 
 
-Definition at line 47 of file Interrupts.\+h.
+Definition at line 58 of file Interrupts.\+h.
 
-\hypertarget{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{}\index{Interrupts.\+h@{Interrupts.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}}
+\hypertarget{_interrupts_8h_a569583c12bf384c13bcd2ea5f46fc9ab}{}\index{Interrupts.\+h@{Interrupts.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}}
 \index{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}!Interrupts.\+h@{Interrupts.\+h}}
-\subsubsection[{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}
+\subsubsection[{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}\label{_interrupts_8h_a569583c12bf384c13bcd2ea5f46fc9ab}
 {\bfseries Value\+:}
 \begin{DoxyCode}
-uint16\_t cpuIntPrio = 0; \(\backslash\)
-                SET\_AND\_SAVE\_CPU\_IPL(cpuIntPrio, 7)
+uint16\_t cpuIntPrio = 0;                                                   \(\backslash\)
+    SET\_AND\_SAVE\_CPU\_IPL(cpuIntPrio, 7)
 \end{DoxyCode}
 
 
@@ -58,20 +54,16 @@ Disable interrupts.
 
 Disable interrupts by saving the current C\+P\+U interrupt priority level to a variable and setting the C\+P\+U interrupt priority level to 7 (the highest level). Using the predefined S\+E\+T\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L macro for setting and saving the C\+P\+U interrupt priority level. 
 
-Definition at line 61 of file Interrupts.\+h.
+Definition at line 72 of file Interrupts.\+h.
 
-\hypertarget{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{}\index{Interrupts.\+h@{Interrupts.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}}
+\hypertarget{_interrupts_8h_a994db87576912eea693503f28003cb21}{}\index{Interrupts.\+h@{Interrupts.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}}
 \index{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L@{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}!Interrupts.\+h@{Interrupts.\+h}}
-\subsubsection[{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)~R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(cpu\+Int\+Prio)}\label{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}
+\subsubsection[{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L~R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L(cpu\+Int\+Prio)}\label{_interrupts_8h_a994db87576912eea693503f28003cb21}
 
 
 Restore the previous C\+P\+U interrupt priority level from the saved variable. 
 
 Using the predefined R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L macro for restoring the C\+P\+U interrupt priority level. This doesn\textquotesingle{}t necessary mean that interrupts are enabled after this macro, because the C\+P\+U interrupt priority level is only restored to it\textquotesingle{}s original value. So if it original value was 7 (interrupts disabled) it will be restored to the same value, resulting in an interrupts disabled situation.  The macro I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L must be in the same scope as this macro. 
 
-Definition at line 76 of file Interrupts.\+h.
+Definition at line 88 of file Interrupts.\+h.
 

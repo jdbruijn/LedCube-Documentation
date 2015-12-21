@@ -1,9 +1,6 @@
 var searchData=
 [
   ['_5fcolour_5fmax',['_COLOUR_MAX',['../_colours_8h.html#a2556669c74174d9ddf0003c12db63457',1,'Colours.h']]],
-  ['_5fdebug_5fflag',['_DEBUG_FLAG',['../_debug_8h.html#a7f2ad17b10b464b92eb67d0d72b2e8d3',1,'Debug.h']]],
-  ['_5fdebug_5ffunc_5finit_5fflag',['_DEBUG_FUNC_INIT_FLAG',['../_debug_8h.html#a700f756d6a7225cb44e62b27a1eb5ca2',1,'Debug.h']]],
-  ['_5fled_5fdriver_5freorderleddata',['_LED_DRIVER_ReorderLedData',['../_led_driver_8h.html#a3ed82ed3cce7de15bc8e7675c776e1d9',1,'LedDriver.h']]],
   ['_5fmacro_5fexpand_5fconcatenate_5ffive',['_MACRO_EXPAND_CONCATENATE_FIVE',['../_macro_8h.html#a22b5f42cb42f3e76ec61d0eb5ca3e776',1,'Macro.h']]],
   ['_5fmacro_5fexpand_5fconcatenate_5ffour',['_MACRO_EXPAND_CONCATENATE_FOUR',['../_macro_8h.html#a58a2ae4fabd961369a372accbb540c9c',1,'Macro.h']]],
   ['_5fmacro_5fexpand_5fconcatenate_5fstr_5ffive',['_MACRO_EXPAND_CONCATENATE_STR_FIVE',['../_macro_8h.html#ac0f1bf38a2c14b67eccfe36e08860ab3',1,'Macro.h']]],
@@ -13,6 +10,7 @@ var searchData=
   ['_5fmacro_5fexpand_5fconcatenate_5fthree',['_MACRO_EXPAND_CONCATENATE_THREE',['../_macro_8h.html#afd8b82a4d8ecff4c3393179001775ac1',1,'Macro.h']]],
   ['_5fmacro_5fexpand_5fconcatenate_5ftwo',['_MACRO_EXPAND_CONCATENATE_TWO',['../_macro_8h.html#a1d177c5573dc3941b920376a424ad77d',1,'Macro.h']]],
   ['_5fmacro_5fexpand_5fstr_5fone',['_MACRO_EXPAND_STR_ONE',['../_macro_8h.html#af1e9c50b3429e6ed6a018245d63c529c',1,'Macro.h']]],
+  ['_5fmyassert_5fassert',['_MYASSERT_ASSERT',['../_my_assert_8h.html#a5327f58e15c6dd175afabe3c960bef68',1,'MyAssert.h']]],
   ['_5fport_5fconfigure_5fall_5fpins_5fas_5fdigital',['_PORT_CONFIGURE_ALL_PINS_AS_DIGITAL',['../_ports_8h.html#a6403eed04b409c8cdfc4615caee05971',1,'Ports.h']]],
   ['_5fport_5fconfigure_5fall_5fpins_5fas_5foutput',['_PORT_CONFIGURE_ALL_PINS_AS_OUTPUT',['../_ports_8h.html#a5379eb9021572afd480d3d4a94b86b96',1,'Ports.h']]],
   ['_5fports_5fconcatenate_5fassign',['_PORTS_CONCATENATE_ASSIGN',['../_ports_8h.html#ad43ab51b0dade630307ea10595e099e9',1,'Ports.h']]],

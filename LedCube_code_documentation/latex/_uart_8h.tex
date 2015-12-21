@@ -38,7 +38,17 @@ Controls the U\+A\+R\+T functionality of the device to send and receive data.
 
 \begin{DoxyCompactList}\small\item\em Actual calculated baudrate for U\+A\+R\+T 1. \end{DoxyCompactList}\item 
 \#define \hyperlink{_uart_8h_af2e0d731995e32090f1b89b54f329521}{U\+A\+R\+T1\+\_\+\+B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R}
-\begin{DoxyCompactList}\small\item\em U\+A\+R\+Tx Baud Rate error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+Tx Baud Rate error. \end{DoxyCompactList}\item 
+\#define \hyperlink{_uart_8h_aecefb1323972f0a37eb1dc53b9ee719c}{uprintf}~\hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf}
+\begin{DoxyCompactList}\small\item\em Print formatted data. \end{DoxyCompactList}\item 
+\#define \hyperlink{_uart_8h_a140b450243cd776c28232f5281ea6e83}{uputc}~\hyperlink{_uart_8h_a6572d5a9aefd29ac8be4b7190c35d93f}{Uart1\+\_\+putc}
+\begin{DoxyCompactList}\small\item\em Print a character. \end{DoxyCompactList}\item 
+\#define \hyperlink{_uart_8h_a2c479bff212c3fe9368d0f8fc7f33c83}{uputs}~\hyperlink{_uart_8h_abf908913993328fbf02cfb6cc47bec0d}{Uart1\+\_\+puts}
+\begin{DoxyCompactList}\small\item\em Print a string. \end{DoxyCompactList}\item 
+\#define \hyperlink{_uart_8h_a340e29be7014da8039cbefaa6b444beb}{uputnum}~\hyperlink{_uart_8h_a505ab248378a9dd26d0860bde9fff28f}{Uart1\+\_\+put\+Num}
+\begin{DoxyCompactList}\small\item\em Print a number. \end{DoxyCompactList}\item 
+\#define \hyperlink{_uart_8h_a19ecd28f78397230bb15f69464f87b56}{uputbits}~\hyperlink{_uart_8h_a77659fb699d32e7fb8e1005c172e8137}{Uart1\+\_\+put\+Bits}
+\begin{DoxyCompactList}\small\item\em Print an unsigned number with zero padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,10 +60,10 @@ void \hyperlink{_uart_8h_abf908913993328fbf02cfb6cc47bec0d}{Uart1\+\_\+puts} (co
 \begin{DoxyCompactList}\small\item\em Send a string using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
 void \hyperlink{_uart_8h_a505ab248378a9dd26d0860bde9fff28f}{Uart1\+\_\+put\+Num} (int32\+\_\+t \+\_\+num, uint8\+\_\+t \+\_\+base, bool \+\_\+print\+Base)
 \begin{DoxyCompactList}\small\item\em Send an integer number using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
-void \hyperlink{_uart_8h_a5f9da20b7570f093e17cc0997dc37ca6}{Uart1\+\_\+put\+Bits} (const uint64\+\_\+t \+\_\+v, uint8\+\_\+t \+\_\+n\+Bits)
+void \hyperlink{_uart_8h_a77659fb699d32e7fb8e1005c172e8137}{Uart1\+\_\+put\+Bits} (const uint64\+\_\+t \+\_\+num, uint8\+\_\+t \+\_\+n\+Bits)
 \begin{DoxyCompactList}\small\item\em Send a byte in binary form (with zero padding) using the U\+A\+R\+Tx module. \end{DoxyCompactList}\item 
 uint16\+\_\+t \hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf} (const char $\ast$format,...)
-\begin{DoxyCompactList}\small\item\em Print formatted data to U\+A\+R\+Tx. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print formatted data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -71,7 +81,7 @@ Baudrate clock prescaler for U\+A\+R\+T 1.
 
 This value should be either 4 or 16. 4 = B\+R\+G generates 4 clocks per bit period (4x baud clock, High-\/\+Speed mode) 16 = B\+R\+G generates 16 clocks per bit period (16x baud clock, Standard Speed mode) 
 
-Definition at line 64 of file Uart.\+h.
+Definition at line 75 of file Uart.\+h.
 
 \hypertarget{_uart_8h_af2e0d731995e32090f1b89b54f329521}{}\index{Uart.\+h@{Uart.\+h}!U\+A\+R\+T1\+\_\+\+B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R@{U\+A\+R\+T1\+\_\+\+B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R}}
 \index{U\+A\+R\+T1\+\_\+\+B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R@{U\+A\+R\+T1\+\_\+\+B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R}!Uart.\+h@{Uart.\+h}}
@@ -89,7 +99,228 @@ This value is in tenth, so a value of 21 means that the Baud Rate error equals 2
 
 \char`\"{}\+Error = \mbox{[}(\+Calculated Baud Rate -\/ Desired Baud Rate) / Desired Baud Rate\mbox{]}\char`\"{} (Universal Asynchronous Receiver Transmitter (U\+A\+R\+T), Equation 3-\/2\+: Baud Rate Error Calculation (B\+R\+G\+H = 0), Microchip) 
 
-Definition at line 81 of file Uart.\+h.
+Definition at line 92 of file Uart.\+h.
+
+\hypertarget{_uart_8h_aecefb1323972f0a37eb1dc53b9ee719c}{}\index{Uart.\+h@{Uart.\+h}!uprintf@{uprintf}}
+\index{uprintf@{uprintf}!Uart.\+h@{Uart.\+h}}
+\subsubsection[{uprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define uprintf~{\bf Uart1\+\_\+printf}}\label{_uart_8h_aecefb1323972f0a37eb1dc53b9ee719c}
+
+
+Print formatted data. 
+
+Writes the C string pointed by format to the standard stream. If format includes format specifiers (subsequences beginning with \%), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & C string that contains the text to be written to U\+A\+R\+Tx. It can optionally contain embedded format specifiers that are replaced by the values specified in subsequent additional arguments and formatted as requested. ~\newline
+ A format specifier follows this prototype\+: \%\mbox{[}flags\mbox{]}\mbox{[}width\mbox{]}\mbox{[}.precision\mbox{]}\mbox{[}length\mbox{]}specifier \begin{DoxyVerb}* Where the specifier character at the end is the most significant component,
+* since it defines the type and the interpretation of its corresponding
+* argument:
+* | specifier  | output                                       | example       |
+* | ---------- | -------------------------------------------- | ------------- |
+* | d or i     | Signed decimal integer                       | 392           |
+* | u          | Unsigned decimal integer                     | 7235          |
+* | o          | Unsigned octal                               | 610           |
+* | x          | Unsigned hexadecimal integer                 | 7fa           |
+* | X          | Unsigned hexadecimal integer (uppercase)     | 7FA           |
+* | f          | Decimal floating point, lowercase            | 392.65        |
+* | F          | Decimal floating point, uppercase            | 392.65        |
+* | e          | Scientific notation (exponent), lowercase    | 3.9265e+2     |
+* | E          | Scientific notation (exponent), uppercase    | 3.9265E+2     |
+* | g          | Use the shortest representation: %e or %f    | 392.65        |
+* | G          | Use the shortest representation: %E or %F    | 392.65        |
+* | a          | Hexadecimal floating point, lowercase        | -0xc.90fep-2  |
+* | A          | Hexadecimal floating point, uppercase        | -0XC.90FEP-2  |
+* | c          | Character                                    | a             |
+* | s          | String of characters                         | sample        |
+* | p          | Pointer address                              | b8000000      |
+* | n          | Nothing printed. The corresponding argument
+*                must be a pointer to a signed int. The
+*                number of characters written so far is
+*                stored in the pointed location.              |               |
+* | %          | A % followed by another % character will
+*                write a single % to the stream.              | %             |
+* 
+* The format specifier can also contain sub-specifiers: flags, width,
+* .precision and modifiers (in that order), which are optional and follow these
+* specifications:
+* | flags    | description                                                    |
+* | -------- | -------------------------------------------------------------- |
+* | -        | Left-justify within the given field width; Right justification
+*              is the default (see width sub-specifier).                      |
+* | +        | Forces to preceed the result with a plus or minus sign (+ or -)
+*              even for positive numbers. By default, only negative numbers
+*              are preceded with a - sign.                                    |
+* | (space)  | If no sign is going to be written, a blank space is inserted
+*              before the value.                                              |
+* | #        | Used with o, x or X specifiers the value is preceeded
+*              with 0, 0x or 0X respectively for values different than zero.
+*              Used with a, A, e, E, f, F, g or G it forces the written output
+*              to contain a decimal point even if no more digits follow.
+*              By default, if no digits follow, no decimal point is written.  |
+* | 0        | Left-pads the number with zeroes (0) instead of spaces when
+*              padding is specified (see width sub-specifier).                |
+* 
+* | width     | description                                                   |
+* | --------- | ------------------------------------------------------------- |
+* | (number)  | Minimum number of characters to be printed.
+*               If the value to be printed is shorter than this number,
+*               the result is padded with blank spaces. The value is not
+*               truncated even if the result is larger.
+* | *         | The width is not specified in the format string, but as
+*               an additional integer value argument preceding the argument
+*               that has to be formatted.
+* 
+* | .precision | description                                                  |
+* | ---------- | ------------------------------------------------------------ |
+* | .number    | For integer specifiers (d, i, o, u, x, X): precision 
+*                specifies the minimum number of digits to be written. If the
+*                value to be written is shorter than this number, the result
+*                is padded with leading zeros. The value is not truncated
+*                even if the result is longer. A precision of 0 means that no
+*                character is written for the value 0.  
+*                For a, A, e, E, f and F specifiers: this is the number of
+*                digits to be printed after the decimal point (by default,
+*                this is 6).  
+*                For g and G specifiers: This is the maximum number of
+*                significant digits to be printed.  
+*                For s: this is the maximum number of characters to be
+*                printed. By default all characters are printed until the
+*                ending null character is encountered.  
+*                If the period is specified without an explicit value for
+*                precision, 0 is assumed.                                     |
+* | *          | The precision is not specified in the format string,
+*                but as an additional integer value argument preceding the
+*                argument that has to be formatted.                           |
+* 
+* The length sub-specifier modifies the length of the data type. This is a
+* chart showing the types used to interpret the corresponding arguments with
+* and without length specifier (if a different type is used, the proper type
+* promotion or conversion is performed, if allowed):
+* |        | specifiers                                                       |
+* | length | d i           | u o x X                | n                       |
+* | ------ | ------------- | ---------------------- | ----------------------- |
+* | (none) | int           | unsigned int           | int*                    |
+* | hh     | signed char   | unsigned char          | signed char*            |
+* | h      | short int     | unsigned short int     | short int*              |
+* | l      | long int      | unsigned long int      | long int*               |
+* | ll     | long long int | unsigned long long int | long long int*          |
+* | j      | intmax_t      | uintmax_t              | intmax_t*               |
+* | z      | size_t        | size_t                 | size_t*                 |
+* | t      | ptrdiff_t     | ptrdiff_t              | ptrdiff_t*              |
+* 
+* Extended table:
+* |        | specifiers                                                       |
+* | length | f F e E g G a A | c      | s        | p                          |
+* | ------ | --------------- | ------ | -------- | -------------------------- |
+* | (none) | double          | int    | char*    | void*                      |
+* | hh     |                 |        |          |                            |
+* | h      |                 |        |          |                            |
+* | l      |                 | wint_t | wchar_t  |                            |
+* | ll     |                 |        |          |                            |
+* | j      |                 |        |          |                            |
+* | z      |                 |        |          |                            |
+* | t      |                 |        |          |                            |
+* | L      | long double     |        |          |                            |
+* \end{DoxyVerb}
+ \\
+\hline
+{\em ...} & (additional arguments) Depending on the format string, the function may expect a sequence of additional arguments, each containing a value to be used to replace a format specifier in the format string (or a pointer to a storage location, for n). There should be at least as many of these arguments as the number of values specified in the format specifiers. Additional arguments are ignored by the function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Length of the printed string. 
+\end{DoxyReturn}
+
+
+Definition at line 233 of file Uart.\+h.
+
+\hypertarget{_uart_8h_a140b450243cd776c28232f5281ea6e83}{}\index{Uart.\+h@{Uart.\+h}!uputc@{uputc}}
+\index{uputc@{uputc}!Uart.\+h@{Uart.\+h}}
+\subsubsection[{uputc}]{\setlength{\rightskip}{0pt plus 5cm}\#define uputc~{\bf Uart1\+\_\+putc}}\label{_uart_8h_a140b450243cd776c28232f5281ea6e83}
+
+
+Print a character. 
+
+Writes the a character (byte) to the standard stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+c} & Character to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 246 of file Uart.\+h.
+
+\hypertarget{_uart_8h_a2c479bff212c3fe9368d0f8fc7f33c83}{}\index{Uart.\+h@{Uart.\+h}!uputs@{uputs}}
+\index{uputs@{uputs}!Uart.\+h@{Uart.\+h}}
+\subsubsection[{uputs}]{\setlength{\rightskip}{0pt plus 5cm}\#define uputs~{\bf Uart1\+\_\+puts}}\label{_uart_8h_a2c479bff212c3fe9368d0f8fc7f33c83}
+
+
+Print a string. 
+
+Writes the a string to the standard stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+s} & String to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 255 of file Uart.\+h.
+
+\hypertarget{_uart_8h_a340e29be7014da8039cbefaa6b444beb}{}\index{Uart.\+h@{Uart.\+h}!uputnum@{uputnum}}
+\index{uputnum@{uputnum}!Uart.\+h@{Uart.\+h}}
+\subsubsection[{uputnum}]{\setlength{\rightskip}{0pt plus 5cm}\#define uputnum~{\bf Uart1\+\_\+put\+Num}}\label{_uart_8h_a340e29be7014da8039cbefaa6b444beb}
+
+
+Print a number. 
+
+Writes an integer number to the standard stream.
+
+\begin{DoxyNote}{Note}
+The number must be within range of a 32-\/bit integer. Thus the lowest number is -\/2147483647 and the highest number is 2147483647. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num} & Number to send. \\
+\hline
+{\em \+\_\+base} & Numeral system to use. \begin{DoxyVerb}* | _base  | Description                                                      |
+* | ------ | ---------------------------------------------------------------- |
+* | 2      | Binary (adds suffix 'b' to the output)                           |
+* | 10     | Decimal                                                          |
+* | 16     | hexadecimal (adds suffix 'h' to the output)                      |
+* \end{DoxyVerb}
+ \\
+\hline
+{\em \+\_\+print\+Base} & Boolean value whether the base (\textquotesingle{}b\textquotesingle{} or \textquotesingle{}h\textquotesingle{} suffix) needs to be send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 276 of file Uart.\+h.
+
+\hypertarget{_uart_8h_a19ecd28f78397230bb15f69464f87b56}{}\index{Uart.\+h@{Uart.\+h}!uputbits@{uputbits}}
+\index{uputbits@{uputbits}!Uart.\+h@{Uart.\+h}}
+\subsubsection[{uputbits}]{\setlength{\rightskip}{0pt plus 5cm}\#define uputbits~{\bf Uart1\+\_\+put\+Bits}}\label{_uart_8h_a19ecd28f78397230bb15f69464f87b56}
+
+
+Print an unsigned number with zero padding. 
+
+Writes an unsigned number with zero padding to the standard stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+num} & Number to send \\
+\hline
+{\em \+\_\+n\+Bits} & Number of bits to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 286 of file Uart.\+h.
 
 
 
@@ -112,7 +343,7 @@ Make sure the analog functionality of the R\+X pin, if it has an analog function
 \end{DoxyNote}
 
 
-Definition at line 38 of file Uart.\+c.
+Definition at line 49 of file Uart.\+c.
 
 \hypertarget{_uart_8h_a6572d5a9aefd29ac8be4b7190c35d93f}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+putc@{Uart1\+\_\+putc}}
 \index{Uart1\+\_\+putc@{Uart1\+\_\+putc}!Uart.\+h@{Uart.\+h}}
@@ -132,7 +363,7 @@ Send a single character (byte) using the U\+A\+R\+Tx module.
 \end{DoxyParams}
 
 
-Definition at line 102 of file Uart.\+c.
+Definition at line 114 of file Uart.\+c.
 
 \hypertarget{_uart_8h_abf908913993328fbf02cfb6cc47bec0d}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+puts@{Uart1\+\_\+puts}}
 \index{Uart1\+\_\+puts@{Uart1\+\_\+puts}!Uart.\+h@{Uart.\+h}}
@@ -152,7 +383,7 @@ Send a string using the U\+A\+R\+Tx module.
 \end{DoxyParams}
 
 
-Definition at line 110 of file Uart.\+c.
+Definition at line 123 of file Uart.\+c.
 
 \hypertarget{_uart_8h_a505ab248378a9dd26d0860bde9fff28f}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+put\+Num@{Uart1\+\_\+put\+Num}}
 \index{Uart1\+\_\+put\+Num@{Uart1\+\_\+put\+Num}!Uart.\+h@{Uart.\+h}}
@@ -174,41 +405,43 @@ The number must be within range of a 32-\/bit integer. Thus the lowest number is
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+num} & Number to send using U\+A\+R\+Tx. \\
 \hline
-{\em \+\_\+base} & The numeral system to use.~\newline
-\+\_\+base \&\#09 Description~\newline
-2 \&\#09 Binary (adds suffix \textquotesingle{}b\textquotesingle{} to the output)~\newline
-10 \&\#09 Decimal~\newline
-16 \&\#09 Hexadecimal (adds suffix \textquotesingle{}h\textquotesingle{} to the output) \\
+{\em \+\_\+base} & The numeral system to use. \begin{DoxyVerb}* | _base  | Description                                                      |
+* | ------ | ---------------------------------------------------------------- |
+* | 2      | Binary (adds suffix 'b' to the output)                           |
+* | 10     | Decimal                                                          |
+* | 16     | hexadecimal (adds suffix 'h' to the output)                      |
+* \end{DoxyVerb}
+ \\
 \hline
-{\em \+\_\+pritn\+Base} & Boolean value whether the base (\textquotesingle{}b\textquotesingle{} or \textquotesingle{}h\textquotesingle{} suffix) needs to be added. \\
+{\em \+\_\+print\+Base} & Boolean value whether the base (\textquotesingle{}b\textquotesingle{} or \textquotesingle{}h\textquotesingle{} suffix) needs to be send. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 119 of file Uart.\+c.
+Definition at line 133 of file Uart.\+c.
 
-\hypertarget{_uart_8h_a5f9da20b7570f093e17cc0997dc37ca6}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+put\+Bits@{Uart1\+\_\+put\+Bits}}
+\hypertarget{_uart_8h_a77659fb699d32e7fb8e1005c172e8137}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+put\+Bits@{Uart1\+\_\+put\+Bits}}
 \index{Uart1\+\_\+put\+Bits@{Uart1\+\_\+put\+Bits}!Uart.\+h@{Uart.\+h}}
-\subsubsection[{Uart1\+\_\+put\+Bits(const uint64\+\_\+t \+\_\+v, uint8\+\_\+t \+\_\+n\+Bits)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+put\+Bits (
+\subsubsection[{Uart1\+\_\+put\+Bits(const uint64\+\_\+t \+\_\+num, uint8\+\_\+t \+\_\+n\+Bits)}]{\setlength{\rightskip}{0pt plus 5cm}void Uart1\+\_\+put\+Bits (
 \begin{DoxyParamCaption}
-\item[{const uint64\+\_\+t}]{\+\_\+v, }
+\item[{const uint64\+\_\+t}]{\+\_\+num, }
 \item[{uint8\+\_\+t}]{\+\_\+n\+Bits}
 \end{DoxyParamCaption}
-)}\label{_uart_8h_a5f9da20b7570f093e17cc0997dc37ca6}
+)}\label{_uart_8h_a77659fb699d32e7fb8e1005c172e8137}
 
 
 Send a byte in binary form (with zero padding) using the U\+A\+R\+Tx module. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \+\_\+v} & Variable to send using U\+A\+R\+Tx \\
+{\em \+\_\+num} & Variable to send using U\+A\+R\+Tx \\
 \hline
 {\em \+\_\+n\+Bits} & Number of bits to send \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 171 of file Uart.\+c.
+Definition at line 184 of file Uart.\+c.
 
 \hypertarget{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{}\index{Uart.\+h@{Uart.\+h}!Uart1\+\_\+printf@{Uart1\+\_\+printf}}
 \index{Uart1\+\_\+printf@{Uart1\+\_\+printf}!Uart.\+h@{Uart.\+h}}
@@ -220,123 +453,128 @@ Definition at line 171 of file Uart.\+c.
 )}\label{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}
 
 
-Print formatted data to U\+A\+R\+Tx. 
+Print formatted data. 
 
-Writes the C string pointed by format to the U\+A\+R\+Tx. If format includes format specifiers (subsequences beginning with \%), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
+Writes the C string pointed by format to the standard stream. If format includes format specifiers (subsequences beginning with \%), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
 
 
 \begin{DoxyParams}{Parameters}
-{\em format} & C string that contains the text to be written to U\+A\+R\+Tx. It can optionally contain embedded format specifiers that are replaced by the values specified in subsequent additional arguments and formatted as requested.~\newline
- A format specifier follows this prototype\+:~\newline
- \%\mbox{[}flags\mbox{]}\mbox{[}width\mbox{]}\mbox{[}.precision\mbox{]}\mbox{[}length\mbox{]}specifier~\newline
- specifier \&\#09 output \&\#09 \&\#09 \&\#09 \&\#09 example ~\newline
-d or i \&\#09 Signed decimal integer \&\#09 \&\#09 392 ~\newline
-u \&\#09 Unsigned decimal integer \&\#09 \&\#09 7235 ~\newline
-o \&\#09 Unsigned octal \&\#09 \&\#09 \&\#09 610 ~\newline
-x \&\#09 Unsigned hexadecimal integer \&\#09 \&\#09 7fa ~\newline
-X \&\#09 Unsigned hexadecimal integer (uppercase) \&\#09 7\+F\+A ~\newline
-f \&\#09 Decimal floating point, lowercase \&\#09 \&\#09 392.\+65 ~\newline
-F \&\#09 Decimal floating point, uppercase \&\#09 \&\#09 392.\+65 ~\newline
-e \&\#09 Scientific notation (exponent), lowercase \&\#09 3.\+9265e+2 ~\newline
-E \&\#09 Scientific notation (exponent), uppercase \&\#09 3.\+9265\+E+2 ~\newline
-g \&\#09 Use the shortest representation\+: e or f \&\#09 392.\+65 ~\newline
-G \&\#09 Use the shortest representation\+: E or F \&\#09 392.\+65 ~\newline
-a \&\#09 Hexadecimal floating point, lowercase \&\#09 -\/0xc.\+90fep-\/2~\newline
-A \&\#09 Hexadecimal floating point, uppercase \&\#09 -\/0\+X\+C.\+90\+F\+E\+P-\/2~\newline
-c \&\#09 Character \&\#09 \&\#09 \&\#09 \&\#09 a ~\newline
-s \&\#09 String of characters \&\#09 \&\#09 \&\#09 sample ~\newline
-p \&\#09 Pointer address \&\#09 \&\#09 \&\#09 b8000000 ~\newline
-n \&\#09 Nothing printed. The corresponding argument ~\newline
- \&\#09 must be a pointer to a signed int. ~\newline
- \&\#09 The number of characters written so far is ~\newline
- \&\#09 stored in the pointed location. ~\newline
-\% \&\#09 A \% followed by another \% character will \&\#09 \% ~\newline
- \&\#09 write a single \% to the stream.\\
+{\em format} & C string that contains the text to be written to U\+A\+R\+Tx. It can optionally contain embedded format specifiers that are replaced by the values specified in subsequent additional arguments and formatted as requested. ~\newline
+ A format specifier follows this prototype\+: \%\mbox{[}flags\mbox{]}\mbox{[}width\mbox{]}\mbox{[}.precision\mbox{]}\mbox{[}length\mbox{]}specifier \begin{DoxyVerb}* Where the specifier character at the end is the most significant component,
+* since it defines the type and the interpretation of its corresponding
+* argument:
+* | specifier  | output                                       | example       |
+* | ---------- | -------------------------------------------- | ------------- |
+* | d or i     | Signed decimal integer                       | 392           |
+* | u          | Unsigned decimal integer                     | 7235          |
+* | o          | Unsigned octal                               | 610           |
+* | x          | Unsigned hexadecimal integer                 | 7fa           |
+* | X          | Unsigned hexadecimal integer (uppercase)     | 7FA           |
+* | f          | Decimal floating point, lowercase            | 392.65        |
+* | F          | Decimal floating point, uppercase            | 392.65        |
+* | e          | Scientific notation (exponent), lowercase    | 3.9265e+2     |
+* | E          | Scientific notation (exponent), uppercase    | 3.9265E+2     |
+* | g          | Use the shortest representation: %e or %f    | 392.65        |
+* | G          | Use the shortest representation: %E or %F    | 392.65        |
+* | a          | Hexadecimal floating point, lowercase        | -0xc.90fep-2  |
+* | A          | Hexadecimal floating point, uppercase        | -0XC.90FEP-2  |
+* | c          | Character                                    | a             |
+* | s          | String of characters                         | sample        |
+* | p          | Pointer address                              | b8000000      |
+* | n          | Nothing printed. The corresponding argument
+*                must be a pointer to a signed int. The
+*                number of characters written so far is
+*                stored in the pointed location.              |               |
+* | %          | A % followed by another % character will
+*                write a single % to the stream.              | %             |
+* 
+* The format specifier can also contain sub-specifiers: flags, width,
+* .precision and modifiers (in that order), which are optional and follow these
+* specifications:
+* | flags    | description                                                    |
+* | -------- | -------------------------------------------------------------- |
+* | -        | Left-justify within the given field width; Right justification
+*              is the default (see width sub-specifier).                      |
+* | +        | Forces to preceed the result with a plus or minus sign (+ or -)
+*              even for positive numbers. By default, only negative numbers
+*              are preceded with a - sign.                                    |
+* | (space)  | If no sign is going to be written, a blank space is inserted
+*              before the value.                                              |
+* | #        | Used with o, x or X specifiers the value is preceeded
+*              with 0, 0x or 0X respectively for values different than zero.
+*              Used with a, A, e, E, f, F, g or G it forces the written output
+*              to contain a decimal point even if no more digits follow.
+*              By default, if no digits follow, no decimal point is written.  |
+* | 0        | Left-pads the number with zeroes (0) instead of spaces when
+*              padding is specified (see width sub-specifier).                |
+* 
+* | width     | description                                                   |
+* | --------- | ------------------------------------------------------------- |
+* | (number)  | Minimum number of characters to be printed.
+*               If the value to be printed is shorter than this number,
+*               the result is padded with blank spaces. The value is not
+*               truncated even if the result is larger.
+* | *         | The width is not specified in the format string, but as
+*               an additional integer value argument preceding the argument
+*               that has to be formatted.
+* 
+* | .precision | description                                                  |
+* | ---------- | ------------------------------------------------------------ |
+* | .number    | For integer specifiers (d, i, o, u, x, X): precision 
+*                specifies the minimum number of digits to be written. If the
+*                value to be written is shorter than this number, the result
+*                is padded with leading zeros. The value is not truncated
+*                even if the result is longer. A precision of 0 means that no
+*                character is written for the value 0.  
+*                For a, A, e, E, f and F specifiers: this is the number of
+*                digits to be printed after the decimal point (by default,
+*                this is 6).  
+*                For g and G specifiers: This is the maximum number of
+*                significant digits to be printed.  
+*                For s: this is the maximum number of characters to be
+*                printed. By default all characters are printed until the
+*                ending null character is encountered.  
+*                If the period is specified without an explicit value for
+*                precision, 0 is assumed.                                     |
+* | *          | The precision is not specified in the format string,
+*                but as an additional integer value argument preceding the
+*                argument that has to be formatted.                           |
+* 
+* The length sub-specifier modifies the length of the data type. This is a
+* chart showing the types used to interpret the corresponding arguments with
+* and without length specifier (if a different type is used, the proper type
+* promotion or conversion is performed, if allowed):
+* |        | specifiers                                                       |
+* | length | d i           | u o x X                | n                       |
+* | ------ | ------------- | ---------------------- | ----------------------- |
+* | (none) | int           | unsigned int           | int*                    |
+* | hh     | signed char   | unsigned char          | signed char*            |
+* | h      | short int     | unsigned short int     | short int*              |
+* | l      | long int      | unsigned long int      | long int*               |
+* | ll     | long long int | unsigned long long int | long long int*          |
+* | j      | intmax_t      | uintmax_t              | intmax_t*               |
+* | z      | size_t        | size_t                 | size_t*                 |
+* | t      | ptrdiff_t     | ptrdiff_t              | ptrdiff_t*              |
+* 
+* Extended table:
+* |        | specifiers                                                       |
+* | length | f F e E g G a A | c      | s        | p                          |
+* | ------ | --------------- | ------ | -------- | -------------------------- |
+* | (none) | double          | int    | char*    | void*                      |
+* | hh     |                 |        |          |                            |
+* | h      |                 |        |          |                            |
+* | l      |                 | wint_t | wchar_t  |                            |
+* | ll     |                 |        |          |                            |
+* | j      |                 |        |          |                            |
+* | z      |                 |        |          |                            |
+* | t      |                 |        |          |                            |
+* | L      | long double     |        |          |                            |
+* \end{DoxyVerb}
+ \\
 \hline
-\end{DoxyParams}
-flags \&\#09 description ~\newline
-
-\begin{DoxyItemize}
-\item \&\#09 Left-\/justify within the given field width; Right justification ~\newline
- \&\#09 is the default (see width sub-\/specifier). ~\newline
-
-\item \&\#09 Forces to preceed the result with a plus or minus sign (+ or -\/) ~\newline
- \&\#09 even for positive numbers. By default, only negative numbers ~\newline
- \&\#09 are preceded with a -\/ sign. ~\newline
-(space) \&\#09 If no sign is going to be written, a blank space is inserted ~\newline
- \&\#09 before the value. ~\newline
-\subsection*{\&\#09 Used with o, x or X specifiers the value is preceeded }
-\end{DoxyItemize}
-
-\&\#09 with 0, 0x or 0\+X respectively for values different than zero. ~\newline
- \&\#09 Used with a, A, e, E, f, F, g or G it forces the written output ~\newline
- \&\#09 to contain a decimal point even if no more digits follow. ~\newline
- \&\#09 By default, if no digits follow, no decimal point is written. ~\newline
-0 \&\#09 Left-\/pads the number with zeroes (0) instead of spaces when ~\newline
- \&\#09 padding is specified (see width sub-\/specifier).
-
-width \&\#09 description ~\newline
-(number) \&\#09 Minimum number of characters to be printed. ~\newline
- \&\#09 If the value to be printed is shorter than this number, ~\newline
- \&\#09 the result is padded with blank spaces. The value is not ~\newline
- \&\#09 truncated even if the result is larger. ~\newline
-
-\begin{DoxyItemize}
-\item \&\#09 The width is not specified in the format string, but as ~\newline
- \&\#09 an additional integer value argument preceding the argument ~\newline
- \&\#09 that has to be formatted.
-\end{DoxyItemize}
-
-.precision \&\#09 description ~\newline
-.number \&\#09 For integer specifiers (d, i, o, u, x, X)\+: precision specifies ~\newline
- \&\#09 the minimum number of digits to be written. If the value to be ~\newline
- \&\#09 written is shorter than this number, the result is padded with ~\newline
- \&\#09 leading zeros. The value is not truncated even if the result ~\newline
- \&\#09 is longer. A precision of 0 means that no character is written ~\newline
- \&\#09 for the value 0. ~\newline
- \&\#09 For a, A, e, E, f and F specifiers\+: this is the number of digits ~\newline
- \&\#09 to be printed after the decimal point (by default, this is 6). ~\newline
- \&\#09 For g and G specifiers\+: This is the maximum number of significant ~\newline
- \&\#09 digits to be printed. ~\newline
- \&\#09 For s\+: this is the maximum number of characters to be printed. ~\newline
- \&\#09 By default all characters are printed until the ending null ~\newline
- \&\#09 character is encountered. If the period is specified without an ~\newline
- \&\#09 explicit value for precision, 0 is assumed. ~\newline
-.$\ast$ \&\#09 The precision is not specified in the format string, but as an ~\newline
- \&\#09 additional integer value argument preceding the argument that ~\newline
- \&\#09 has to be formatted.
-
-length \&\#09 specifiers \mbox{[}d i\mbox{]} ~\newline
- \&\#32 (none) \&\#09 int ~\newline
- \&\#32 hh \&\#09 signed char ~\newline
- \&\#32 h \&\#09 short int ~\newline
- \&\#32 l \&\#09 long int ~\newline
- \&\#32 ll \&\#09 long long int ~\newline
- \&\#32 j \&\#09 intmax\+\_\+t ~\newline
- \&\#32 z \&\#09 size\+\_\+t ~\newline
- \&\#32 t \&\#09 ptrdiff\+\_\+t ~\newline
-length \&\#09 specifiers \mbox{[}u o x X\mbox{]} ~\newline
- \&\#32(none) \&\#09 unsigned int ~\newline
- \&\#32 hh \&\#09 unsigned char ~\newline
- \&\#32 h \&\#09 unsigned short int ~\newline
- \&\#32 l \&\#09 unsigned long int ~\newline
- \&\#32 ll \&\#09 unsigned long long int ~\newline
- \&\#32 j \&\#09 uintmax\+\_\+t ~\newline
- \&\#32 z \&\#09 size\+\_\+t ~\newline
- \&\#32 t \&\#09 ptrdiff\+\_\+t ~\newline
-length \&\#09 specifiers \mbox{[}f F e E g G a A\mbox{]} ~\newline
- \&\#32 (none) \&\#09 double ~\newline
- \&\#32 L \&\#09 long double ~\newline
- 
-\begin{DoxyParams}{Parameters}
-{\em ...} & (additional arguments) Depending on the format string, the function ~\newline
-may expect a sequence of additional arguments, each containing a value to be ~\newline
-used to replace a format specifier in the format string (or a pointer to a ~\newline
-storage location, for n). There should be at least as many of these arguments as ~\newline
-the number of values specified in the format specifiers. Additional arguments ~\newline
-are ignored by the function. \\
+{\em ...} & (additional arguments) Depending on the format string, the function may expect a sequence of additional arguments, each containing a value to be used to replace a format specifier in the format string (or a pointer to a storage location, for n). There should be at least as many of these arguments as the number of values specified in the format specifiers. Additional arguments are ignored by the function. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-uint16\+\_\+t len Length of the printed string. 
+uint16\+\_\+t Length of the printed string. 
 \end{DoxyReturn}

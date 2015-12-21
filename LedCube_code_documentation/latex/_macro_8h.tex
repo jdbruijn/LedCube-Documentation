@@ -8,6 +8,8 @@ Standard macros to perform general macro operations like expansion and concatena
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\#define \hyperlink{_macro_8h_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+E\+D}(x)~((void)(x))
+\begin{DoxyCompactList}\small\item\em Suppress the \char`\"{}unused parameter\char`\"{} warnings. \end{DoxyCompactList}\item 
 \#define \hyperlink{_macro_8h_a1d177c5573dc3941b920376a424ad77d}{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}(a,  b)~a \#\# b
 \begin{DoxyCompactList}\small\item\em Internal helper macro to expand and concatenate two arguments. \end{DoxyCompactList}\item 
 \#define \hyperlink{_macro_8h_a3b5b02cafb079a66411e4e709ef00051}{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}(a,  b)                                                                      ~\hyperlink{_macro_8h_a1d177c5573dc3941b920376a424ad77d}{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}(a, b)
@@ -52,6 +54,29 @@ Standard macros to perform general macro operations like expansion and concatena
 
 
 \subsection{Macro Definition Documentation}
+\hypertarget{_macro_8h_a86d500a34c624c2cae56bc25a31b12f3}{}\index{Macro.\+h@{Macro.\+h}!U\+N\+U\+S\+E\+D@{U\+N\+U\+S\+E\+D}}
+\index{U\+N\+U\+S\+E\+D@{U\+N\+U\+S\+E\+D}!Macro.\+h@{Macro.\+h}}
+\subsubsection[{U\+N\+U\+S\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+N\+U\+S\+E\+D(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((void)(x))}\label{_macro_8h_a86d500a34c624c2cae56bc25a31b12f3}
+
+
+Suppress the \char`\"{}unused parameter\char`\"{} warnings. 
+
+\begin{DoxyNote}{Note}
+This method of suppressing the compiler warnings works for variables and arguments of methods, but not for functions. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The unused variable. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Macro.\+h.
+
 \hypertarget{_macro_8h_a1d177c5573dc3941b920376a424ad77d}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}!Macro.\+h@{Macro.\+h}}
 \subsubsection[{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O(
@@ -76,7 +101,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 39 of file Macro.\+h.
+Definition at line 58 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a3b5b02cafb079a66411e4e709ef00051}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+W\+O}!Macro.\+h@{Macro.\+h}}
@@ -99,7 +124,7 @@ Expand and concatenate two arguments.
 \end{DoxyParams}
 
 
-Definition at line 46 of file Macro.\+h.
+Definition at line 65 of file Macro.\+h.
 
 \hypertarget{_macro_8h_afd8b82a4d8ecff4c3393179001775ac1}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E}!Macro.\+h@{Macro.\+h}}
@@ -128,7 +153,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 58 of file Macro.\+h.
+Definition at line 77 of file Macro.\+h.
 
 \hypertarget{_macro_8h_ad1ab55b62532eb7ee9704a55fb6d46e4}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E}!Macro.\+h@{Macro.\+h}}
@@ -154,7 +179,7 @@ Expand and concatenate three arguments.
 \end{DoxyParams}
 
 
-Definition at line 66 of file Macro.\+h.
+Definition at line 85 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a58a2ae4fabd961369a372accbb540c9c}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R}!Macro.\+h@{Macro.\+h}}
@@ -186,7 +211,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 79 of file Macro.\+h.
+Definition at line 98 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a0c3e2402a62d47c503c1ec3ab8a53e2c}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+O\+U\+R}!Macro.\+h@{Macro.\+h}}
@@ -215,7 +240,7 @@ Expand and concatenate four arguments.
 \end{DoxyParams}
 
 
-Definition at line 88 of file Macro.\+h.
+Definition at line 107 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a22b5f42cb42f3e76ec61d0eb5ca3e776}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E}!Macro.\+h@{Macro.\+h}}
@@ -250,7 +275,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 102 of file Macro.\+h.
+Definition at line 121 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a4aede6b9705bf4dbdf42da8e6b78f9c5}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+F\+I\+V\+E}!Macro.\+h@{Macro.\+h}}
@@ -282,7 +307,7 @@ Expand and concatenate five arguments.
 \end{DoxyParams}
 
 
-Definition at line 112 of file Macro.\+h.
+Definition at line 131 of file Macro.\+h.
 
 \hypertarget{_macro_8h_af1e9c50b3429e6ed6a018245d63c529c}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E}!Macro.\+h@{Macro.\+h}}
@@ -305,7 +330,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 122 of file Macro.\+h.
+Definition at line 141 of file Macro.\+h.
 
 \hypertarget{_macro_8h_aca3956914567cb60312c01e2482b3778}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+S\+T\+R\+\_\+\+O\+N\+E}!Macro.\+h@{Macro.\+h}}
@@ -328,7 +353,7 @@ The argument could be anything. For example a number.
 \end{DoxyParams}
 
 
-Definition at line 129 of file Macro.\+h.
+Definition at line 148 of file Macro.\+h.
 
 \hypertarget{_macro_8h_aa360f4a26a3da6a042949cbd8b2243f5}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O}!Macro.\+h@{Macro.\+h}}
@@ -354,7 +379,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 141 of file Macro.\+h.
+Definition at line 160 of file Macro.\+h.
 
 \hypertarget{_macro_8h_aabab7862a592902ae053a4ecbad80dbd}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+W\+O}!Macro.\+h@{Macro.\+h}}
@@ -380,7 +405,7 @@ The arguments could be anything. For example a number.
 \end{DoxyParams}
 
 
-Definition at line 149 of file Macro.\+h.
+Definition at line 168 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a67f6a5e2aa1b2c0da1f73a3ce8f2738f}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E}!Macro.\+h@{Macro.\+h}}
@@ -409,7 +434,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 162 of file Macro.\+h.
+Definition at line 181 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a4ee202bfa7b596747a40d5173490b2ee}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+T\+H\+R\+E\+E}!Macro.\+h@{Macro.\+h}}
@@ -438,7 +463,7 @@ The arguments could be anything. For example a number.
 \end{DoxyParams}
 
 
-Definition at line 171 of file Macro.\+h.
+Definition at line 190 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a3c36f0fab25751c14b20387dff2408fb}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R}!Macro.\+h@{Macro.\+h}}
@@ -470,7 +495,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 185 of file Macro.\+h.
+Definition at line 204 of file Macro.\+h.
 
 \hypertarget{_macro_8h_abb4fae5fbf5f4b21c99e2516a7841a22}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+O\+U\+R}!Macro.\+h@{Macro.\+h}}
@@ -502,7 +527,7 @@ The arguments could be anything. For example a number.
 \end{DoxyParams}
 
 
-Definition at line 195 of file Macro.\+h.
+Definition at line 214 of file Macro.\+h.
 
 \hypertarget{_macro_8h_ac0f1bf38a2c14b67eccfe36e08860ab3}{}\index{Macro.\+h@{Macro.\+h}!\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E}}
 \index{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E@{\+\_\+\+M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E}!Macro.\+h@{Macro.\+h}}
@@ -537,7 +562,7 @@ The helper macro is needed to expand the arguments. Due to the macro replacement
 \end{DoxyParams}
 
 
-Definition at line 210 of file Macro.\+h.
+Definition at line 229 of file Macro.\+h.
 
 \hypertarget{_macro_8h_a37280fa620fc149410183212175184e6}{}\index{Macro.\+h@{Macro.\+h}!M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E}}
 \index{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E@{M\+A\+C\+R\+O\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+\+C\+O\+N\+C\+A\+T\+E\+N\+A\+T\+E\+\_\+\+S\+T\+R\+\_\+\+F\+I\+V\+E}!Macro.\+h@{Macro.\+h}}
@@ -572,5 +597,5 @@ The arguments could be anything. For example a number.
 \end{DoxyParams}
 
 
-Definition at line 221 of file Macro.\+h.
+Definition at line 240 of file Macro.\+h.
 

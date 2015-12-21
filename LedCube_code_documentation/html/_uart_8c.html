@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -123,9 +123,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a505ab248378a9dd26d0860bde9fff28f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a505ab248378a9dd26d0860bde9fff28f">Uart1_putNum</a> (int32_t _num, uint8_t _base, bool _printBase)</td></tr>
 <tr class="memdesc:a505ab248378a9dd26d0860bde9fff28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an integer number using the UARTx module.  <a href="#a505ab248378a9dd26d0860bde9fff28f">More...</a><br /></td></tr>
 <tr class="separator:a505ab248378a9dd26d0860bde9fff28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9da20b7570f093e17cc0997dc37ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a5f9da20b7570f093e17cc0997dc37ca6">Uart1_putBits</a> (const uint64_t _v, uint8_t _nBits)</td></tr>
-<tr class="memdesc:a5f9da20b7570f093e17cc0997dc37ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a byte in binary form (with zero padding) using the UARTx module.  <a href="#a5f9da20b7570f093e17cc0997dc37ca6">More...</a><br /></td></tr>
-<tr class="separator:a5f9da20b7570f093e17cc0997dc37ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77659fb699d32e7fb8e1005c172e8137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a77659fb699d32e7fb8e1005c172e8137">Uart1_putBits</a> (const uint64_t _num, uint8_t _nBits)</td></tr>
+<tr class="memdesc:a77659fb699d32e7fb8e1005c172e8137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a byte in binary form (with zero padding) using the UARTx module.  <a href="#a77659fb699d32e7fb8e1005c172e8137">More...</a><br /></td></tr>
+<tr class="separator:a77659fb699d32e7fb8e1005c172e8137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a348b663f86a656f5ea991d496ff9b896"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a348b663f86a656f5ea991d496ff9b896"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a348b663f86a656f5ea991d496ff9b896">__attribute__</a> ((interrupt, auto_psv))</td></tr>
 <tr class="memdesc:a348b663f86a656f5ea991d496ff9b896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt for received UARTx data. Puts the data in a software FIFO buffer (<a class="el" href="_uart_8c.html#a4ad2edb55b2802d02a508eb857448daf">pRxBuffer</a>). <br /></td></tr>
@@ -133,7 +133,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uar
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9536199d47c0dfeb8104921c41af9a35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsw_fifo_buffer__t.html">swFifoBuffer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a9536199d47c0dfeb8104921c41af9a35">rxBuffer</a> = { 0,0,0, {0}, 0,0,0 }</td></tr>
+<tr class="memitem:a9536199d47c0dfeb8104921c41af9a35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsw_fifo_buffer__t.html">swFifoBuffer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a9536199d47c0dfeb8104921c41af9a35">rxBuffer</a> = {0, 0, 0, {0}, 0, 0, 0}</td></tr>
 <tr class="separator:a9536199d47c0dfeb8104921c41af9a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad2edb55b2802d02a508eb857448daf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsw_fifo_buffer__t.html">pSwFifoBuffer_t</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_uart_8c.html#a4ad2edb55b2802d02a508eb857448daf">pRxBuffer</a> = &amp;<a class="el" href="_uart_8c.html#a9536199d47c0dfeb8104921c41af9a35">rxBuffer</a></td></tr>
 <tr class="separator:a4ad2edb55b2802d02a508eb857448daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,7 +162,7 @@ Variables</h2></td></tr>
 <dd>
 Make sure the analog functionality of the RX pin, if it has an analog functionality, is disabled. </dd></dl>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00038">38</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00049">49</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ Make sure the analog functionality of the RX pin, if it has an analog functional
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00102">102</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00114">114</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Make sure the analog functionality of the RX pin, if it has an analog functional
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00110">110</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00123">123</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
@@ -253,21 +253,22 @@ Make sure the analog functionality of the RX pin, if it has an analog functional
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_num</td><td>Number to send using UARTx. </td></tr>
-    <tr><td class="paramname">_base</td><td>The numeral system to use.<br />
-_base &amp;#09 Description<br />
-2 &amp;#09 Binary (adds suffix 'b' to the output)<br />
-10 &amp;#09 Decimal<br />
-16 &amp;#09 Hexadecimal (adds suffix 'h' to the output) </td></tr>
-    <tr><td class="paramname">_pritnBase</td><td>Boolean value whether the base ('b' or 'h' suffix) needs to be added. </td></tr>
+    <tr><td class="paramname">_base</td><td>The numeral system to use. <pre class="fragment">* | _base  | Description                                                      |
+* | ------ | ---------------------------------------------------------------- |
+* | 2      | Binary (adds suffix 'b' to the output)                           |
+* | 10     | Decimal                                                          |
+* | 16     | hexadecimal (adds suffix 'h' to the output)                      |
+* </pre> </td></tr>
+    <tr><td class="paramname">_printBase</td><td>Boolean value whether the base ('b' or 'h' suffix) needs to be send. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00119">119</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00133">133</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5f9da20b7570f093e17cc0997dc37ca6"></a>
+<a class="anchor" id="a77659fb699d32e7fb8e1005c172e8137"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -275,7 +276,7 @@ _base &amp;#09 Description<br />
           <td class="memname">void Uart1_putBits </td>
           <td>(</td>
           <td class="paramtype">const uint64_t&#160;</td>
-          <td class="paramname"><em>_v</em>, </td>
+          <td class="paramname"><em>_num</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -294,13 +295,13 @@ _base &amp;#09 Description<br />
 <p>Send a byte in binary form (with zero padding) using the UARTx module. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_v</td><td>Variable to send using UARTx </td></tr>
+    <tr><td class="paramname">_num</td><td>Variable to send using UARTx </td></tr>
     <tr><td class="paramname">_nBits</td><td>Number of bits to send </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00171">171</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00184">184</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
@@ -310,13 +311,13 @@ _base &amp;#09 Description<br />
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsw_fifo_buffer__t.html">swFifoBuffer_t</a> rxBuffer = { 0,0,0, {0}, 0,0,0 }</td>
+          <td class="memname"><a class="el" href="structsw_fifo_buffer__t.html">swFifoBuffer_t</a> rxBuffer = {0, 0, 0, {0}, 0, 0, 0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Global UARTx receive software FIFO buffer. </p>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00030">30</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00041">41</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
@@ -331,14 +332,14 @@ _base &amp;#09 Description<br />
 </div><div class="memdoc">
 <p>Global pointer to the UARTx receive software FIFO buffer. </p>
 
-<p>Definition at line <a class="el" href="_uart_8c_source.html#l00032">32</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
+<p>Definition at line <a class="el" href="_uart_8c_source.html#l00043">43</a> of file <a class="el" href="_uart_8c_source.html">Uart.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

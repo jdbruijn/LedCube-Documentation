@@ -7,20 +7,15 @@ Gets the configuration bits that are set in the microcontroller.
 
 {\ttfamily \#include $<$xc.\+h$>$}\\*
 {\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Macro.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Uart.\+h\char`\"{}}\\*
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}~\hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf}\label{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}
-
-\begin{DoxyCompactList}\small\item\em Wrapper for P\+R\+I\+N\+T\+F to an actual printf function, in this case \hyperlink{_uart_8h_aee7cb5e772b9ad629447b74b07c47543}{Uart1\+\_\+printf}. \end{DoxyCompactList}\item 
-\hypertarget{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+E\+D}(x)~(void)(x)\label{get_p_i_c_configuration_bits_8h_a86d500a34c624c2cae56bc25a31b12f3}
-
-\begin{DoxyCompactList}\small\item\em Macro to suppress the \char`\"{}unused parameter\char`\"{} warnings. \end{DoxyCompactList}\item 
-\hypertarget{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}
+\hypertarget{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}{P\+R\+I\+N\+T\+\_\+\+D\+E\+S\+C}(fmt,  args...)~P\+R\+I\+N\+T\+F(\char`\"{} \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a522aa29295ebb2aa65ea06b325947f26}
 
 \begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit description with indent. \end{DoxyCompactList}\item 
-\hypertarget{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}(fmt,  args...)~\hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F}(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}
+\hypertarget{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{}\#define \hyperlink{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}{P\+R\+I\+N\+T\+\_\+\+R\+E\+S\+U\+L\+T}(fmt,  args...)~P\+R\+I\+N\+T\+F(\char`\"{}  \char`\"{} fmt \char`\"{}\textbackslash{}n\char`\"{}, \#\#args)\label{get_p_i_c_configuration_bits_8h_a2237654922519f9d189b65b6ccad362e}
 
 \begin{DoxyCompactList}\small\item\em Macro for printing the configuration bit result with indent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -53,7 +48,7 @@ This file is designed for the P\+I\+C24\+F\+J64\+G\+A004, so the documentation o
 Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. 
 
 \begin{DoxyNote}{Note}
-The print of the read data is done using the \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F} wrapper.
+The print of the read data is done using the P\+R\+I\+N\+T\+F wrapper.
 \end{DoxyNote}
 \subparagraph*{Example output (without the asterisks)\+:}
 
@@ -94,11 +89,13 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 *  FNOSC<2:0>: Initial Oscillator Select bits
 *   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
 *  FCKSM<1:0>: Clock Switching and Fail-Safe Clock Monitor Configuration bits
-*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is
+*   disabled
 *  OSCIOFCN: OSCO Pin Configuration bit:
 *   OSCIOFCN has no effect on OSCO/CLKO/RA3
 *  IOL1WAY: IOLOCK One-Way Set Enable bit
-*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed, provided the unlock sequence has been completed
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed,
+*   provided the unlock sequence has been completed
 *  I2C1SEL: I2C1 Pin Select bit
 *   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
 *  POSCMD<1:0:> Primary Oscillator Configuration bits
@@ -107,5 +104,5 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 * \end{DoxyVerb}
  
 
-Definition at line 180 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 194 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 

@@ -25,31 +25,30 @@ Data protocol and functions for connection with the Led\+Cube Visualisation soft
 \hypertarget{_led_cube_visualisation_8h_ae420b893b01bb667ddfad5fecd40018a}{}\#define \hyperlink{_led_cube_visualisation_8h_ae420b893b01bb667ddfad5fecd40018a}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+A\+R}~0x17\label{_led_cube_visualisation_8h_ae420b893b01bb667ddfad5fecd40018a}
 
 \begin{DoxyCompactList}\small\item\em End of Transmission Block (E\+T\+B) character, decimal A\+S\+C\+I\+I code 23. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{}\#define \hyperlink{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(c)~\hyperlink{_uart_8h_a6572d5a9aefd29ac8be4b7190c35d93f}{Uart1\+\_\+putc}(c)\label{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}
+\hypertarget{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{}\#define \hyperlink{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(c)                                                                                                          ~\hyperlink{_uart_8h_a140b450243cd776c28232f5281ea6e83}{uputc}((c))\label{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}
 
-\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R to a actual function, in this case \hyperlink{_uart_8h_a6572d5a9aefd29ac8be4b7190c35d93f}{Uart1\+\_\+putc}. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a8d2dadcfbb7c46b9c2752d353af45673}{}\#define \hyperlink{_led_cube_visualisation_8h_a8d2dadcfbb7c46b9c2752d353af45673}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R}(s)~\hyperlink{_uart_8h_abf908913993328fbf02cfb6cc47bec0d}{Uart1\+\_\+puts}(s)\label{_led_cube_visualisation_8h_a8d2dadcfbb7c46b9c2752d353af45673}
+\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R to a actual function, in this case \hyperlink{_uart_8h_a140b450243cd776c28232f5281ea6e83}{uputc}. \end{DoxyCompactList}\item 
+\hypertarget{_led_cube_visualisation_8h_abdbe7a9f35a65c581db2bd0e68fb4ef6}{}\#define \hyperlink{_led_cube_visualisation_8h_abdbe7a9f35a65c581db2bd0e68fb4ef6}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R}(s)                                                                                                            ~\hyperlink{_uart_8h_a2c479bff212c3fe9368d0f8fc7f33c83}{uputs}((s))\label{_led_cube_visualisation_8h_abdbe7a9f35a65c581db2bd0e68fb4ef6}
 
-\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R to a actual function, in this case \hyperlink{_uart_8h_abf908913993328fbf02cfb6cc47bec0d}{Uart1\+\_\+puts}. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a09dd94179f6ffb8c53ef60b60d47373c}{}\#define \hyperlink{_led_cube_visualisation_8h_a09dd94179f6ffb8c53ef60b60d47373c}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M}(s)~\hyperlink{_uart_8h_a505ab248378a9dd26d0860bde9fff28f}{Uart1\+\_\+put\+Num}(s, 16, false)\label{_led_cube_visualisation_8h_a09dd94179f6ffb8c53ef60b60d47373c}
-
-\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M to a actual function, in this case \hyperlink{_uart_8h_a505ab248378a9dd26d0860bde9fff28f}{Uart1\+\_\+put\+Num}. This does send the number in hexadecimal form without the \textquotesingle{}h\textquotesingle{} suffix. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a1553b27cfe783f974f51b00bcd4bbdcb}{}\#define \hyperlink{_led_cube_visualisation_8h_a1553b27cfe783f974f51b00bcd4bbdcb}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N}()~\hyperlink{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_a4cf0dcec4dc39b57e31d43f4a7040753}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_a1553b27cfe783f974f51b00bcd4bbdcb}
+\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R to a actual function, in this case \hyperlink{_uart_8h_a2c479bff212c3fe9368d0f8fc7f33c83}{uputs}. \end{DoxyCompactList}\item 
+\#define \hyperlink{_led_cube_visualisation_8h_aa890ae62f7aec6af3a006e5b255acffe}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M}(s)                                                                                                    ~\hyperlink{_uart_8h_a340e29be7014da8039cbefaa6b444beb}{uputnum}((s), 16, false)
+\begin{DoxyCompactList}\small\item\em Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M to a actual function, in this case \hyperlink{_uart_8h_a340e29be7014da8039cbefaa6b444beb}{uputnum}. \end{DoxyCompactList}\item 
+\hypertarget{_led_cube_visualisation_8h_a3e3669d4a1df0af35bd13d1e60920f6d}{}\#define \hyperlink{_led_cube_visualisation_8h_a3e3669d4a1df0af35bd13d1e60920f6d}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N}~\hyperlink{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_a4cf0dcec4dc39b57e31d43f4a7040753}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_a3e3669d4a1df0af35bd13d1e60920f6d}
 
 \begin{DoxyCompactList}\small\item\em Macro for starting a transmission. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a6c91f3f0dd08eb0d12c892222ab8eade}{}\#define \hyperlink{_led_cube_visualisation_8h_a6c91f3f0dd08eb0d12c892222ab8eade}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N}()~\hyperlink{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_acb16454a9f0b8643c303aa579fc34ec0}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_a6c91f3f0dd08eb0d12c892222ab8eade}
+\hypertarget{_led_cube_visualisation_8h_ad6a4b1a661bb3f6db4d5d0e791c926fd}{}\#define \hyperlink{_led_cube_visualisation_8h_ad6a4b1a661bb3f6db4d5d0e791c926fd}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N}~\hyperlink{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_acb16454a9f0b8643c303aa579fc34ec0}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_ad6a4b1a661bb3f6db4d5d0e791c926fd}
 
 \begin{DoxyCompactList}\small\item\em Macro for ending a transmission. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a9855d29af97af5ac45c29b51711e3ae7}{}\#define \hyperlink{_led_cube_visualisation_8h_a9855d29af97af5ac45c29b51711e3ae7}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K}()~\hyperlink{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_a38948db186e6dc144b8df4a8580ab3ac}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_a9855d29af97af5ac45c29b51711e3ae7}
+\hypertarget{_led_cube_visualisation_8h_a19bead787209652bb0907361b4ff73a8}{}\#define \hyperlink{_led_cube_visualisation_8h_a19bead787209652bb0907361b4ff73a8}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K}~\hyperlink{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_a38948db186e6dc144b8df4a8580ab3ac}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_a19bead787209652bb0907361b4ff73a8}
 
 \begin{DoxyCompactList}\small\item\em Macro for starting a block. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_afeaf0da2b20f3d40d1a6db7860987aaf}{}\#define \hyperlink{_led_cube_visualisation_8h_afeaf0da2b20f3d40d1a6db7860987aaf}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K}()~\hyperlink{_led_cube_visualisation_8h_a73a39e23f191e81c33cd52a81feaefd3}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_ae420b893b01bb667ddfad5fecd40018a}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_afeaf0da2b20f3d40d1a6db7860987aaf}
+\hypertarget{_led_cube_visualisation_8h_ab680308978bdb5dff23ec3861cc4a9f2}{}\#define \hyperlink{_led_cube_visualisation_8h_ab680308978bdb5dff23ec3861cc4a9f2}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K}~\hyperlink{_led_cube_visualisation_8h_ac4546b071de72c01aca8231f96efaea4}{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+C\+H\+A\+R}(\hyperlink{_led_cube_visualisation_8h_ae420b893b01bb667ddfad5fecd40018a}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+A\+R})\label{_led_cube_visualisation_8h_ab680308978bdb5dff23ec3861cc4a9f2}
 
 \begin{DoxyCompactList}\small\item\em Macro for ending a block. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_a41590ba8bb0cf90378e188699eaf6de6}{}\#define \hyperlink{_led_cube_visualisation_8h_a41590ba8bb0cf90378e188699eaf6de6}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+B\+L\+O\+C\+K}()\label{_led_cube_visualisation_8h_a41590ba8bb0cf90378e188699eaf6de6}
+\hypertarget{_led_cube_visualisation_8h_a6e14ececfa8e3ef2f492d0f9c0ec6bbf}{}\#define \hyperlink{_led_cube_visualisation_8h_a6e14ececfa8e3ef2f492d0f9c0ec6bbf}{L\+C\+V\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+B\+L\+O\+C\+K}\label{_led_cube_visualisation_8h_a6e14ececfa8e3ef2f492d0f9c0ec6bbf}
 
 \begin{DoxyCompactList}\small\item\em Macro for starting a transmission and a block. \end{DoxyCompactList}\item 
-\hypertarget{_led_cube_visualisation_8h_ad80c0edc3e8b83e71c84f95de1a22f80}{}\#define \hyperlink{_led_cube_visualisation_8h_ad80c0edc3e8b83e71c84f95de1a22f80}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+B\+L\+O\+C\+K}()    \label{_led_cube_visualisation_8h_ad80c0edc3e8b83e71c84f95de1a22f80}
+\hypertarget{_led_cube_visualisation_8h_aaf16aaceea5ef1d7adfa9d2c7c22c764}{}\#define \hyperlink{_led_cube_visualisation_8h_aaf16aaceea5ef1d7adfa9d2c7c22c764}{L\+C\+V\+\_\+\+E\+N\+D\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+B\+L\+O\+C\+K}\label{_led_cube_visualisation_8h_aaf16aaceea5ef1d7adfa9d2c7c22c764}
 
 \begin{DoxyCompactList}\small\item\em Macro for ending a transmission and a block. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -68,6 +67,24 @@ void \hyperlink{_led_cube_visualisation_8h_a62a253b89387279df5b3095e4ef62a3b}{Le
 
 \subsection{Detailed Description}
 Data protocol and functions for connection with the Led\+Cube Visualisation software. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_led_cube_visualisation_8h_aa890ae62f7aec6af3a006e5b255acffe}{}\index{Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}!L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M@{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M}}
+\index{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M@{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M}!Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}}
+\subsubsection[{L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf uputnum}((s), 16, false)}\label{_led_cube_visualisation_8h_aa890ae62f7aec6af3a006e5b255acffe}
+
+
+Wrapper for L\+C\+V\+\_\+\+S\+E\+N\+D\+\_\+\+H\+E\+X\+\_\+\+N\+U\+M to a actual function, in this case \hyperlink{_uart_8h_a340e29be7014da8039cbefaa6b444beb}{uputnum}. 
+
+This does send the number in hexadecimal form without the \textquotesingle{}h\textquotesingle{} suffix. 
+
+Definition at line 80 of file Led\+Cube\+Visualisation.\+h.
 
 
 
@@ -96,7 +113,7 @@ Send the Cube\+Data of a single row.
 \end{DoxyParams}
 
 
-Definition at line 41 of file Led\+Cube\+Visualisation.\+c.
+Definition at line 53 of file Led\+Cube\+Visualisation.\+c.
 
 \hypertarget{_led_cube_visualisation_8h_a12fc758b19f801bcf5f91a43dacc3ca6}{}\index{Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}!Led\+Cube\+Visualisation\+\_\+send\+Layer@{Led\+Cube\+Visualisation\+\_\+send\+Layer}}
 \index{Led\+Cube\+Visualisation\+\_\+send\+Layer@{Led\+Cube\+Visualisation\+\_\+send\+Layer}!Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}}
@@ -119,7 +136,7 @@ Send the Cube\+Data of a single layer.
 \end{DoxyParams}
 
 
-Definition at line 76 of file Led\+Cube\+Visualisation.\+c.
+Definition at line 89 of file Led\+Cube\+Visualisation.\+c.
 
 \hypertarget{_led_cube_visualisation_8h_a62a253b89387279df5b3095e4ef62a3b}{}\index{Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}!Led\+Cube\+Visualisation\+\_\+send\+Cube\+Data@{Led\+Cube\+Visualisation\+\_\+send\+Cube\+Data}}
 \index{Led\+Cube\+Visualisation\+\_\+send\+Cube\+Data@{Led\+Cube\+Visualisation\+\_\+send\+Cube\+Data}!Led\+Cube\+Visualisation.\+h@{Led\+Cube\+Visualisation.\+h}}
@@ -139,5 +156,5 @@ Send the Cube\+Data of a whole Cube.
 \end{DoxyParams}
 
 
-Definition at line 88 of file Led\+Cube\+Visualisation.\+c.
+Definition at line 102 of file Led\+Cube\+Visualisation.\+c.
 

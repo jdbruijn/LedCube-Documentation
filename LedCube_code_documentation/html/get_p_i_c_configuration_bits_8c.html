@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -172,7 +172,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>UWord32 32-bit value that was at the address of addrhi and addrlo. </dd></dl>
 
-<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00145">145</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
+<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00157">157</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool True if the upper byte is successfully verified, false else. </dd></dl>
 
-<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00171">171</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
+<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00184">184</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. </p>
-<dl class="section note"><dt>Note</dt><dd>The print of the read data is done using the <a class="el" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">PRINTF</a> wrapper.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The print of the read data is done using the PRINTF wrapper.</dd></dl>
 <h4>Example output (without the asterisks):</h4>
 <pre class="fragment">* Reading Flash Configuration Word 1...
 * Binary read value:
@@ -257,25 +257,27 @@ Functions</h2></td></tr>
 *  FNOSC&lt;2:0&gt;: Initial Oscillator Select bits
 *   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
 *  FCKSM&lt;1:0&gt;: Clock Switching and Fail-Safe Clock Monitor Configuration bits
-*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is
+*   disabled
 *  OSCIOFCN: OSCO Pin Configuration bit:
 *   OSCIOFCN has no effect on OSCO/CLKO/RA3
 *  IOL1WAY: IOLOCK One-Way Set Enable bit
-*   [IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed, provided the unlock sequence has been completed
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed,
+*   provided the unlock sequence has been completed
 *  I2C1SEL: I2C1 Pin Select bit
 *   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
 *  POSCMD&lt;1:0:&gt; Primary Oscillator Configuration bits
 *   [POSCMOD_XT] XT Oscillator mode is selected
 * Done Reading Flash Configuration Word 2.
 * </pre> 
-<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00180">180</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
+<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00194">194</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

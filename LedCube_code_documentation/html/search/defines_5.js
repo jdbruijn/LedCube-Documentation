@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['int_5ft3_5fprio',['INT_T3_PRIO',['../_interrupts_8h.html#a3062d103ca3d5d29b5fecd2f0813bf8f',1,'Interrupts.h']]],
-  ['int_5fu1rx_5fprio',['INT_U1RX_PRIO',['../_interrupts_8h.html#a8e19b93b6345b31b628791f64a5e7596',1,'Interrupts.h']]],
-  ['interrupts_5fdissable_5fand_5fsave_5fcpu_5fipl',['INTERRUPTS_DISSABLE_AND_SAVE_CPU_IPL',['../_interrupts_8h.html#a8ec23fc7d5e824e324f6240318e1657d',1,'Interrupts.h']]],
-  ['interrupts_5frestore_5fcpu_5fipl',['INTERRUPTS_RESTORE_CPU_IPL',['../_interrupts_8h.html#ac27b8fcb90a7780c507092e4e74e31ef',1,'Interrupts.h']]]
+  ['fcy',['FCY',['../_system_8h.html#a99d7c812ba23bfdba5d29ec2fddf1e83',1,'System.h']]],
+  ['fifo_5fbuffer_5fsize',['FIFO_BUFFER_SIZE',['../_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd',1,'SwFifoBuffer.h']]],
+  ['fosc',['FOSC',['../_system_8h.html#a802b2b582b121e4632aa9a491d503720',1,'System.h']]],
+  ['fpb',['FPB',['../_system_8h.html#a2a5de2acdd9267b75652bdc1d9a251a7',1,'System.h']]],
+  ['frcdiv',['FRCDIV',['../_system_8h.html#a818b0c17e45483794fb99a7928e02551',1,'System.h']]]
 ];

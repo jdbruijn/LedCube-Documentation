@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['haveoppositesigns',['haveOppositeSigns',['../_bit_operations_8h.html#a5a16a55c4150b94d46a15bb4bdb16ab8',1,'haveOppositeSigns(int32_t const _x, int32_t const _y):&#160;BitOperations.c'],['../_bit_operations_8c.html#a5a16a55c4150b94d46a15bb4bdb16ab8',1,'haveOppositeSigns(int32_t const _x, int32_t const _y):&#160;BitOperations.c']]]
+  ['getpicconfigbits',['getPICConfigBits',['../get_p_i_c_configuration_bits_8h.html#a6cb24dac747d04d782a4810170da12d8',1,'getPICConfigBits(void):&#160;getPICConfigurationBits.c'],['../get_p_i_c_configuration_bits_8c.html#a6cb24dac747d04d782a4810170da12d8',1,'getPICConfigBits(void):&#160;getPICConfigurationBits.c']]],
+  ['getpicconfigurationbits_2ec',['getPICConfigurationBits.c',['../get_p_i_c_configuration_bits_8c.html',1,'']]],
+  ['getpicconfigurationbits_2eh',['getPICConfigurationBits.h',['../get_p_i_c_configuration_bits_8h.html',1,'']]],
+  ['green',['green',['../struct_row_data__t.html#a67b2254f618fa4fc2a513eed8e3364c5',1,'RowData_t']]]
 ];

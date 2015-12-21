@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdfghilmnoprstuv",
+  0: "_abcdfghilmnoprstuv",
   1: "crs",
   2: "bcdfgilmpsuv",
   3: "_bcfghilmnprsu",
@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "_",
   6: "bp",
   7: "bp",
-  8: "_bcdfilmnopstuv",
+  8: "_abcdfilmnopstuv",
   9: "bt"
 };
 
@@ -29,7 +29,7 @@ var indexSectionNames =
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
+  1: "Data Structures",
   2: "Files",
   3: "Functions",
   4: "Variables",

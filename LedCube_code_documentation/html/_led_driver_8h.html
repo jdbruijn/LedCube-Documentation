@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -116,10 +116,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a97476fd466a0045342316c7a2a0c6ccb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#a97476fd466a0045342316c7a2a0c6ccb">SPI1_PPRE</a>&#160;&#160;&#160;1           /* SPI1 Primary Prescale bits */</td></tr>
+<tr class="memitem:a97476fd466a0045342316c7a2a0c6ccb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#a97476fd466a0045342316c7a2a0c6ccb">SPI1_PPRE</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a97476fd466a0045342316c7a2a0c6ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed82ed3cce7de15bc8e7675c776e1d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#a3ed82ed3cce7de15bc8e7675c776e1d9">_LED_DRIVER_ReorderLedData</a>(ledData)</td></tr>
-<tr class="separator:a3ed82ed3cce7de15bc8e7675c776e1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61570500e1258028b30482878be16d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#ae61570500e1258028b30482878be16d7">SPI1_SPRE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ae61570500e1258028b30482878be16d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa9185d90ac7284e43ead50e9a3076a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#a3fa9185d90ac7284e43ead50e9a3076a">SPI1_FSCK</a>&#160;&#160;&#160;(<a class="el" href="_system_8h.html#a99d7c812ba23bfdba5d29ec2fddf1e83">FCY</a> / (<a class="el" href="_led_driver_8h.html#a97476fd466a0045342316c7a2a0c6ccb">SPI1_PPRE</a> * <a class="el" href="_led_driver_8h.html#ae61570500e1258028b30482878be16d7">SPI1_SPRE</a>))</td></tr>
+<tr class="separator:a3fa9185d90ac7284e43ead50e9a3076a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db6be54dd85c8147ef46761251eccd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_led_driver_8h.html#a1db6be54dd85c8147ef46761251eccd5">LED_DRIVER_REORDER_LEDDATA</a>(ledData)</td></tr>
+<tr class="separator:a1db6be54dd85c8147ef46761251eccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -143,22 +147,52 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SPI1_PPRE&#160;&#160;&#160;1           /* SPI1 Primary Prescale bits */</td>
+          <td class="memname">#define SPI1_PPRE&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>document defines and macros </dd></dl>
+<p>SPI1 Primary Prescale bits </p>
 
-<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00049">49</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00059">59</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3ed82ed3cce7de15bc8e7675c776e1d9"></a>
+<a class="anchor" id="ae61570500e1258028b30482878be16d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _LED_DRIVER_ReorderLedData</td>
+          <td class="memname">#define SPI1_SPRE&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SPI1 Secondary Prescale bits </p>
+
+<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00060">60</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fa9185d90ac7284e43ead50e9a3076a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI1_FSCK&#160;&#160;&#160;(<a class="el" href="_system_8h.html#a99d7c812ba23bfdba5d29ec2fddf1e83">FCY</a> / (<a class="el" href="_led_driver_8h.html#a97476fd466a0045342316c7a2a0c6ccb">SPI1_PPRE</a> * <a class="el" href="_led_driver_8h.html#ae61570500e1258028b30482878be16d7">SPI1_SPRE</a>))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SPI1 clock speed. </p>
+
+<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00062">62</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1db6be54dd85c8147ef46761251eccd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_DRIVER_REORDER_LEDDATA</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">ledData</td><td>)</td>
@@ -170,7 +204,7 @@ Functions</h2></td></tr>
 <div class="line">                ((ledData) &amp; 0x0404)      | ((ledData) &amp; 0x0808) &lt;&lt; 2 | \</div>
 <div class="line">                ((ledData) &amp; 0x1010) &gt;&gt; 3 | ((ledData) &amp; 0x2020) &lt;&lt; 1 | \</div>
 <div class="line">                ((ledData) &amp; 0x4040) &gt;&gt; 6 | ((ledData) &amp; 0x8080) )</div>
-</div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Change bitorder in the tables below so 0 is the LSB and 15 the MSB. </dd></dl>
+</div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Change bitorder in the tables below so 0 is the LSB and 15 the MSB. </dd></dl>
 <p>Reorder the bits to be in correct order, where 0 is the rightmost (LSB) bit and 15 is the leftmost (MSB) bit. This is needed for <a class="el" href="_led_driver_8c.html#a5e8f1b876929be89fbd493f4df041895">LedDriver_update</a>, which needs to reorder the LED data befor sending it to the LED Sink Driver.</p>
 <table class="doxtable">
 <tr>
@@ -202,7 +236,7 @@ Functions</h2></td></tr>
 <h4>Operations:</h4>
 <p>7 <code>AND</code>, 6 <code>OR</code>, 5 <code>SHIFT</code> </p>
 
-<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00087">87</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8h_source.html#l00096">96</a> of file <a class="el" href="_led_driver_8h_source.html">LedDriver.h</a>.</p>
 
 </div>
 </div>
@@ -223,7 +257,7 @@ Functions</h2></td></tr>
 <p>Initialize a LED Sink Driver by configuring the SPIx peripheral.</p>
 <dl class="section note"><dt>Note</dt><dd>This function should be called only once because it sets the SPIx peripheral for all the LED Sink Drivers since they are in a bus. </dd></dl>
 
-<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00029">29</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00040">40</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
 
 </div>
 </div>
@@ -248,7 +282,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00089">89</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00101">101</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
 
 </div>
 </div>
@@ -267,7 +301,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Turn all the LEDs of a LED Sink Driver off using <a class="el" href="_led_driver_8c.html#a5e8f1b876929be89fbd493f4df041895">LedDriver_update</a>. </p>
 
-<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00102">102</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00115">115</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
 
 </div>
 </div>
@@ -286,14 +320,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Turn all the LEDs of a LED Sink Driver off using <a class="el" href="_led_driver_8c.html#a5e8f1b876929be89fbd493f4df041895">LedDriver_update</a>. </p>
 
-<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00111">111</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
+<p>Definition at line <a class="el" href="_led_driver_8c_source.html#l00125">125</a> of file <a class="el" href="_led_driver_8c_source.html">LedDriver.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

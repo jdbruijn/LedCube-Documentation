@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['fcy',['FCY',['../_system_8h.html#a99d7c812ba23bfdba5d29ec2fddf1e83',1,'System.h']]],
-  ['fifo_5fbuffer_5fsize',['FIFO_BUFFER_SIZE',['../_sw_fifo_buffer_8h.html#ad73fd7fab7940b2765b6a7054fc591dd',1,'SwFifoBuffer.h']]],
-  ['fosc',['FOSC',['../_system_8h.html#a802b2b582b121e4632aa9a491d503720',1,'System.h']]],
-  ['fpb',['FPB',['../_system_8h.html#a2a5de2acdd9267b75652bdc1d9a251a7',1,'System.h']]],
-  ['frcdiv',['FRCDIV',['../_system_8h.html#a818b0c17e45483794fb99a7928e02551',1,'System.h']]]
+  ['delay_5fmax_5fms',['DELAY_MAX_MS',['../_delay_8h.html#a93a155546ce00a43005a47c980a71652',1,'Delay.h']]],
+  ['delay_5fmax_5fs',['DELAY_MAX_S',['../_delay_8h.html#a62c80f08550c22513b411f2f07de57c3',1,'Delay.h']]],
+  ['delay_5fmax_5fus',['DELAY_MAX_US',['../_delay_8h.html#ace5b694acf827601105905f4ec93f154',1,'Delay.h']]],
+  ['delay_5fms',['DELAY_MS',['../_delay_8h.html#aa200ec1d06dc0db47076ae3d61936b65',1,'Delay.h']]],
+  ['delay_5fs',['DELAY_S',['../_delay_8h.html#afd020fd3c408ff4c36e0e0378f4d6b61',1,'Delay.h']]],
+  ['delay_5fus',['DELAY_US',['../_delay_8h.html#a9c373e43e5b49ed95c3acdb84c4d49e5',1,'Delay.h']]]
 ];

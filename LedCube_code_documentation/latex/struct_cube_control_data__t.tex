@@ -9,7 +9,7 @@ Structure with Cube-\/ and Cube\+Control data.
 
 {\ttfamily \#include $<$source/\+Cube\+Control/\+Cube\+Control\+Data.\+h$>$}
 
-\subsection*{Public Attributes}
+\subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{struct_row_data__t}{Row\+Data\+\_\+t} \hyperlink{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}{Cube\+Data0} \mbox{[}\hyperlink{_cube_control_data_8h_af8a3cd66f1181d1c4119a4e51a4015f8}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}\hyperlink{_cube_control_data_8h_aaf8754e50e21c648edd86850eedb5a63}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}
@@ -31,52 +31,52 @@ Structure with Cube-\/ and Cube\+Control data.
 
 This contains two \hyperlink{struct_row_data__t}{Row\+Data\+\_\+t} structure arrays, pointers to the current read and write structure arrays, masks for the B\+A\+M rounds and the shift needed for each B\+A\+M round. 
 
-Definition at line 109 of file Cube\+Control\+Data.\+h.
+Definition at line 124 of file Cube\+Control\+Data.\+h.
 
 
 
-\subsection{Member Data Documentation}
+\subsection{Field Documentation}
 \hypertarget{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Cube\+Data0@{Cube\+Data0}}
 \index{Cube\+Data0@{Cube\+Data0}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{Cube\+Data0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Row\+Data\+\_\+t} Cube\+Control\+Data\+\_\+t\+::\+Cube\+Data0\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}}\label{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}
 First Cube\+Data structure array where the L\+E\+D data of the whole Led\+Cube is stored in. So this is the data for all 512 L\+E\+Ds $ { (8 \times 8 \times 8) } $ and the \hyperlink{_cube_control_data_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S} B\+A\+M rounds. 
 
-Definition at line 114 of file Cube\+Control\+Data.\+h.
+Definition at line 129 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{struct_cube_control_data__t_a647ae59f9e5f0842d92ef0241db2a141}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Cube\+Data1@{Cube\+Data1}}
 \index{Cube\+Data1@{Cube\+Data1}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{Cube\+Data1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Row\+Data\+\_\+t} Cube\+Control\+Data\+\_\+t\+::\+Cube\+Data1\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}\mbox{]}\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}\mbox{]}}\label{struct_cube_control_data__t_a647ae59f9e5f0842d92ef0241db2a141}
 Second Cube\+Data structure array where the L\+E\+D data of the whole Led\+Cube is stored in. For more info see \hyperlink{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}{Cube\+Data0}. 
 
-Definition at line 118 of file Cube\+Control\+Data.\+h.
+Definition at line 133 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{struct_cube_control_data__t_a981fbbdd6a05af493c7ae6782bdcb9af}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!p\+Cube\+Data\+Read@{p\+Cube\+Data\+Read}}
 \index{p\+Cube\+Data\+Read@{p\+Cube\+Data\+Read}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{p\+Cube\+Data\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} Cube\+Control\+Data\+\_\+t\+::p\+Cube\+Data\+Read}\label{struct_cube_control_data__t_a981fbbdd6a05af493c7ae6782bdcb9af}
 Pointer to the current Cube\+Data structure array where is read from. This can point to either \hyperlink{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}{Cube\+Data0} using \hyperlink{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base} or to \hyperlink{struct_cube_control_data__t_a647ae59f9e5f0842d92ef0241db2a141}{Cube\+Data1} using \hyperlink{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base}. 
 
-Definition at line 123 of file Cube\+Control\+Data.\+h.
+Definition at line 138 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{struct_cube_control_data__t_aa60f6c5f56c138fba459e0a990248e0f}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!p\+Cube\+Data\+Write@{p\+Cube\+Data\+Write}}
 \index{p\+Cube\+Data\+Write@{p\+Cube\+Data\+Write}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{p\+Cube\+Data\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} Cube\+Control\+Data\+\_\+t\+::p\+Cube\+Data\+Write}\label{struct_cube_control_data__t_aa60f6c5f56c138fba459e0a990248e0f}
 Pointer to the current Cube\+Data structure array where is written to. This can point to either \hyperlink{struct_cube_control_data__t_a4fcbd72fab1f862e17acc3f96efe8d4c}{Cube\+Data0} using \hyperlink{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base} or to \hyperlink{struct_cube_control_data__t_a647ae59f9e5f0842d92ef0241db2a141}{Cube\+Data1} using \hyperlink{_cube_control_data_8c_ae726beefa78aea201161f0cf5744dcee}{p\+Cube\+Data0\+Base}. 
 
-Definition at line 128 of file Cube\+Control\+Data.\+h.
+Definition at line 143 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{struct_cube_control_data__t_a27e68e649dcb5beced5b6b7c92419ec5}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Bam\+Round\+Mask@{Bam\+Round\+Mask}}
 \index{Bam\+Round\+Mask@{Bam\+Round\+Mask}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{Bam\+Round\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bam\+Round\+Masks\+\_\+t} const Cube\+Control\+Data\+\_\+t\+::\+Bam\+Round\+Mask\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}}\label{struct_cube_control_data__t_a27e68e649dcb5beced5b6b7c92419ec5}
 Constant array of type \hyperlink{_cube_control_data_8h_a2b6850a8815b785ea51f17c4d979706e}{Bam\+Round\+Masks\+\_\+t} that is used as a B\+A\+M mask for each B\+A\+M round. 
 
-Definition at line 132 of file Cube\+Control\+Data.\+h.
+Definition at line 147 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{struct_cube_control_data__t_a945206c33a16ec4249c30e2b698dccff}{}\index{Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}!Bam\+Round\+Shift@{Bam\+Round\+Shift}}
 \index{Bam\+Round\+Shift@{Bam\+Round\+Shift}!Cube\+Control\+Data\+\_\+t@{Cube\+Control\+Data\+\_\+t}}
 \subsubsection[{Bam\+Round\+Shift}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Cube\+Control\+Data\+\_\+t\+::\+Bam\+Round\+Shift\mbox{[}{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}\mbox{]}}\label{struct_cube_control_data__t_a945206c33a16ec4249c30e2b698dccff}
 Constant array containing the shift needed for each B\+A\+M round 
 
-Definition at line 134 of file Cube\+Control\+Data.\+h.
+Definition at line 149 of file Cube\+Control\+Data.\+h.
 
 
 

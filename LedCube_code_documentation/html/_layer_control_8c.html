@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -131,6 +131,8 @@ Variables</h2></td></tr>
 <tr class="separator:a0210645c118b58a2f45feea0c8976a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e27186c6936262018768a367a9ccfba"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_layer_control_8c.html#a8e27186c6936262018768a367a9ccfba">bamRound</a> = 0</td></tr>
 <tr class="separator:a8e27186c6936262018768a367a9ccfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e22a6b967c5ba57137c3c47ab49a7e"><td class="memItemLeft" align="right" valign="top">uint8_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_layer_control_8c.html#ae0e22a6b967c5ba57137c3c47ab49a7e">layerReg</a> [8]</td></tr>
+<tr class="separator:ae0e22a6b967c5ba57137c3c47ab49a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controls a single layer of the 8x8x8 LED cube. </p>
@@ -153,7 +155,7 @@ Variables</h2></td></tr>
 <p>Initialize everything needed for controlling the layers by configuring the SPIx peripheral.</p>
 <dl class="section note"><dt>Note</dt><dd>This also initializes everything needed for a PanelControl PCB using the <a class="el" href="_panel_control_8c.html#aef253c0667beeb546a7eff1cf564e3a5">PanelControl_init</a> function. </dd></dl>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00047">47</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00060">60</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -174,12 +176,12 @@ Variables</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function is used by the _T3Interrupt ISR. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_layer</td><td>The layer to set active ranging from 0 to LC_MAX_Z_C. </td></tr>
+    <tr><td class="paramname">_layer</td><td>The layer to set active ranging from 0 to <a class="el" href="_layer_control_8h.html#a90e188c122f5e86219eda798e7bfd89d">LC_MAX_Z_C</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00153">153</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00167">167</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -229,7 +231,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00175">175</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00190">190</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -248,7 +250,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Turn all the LEDs of a layer off using <a class="el" href="_panel_control_8c.html#a7b7be44baa16fe021aa42b1eba9406aa">PanelControl_allOff</a>. </p>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00199">199</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00215">215</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -267,7 +269,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Turn all the LEDs of a layer on using <a class="el" href="_panel_control_8c.html#a2a56611f2abac08f8558ddeb1b19cad8">PanelControl_allOn</a>. </p>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00211">211</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00228">228</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -286,7 +288,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Interrupt for timer 3. This interrupt multiplexes the eight layers and puts the correct LED data in the current layer. </p>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00228">228</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00246">246</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -302,7 +304,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Global variable for keeping track of the current active layer in the ISR. </p>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00029">29</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00041">41</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
@@ -317,14 +319,39 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Global variable for keeping track of the current BAM round in the ISR. </p>
 
-<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00031">31</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00043">43</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0e22a6b967c5ba57137c3c47ab49a7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t const layerReg[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0b11111101,</div>
+<div class="line">    0b11111110,</div>
+<div class="line">    0b11110111,</div>
+<div class="line">    0b11111011,</div>
+<div class="line">    0b11011111,</div>
+<div class="line">    0b11101111,</div>
+<div class="line">    0b10111111,</div>
+<div class="line">    0b01111111</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Pattern to select the current layer. </p>
+
+<p>Definition at line <a class="el" href="_layer_control_8c_source.html#l00045">45</a> of file <a class="el" href="_layer_control_8c_source.html">LayerControl.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

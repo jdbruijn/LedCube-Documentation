@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -107,26 +107,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;xc.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_macro_8h_source.html">Macro.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_uart_8h_source.html">Uart.h</a>&quot;</code><br />
 </div>
 <p><a href="get_p_i_c_configuration_bits_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae1649fc947ca37a86917a08354f48d1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1649fc947ca37a86917a08354f48d1a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">PRINTF</a>&#160;&#160;&#160;<a class="el" href="_uart_8h.html#aee7cb5e772b9ad629447b74b07c47543">Uart1_printf</a></td></tr>
-<tr class="memdesc:ae1649fc947ca37a86917a08354f48d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for PRINTF to an actual printf function, in this case <a class="el" href="_uart_8h.html#aee7cb5e772b9ad629447b74b07c47543">Uart1_printf</a>. <br /></td></tr>
-<tr class="separator:ae1649fc947ca37a86917a08354f48d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d500a34c624c2cae56bc25a31b12f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86d500a34c624c2cae56bc25a31b12f3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(x)&#160;&#160;&#160;(void)(x)</td></tr>
-<tr class="memdesc:a86d500a34c624c2cae56bc25a31b12f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to suppress the "unused parameter" warnings. <br /></td></tr>
-<tr class="separator:a86d500a34c624c2cae56bc25a31b12f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522aa29295ebb2aa65ea06b325947f26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a522aa29295ebb2aa65ea06b325947f26"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#a522aa29295ebb2aa65ea06b325947f26">PRINT_DESC</a>(fmt,  args...)&#160;&#160;&#160;<a class="el" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">PRINTF</a>(&quot; &quot; fmt &quot;\n&quot;, ##args)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#a522aa29295ebb2aa65ea06b325947f26">PRINT_DESC</a>(fmt,  args...)&#160;&#160;&#160;PRINTF(&quot; &quot; fmt &quot;\n&quot;, ##args)</td></tr>
 <tr class="memdesc:a522aa29295ebb2aa65ea06b325947f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for printing the configuration bit description with indent. <br /></td></tr>
 <tr class="separator:a522aa29295ebb2aa65ea06b325947f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2237654922519f9d189b65b6ccad362e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2237654922519f9d189b65b6ccad362e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#a2237654922519f9d189b65b6ccad362e">PRINT_RESULT</a>(fmt,  args...)&#160;&#160;&#160;<a class="el" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">PRINTF</a>(&quot;  &quot; fmt &quot;\n&quot;, ##args)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="get_p_i_c_configuration_bits_8h.html#a2237654922519f9d189b65b6ccad362e">PRINT_RESULT</a>(fmt,  args...)&#160;&#160;&#160;PRINTF(&quot;  &quot; fmt &quot;\n&quot;, ##args)</td></tr>
 <tr class="memdesc:a2237654922519f9d189b65b6ccad362e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for printing the configuration bit result with indent. <br /></td></tr>
 <tr class="separator:a2237654922519f9d189b65b6ccad362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -158,7 +151,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. </p>
-<dl class="section note"><dt>Note</dt><dd>The print of the read data is done using the <a class="el" href="get_p_i_c_configuration_bits_8h.html#ae1649fc947ca37a86917a08354f48d1a">PRINTF</a> wrapper.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The print of the read data is done using the PRINTF wrapper.</dd></dl>
 <h4>Example output (without the asterisks):</h4>
 <pre class="fragment">* Reading Flash Configuration Word 1...
 * Binary read value:
@@ -197,25 +190,27 @@ Functions</h2></td></tr>
 *  FNOSC&lt;2:0&gt;: Initial Oscillator Select bits
 *   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
 *  FCKSM&lt;1:0&gt;: Clock Switching and Fail-Safe Clock Monitor Configuration bits
-*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is
+*   disabled
 *  OSCIOFCN: OSCO Pin Configuration bit:
 *   OSCIOFCN has no effect on OSCO/CLKO/RA3
 *  IOL1WAY: IOLOCK One-Way Set Enable bit
-*   [IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed, provided the unlock sequence has been completed
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON&lt;6&gt;) bit can be set and cleared as needed,
+*   provided the unlock sequence has been completed
 *  I2C1SEL: I2C1 Pin Select bit
 *   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
 *  POSCMD&lt;1:0:&gt; Primary Oscillator Configuration bits
 *   [POSCMOD_XT] XT Oscillator mode is selected
 * Done Reading Flash Configuration Word 2.
 * </pre> 
-<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00180">180</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
+<p>Definition at line <a class="el" href="get_p_i_c_configuration_bits_8c_source.html#l00194">194</a> of file <a class="el" href="get_p_i_c_configuration_bits_8c_source.html">getPICConfigurationBits.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

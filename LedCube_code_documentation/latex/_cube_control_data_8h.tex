@@ -9,8 +9,9 @@ Provides Cube-\/ and Cube\+Control data structures and functions.
 {\ttfamily \#include $<$stdint.\+h$>$}\\*
 {\ttfamily \#include $<$stddef.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Uart.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Interrupts.\+h\char`\"{}}\\*
-\subsection*{Classes}
+\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_row_data__t}{Row\+Data\+\_\+t}
@@ -76,30 +77,30 @@ Declares and controls the data of the whole L\+E\+D cube using several functions
 \hypertarget{_cube_control_data_8h_aaf8754e50e21c648edd86850eedb5a63}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}}
 \index{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C~8}\label{_cube_control_data_8h_aaf8754e50e21c648edd86850eedb5a63}
-Max coordinate for the x-\/axis 
+Max coordinate for the x-\/axis. 
 
-Definition at line 42 of file Cube\+Control\+Data.\+h.
+Definition at line 54 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{_cube_control_data_8h_ad81929089053d6c5d380dbbce3832272}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C}}
 \index{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Y\+\_\+\+C~{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}}\label{_cube_control_data_8h_ad81929089053d6c5d380dbbce3832272}
-Max coordinate for the y-\/axis 
+Max coordinate for the y-\/axis. 
 
-Definition at line 45 of file Cube\+Control\+Data.\+h.
+Definition at line 57 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{_cube_control_data_8h_af8a3cd66f1181d1c4119a4e51a4015f8}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}}
 \index{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+Z\+\_\+\+C~{\bf C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+M\+A\+X\+\_\+\+X\+\_\+\+C}}\label{_cube_control_data_8h_af8a3cd66f1181d1c4119a4e51a4015f8}
-Max coordinate for the z-\/axis 
+Max coordinate for the z-\/axis. 
 
-Definition at line 48 of file Cube\+Control\+Data.\+h.
+Definition at line 60 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{_cube_control_data_8h_ae8163b1995363e0daae4ac54ee4d1dd9}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}}
 \index{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S@{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+U\+B\+E\+D\+A\+T\+A\+\_\+\+N\+\_\+\+B\+A\+M\+\_\+\+B\+I\+T\+S~4}\label{_cube_control_data_8h_ae8163b1995363e0daae4ac54ee4d1dd9}
-Number of bits used for bit angle modulation (B\+A\+M) 
+Number of bits used for bit angle modulation (B\+A\+M). 
 
-Definition at line 51 of file Cube\+Control\+Data.\+h.
+Definition at line 63 of file Cube\+Control\+Data.\+h.
 
 
 
@@ -122,7 +123,7 @@ The enumeration of the start row for the four Panel\+Control (P\+C) P\+C\+Bs. \b
 \end{Desc}
 
 
-Definition at line 59 of file Cube\+Control\+Data.\+h.
+Definition at line 71 of file Cube\+Control\+Data.\+h.
 
 \hypertarget{_cube_control_data_8h_a2b6850a8815b785ea51f17c4d979706e}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!Bam\+Round\+Masks\+\_\+t@{Bam\+Round\+Masks\+\_\+t}}
 \index{Bam\+Round\+Masks\+\_\+t@{Bam\+Round\+Masks\+\_\+t}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
@@ -142,7 +143,7 @@ The enumeration of masks for the four B\+A\+M rounds. \begin{Desc}
 \end{Desc}
 
 
-Definition at line 69 of file Cube\+Control\+Data.\+h.
+Definition at line 81 of file Cube\+Control\+Data.\+h.
 
 
 
@@ -163,7 +164,7 @@ Initialize a Cube\+Control\+Data structure. The \hyperlink{struct_cube_control_d
 \end{DoxyParams}
 
 
-Definition at line 117 of file Cube\+Control\+Data.\+c.
+Definition at line 128 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_a9309f328a589652ed37f92d561c38daa}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!Cube\+Control\+Data\+\_\+switch\+Cube\+Data@{Cube\+Control\+Data\+\_\+switch\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+switch\+Cube\+Data@{Cube\+Control\+Data\+\_\+switch\+Cube\+Data}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
@@ -177,7 +178,7 @@ Definition at line 117 of file Cube\+Control\+Data.\+c.
 Switch the Cube\+Data read-\/ and write pointers. 
 
 \begin{DoxyNote}{Note}
-The switch is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
+The switch is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a569583c12bf384c13bcd2ea5f46fc9ab}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_a994db87576912eea693503f28003cb21}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -186,7 +187,7 @@ The switch is performed with interrupts disabled using the \hyperlink{_interrupt
 \end{DoxyParams}
 
 
-Definition at line 126 of file Cube\+Control\+Data.\+c.
+Definition at line 138 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_ae1422d16d0c9b80676ee3b2da685cfef}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!Cube\+Control\+Data\+\_\+reset\+Cube\+Data@{Cube\+Control\+Data\+\_\+reset\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+reset\+Cube\+Data@{Cube\+Control\+Data\+\_\+reset\+Cube\+Data}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
@@ -204,7 +205,7 @@ Reset a Cube\+Data structure array.
 \end{DoxyParams}
 
 
-Definition at line 150 of file Cube\+Control\+Data.\+c.
+Definition at line 163 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_ae0bb91ea8834b363a9fe43de4bb77c70}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!Cube\+Control\+Data\+\_\+copy\+Cube\+Data@{Cube\+Control\+Data\+\_\+copy\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+copy\+Cube\+Data@{Cube\+Control\+Data\+\_\+copy\+Cube\+Data}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
@@ -215,7 +216,7 @@ Definition at line 150 of file Cube\+Control\+Data.\+c.
 \end{DoxyParamCaption}
 )}\label{_cube_control_data_8h_ae0bb91ea8834b363a9fe43de4bb77c70}
 Copy a Cube\+Data structure array. \begin{DoxyNote}{Note}
-The copy is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a8ec23fc7d5e824e324f6240318e1657d}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_ac27b8fcb90a7780c507092e4e74e31ef}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
+The copy is performed with interrupts disabled using the \hyperlink{_interrupts_8h_a569583c12bf384c13bcd2ea5f46fc9ab}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+D\+I\+S\+S\+A\+B\+L\+E\+\_\+\+A\+N\+D\+\_\+\+S\+A\+V\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} and \hyperlink{_interrupts_8h_a994db87576912eea693503f28003cb21}{I\+N\+T\+E\+R\+R\+U\+P\+T\+S\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+C\+P\+U\+\_\+\+I\+P\+L} macros because the Cube\+Data read takes place in an interrupt service routine.
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -226,7 +227,7 @@ The copy is performed with interrupts disabled using the \hyperlink{_interrupts_
 \end{DoxyParams}
 
 
-Definition at line 166 of file Cube\+Control\+Data.\+c.
+Definition at line 180 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_a70edccbdd8cf75f052397b2d1e18e191}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data@{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}}
 \index{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data@{Cube\+Control\+Data\+\_\+print\+Hex\+Cube\+Data}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
@@ -244,7 +245,7 @@ Print the contents of a Cube\+Data structure array hexadecimal.
 \end{DoxyParams}
 
 
-Definition at line 190 of file Cube\+Control\+Data.\+c.
+Definition at line 205 of file Cube\+Control\+Data.\+c.
 
 
 
@@ -254,19 +255,19 @@ Definition at line 190 of file Cube\+Control\+Data.\+c.
 \subsubsection[{p\+Cube\+Control\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Control\+Data\+\_\+t} const p\+Cube\+Control\+Data}\label{_cube_control_data_8h_af2bcd585006c21d7500dde639c50d9e5}
 Constant pointer to the Cube\+Control\+Data structure 
 
-Definition at line 105 of file Cube\+Control\+Data.\+c.
+Definition at line 116 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_ae726beefa78aea201161f0cf5744dcee}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!p\+Cube\+Data0\+Base@{p\+Cube\+Data0\+Base}}
 \index{p\+Cube\+Data0\+Base@{p\+Cube\+Data0\+Base}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{p\+Cube\+Data0\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} const p\+Cube\+Data0\+Base}\label{_cube_control_data_8h_ae726beefa78aea201161f0cf5744dcee}
 Constant pointer to the Cube\+Data0 structure array 
 
-Definition at line 108 of file Cube\+Control\+Data.\+c.
+Definition at line 119 of file Cube\+Control\+Data.\+c.
 
 \hypertarget{_cube_control_data_8h_af5572749fda02c9b135e12dcdbfed600}{}\index{Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}!p\+Cube\+Data1\+Base@{p\+Cube\+Data1\+Base}}
 \index{p\+Cube\+Data1\+Base@{p\+Cube\+Data1\+Base}!Cube\+Control\+Data.\+h@{Cube\+Control\+Data.\+h}}
 \subsubsection[{p\+Cube\+Data1\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\+Cube\+Data\+\_\+t} const p\+Cube\+Data1\+Base}\label{_cube_control_data_8h_af5572749fda02c9b135e12dcdbfed600}
 Constant pointer to the Cube\+Data1 structure array 
 
-Definition at line 111 of file Cube\+Control\+Data.\+c.
+Definition at line 122 of file Cube\+Control\+Data.\+c.
 

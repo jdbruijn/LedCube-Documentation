@@ -59,7 +59,7 @@ U\+Word32 32-\/bit value that was at the address of addrhi and addrlo.
 \end{DoxyReturn}
 
 
-Definition at line 145 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 157 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 
 \hypertarget{get_p_i_c_configuration_bits_8c_a8fa1a07ca09b1acf41750a432e892082}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte}}
 \index{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte@{\+\_\+\+G\+P\+C\+B\+\_\+verify\+Config\+Upper\+Byte}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
@@ -82,7 +82,7 @@ bool True if the upper byte is successfully verified, false else.
 \end{DoxyReturn}
 
 
-Definition at line 171 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 184 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 
 \hypertarget{get_p_i_c_configuration_bits_8c_a6cb24dac747d04d782a4810170da12d8}{}\index{get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}!get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}}
 \index{get\+P\+I\+C\+Config\+Bits@{get\+P\+I\+C\+Config\+Bits}!get\+P\+I\+C\+Configuration\+Bits.\+c@{get\+P\+I\+C\+Configuration\+Bits.\+c}}
@@ -96,7 +96,7 @@ Definition at line 171 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 Read the two Flash Configuration Words, verify and print the read Flash Configuration Words in a user friendly format. 
 
 \begin{DoxyNote}{Note}
-The print of the read data is done using the \hyperlink{get_p_i_c_configuration_bits_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+T\+F} wrapper.
+The print of the read data is done using the P\+R\+I\+N\+T\+F wrapper.
 \end{DoxyNote}
 \subparagraph*{Example output (without the asterisks)\+:}
 
@@ -137,11 +137,13 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 *  FNOSC<2:0>: Initial Oscillator Select bits
 *   [FNOSC_FRCPLL] Fast RC Oscillator with Postscaler and PLL module (FRCPLL)
 *  FCKSM<1:0>: Clock Switching and Fail-Safe Clock Monitor Configuration bits
-*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is disabled
+*   [FCKSM_CSECMD] Clock switching is enabled, Fail-Safe Clock Monitor is
+*   disabled
 *  OSCIOFCN: OSCO Pin Configuration bit:
 *   OSCIOFCN has no effect on OSCO/CLKO/RA3
 *  IOL1WAY: IOLOCK One-Way Set Enable bit
-*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed, provided the unlock sequence has been completed
+*   [IOL1WAY_OFF] The IOLOCK (OSCCON<6>) bit can be set and cleared as needed,
+*   provided the unlock sequence has been completed
 *  I2C1SEL: I2C1 Pin Select bit
 *   [I2C1SEL_PRI] Use default SCL1/SDA1 pins
 *  POSCMD<1:0:> Primary Oscillator Configuration bits
@@ -150,5 +152,5 @@ The print of the read data is done using the \hyperlink{get_p_i_c_configuration_
 * \end{DoxyVerb}
  
 
-Definition at line 180 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
+Definition at line 194 of file get\+P\+I\+C\+Configuration\+Bits.\+c.
 

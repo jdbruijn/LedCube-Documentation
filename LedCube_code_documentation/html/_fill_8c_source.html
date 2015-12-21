@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="LedCube Visualisation Logo.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LedCube
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">C code of an 8x8x8 RGB LED cube</div>
   </td>
@@ -48,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -106,92 +106,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * </span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Copyright (c) 2015 Jeroen de Bruijn &lt;vidavidorra@gmail.com&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * This file is part of LedCube.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This file is part of LedCube which is released under The MIT License (MIT).</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * For full license details see file &quot;main.c&quot; or &quot;LICENSE.md&quot; or go to</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * https://opensource.org/licenses/MIT</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * </span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * Includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fill_8h.html">Fill.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * Functions</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">   29</a></span>&#160;<a class="code" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a>( uint8_t _x, uint8_t _z,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        uint8_t _red, uint8_t _green, uint8_t _blue ) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u, %u&quot;</span>, _x, _z,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            _red, _green, _blue);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    uint8_t y;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span>(y = 0; y &lt; <a class="code" href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a>; y++) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a>(_x, y, _z, _red, _green, _blue);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">   43</a></span>&#160;<a class="code" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a>( uint8_t _x, uint8_t _z,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        uint8_t _red, uint8_t _green, uint8_t _blue ) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u, %u&quot;</span>, _x, _z,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            _red, _green, _blue);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    uint8_t y;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span>(y = 0; y &lt; <a class="code" href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a>; y++) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a>(_x, y, _z, _red, _green, _blue);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a>(100);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">   59</a></span>&#160;<a class="code" href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">FillLayerAtOnceWithSingleColour</a>( uint8_t _z,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        uint8_t _red, uint8_t _green, uint8_t _blue ) {  </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u&quot;</span>, _z, _red, _green, _blue);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint8_t x;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span>(x = 0; x &lt; <a class="code" href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a>; x++) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a>(x, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Copyright (c) 2015  Jeroen de Bruijn  &lt;vidavidorra@gmail.com&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * Includes</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fill_8h.html">Fill.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * Functions</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">   40</a></span>&#160;<a class="code" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a>(uint8_t _x, uint8_t _z,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                              uint8_t _red, uint8_t _green, uint8_t _blue)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u, %u&quot;</span>, _x, _z,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                               _red, _green, _blue);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint8_t y;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (y = 0; y &lt; <a class="code" href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a>; y++) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a>(_x, y, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">   55</a></span>&#160;<a class="code" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a>(uint8_t _x, uint8_t _z,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        uint8_t _red, uint8_t _green, uint8_t _blue)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u, %u&quot;</span>, _x, _z,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                               _red, _green, _blue);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    uint8_t y;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (y = 0; y &lt; <a class="code" href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a>; y++) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a>(_x, y, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="_delay_8h.html#aa200ec1d06dc0db47076ae3d61936b65">DELAY_MS</a>(100);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">   72</a></span>&#160;<a class="code" href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">FillLayerWithSingleColour</a>( uint8_t _z,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        uint8_t _red, uint8_t _green, uint8_t _blue ) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u&quot;</span>, _z, _red, _green, _blue);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    uint8_t x;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span>(x = 0; x &lt; <a class="code" href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a>; x++) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a>(x, _z, _red, _green, _blue);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/* End of file Fill.c */</span></div>
-<div class="ttc" id="_led_cube_8h_html_a78bca30cd17eb8dd2469d10be6dcc421"><div class="ttname"><a href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a></div><div class="ttdeci">void LedCube_setPixel(uint8_t const _x, uint8_t const _y, uint8_t const _z, uint8_t const _red, uint8_t const _green, uint8_t const _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00040">LedCube.c:40</a></div></div>
-<div class="ttc" id="_fill_8c_html_a09b84c509c15b03240ad89307cdb3aef"><div class="ttname"><a href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a></div><div class="ttdeci">void FillRowWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00043">Fill.c:43</a></div></div>
-<div class="ttc" id="_delay_8h_html_a36292b8e8931575a52f4184b89fd1018"><div class="ttname"><a href="_delay_8h.html#a36292b8e8931575a52f4184b89fd1018">Delay_ms</a></div><div class="ttdeci">#define Delay_ms(t)</div><div class="ttdoc">Delay a certain number of milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="_delay_8h_source.html#l00071">Delay.h:71</a></div></div>
-<div class="ttc" id="_led_cube_8h_html_a3620b6696f75c8c5e4979576adf95aa2"><div class="ttname"><a href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a></div><div class="ttdeci">void LedCube_updateUsingCopy(void)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00123">LedCube.c:123</a></div></div>
-<div class="ttc" id="_fill_8c_html_ad3faad1cf94abc0cf376feecc0097ed7"><div class="ttname"><a href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">FillLayerWithSingleColour</a></div><div class="ttdeci">void FillLayerWithSingleColour(uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00072">Fill.c:72</a></div></div>
-<div class="ttc" id="_fill_8c_html_af45f203582b60cf270dccd3ffdc58a22"><div class="ttname"><a href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a></div><div class="ttdeci">void FillRowAtOnceWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00029">Fill.c:29</a></div></div>
-<div class="ttc" id="_cube_control_data_8h_html_aaf8754e50e21c648edd86850eedb5a63"><div class="ttname"><a href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a></div><div class="ttdeci">#define CUBEDATA_MAX_X_C</div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00042">CubeControlData.h:42</a></div></div>
-<div class="ttc" id="_cube_control_data_8h_html_ad81929089053d6c5d380dbbce3832272"><div class="ttname"><a href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a></div><div class="ttdeci">#define CUBEDATA_MAX_Y_C</div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00045">CubeControlData.h:45</a></div></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">   72</a></span>&#160;<a class="code" href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">FillLayerAtOnceWithSingleColour</a>(uint8_t _z,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                uint8_t _red, uint8_t _green, uint8_t _blue)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u&quot;</span>, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint8_t x;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (x = 0; x &lt; <a class="code" href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a>; x++) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a>(x, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">   86</a></span>&#160;<a class="code" href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">FillLayerWithSingleColour</a>(uint8_t _z,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                          uint8_t _red, uint8_t _green, uint8_t _blue)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    DEBUG_PRINTF_FUNCTION_CALL(<span class="stringliteral">&quot;%u, %u, %u, %u&quot;</span>, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint8_t x;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">for</span> (x = 0; x &lt; <a class="code" href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a>; x++) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a>(x, _z, _red, _green, _blue);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">/* End of file Fill.c */</span></div>
+<div class="ttc" id="_led_cube_8h_html_a78bca30cd17eb8dd2469d10be6dcc421"><div class="ttname"><a href="_led_cube_8h.html#a78bca30cd17eb8dd2469d10be6dcc421">LedCube_setPixel</a></div><div class="ttdeci">void LedCube_setPixel(uint8_t const _x, uint8_t const _y, uint8_t const _z, uint8_t const _red, uint8_t const _green, uint8_t const _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00052">LedCube.c:52</a></div></div>
+<div class="ttc" id="_fill_8c_html_a09b84c509c15b03240ad89307cdb3aef"><div class="ttname"><a href="_fill_8c.html#a09b84c509c15b03240ad89307cdb3aef">FillRowWithSingleColour</a></div><div class="ttdeci">void FillRowWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00055">Fill.c:55</a></div></div>
+<div class="ttc" id="_delay_8h_html_aa200ec1d06dc0db47076ae3d61936b65"><div class="ttname"><a href="_delay_8h.html#aa200ec1d06dc0db47076ae3d61936b65">DELAY_MS</a></div><div class="ttdeci">#define DELAY_MS(t)</div><div class="ttdoc">Delay a certain number of milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="_delay_8h_source.html#l00082">Delay.h:82</a></div></div>
+<div class="ttc" id="_led_cube_8h_html_a3620b6696f75c8c5e4979576adf95aa2"><div class="ttname"><a href="_led_cube_8h.html#a3620b6696f75c8c5e4979576adf95aa2">LedCube_updateUsingCopy</a></div><div class="ttdeci">void LedCube_updateUsingCopy(void)</div><div class="ttdef"><b>Definition:</b> <a href="_led_cube_8c_source.html#l00141">LedCube.c:141</a></div></div>
+<div class="ttc" id="_fill_8c_html_ad3faad1cf94abc0cf376feecc0097ed7"><div class="ttname"><a href="_fill_8c.html#ad3faad1cf94abc0cf376feecc0097ed7">FillLayerWithSingleColour</a></div><div class="ttdeci">void FillLayerWithSingleColour(uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00086">Fill.c:86</a></div></div>
+<div class="ttc" id="_fill_8c_html_af45f203582b60cf270dccd3ffdc58a22"><div class="ttname"><a href="_fill_8c.html#af45f203582b60cf270dccd3ffdc58a22">FillRowAtOnceWithSingleColour</a></div><div class="ttdeci">void FillRowAtOnceWithSingleColour(uint8_t _x, uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00040">Fill.c:40</a></div></div>
+<div class="ttc" id="_cube_control_data_8h_html_aaf8754e50e21c648edd86850eedb5a63"><div class="ttname"><a href="_cube_control_data_8h.html#aaf8754e50e21c648edd86850eedb5a63">CUBEDATA_MAX_X_C</a></div><div class="ttdeci">#define CUBEDATA_MAX_X_C</div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00054">CubeControlData.h:54</a></div></div>
+<div class="ttc" id="_cube_control_data_8h_html_ad81929089053d6c5d380dbbce3832272"><div class="ttname"><a href="_cube_control_data_8h.html#ad81929089053d6c5d380dbbce3832272">CUBEDATA_MAX_Y_C</a></div><div class="ttdeci">#define CUBEDATA_MAX_Y_C</div><div class="ttdef"><b>Definition:</b> <a href="_cube_control_data_8h_source.html#l00057">CubeControlData.h:57</a></div></div>
 <div class="ttc" id="_fill_8h_html"><div class="ttname"><a href="_fill_8h.html">Fill.h</a></div><div class="ttdoc">Animations to fill a row, layer or whole LED cube. </div></div>
-<div class="ttc" id="_fill_8c_html_a42acc54f5269344bbb3176e07c933f78"><div class="ttname"><a href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">FillLayerAtOnceWithSingleColour</a></div><div class="ttdeci">void FillLayerAtOnceWithSingleColour(uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00059">Fill.c:59</a></div></div>
+<div class="ttc" id="_fill_8c_html_a42acc54f5269344bbb3176e07c933f78"><div class="ttname"><a href="_fill_8c.html#a42acc54f5269344bbb3176e07c933f78">FillLayerAtOnceWithSingleColour</a></div><div class="ttdeci">void FillLayerAtOnceWithSingleColour(uint8_t _z, uint8_t _red, uint8_t _green, uint8_t _blue)</div><div class="ttdef"><b>Definition:</b> <a href="_fill_8c_source.html#l00072">Fill.c:72</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 00:29:31 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 21 2015 17:25:40 for LedCube by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
